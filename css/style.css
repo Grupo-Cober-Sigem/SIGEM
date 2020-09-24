@@ -1334,7 +1334,7 @@ pre {
 .table {
   width: 100%;
   margin-bottom: 1rem;
-  color: #212529; }
+  color: #1d1919; }
   .table th,
   .table td {
     padding: 0.75rem;
@@ -1521,7 +1521,7 @@ pre {
 
 .table .thead-dark th {
   color: #fff;
-  background-color: #343a40;
+  background-color: #1d1919;
   border-color: #454d55; }
 
 .table .thead-light th {
@@ -1531,7 +1531,7 @@ pre {
 
 .table-dark {
   color: #fff;
-  background-color: #343a40; }
+  background-color: #1d1919; }
   .table-dark th,
   .table-dark td,
   .table-dark thead th {
