@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="es">
+  <head>
+  	<title>Edición de Asignatura</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+		
+		<div class="wrapper d-flex align-items-stretch">
+			<nav id="sidebar">
+				<div class="p-4 pt-5">
+		  		<a href="#" class="img logo rounded-circle mb-5" style="background-image: url(/images/logo.jpg);"></a>
+	        <ul class="list-unstyled components mb-5">
+             <li class="active">
+                <a href="#gestionSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Gestión de Asignaturas</a>
+	            <ul class="collapse list-unstyled" id="gestionSubmenu">
+                <li><a href="#">Asignaturas</a></li>
+                <li><a href="#">Microcurriculos</a></li>
+                <li><a href="#">Planes de aula</a></li>
+	            </ul>
+	          </li>
+              <li>
+                <a href="#gestionMicroSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Seguimiento a Microcurriculo</a>
+	            <ul class="collapse list-unstyled" id="gestionMicroSubmenu">
+                <li><a href="#">Seguimiento</a></li>
+                <li><a href="#">Revisión</a></li>
+	            </ul>
+	          </li>	          
+	        </ul>
+
+	        <div class="footer">
+	        	<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | 
+                Desarrollado <i  class="icon-heart" aria-hidden="true"></i> por <a href="https://colorlib.com" target="_blank">Andrés Alfonso - Jonathan Bernal</a>
+				</p>
+	        </div>
+
+	      </div>
+    	</nav>
+
+        <!-- Page Content  -->
+      <div id="content" class="p-4 p-md-5">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+
+            <button type="button" id="sidebarCollapse" class="btn btn-primary">
+              <i class="fa fa-bars"></i>
+              <span class="sr-only">Toggle Menu</span>
+            </button>
+            <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../administrador/indexadmin.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://siul.unilibre.edu.co/sinugwt/">SIUL</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Perfil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cerrar Sesión</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <div class="container-fluid">
+        
+        <! -- AQUI EMPIEZA EL FORMULARIO -->
+      <div class="container-fluid">
+        <p cclass="font-weight-bold"></p>
+            <form>
+            <h1>Edición</h1>
+                <div class="accordion" id="accordionExample">
+                  <!-- SECCION 1 -->
+                  <div class="card">
+                    <div class="card-header bg-warning" id="headingOne">
+                      <h2 class="mb-0">
+                        <button class="btn text-left text-white" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                          <h5>Datos básicos de la asignatura</h5>
+                        </button>
+                      </h2>
+                    </div>
+
+                    <div id="collapse1" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                      <div class="card-body">
+                        <div class="row">
+                        <div class="col">
+                            <div class="form-group ">
+                                <label for="exampleFormControlInput1">Nombre</label>
+                                <input type="text" class="form-control" placeholder="Nombre de la asignatura" id="nombreasignatura">
+                            </div>
+                        </div>
+                        <div class="col">
+                          <label for="exampleFormControlInput1">Código</label>
+                          <input type="text" class="form-control" placeholder="Código de la asignatura" id="codigoasignatura">
+                        </div>
+                        <div class="col">
+                          <label for="exampleFormControlInput1">Cantidad de Creditos</label>
+                          <input type="text" class="form-control" placeholder="Cantidad de Creditos" id="cdcxignatura">
+                        </div>
+                    </div>    
+                    <div class="row">
+                        <div class="col">
+                          <div class="form-group">
+                            <label for="exampleFormControlSelect1">Área</label>
+                                <select class="form-control" id="nivelformacion">
+                                  <option>Básicas de Ingeniería</option>
+                                  <option>Ingeniería Aplicada</option>
+                                </select>
+                          </div>
+                        </div>    
+                        <div class="col">
+                          <div class="form-group">
+                            <label for="exampleFormControlSelect1">Ubicación</label>
+                                <select class="form-control" id="nivelformacion">
+                                  <option>Semestre 1</option>
+                                  <option>Semestre 1</option>
+                                </select>
+                          </div>
+                        </div>   
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                          <div class="form-group">
+                            <label for="exampleFormControlSelect1">Nivel de formación</label>
+                                <select class="form-control" id="nivelformacion">
+                                  <option>Pregado</option>
+                                  <option>Posgrado</option>
+                                  <option>Tecnología</option>
+                                  <option>Técnico</option>
+                                </select>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="form-group">
+                            <label for="exampleFormControlSelect1">Modalidad</label>
+                                <select class="form-control" id="modalidad">
+                                  <option>Presencial</option>
+                                  <option>A distancia</option>
+                                  <option>Tutoriada</option>
+                                  <option>Virtual</option>
+                                  <option>Escenarios múltiples</option>
+                                </select>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                          <div class="form-group">
+                            <label for="exampleFormControlSelect1">Carácter de la asignatura</label>
+                                <select class="form-control" id="carasignatura">
+                                  <option>Obligatoria</option>
+                                  <option>Electiva</option>
+                                  <option>Optativa</option>
+                                </select>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="form-group">
+                            <label for="exampleFormControlSelect1">Tipo de asignatura</label>
+                                <select class="form-control" id="tipoasignatura">
+                                  <option>Teórica</option>
+                                  <option>Práctica</option>
+                                  <option>Teórica Práctica</option>
+                                </select>
+                          </div>
+                        </div>
+                    </div>
+                    <h4>Periodicidad e intensidad horaria</h4>
+                        <div class="row">
+                            <div class="col">
+                              <div class="form-group">
+                                <label for="exampleFormControlInput1">Número de horas Semanales</label>
+                                  <div class="row">
+                                  <div class="col">
+                                    <input type="text" class="form-control" placeholder="Presenciales" id="ubicacionasignatura">
+                                  </div>
+                                  <div class="col">
+                                    <input type="text" class="form-control" placeholder="Independientes" id="ubicacionasignatura">
+                                  </div>
+                                  </div>
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- SECCION 2 -->  
+                  <div class="card">
+                    <div class="card-header bg-warning" id="headingOne">
+                      <h2 class="mb-0">
+                        <button class="btn text-left text-white" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
+                          <h5>Justificación</h5>
+                        </button>
+                      </h2>
+                    </div>
+
+                    <div id="collapse2" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                      <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                              <div class="form-group">
+                                <label for="exampleFormControlTextarea1">Por favor en el siguiente espacio en blanco digite la justificación de la asignatura</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- SECCION 3 -->
+                  <div class="card">
+                    <div class="card-header bg-warning" id="headingOne">
+                      <h2 class="mb-0">
+                        <button class="btn  text-left text-white" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="true" aria-controls="collapse3">
+                          <h5>Objetivo general</h5>
+                        </button>
+                      </h2>
+                    </div>
+
+                    <div id="collapse3" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                      <div class="card-body">   
+                        <div class="row">
+                            <div class="col">
+                              <div class="form-group">
+                                <label for="exampleFormControlTextarea1">Por favor en el siguiente espacio en blanco digite el objetivo de la asignatura</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                              </div>
+                            </div>
+                        </div>  
+                      </div>
+                    </div>
+                  </div>
+                  <!-- SECCION 4 -->
+                  <div class="card">
+                    <div class="card-header bg-warning" id="headingOne">
+                      <h2 class="mb-0">
+                        <button class="btn text-white text-left" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="true" aria-controls="collapse4">
+                          <h5>Estrategias de enseñanza</h5>
+                        </button>
+                      </h2>
+                    </div>
+
+                    <div id="collapse4" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                      <div class="card-body">   
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group ">
+                                    <label for="exampleFormControlInput1">Metodología</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                </div>
+                            </div>
+                        </div>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group ">
+                        <label for="exampleFormControlInput1">Apoyos didácticos</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                </div>
+            </div>             
+                      </div>
+                    </div>
+                  </div>
+                  <!-- SECCION 5 -->
+                  <div class="card">
+                    <div class="card-header bg-warning" id="headingOne">
+                      <h2 class="mb-0">
+                        <button class="btn text-white text-left" type="button" data-toggle="collapse" data-target="#collapse5" aria-expanded="true" aria-controls="collapse5">
+                          <h5>Competencias a desarrollar por el estudiante</h5>
+                        </button>
+                      </h2>
+                    </div>
+
+                    <div id="collapse5" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                      <div class="card-body">   
+                        <h5>Problema de la asignatura</h5>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group ">
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <h5>Competencia</h5>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group ">
+                                <label for="exampleFormControlInput1">Identificación de la competencia</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="col">
+                          <label for="exampleFormControlInput1">Elementos de la competencia</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                    </div>      
+                    <h5>Criterios de desempeño</h5>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group ">
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                     <h5>Saberes esenciales</h5>
+                     <div class="row">
+                        <div class="col">
+                            <div class="form-group ">
+                                <label for="exampleFormControlInput1">Saber conocer</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="col">
+                                <label for="exampleFormControlInput1">Saber hacer</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                         <div class="col">
+                                <label for="exampleFormControlInput1">Saber ser</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                    </div>    
+                    <h5>Rango de aplicación</h5>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group ">
+                                <input type="text" class="form-control" placeholder="Escriba aquí el rango de aplicación" id="areaasignatura">
+                            </div>
+                        </div>
+                    </div>      
+                    <h5>Evidencias requeridas</h5>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group ">
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+                        </div>
+                    </div>      
+                      </div>
+                    </div>
+                </div>
+                  <!-- SECCION 6 -->
+                  <div class="card">
+                    <div class="card-header bg-warning" id="headingOne">
+                      <h2 class="mb-0">
+                        <button class="btn text-white text-left" type="button" data-toggle="collapse" data-target="#collapse6" aria-expanded="true" aria-controls="collapse6">
+                          <h5>Contenido tematico</h5>
+                        </button>
+                      </h2>
+                    </div>
+
+                    <div id="collapse6" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                      <div class="card-body">   
+                        RELLENO             
+                      </div>
+                    </div>
+                </div>
+                  <!-- SECCION 7 -->
+                  <div class="card">
+                    <div class="card-header bg-warning" id="headingOne">
+                      <h2 class="mb-0">
+                        <button class="btn text-white text-left" type="button" data-toggle="collapse" data-target="#collapse7" aria-expanded="true" aria-controls="collapse7">
+                          <h5>Bibliografia básica</h5>
+                        </button>
+                      </h2>
+                    </div>
+
+                    <div id="collapse7" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                      <div class="card-body">   
+                        RELLENO             
+                      </div>
+                    </div>
+                  </div>
+                  <!-- SECCION 8 -->
+                  <div class="card">
+                    <div class="card-header bg-warning" id="headingOne">
+                      <h2 class="mb-0">
+                        <button class="btn text-white text-left" type="button" data-toggle="collapse" data-target="#collapse8" aria-expanded="true" aria-controls="collapse8">
+                          <h5>Bibliografia Complementaria</h5>
+                        </button>
+                      </h2>
+                    </div>
+
+                    <div id="collapse8" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                      <div class="card-body">   
+                        RELLENO             
+                      </div>
+                    </div>
+                  </div>
+                  <!-- SECCION 9 -->
+                  <div class="card">
+                    <div class="card-header bg-warning" id="headingOne">
+                      <h2 class="mb-0">
+                        <button class="btn text-white text-left" type="button" data-toggle="collapse" data-target="#collapse9" aria-expanded="true" aria-controls="collapse9">
+                          <h5>Criterios de evaluación</h5>
+                        </button>
+                      </h2>
+                    </div>
+
+                    <div id="collapse9" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                      <div class="card-body">   
+                        RELLENO             
+                      </div>
+                    </div>
+                  </div>    
+                
+                </div>  
+            </form>
+        
+      </div>    
+            
+      </div>
+          
+      </div>
+		</div>
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/popper.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
