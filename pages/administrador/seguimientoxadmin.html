@@ -1,63 +1,57 @@
 <!doctype html>
 <html lang="es">
   <head>
-  	<title>Usuarios</title>
+  	<title>SIGEM - Seguimiento</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link rel="icon" href="/images/logo.jpg" type="image/icon type">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
-
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
-
 		<div class="wrapper d-flex align-items-stretch">
-			<nav id="sidebar">
+			<!-- Menu lateral Izquierdo -->
+            <nav id="sidebar">
 				<div class="p-4 pt-5">
-		  		<a href="#" class="img logo rounded-circle mb-5" style="background-image: url(/images/logo.jpg);"></a>
-	        <ul class="list-unstyled components mb-5">
-	         <li><a href="#">Usuarios</a></li>
-             <li class="active"><a href="#gestionSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Gestión de Asignaturas</a>
-	            <ul class="collapse list-unstyled" id="gestionSubmenu">
-                <li class="active"><a href="#">Asignaturas</a></li>
-                <li><a href="#">Microcurriculos</a></li>
-                <li><a href="#">Planes de aula</a></li>
-	            </ul>
-	          </li>
-              <li>
-                <a href="#gestionMicroSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Seguimiento a Microcurriculo</a>
-	            <ul class="collapse list-unstyled" id="gestionMicroSubmenu">
-                <li><a href="#">Seguimiento</a></li>
-                <li><a href="#">Revisión</a></li>
-	            </ul>
-	          </li>
-	          <li>
-              <a href="#statisticsSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Estadísticas</a>
-              <ul class="collapse list-unstyled" id="statisticsSubmenu">
-                <li><a href="#">General</a></li>
-                <li><a href="#">Personalizadas</a></li>
-              </ul>
-	          </li>
+                    <a href="#" class="img logo rounded-circle mb-5" style="background-image: url(/images/logo.jpg);"></a>
+                    <ul class="list-unstyled components mb-5">
+                    <li><a href="/pages/administrador/users.html">Usuarios</a></li>
+                    <li><a href="#gestionSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Gestión de Asignaturas</a>
+                        <ul class="collapse list-unstyled" id="gestionSubmenu">
+                        <li><a href="/pages/administrador/asignaturasxadmin.html">Asignaturas</a></li>
+                        <li><a href="/pages/administrador/microcurriculosxadmin.html">Microcurriculos</a></li>
+                        <li><a href="/pages/administrador/planesdeaulaxadmin.html">Planes de aula</a></li>
+                        </ul>
+                    </li>
+                    <li  class="active">
+                    <a href="#gestionMicroSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Seguimiento a Microcurriculo</a>
+	                    <ul class="collapse list-unstyled" id="gestionMicroSubmenu">
+                        <li class="active"><a href="/pages/administrador/seguimientoxadmin.html">Seguimiento</a></li>
+                        <li><a href="/pages/administrador/revisionxadmin.html">Revisión</a></li>
+	                    </ul>
+	                </li>
+                    <li>
+                    <a href="#statisticsSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Estadísticas</a>
+                        <ul class="collapse list-unstyled" id="statisticsSubmenu">
+                        <li><a href="/pages/administrador/statisticsgxadmin.html">General</a></li>
+                        <li><a href="/pages/administrador/statisticspxadmin.html">Personalizadas</a></li>
+                        </ul>
+                    </li>
+                    </ul>
 
-	        </ul>
-
-	        <div class="footer">
-	        	<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-				Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados |
-                Desarrollado <i  class="icon-heart" aria-hidden="true"></i> por <a href="https://colorlib.com" target="_blank">Andrés Alfonso - Jonathan Bernal</a>
-				</p>
-	        </div>
-
+	            <div class="footer">
+                    <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados |
+                    Desarrollado <i  class="icon-heart" aria-hidden="true"></i> por <a href="https://colorlib.com" target="_blank">Andrés Alfonso - Jonathan Bernal</a>
+                    </p>
+	            </div>
 	      </div>
     	</nav>
-
-        <!-- Page Content  -->
       <div id="content" class="p-4 p-md-5">
-
+        <!-- Menu Flotante  -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="container-fluid">
-
             <button type="button" id="sidebarCollapse" class="btn btn-primary">
               <i class="fa fa-bars"></i>
               <span class="sr-only">Toggle Menu</span>
@@ -84,7 +78,7 @@
             </div>
           </div>
         </nav>
-
+        <!-- Contenido de la Página  -->
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-3">
