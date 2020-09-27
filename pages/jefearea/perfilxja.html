@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+  <head>
+  	<title>SIGEM - Perfil</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="/images/logo.jpg" type="image/icon type">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+      <div class="wrapper d-flex align-items-stretch">
+          <!-- Menu lateral izquierdo -->
+          <nav id="sidebar">
+				<div class="p-4 pt-5">
+		  		<a href="#" class="img logo rounded-circle mb-5" style="background-image: url(/images/logo.jpg);"></a>
+	            <ul class="list-unstyled components mb-5">
+                    <li>
+                        <a href="#gestionSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Gestión de Asignaturas</a>
+                        <ul class="collapse list-unstyled" id="gestionSubmenu">
+                            <li><a href="../jefearea/asignaturasxja.html">Asignaturas</a></li>
+                            <li><a href="../jefearea/microcurriculosxja.html">Microcurriculos</a></li>
+                            <li><a href="../jefearea/planesdeaulaxja.html">Planes de aula</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#gestionMicroSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Seguimiento a Microcurriculo</a>
+                        <ul class="collapse list-unstyled" id="gestionMicroSubmenu">
+                            <li><a href="../jefearea/seguimientoxja.html">Seguimiento</a></li>
+                            <li><a href="../jefearea/revisionxja.html">Revisión</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="footer">
+                    <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados |
+                    Desarrollado <i  class="icon-heart" aria-hidden="true"></i> por <a href="https://colorlib.com" target="_blank">Andrés Alfonso - Jonathan Bernal</a>
+                    </p>
+                </div>
+              </div>
+          </nav>
+          <!-- Sección derecha de la página -->
+          <div id="content" class="p-4 p-md-5">
+              <!-- Menu superior -->
+              <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                  <div class="container-fluid">
+                      <button type="button" id="sidebarCollapse" class="btn btn-primary"><i class="fa fa-bars"></i><span class="sr-only">Toggle Menu</span></button>
+                      <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                          <ul class="nav navbar-nav ml-auto">
+                              <li class="nav-item"><a class="nav-link" href="../jefearea/indexja.html">Inicio</a></li>
+                              <li class="nav-item"><a class="nav-link" href="http://siul.unilibre.edu.co/sinugwt/">SIUL</a></li>
+                              <li class="nav-item active"><a class="nav-link" href="../jefearea/perfilxja.html">Perfil</a></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Cerrar Sesión</a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </nav>
+              <!-- Contenido de la página -->
+              <div class="container-fluid">
+                  <div class="container-fluid">
+                      <form>
+                          <h1>Datos personales</h1>
+                          <div class="row">
+                              <div class="col">
+                                  <div class="form-group ">
+                                      <label for="exampleFormControlInput1">Nombres</label>
+                                      <input type="text" class="form-control" id="nombreasignatura">
+                                  </div>
+                              </div>
+                              <div class="col">
+                                  <label for="exampleFormControlInput1">Apellidos</label>
+                                  <input type="text" class="form-control" id="codigoasignatura">
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col">
+                                  <div class="form-group ">
+                                      <label for="exampleFormControlInput1">Correo electrónico</label>
+                                      <input type="text" class="form-control" id="nombreasignatura">
+                                  </div>
+                              </div>
+                              <div class="col">
+                                  <label for="exampleFormControlInput1">Contraseña</label>
+                                  <input type="password" class="form-control" id="codigoasignatura">
+                              </div>
+                          </div>
+                          <button type="button" class="btn btn-warning">Editar</button>
+                          <button type="button" class="btn btn-success" style="margin-left: 10px">Guardar</button>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/popper.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
