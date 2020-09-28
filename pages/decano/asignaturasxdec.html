@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="es">
+  <head>
+  	<title>SIGEM - Asignaturas</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="/images/logo.jpg" type="image/icon type">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+      <div class="wrapper d-flex align-items-stretch">
+          <!-- Menu lateral Izquierdo -->
+          <nav id="sidebar">
+				<div class="p-4 pt-5">
+                    <a href="../decano/indexdec.html" class="img logo rounded-circle mb-5" style="background-image: url(/images/logo.jpg);"></a>
+                    <ul class="list-unstyled components mb-5">
+                    <li class="active"><a href="#gestionSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Gestión de Asignaturas</a>
+                        <ul class="collapse list-unstyled" id="gestionSubmenu">
+                        <li class="active"><a href="../decano/asignaturasxdec.html">Asignaturas</a></li>
+                        <li><a href="../decano/microcurriculosxdec.html">Microcurriculos</a></li>
+                        <li><a href="../decano/planesdeaulaxdec.html">Planes de aula</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                    <a href="#gestionMicroSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Seguimiento a Microcurriculo</a>
+	                    <ul class="collapse list-unstyled" id="gestionMicroSubmenu">
+                        <li><a href="../decano/seguimientoxdec.html">Seguimiento</a></li>
+                        <li><a href="../decano/revisionxdec.html">Revisión</a></li>
+	                    </ul>
+	                </li>
+                    <li>
+                    <a href="#statisticsSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Estadísticas</a>
+                        <ul class="collapse list-unstyled" id="statisticsSubmenu">
+                        <li><a href="../decano/statisticsgxdec.html">General</a></li>
+                        <li><a href="../decano/statisticspxdec.html">Personalizadas</a></li>
+                        </ul>
+                    </li>
+                    </ul>
+
+	            <div class="footer">
+                    <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados |
+                    Desarrollado <i  class="icon-heart" aria-hidden="true"></i> por <a href="https://colorlib.com" target="_blank">Andrés Alfonso - Jonathan Bernal</a>
+                    </p>
+	            </div>
+	      </div>
+    	</nav>
+          <!-- Sección derecha de la página  -->
+          <div id="content" class="p-4 p-md-5">
+              <!-- Menu superior Flotante  -->
+              <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                  <div class="container-fluid">
+                        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                        <i class="fa fa-bars"></i>
+                        <span class="sr-only">Toggle Menu</span>
+                        </button>
+                        <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="nav navbar-nav ml-auto">
+                                <li class="nav-item"><a class="nav-link" href="../decano/indexdec.html">Inicio</a></li>
+                                <li class="nav-item"><a class="nav-link" href="http://siul.unilibre.edu.co/sinugwt/">SIUL</a></li>
+                                <li class="nav-item"><a class="nav-link" href="../decano/perfilxdec.html">Perfil</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Cerrar Sesión</a></li>
+                            </ul>
+                        </div>
+                    </div>
+              </nav>
+              <!-- Contenido de la página -->
+              <div class="container-fluid">
+                  <!-- Barra de busqueda -->
+                  <div class="row">
+                      <div class="col-md-4">
+                          <div class="form-group">
+                              <label for="exampleFormControlSelect1">Programa</label>
+                              <select class="form-control" id="nivelformacion">
+                                  <option>Ingeniería en TIC</option>
+                                  <option>Ingeniería industrial</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="col-md-4">
+                          <div class="form-group">
+                              <label for="exampleFormControlSelect1">Área</label>
+                              <select class="form-control" id="nivelformacion">
+                                  <option>Básicas de Ingeniería</option>
+                                  <option>Ingeniería Aplicada</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="col-md-2">
+                          <div class="form-group">
+                              <label for="exampleFormControlSelect1">Semestre</label>
+                              <select class="form-control" id="nivelformacion">
+                                  <option>2020-1</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="col-md-2">
+                          <div class="form-group">
+                              <button type="button" class="btn btn-warning col-md-12" style="margin-top: 33px;">Buscar</button>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Modal de Microcurriculo -->
+                  <div class="modal fade" id="microModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Microcurrículo académico</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="form-group">
+                        <div class="row">
+                            <div class="col">
+                                <label for="exampleFormControlInput1">Nombre</label>
+                                <input type="text" class="form-control" placeholder="Nombre de la asignatura" id="nombreasignatura">
+                            </div>
+                            <div class="col">
+                                <label for="exampleFormControlInput1">Código</label>
+                                <input type="text" class="form-control" placeholder="Código de la asignatura" id="codigoasignatura">
+                            </div>
+                            <div class="col">
+                                <label for="exampleFormControlInput1">Cantidad de Creditos</label>
+                                <input type="text" class="form-control" placeholder="Cantidad de Creditos" id="cdcxignatura">
+                            </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <div class="form-group">
+                            <label for="exampleFormControlSelect1">Área</label>
+                                <select class="form-control" id="nivelformacion">
+                                  <option>Básicas de Ingeniería</option>
+                                  <option>Ingeniería Aplicada</option>
+                                </select>
+                          </div>
+                        </div>
+                          <div class="col">
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1">Ubicación</label>
+                                <select class="form-control" id="nivelformacion">
+                                  <option>Semestre 1</option>
+                                  <option>Semestre 1</option>
+                                </select>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <div class="form-group">
+                            <label for="exampleFormControlSelect1">Nivel de formación</label>
+                                <select class="form-control" id="nivelformacion">
+                                  <option>Pregado</option>
+                                  <option>Posgrado</option>
+                                  <option>Tecnología</option>
+                                  <option>Técnico</option>
+                                </select>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="form-group">
+                            <label for="exampleFormControlSelect1">Modalidad</label>
+                                <select class="form-control" id="modalidad">
+                                  <option>Presencial</option>
+                                  <option>A distancia</option>
+                                  <option>Tutoriada</option>
+                                  <option>Virtual</option>
+                                  <option>Escenarios múltiples</option>
+                                </select>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                          <div class="form-group">
+                            <label for="exampleFormControlSelect1">Carácter de la asignatura</label>
+                                <select class="form-control" id="carasignatura">
+                                  <option>Obligatoria</option>
+                                  <option>Electiva</option>
+                                  <option>Optativa</option>
+                                </select>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="form-group">
+                            <label for="exampleFormControlSelect1">Tipo de asignatura</label>
+                                <select class="form-control" id="tipoasignatura">
+                                  <option>Teórica</option>
+                                  <option>Práctica</option>
+                                  <option>Teórica Práctica</option>
+                                </select>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1">Número de horas Semanales</label>
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Presenciales" id="ubicacionasignatura">
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Independientes" id="ubicacionasignatura">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-warning">Editar</button>
+                    <button type="button" class="btn btn-success">Guardar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+                  <!-- Modal de Plan de aula -->
+                  <div class="modal fade" id="planModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Plan de Aula</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="exampleFormControlSelect1">Pre - Requesitos</label>
+                                    <select class="form-control" id="nivelformacion">
+                                      <option>Aplica</option>
+                                      <option>No Aplica</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label for="exampleFormControlInput1">Bloque</label>
+                                <input type="text" class="form-control" placeholder="Ubicación del bloque" id="ubicacionasignatura">
+                            </div>
+                            <div class="col">
+                                <label for="exampleFormControlInput1">Aula</label>
+                                <input type="text" class="form-control" placeholder="Aula de la clase" id="ubicacionasignatura">
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Año</label>
+                                    <input type="text" class="form-control" placeholder="Año" id="ubicacionasignatura">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="exampleFormControlSelect1">Problema</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-warning">Editar</button>
+                    <button type="button" class="btn btn-success">Guardar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+                  <!-- Tabla resultado de busqueda -->
+                  <div class="table-responsive">
+                      <table id="productSizes" class="table table-hover table-bordered">
+                        <thead class="thead-dark">
+                            <tr class="d-flex">
+                                <th class="col-1">Codigo</th>
+                                <th class="col-4">Nombre</th>
+                                <th class="col-2">Semestre</th>
+                                <th class="col-1">Ver</th>
+                                <th class="col-2">Microcurriculo</th>
+                                <th class="col-2">Plan de aula</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="d-flex">
+                                <td class="col-1">1</td>
+                                <td class="col-4"><span>Matematicas discretas</span></td>
+                                <td class="col-2"><span>Segundo</span></td>
+                                <td class="col-1"><span><button type="button" class="btn btn-warning col-md-12"><i class="fa fa-eye"> </i></button></span></td>
+                                <td class="col-2"><span><button type="button" class="btn btn-warning col-md-12" data-toggle="modal" data-target="#microModal" data-whatever="@mdo"><i class="fa fa-edit"></i> Editar</button></span></td>
+                                <td class="col-2"><span><button type="button" class="btn btn-warning col-md-12" data-toggle="modal" data-target="#planModal" data-whatever="@mdo"><i class="fa fa-edit"></i> Editar</button></span></td>
+                            </tr>
+                        </tbody>
+                      </table>
+                  </div>
+              </div>
+          </div>
+      </div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/popper.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
