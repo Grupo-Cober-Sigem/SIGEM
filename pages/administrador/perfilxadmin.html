@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="es">
   <head>
-  	<title>SIGEM - Perfil</title>
+  	<title>SIGEM - Inicio</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="/images/logo.jpg" type="image/icon type">
@@ -11,30 +11,31 @@
   </head>
   <body>
       <div class="wrapper d-flex align-items-stretch">
-          <!-- Menu lateral Izquierdo -->
-          <nav id="sidebar">
+            <!-- Menu lateral Izquierdo -->
+            <nav id="sidebar">
 				<div class="p-4 pt-5">
-                    <a href="../decano/indexdec.html" class="img logo rounded-circle mb-5" style="background-image: url(/images/logo.jpg);"></a>
+                    <a href="../administrador/indexadmin.html" class="img logo rounded-circle mb-5" style="background-image: url(/images/logo.jpg);"></a>
                     <ul class="list-unstyled components mb-5">
+                    <li><a href="/pages/administrador/users.html">Usuarios</a></li>
                     <li><a href="#gestionSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Gestión de Asignaturas</a>
                         <ul class="collapse list-unstyled" id="gestionSubmenu">
-                        <li><a href="../decano/asignaturasxdec.html">Asignaturas</a></li>
-                        <li><a href="../decano/microcurriculosxdec.html">Microcurriculos</a></li>
-                        <li><a href="../decano/planesdeaulaxdec.html">Planes de aula</a></li>
+                        <li><a href="/pages/administrador/asignaturasxadmin.html">Asignaturas</a></li>
+                        <li><a href="/pages/administrador/microcurriculosxadmin.html">Microcurriculos</a></li>
+                        <li><a href="/pages/administrador/planesdeaulaxadmin.html">Planes de aula</a></li>
                         </ul>
                     </li>
                     <li>
                     <a href="#gestionMicroSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Seguimiento a Microcurriculo</a>
 	                    <ul class="collapse list-unstyled" id="gestionMicroSubmenu">
-                        <li><a href="../decano/seguimientoxdec.html">Seguimiento</a></li>
-                        <li><a href="../decano/revisionxdec.html">Revisión</a></li>
+                        <li><a href="/pages/administrador/seguimientoxadmin.html">Seguimiento</a></li>
+                        <li><a href="/pages/administrador/revisionxadmin.html">Revisión</a></li>
 	                    </ul>
 	                </li>
                     <li>
                     <a href="#statisticsSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Estadísticas</a>
                         <ul class="collapse list-unstyled" id="statisticsSubmenu">
-                        <li><a href="../decano/statisticsgxdec.html">General</a></li>
-                        <li><a href="../decano/statisticspxdec.html">Personalizadas</a></li>
+                        <li><a href="/pages/administrador/statisticsgxadmin.html">General</a></li>
+                        <li><a href="/pages/administrador/statisticspxadmin.html">Personalizadas</a></li>
                         </ul>
                     </li>
                     </ul>
@@ -47,28 +48,41 @@
 	            </div>
 	      </div>
     	</nav>
-          <!-- Sección derecha de la página  -->
-          <div id="content" class="p-4 p-md-5">
-              <!-- Menu superior Flotante  -->
-              <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <!-- Sección derecha de la página -->
+            <div id="content" class="p-4 p-md-5">
+                <!-- Menu superior flotante -->
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+
+            <button type="button" id="sidebarCollapse" class="btn btn-primary">
+              <i class="fa fa-bars"></i>
+              <span class="sr-only">Toggle Menu</span>
+            </button>
+            <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../administrador/indexadmin.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://siul.unilibre.edu.co/sinugwt/">SIUL</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="../administrador/perfilxadmin.html">Perfil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cerrar Sesión</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+                <!-- Contenido de la página -->
+                <div class="container-fluid">
                   <div class="container-fluid">
-                        <button type="button" id="sidebarCollapse" class="btn btn-primary">
-                        <i class="fa fa-bars"></i>
-                        <span class="sr-only">Toggle Menu</span>
-                        </button>
-                        <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="nav navbar-nav ml-auto">
-                                <li class="nav-item"><a class="nav-link" href="../decano/indexdec.html">Inicio</a></li>
-                                <li class="nav-item"><a class="nav-link" href="http://siul.unilibre.edu.co/sinugwt/">SIUL</a></li>
-                                <li class="nav-item active"><a class="nav-link" href="../decano/perfilxdec.html">Perfil</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Cerrar Sesión</a></li>
-                            </ul>
-                        </div>
-                    </div>
-              </nav>
-              <!-- Contenido de la página -->
-              <div class="container-fluid">
                       <form>
                           <h1 class="mb-4"><strong>Datos personales</strong></h1>
                           <div class="row">
@@ -99,7 +113,8 @@
                           <button type="button" class="btn btn-success" style="margin-left: 10px">Guardar</button>
                       </form>
                   </div>
-          </div>
+              </div>
+            </div>
       </div>
     <script src="/js/jquery.min.js"></script>
     <script src="/js/popper.js"></script>

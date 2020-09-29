@@ -72,40 +72,46 @@
                   <!-- Barra de busqueda  -->
                   <div class="row">
                       <div class="col-md-3">
-                    <div class="form-group">
-                        <label for="exampleFormControlSelect1">Programa</label>
-                        <select class="form-control" id="nivelformacion">
-                            <option>Ingeniería en TIC</option>
-                            <option>Ingeniería industrial</option>
-                        </select>
-                    </div>
-                </div>
-                      <div class="col-md-3">
-                    <div class="form-group">
-                        <label for="exampleFormControlSelect1">Área</label>
-                        <select class="form-control" id="nivelformacion">
-                            <option>Básicas de Ingeniería</option>
-                            <option>Ingeniería Aplicada</option>
-                        </select>
-                    </div>
-                </div>
-                      <div class="col-md-3">
-                    <div class="form-group">
-                        <label for="exampleFormControlSelect1">Asignatura</label>
-                        <select class="form-control" id="nivelformacion">
-                            <option>Matematicas discretas</option>
-
-                        </select>
-                    </div>
-                </div>
-                      <div class="col-md-2">
                           <div class="form-group">
-                        <label for="exampleFormControlSelect1">Semestre</label>
-                        <select class="form-control" id="nivelformacion">
-                            <option>2020-1</option>
-
-                        </select>
-                    </div>
+                              <label for="exampleFormControlSelect1">Programa</label>
+                              <select class="form-control" id="nivelformacion">
+                                  <option>Ingeniería en TIC</option>
+                                  <option>Ingeniería industrial</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="col-md-3">
+                          <div class="form-group">
+                              <label for="exampleFormControlSelect1">Área</label>
+                              <select class="form-control" id="nivelformacion">
+                                  <option>Básicas de Ingeniería</option>
+                                  <option>Ingeniería Aplicada</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="col-md-3">
+                          <div class="form-group">
+                              <label for="exampleFormControlSelect1">Asignatura</label>
+                              <select class="form-control" id="nivelformacion">
+                                  <option>Matematicas discretas</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="col-md-1">
+                          <div class="form-group">
+                              <label for="exampleFormControlSelect1">Estado</label>
+                              <select class="form-control" id="nivelformacion">
+                                  <option>Aprobado</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="col-md-1">
+                          <div class="form-group">
+                              <label for="exampleFormControlSelect1">Semestre</label>
+                              <select class="form-control" id="nivelformacion">
+                                  <option>2020-1</option>
+                              </select>
+                          </div>
                       </div>
                       <div class="col-md-1">
                           <div class="form-group">
@@ -113,48 +119,71 @@
                           </div>
                       </div>
                   </div>
-                  <!-- Tabla de resultados de busqueda  -->
+                  <!-- Tabla resultado de busqueda -->
                   <div class="table-responsive">
-                <table class="table table-hover table-bordered">
-                  <thead class="thead-dark">
-                    <tr>
-                      <th scope="col"><small>Día</small></th>
-                      <th scope="col"><small>Hora</small></th>
-                      <th scope="col"><small>Tematica</small></th>
-                      <th scope="col"><small>Subtema</small></th>
-                      <th scope="col"><small>Actividad</small></th>
-                      <th scope="col"><small>Recurso usado</small></th>
-                      <th scope="col"><small>Material Empleado</small></th>
-                      <th scope="col"><small>Actividad desarrollada</small></th>
-                      <th scope="col"><small>Nro. Participantes</small></th>
-                      <th scope="col"><small>Observaciones</small></th>
-                      <th scope="col"><small>Soporte</small></th>
-                      <th scope="col"><small>Estado</small></th>
-                      <th scope="col"><small>Observaciones Jefe de Área</small></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><small>25/09</small></td>
-                      <td><small>06:00PM</small></td>
-                      <td><small>Introducción a la programación</small></td>
-                      <td><small>Inducción y caracterización de estudiantes nuevos Socialización de microcurrículo y plan de aula.</small></td>
-                      <td><small>Explicación de metodología para determinar la capacidad de procesos</small></td>
-                      <td><small>Microsoft Teams</small></td>
-                      <td><small>Guia de aprendizaje</small></td>
-                      <td><small>Sincronica</small></td>
-                      <td><small>11</small></td>
-                      <td><small>La estudiante Carolina Ramírez no tiene computador, se conecta desde el celular</small></td>
-                      <td><small>Soporte</small></td>
-                      <td>
-                        <button type="button" class="btn btn-success col-md-12"><i class="fa fa-check"></i></button>
-                          <br><br>
-                        <button type="button" class="btn btn-danger col-md-12"><i class="fa fa-times"></i></button></td>
-                      <td><small>Observaciones Jefe de Área</small></td>
-                    </tr>
-                  </tbody>
-                </table>
-            </div>
+                      <table class="table table-hover table-bordered">
+                          <thead class="thead-dark">
+                              <tr>
+                                  <th scope="col"><small>Día</small></th>
+                                  <th scope="col"><small>Hora</small></th>
+                                  <th scope="col"><small>Unidad</small></th>
+                                  <th scope="col"><small>Tema</small></th>
+                                  <th scope="col"><small>Actividad</small></th>
+                                  <th scope="col"><small>Recurso usado</small></th>
+                                  <th scope="col"><small>Material Empleado</small></th>
+                                  <th scope="col"><small>Actividad desarrollada</small></th>
+                                  <th scope="col"><small>Cantidad de Participantes</small></th>
+                                  <th scope="col"><small>Observaciones</small></th>
+                                  <th scope="col"><small>Soporte</small></th>
+                                  <th scope="col"><small>Estado</small></th>
+                                  <th scope="col"><small>Acciones</small></th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td><small>25/09</small></td>
+                                  <td><small>06:00PM</small></td>
+                                  <td><small>Introducción a la programación</small></td>
+                                  <td><small>Inducción y caracterización de estudiantes nuevos Socialización de microcurrículo y plan de aula.</small></td>
+                                  <td><small>Explicación de metodología para determinar la capacidad de procesos</small></td>
+                                  <td><small>Microsoft Teams</small></td>
+                                  <td><small>Guia de aprendizaje</small></td>
+                                  <td><small>Sincronica</small></td>
+                                  <td><small>11</small></td>
+                                  <td><small>La estudiante Carolina Ramírez no tiene computador, se conecta desde el celular</small></td>
+                                  <td><small>Soporte</small></td>
+                                  <td><small>Aprobado</small></td>
+                                  <td><button type="button" class="btn btn-success col-md-12"><i class="fa fa-check"></i></button>
+                                  <br><br>
+                                  <button type="button" class="btn btn-danger col-md-12" data-toggle="modal" data-target="#observacionModal" data-whatever="@mdo"><i class="fa fa-times"></i></button>
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
+                  <!-- Modal -->
+                  <div class="modal fade" id="observacionModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel">Observaciones</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                              </div>
+                              <div class="modal-body">
+                                  <form>
+                                      <div class="form-group">
+                                          <label for="message-text" class="col-form-label">Por favor escriba las observaciones que tiene para el docente</label>
+                                          <textarea class="form-control" id="message-text"></textarea>
+                                      </div>
+                                  </form>
+                              </div>
+                              <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                  <button type="button" class="btn btn-danger">Devolver</button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
               </div>
           </div>
       </div>
