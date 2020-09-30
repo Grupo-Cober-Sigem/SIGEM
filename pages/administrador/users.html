@@ -80,12 +80,12 @@
                         </div>
                         <div class="col-md-2">
                             <div class="form-group">
-                                <button type="button" class="btn btn-warning col-md-12" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Agregar</button>
+                                <button type="button" class="btn btn-warning col-md-12" data-toggle="modal" data-target="#agregarModal" data-whatever="@mdo">Agregar</button>
                             </div>
                         </div>
                     </div>
                     <!-- Modales -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="agregarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -123,6 +123,40 @@
                             </div>
                         </div>
                     </div>
+                    <div class="modal fade" id="editarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Edición de Usuarios</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="recipient-name" class="col-form-label">Nombre</label>
+                                            <input type="text" class="form-control" id="recipient-name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="recipient-name" class="col-form-label">Apellidos</label>
+                                            <input type="text" class="form-control" id="recipient-name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="recipient-name" class="col-form-label">Correo electrónico</label>
+                                            <input type="text" class="form-control" id="recipient-name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="recipient-name" class="col-form-label">Contraseña</label>
+                                            <input type="text" class="form-control" id="recipient-name">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                    <button type="button" class="btn btn-warning">Agregar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <!-- Tabla resultados de la busqueda -->
                     <div class="table-responsive">
                                               <table class="table table-hover table-bordered">
@@ -142,7 +176,7 @@
                                                       <td>Bernal</td>
                                                       <td>jonathana-bernalt@unilibre.edu.co</td>
                                                       <td>Docente</td>
-                                                      <td><button type="button" class="btn btn-warning col-md-12"><i class="fa fa-edit"></i></button></td>
+                                                      <td><button type="button" class="btn btn-warning col-md-12" data-toggle="modal" data-target="#editarModal" data-whatever="@mdo"><i class="fa fa-edit"></i></button></td>
                                                       <td><button type="button" class="btn btn-danger col-md-8"><i class="fa fa-ban"></i></button></td>
                                                     </tr>
                                                   </tbody>
