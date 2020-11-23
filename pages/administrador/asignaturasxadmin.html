@@ -2,6 +2,21 @@
 <html lang="es">
   <head>
   	<title>SIGEM - Asignaturas</title>
+      <script language="javascript" src="../../js/jquery-3.5.1.min.js"></script>
+
+      <script language="javascript">
+        $(document).ready(function(){
+            $("#asigPrograma").change(function (){
+                $("asigPrograma option:selected").each(function () {
+                    Cod_programa = $(this).val();
+                    $.post("../../PHP/comboAsig/getArea.php", { cod_programa: Cod_programa
+                    }, function(data){
+                        $("asigArea").html(data);
+                    });
+                });
+            });
+        });
+      </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="/images/logo.jpg" type="image/icon type">
@@ -9,6 +24,13 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="/css/style.css">
   </head>
+    <?php
+        require_once "../PHP/conexion.php";
+        $conexion=conexion();
+
+        $query = "SELECT Cod_programa, Nombre_prog FROM Programa ORDER BY Nombre_prog ASC"
+        $resultado = $mysqli->query($query);
+    ?>
   <body>
 		<div class="wrapper d-flex align-items-stretch">
             <!-- Menu lateral Izquierdo -->
@@ -71,31 +93,42 @@
                 <!-- Contenido de la página -->
                 <div class="container-fluid">
                     <!-- Barra de busqueda -->
+                    <form id="bAsignatura" name="bAsignatura" action="asigConsulta.php" method="post">
                     <div class="row">
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="exampleFormControlSelect1">Programa</label>
-                                <select class="form-control" id="nivelformacion">
-                                    <option>Ingeniería en TIC</option>
-                                    <option>Ingeniería industrial</option>
+                                <select class="form-control" id="asPrograma" name="asigPrograma">
+                                    <option value="0">Seleccionar Programa</option>
+                                    <?php WHILE($row = $resultado->fetch_assoc()) { ?>
+                                    <option value="<?php echo $row['Cod_programa']; ?>">
+                                    <?php echo $row['Nombre_prog']; ?></option>
+                                    <?php } ?>
                                 </select>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="exampleFormControlSelect1">Área</label>
-                                <select class="form-control" id="nivelformacion">
-                                    <option>Básicas de Ingeniería</option>
-                                    <option>Ingeniería Aplicada</option>
+                                <select class="form-control" id="asigArea" name="asigArea">
                                 </select>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="form-group">
                                 <label for="exampleFormControlSelect1">Semestre</label>
-                                <select class="form-control" id="nivelformacion">
+                                <select class="form-control" id="asigSemestre">
+                                    <option>Seleccionar</option>
                                     <option>Primero</option>
-
+                                    <option>Segundo</option>
+                                    <option>Tercero</option>
+                                    <option>Cuarto</option>
+                                    <option>Quinto</option>
+                                    <option>Sexto</option>
+                                    <option>Séptimo</option>
+                                    <option>Octavo</option>
+                                    <option>Noveno</option>
+                                    <option>Décimo</option>
                                 </select>
                             </div>
                         </div>
@@ -110,6 +143,7 @@
                             </div>
                         </div>
                     </div>
+                    </form>
                     <!-- Modales -->
                     <div class="modal fade" id="agregarasigModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
