@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="es">
+  <head>
+  	<title>SIGEM - Planes de Aula</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="../../../images/logo.jpg" type="image/icon type">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../../../css/style.css">
+  </head>
+  <body>
+      <div class="wrapper d-flex align-items-stretch">
+          <!-- Menu lateral Izquierdo -->
+          <nav id="sidebar">
+				<div class="p-4 pt-5">
+                    <a href="../../../pages/decano/indexdec.html" class="img logo rounded-circle mb-5" style="background-image: url(../../../images/logo.jpg);"></a>
+                    <ul class="list-unstyled components mb-5">
+                    <li class="active"><a href="#gestionSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Gestión de Asignaturas</a>
+                        <ul class="collapse list-unstyled" id="gestionSubmenu">
+                        <li><a href="../../../pages/decano/gestionAsig/asignaturas/asignaturasxdec.html">Asignaturas</a></li>
+                        <li><a href="../../../pages/decano/gestionAsig/microcurriculosxdec.html">Microcurriculos</a></li>
+                        <li class="active"><a href="../../../pages/decano/gestionAsig/planesdeaulaxdec.html">Planes de aula</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                    <a href="#gestionMicroSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Seguimiento a Microcurriculo</a>
+	                    <ul class="collapse list-unstyled" id="gestionMicroSubmenu">
+                        <li><a href="../../../pages/decano/seguimientoMicro/seguimientoxdec.html">Seguimiento</a></li>
+                        <li><a href="../../../pages/decano/seguimientoMicro/revisionxdec.html">Revisión</a></li>
+	                    </ul>
+	                </li>
+                    <li>
+                    <a href="#statisticsSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Estadísticas</a>
+                        <ul class="collapse list-unstyled" id="statisticsSubmenu">
+                        <li><a href="../../../pages/decano/estadisticas/statisticsgxdec.html">General</a></li>
+                        <li><a href="../../../pages/decano/estadisticas/statisticspxdec.html">Personalizadas</a></li>
+                        </ul>
+                    </li>
+                    </ul>
+
+	            <div class="footer">
+                    <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados |
+                    Desarrollado <i  class="icon-heart" aria-hidden="true"></i> por <a href="https://colorlib.com" target="_blank">Andrés Alfonso - Jonathan Bernal</a>
+                    </p>
+	            </div>
+	      </div>
+    	</nav>
+          <!-- Sección derecha de la página  -->
+          <div id="content" class="p-4 p-md-5">
+              <!-- Menu superior Flotante  -->
+              <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                  <div class="container-fluid">
+                        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                        <i class="fa fa-bars"></i>
+                        <span class="sr-only">Toggle Menu</span>
+                        </button>
+                        <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="nav navbar-nav ml-auto">
+                                <li class="nav-item"><a class="nav-link" href="../../../pages/decano/indexdec.html">Inicio</a></li>
+                                <li class="nav-item"><a class="nav-link" href="http://siul.unilibre.edu.co/sinugwt/">SIUL</a></li>
+                                <li class="nav-item"><a class="nav-link" href="../../../pages/decano/perfilxdec.html">Perfil</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Cerrar Sesión</a></li>
+                            </ul>
+                        </div>
+                    </div>
+              </nav>
+              <!-- Barra de busqueda -->
+                    <div class="row">
+                      <div class="col-md-4">
+                          <div class="form-group">
+                              <label for="exampleFormControlSelect1">Programa</label>
+                              <select class="form-control" id="nivelformacion">
+                                  <option>Ingeniería en TIC</option>
+                                  <option>Ingeniería industrial</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="col-md-3">
+                          <div class="form-group">
+                              <label for="exampleFormControlSelect1">Semestre</label>
+                              <select class="form-control" id="nivelformacion">
+                                  <option>202012</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="col-md-3">
+                          <div class="form-group">
+                              <label for="exampleFormControlSelect1">Área</label>
+                              <select class="form-control" id="nivelformacion">
+                                  <option>Básicas de Ingeniería</option>
+                                  <option>Ingeniería Aplicada</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="col-md-2">
+                          <div class="form-group">
+                              <button type="button" class="btn btn-warning col-md-12" style="margin-top: 33px;">Buscar</button>
+                          </div>
+                      </div>
+                  </div>
+              <!-- Contenido de la página -->
+              <div class="table-responsive">
+                        <table id="productSizes" class="table table-hover table-bordered">
+                            <thead class="thead-dark">
+                                <tr class="d-flex">
+                                    <th class="col-2">Codigo</th>
+                                    <th class="col-4">Nombre</th>
+                                    <th class="col-2">Semestre</th>
+                                    <th class="col-md-2">Ver</th>
+                                    <th class="col-md-2">Imprimir</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="d-flex">
+                                    <td class="col-md-2"><span>1</span></td>
+                                    <td class="col-4"><span>Matematicas discretas</span></td>
+                                    <td class="col-2"><span>Segundo</span></td>
+                                    <td class="col-2"><span><button type="button" class="btn btn-warning col-md-12" data-toggle="modal" data-target="#planModal" data-whatever="@mdo"><i class="fa fa-eye"></i></button></span></td>
+                                    <td class="col-md-2"><button type="button" class="btn btn-dark col-md-12" ><i class="fa fa-print"></i></button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+          </div>
+      </div>
+    <script src="../../../js/jquery.min.js"></script>
+    <script src="../../../js/popper.js"></script>
+    <script src="../../../js/bootstrap.min.js"></script>
+    <script src="../../../js/main.js"></script>
+  </body>
+</html>
