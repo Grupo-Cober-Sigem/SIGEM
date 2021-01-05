@@ -16,8 +16,8 @@
 				<div class="p-4 pt-5">
                     <a href="../../../pages/administrador/indexadmin.html" class="img logo rounded-circle mb-5" style="background-image: url(../../../images/logo.jpg);"></a>
                     <ul class="list-unstyled components mb-5">
-                    <li class="active"><a href="../../../pages/administrador/usuarios/users.html">Usuarios</a></li>
-                    <li><a href="../../../pages/administrador/periodos/periodos.html">Periodos</a></li>
+                    <li><a href="../../../pages/administrador/usuarios/users.html">Usuarios</a></li>
+                    <li class="active"><a href="../../../pages/administrador/periodos/periodos.html">Periodos</a></li>
                     <li><a href="#gestionSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Gestión de Asignaturas</a>
                         <ul class="collapse list-unstyled" id="gestionSubmenu">
                         <li><a href="../../../pages/administrador/gestionAsig/asignaturas/asignaturasxadmin.html">Asignaturas</a></li>
@@ -90,30 +90,28 @@
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Creación de Usuarios</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel">Creación de Periodo</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                 </div>
                                 <div class="modal-body">
                                     <form>
                                         <div class="form-group">
                                             <label for="recipient-name" class="col-form-label">Nombre</label>
-                                            <input type="text" class="form-control" id="recipient-name">
+                                            <input type="text" class="form-control" id="recipient-name" placeholder="AAAA-SS">
                                         </div>
-                                        <div class="form-group">
-                                            <label for="recipient-name" class="col-form-label">Apellidos</label>
-                                            <input type="text" class="form-control" id="recipient-name">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="recipient-name" class="col-form-label">Documento de identidad</label>
-                                            <input type="text" class="form-control" id="recipient-name" placeholder="En número sin espacios">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="recipient-name" class="col-form-label">Correo electrónico</label>
-                                            <input type="text" class="form-control" id="recipient-name">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="recipient-name" class="col-form-label">Contraseña</label>
-                                            <input type="text" class="form-control" id="recipient-name">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label for="recipient-name" class="col-form-label">Fecha de Inicio</label>
+                                                    <input type="text" class="form-control" id="recipient-name" placeholder="DD/MM/AAAA">
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label for="recipient-name" class="col-form-label">Fecha de Fin</label>
+                                                    <input type="text" class="form-control" id="recipient-name" placeholder="DD/MM/AAAA">
+                                                </div>
+                                            </div>
                                         </div>
                                     </form>
                                 </div>
@@ -128,26 +126,28 @@
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Edición de Usuarios</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel">Edición de Periodos</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                 </div>
                                 <div class="modal-body">
                                     <form>
                                         <div class="form-group">
                                             <label for="recipient-name" class="col-form-label">Nombre</label>
-                                            <input type="text" class="form-control" id="recipient-name">
+                                            <input type="text" class="form-control" id="recipient-name" placeholder="AAAA-SS">
                                         </div>
-                                        <div class="form-group">
-                                            <label for="recipient-name" class="col-form-label">Apellidos</label>
-                                            <input type="text" class="form-control" id="recipient-name">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="recipient-name" class="col-form-label">Correo electrónico</label>
-                                            <input type="text" class="form-control" id="recipient-name">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="recipient-name" class="col-form-label">Contraseña</label>
-                                            <input type="text" class="form-control" id="recipient-name">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label for="recipient-name" class="col-form-label">Fecha de Inicio</label>
+                                                    <input type="text" class="form-control" id="recipient-name" placeholder="DD/MM/AAAA">
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label for="recipient-name" class="col-form-label">Fecha de Fin</label>
+                                                    <input type="text" class="form-control" id="recipient-name" placeholder="DD/MM/AAAA">
+                                                </div>
+                                            </div>
                                         </div>
                                     </form>
                                 </div>
