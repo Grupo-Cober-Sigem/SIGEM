@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="es">
   <head>
-  	<title>SIGEM - Usuarios</title>
+  	<title>SIGEM - Periodos</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="../../../images/logo.jpg" type="image/icon type">
@@ -71,7 +71,7 @@
                     <div class="row">
                         <div class="col-md-8">
                             <div class="form-group">
-                                <input class="form-control" type="text" placeholder="Nombre del usuario">
+                                <input class="form-control" type="text" placeholder="Nombre del periodo">
                             </div>
                         </div>
                         <div class="col-md-2">
@@ -97,7 +97,7 @@
                                     <form>
                                         <div class="form-group">
                                             <label for="recipient-name" class="col-form-label">Nombre</label>
-                                            <input type="text" class="form-control" id="recipient-name" placeholder="AAAA-SS">
+                                            <input type="text" class="form-control" id="recipient-name" placeholder="AAAA-S">
                                         </div>
                                         <div class="row">
                                             <div class="col">
@@ -126,14 +126,14 @@
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Edición de Periodos</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel">Edición de Periodo</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                 </div>
                                 <div class="modal-body">
                                     <form>
                                         <div class="form-group">
                                             <label for="recipient-name" class="col-form-label">Nombre</label>
-                                            <input type="text" class="form-control" id="recipient-name" placeholder="AAAA-SS">
+                                            <input type="text" class="form-control" id="recipient-name" placeholder="AAAA-S">
                                         </div>
                                         <div class="row">
                                             <div class="col">
@@ -153,6 +153,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                    <button type="button" class="btn btn-warning">Editar</button>
                                     <button type="button" class="btn btn-success">Guardar</button>
                                 </div>
                             </div>
@@ -160,25 +161,25 @@
                     </div>
                     <!-- Tabla resultados de la busqueda -->
                     <div class="table-responsive">
-                        <table class="table table-hover table-bordered">
+                        <table id="productSizes" class="table table-hover table-bordered">
                             <thead class="thead-dark">
-                                <tr>
-                                    <th scope="col">Nombre</th>
-                                    <th scope="col">Apellido</th>
-                                    <th scope="col">Email</th>
-                                    <th scope="col">Rol</th>
-                                    <th scope="col"><small>Editar</small></th>
-                                    <th scope="col"><small>Deshabilitar</small></th>
+                                <tr class="d-flex">
+                                    <th class="col-3">Nombre</th>
+                                    <th class="col-2">Inicio</th>
+                                    <th class="col-2">Fin</th>
+                                    <th class="col-1">Editar</th>
+                                    <th class="col-2">Cerrar periodo</th>
+                                    <th class="col-2">Deshabilitar</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>Jonathan</td>
-                                    <td>Bernal</td>
-                                    <td>jonathana-bernalt@unilibre.edu.co</td>
-                                    <td>Docente</td>
-                                    <td><button type="button" class="btn btn-warning col-md-12" data-toggle="modal" data-target="#editarModal" data-whatever="@mdo"><i class="fa fa-edit"></i></button></td>
-                                    <td><button type="button" class="btn btn-danger col-md-8"><i class="fa fa-ban"></i></button></td>
+                                <tr class="d-flex">
+                                    <td class="col-3">2020-1</td>
+                                    <td class="col-2"><span>11/01/2020</span></td>
+                                    <td class="col-2"><span>16/06/2020</span></td>
+                                    <td class="col-1"><span><button type="button" class="btn btn-warning col-md-12" data-toggle="modal" data-target="#editarModal" data-whatever="@mdo"><i class="fa fa-edit"> </i></button></span></td>
+                                    <td class="col-2"><span><button type="button" class="btn btn-danger col-md-12"><i class="fa fa-exclamation"></i></button></span></td>
+                                    <td class="col-2"><span><button type="button" class="btn btn-danger col-md-12"><i class="fa fa-ban"></i></button></span></td>
                                 </tr>
                             </tbody>
                         </table>
