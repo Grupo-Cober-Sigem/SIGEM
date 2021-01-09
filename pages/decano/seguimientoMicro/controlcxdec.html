@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="es">
   <head>
-  	<title>SIGEM - Planes de Aula</title>
+  	<title>SIGEM - Control de Cambios</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="../../../images/logo.jpg" type="image/icon type">
@@ -16,19 +16,19 @@
 				<div class="p-4 pt-5">
                     <a href="../../../pages/decano/indexdec.html" class="img logo rounded-circle mb-5" style="background-image: url(../../../images/logo.jpg);"></a>
                     <ul class="list-unstyled components mb-5">
-                    <li class="active"><a href="#gestionSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Gestión de Asignaturas</a>
+                    <li><a href="#gestionSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Gestión de Asignaturas</a>
                         <ul class="collapse list-unstyled" id="gestionSubmenu">
                         <li><a href="../../../pages/decano/gestionAsig/asignaturas/asignaturasxdec.html">Asignaturas</a></li>
                         <li><a href="../../../pages/decano/gestionAsig/microcurriculosxdec.html">Microcurriculos</a></li>
-                        <li class="active"><a href="../../../pages/decano/gestionAsig/planesdeaulaxdec.html">Planes de aula</a></li>
+                        <li><a href="../../../pages/decano/gestionAsig/planesdeaulaxdec.html">Planes de aula</a></li>
                         </ul>
                     </li>
-                    <li>
+                    <li class="active">
                     <a href="#gestionMicroSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Seguimiento a Microcurriculo</a>
 	                    <ul class="collapse list-unstyled" id="gestionMicroSubmenu">
                         <li><a href="../../../pages/decano/seguimientoMicro/seguimientoxdec.html">Seguimiento</a></li>
                         <li><a href="../../../pages/decano/seguimientoMicro/revisionxdec.html">Revisión</a></li>
-                        <li><a href="../../../pages/decano/seguimientoMicro/controlcxdec.html">Control de Cambios</a></li>
+                        <li class="active"><a href="../../../pages/decano/seguimientoMicro/controlcxdec.html">Control de cambios</a></li>
 	                    </ul>
 	                </li>
                     <li>
@@ -59,30 +59,24 @@
                         <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="nav navbar-nav ml-auto">
-                                <li class="nav-item"><a class="nav-link" href="../../../pages/decano/indexdec.html">Inicio</a></li>
+                                <li class="nav-item"><a class="nav-link" href="../indexdec.html">Inicio</a></li>
                                 <li class="nav-item"><a class="nav-link" href="http://siul.unilibre.edu.co/sinugwt/">SIUL</a></li>
-                                <li class="nav-item"><a class="nav-link" href="../../../pages/decano/perfilxdec.html">Perfil</a></li>
+                                <li class="nav-item"><a class="nav-link" href="../perfilxdec.html">Perfil</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#">Cerrar Sesión</a></li>
                             </ul>
                         </div>
                     </div>
               </nav>
-              <!-- Barra de busqueda -->
-                    <div class="row">
-                      <div class="col-md-4">
+              <!-- Contenido de la página -->
+              <div class="container-fluid">
+                  <!-- Barra de busqueda  -->
+                  <div class="row">
+                      <div class="col-md-3">
                           <div class="form-group">
                               <label for="exampleFormControlSelect1">Programa</label>
                               <select class="form-control" id="nivelformacion">
                                   <option>Ingeniería en TIC</option>
                                   <option>Ingeniería industrial</option>
-                              </select>
-                          </div>
-                      </div>
-                      <div class="col-md-3">
-                          <div class="form-group">
-                              <label for="exampleFormControlSelect1">Semestre</label>
-                              <select class="form-control" id="nivelformacion">
-                                  <option>202012</option>
                               </select>
                           </div>
                       </div>
@@ -95,35 +89,73 @@
                               </select>
                           </div>
                       </div>
+                      <div class="col-md-3">
+                          <div class="form-group">
+                              <label for="exampleFormControlSelect1">Asignatura</label>
+                              <select class="form-control" id="nivelformacion">
+                                  <option>Matematicas discretas</option>
+                              </select>
+                          </div>
+                      </div>
                       <div class="col-md-2">
                           <div class="form-group">
-                              <button type="button" class="btn btn-warning col-md-12" style="margin-top: 33px;">Buscar</button>
+                              <label for="exampleFormControlSelect1">Periodo</label>
+                              <select class="form-control" id="nivelformacion">
+                                  <option>2020-1</option>
+                                  <option>2020-2</option>
+                              </select>
+                          </div>
+                      </div>
+
+                      <div class="col-md-1">
+                          <div class="form-group">
+                              <button type="button" class="btn btn-warning col-md-12" style="margin-top: 33px;"><i class="fa fa-search"></i></button>
                           </div>
                       </div>
                   </div>
-              <!-- Contenido de la página -->
-              <div class="table-responsive">
-                        <table id="productSizes" class="table table-hover table-bordered">
-                            <thead class="thead-dark">
-                                <tr class="d-flex">
-                                    <th class="col-2">Codigo</th>
-                                    <th class="col-4">Nombre</th>
-                                    <th class="col-2">Semestre</th>
-                                    <th class="col-md-2">Ver</th>
-                                    <th class="col-md-2">Imprimir</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="d-flex">
-                                    <td class="col-md-2"><span>1</span></td>
-                                    <td class="col-4"><span>Matematicas discretas</span></td>
-                                    <td class="col-2"><span>Segundo</span></td>
-                                    <td class="col-2"><span><button type="button" class="btn btn-warning col-md-12" data-toggle="modal" data-target="#planModal" data-whatever="@mdo"><i class="fa fa-eye"></i></button></span></td>
-                                    <td class="col-md-2"><button type="button" class="btn btn-dark col-md-12" ><i class="fa fa-print"></i></button></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                  <!-- Tabla resultado de busqueda -->
+                  <div class="table-responsive">
+                      <table class="table table-hover table-bordered">
+                          <thead class="thead-dark">
+                              <tr>
+                                  <th scope="col">Asignatura</th>
+                                  <th scope="col">Microcurriculo</th>
+                                  <th scope="col">Control de cambios</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td>Matematicas discretas</td>
+                                  <td><button type="button" class="btn btn-warning col-md-12"><i class="fa fa-download"></i></button></td>
+                                  <td><button type="button" class="btn btn-success col-md-10"><i class="fa fa-download"></i></button></td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
+                  <!-- Modal -->
+                  <div class="modal fade" id="observacionModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel">Observaciones</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                              </div>
+                              <div class="modal-body">
+                                  <form>
+                                      <div class="form-group">
+                                          <label for="message-text" class="col-form-label">Por favor escriba las observaciones que tiene para el docente</label>
+                                          <textarea class="form-control" id="message-text"></textarea>
+                                      </div>
+                                  </form>
+                              </div>
+                              <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                  <button type="button" class="btn btn-danger">Devolver</button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
           </div>
       </div>
     <script src="../../../js/jquery.min.js"></script>
