@@ -1,13 +1,11 @@
 <?php
     /*function conexion(){*/
-        $servidor="host25.latinoamericahosting.com";
+        $servidor="51.79.81.50";
         $usuario="grupocob_andrefe";
         $bd="grupocob_sigem";
         $password="Th3Unkindled";
 
         $conexion=mysqli_connect($servidor,$usuario,$password,$bd);
-
-        $this->$conexion->set_charset("utf8");
 
         if($conexion)
         {
