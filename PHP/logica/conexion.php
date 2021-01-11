@@ -1,5 +1,5 @@
 <?php
-    /*function conexion(){*/
+    function conexion(){
         $servidor="localhost";
         $usuario="grupocob_andrefe";
         $bd="grupocob_SIGEM";
@@ -15,6 +15,6 @@
         {
             echo "No se pudo conectar";
         }
-    /*}*/
+    }
 
 ?>
