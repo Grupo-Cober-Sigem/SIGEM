@@ -1,8 +1,8 @@
 <?php
-    function conexion(){
+    /*function conexion(){*/
         $servidor="host25.latinoamericahosting.com";
         $usuario="grupocob_andrefe";
-        $bd="grupocob_SIGEM";
+        $bd="grupocob_sigem";
         $password="Th3Unkindled";
 
         $conexion=mysqli_connect($servidor,$usuario,$password,$bd);
@@ -21,6 +21,6 @@
         if (mysqli_connect_errno()) {
             print("error al conectarse");
         }
-    }
+    /*}*/
 
 ?>
