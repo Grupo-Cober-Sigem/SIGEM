@@ -1,8 +1,8 @@
 <?php
     /*function conexion(){*/
-        $servidor="51.79.81.50";
+        $servidor="localhost";
         $usuario="grupocob_andrefe";
-        $bd="grupocob_sigem";
+        $bd="grupocob_SIGEM";
         $password="Th3Unkindled";
 
         $conexion=mysqli_connect($servidor,$usuario,$password,$bd);
@@ -14,10 +14,6 @@
         else
         {
             echo "No se pudo conectar";
-        }
-
-        if (mysqli_connect_errno()) {
-            print("error al conectarse");
         }
     /*}*/
 

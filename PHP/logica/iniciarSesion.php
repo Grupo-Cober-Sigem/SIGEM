@@ -5,7 +5,7 @@
     $Usuario = $_POST['Usuario'];
     $Clave = $_POST['Pass'];
 
-    $query= "SELECT * from datosUsuario where Cod_User='$Usuario' and Pass='$Clave'"
+    $query= "SELECT * from datosUsuario where Cod_User='$Usuario' and Pass='$Clave'";
     $result=mysqli_query($conexion,$query);
     $response=msqli_fetch_array($result);
 
