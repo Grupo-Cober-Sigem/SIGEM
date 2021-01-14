@@ -14,16 +14,16 @@ $(document).ready(function(){
 
                 switch(res){
                     case 1:
-                        window.location="../../pages/administrador/indexadmin.html";
+                        window.location="./pages/administrador/indexadmin.html";
                         break;
                     case 2:
-                        window.location="../../pages/decano/indexdec.html";
+                        window.location="./pages/decano/indexdec.html";
                         break;
                     case 3:
-                        window.location="../../pages/jefearea/indexja.html";
+                        window.location="./pages/jefearea/indexja.html";
                         break;
                     case 4:
-                        window.location="../../pages/docentes/indexdoc.html";
+                        window.location="./pages/docentes/indexdoc.html";
                         break;
                     default:
                         alertify.alert('Lo lamentamos, pero su usuario no se encuentra en el sistema.');
