@@ -8,7 +8,7 @@ $(document).ready(function(){
 
         $.ajax({
             type:"POST",
-            url:"../../PHP/logica/iniciarSesion.php",
+            url:"PHP/logica/iniciarSesion.php",
             data:cadena,
             success:function(res){
 
