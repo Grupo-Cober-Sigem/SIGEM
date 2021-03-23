@@ -30,7 +30,7 @@ var app = new Vue({
 
                 if(this.datos != ''){
                     localStorage.setItem("usuario", this.datos[0].Cod_User);
-                    window.location.href = "SIGEM/pages/administrador/indexadmin.html";
+                    window.location.href = "./pages/administrador/indexadmin.html";
                 } else {
                     console.log("Error, datos incorrectos");
                     //y mostramos un msj sobre la eliminación  
