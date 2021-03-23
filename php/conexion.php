@@ -3,9 +3,9 @@
     class Conexion {
         public static function Conectar(){
             define('servidor', 'localhost');
-            define('nombre_db', 'grupocob_sigem');
-            define('usuario', 'root');
-            define('contraseña','');
+            define('nombre_db', 'grupocob_SIGEM');
+            define('usuario', 'grupocob_andrefe');
+            define('contraseña','Th3Unkindled');
 
             // Conexión a la base de datos por PDO (Más robusto que utilizar mysqli)
             $opciones = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
