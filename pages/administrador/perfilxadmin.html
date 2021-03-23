@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="../../css/style.css">
+    <!-- Sweet Alert 2 -->
+    <link rel="stylesheet" href="../../plugins/sweetalert2/sweetalert2.min.css">
   </head>
   <body>
       <div class="wrapper d-flex align-items-stretch">
@@ -76,7 +78,7 @@
                     <a class="nav-link" href="../../pages/administrador/perfilxadmin.html">Perfil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Cerrar Sesión</a>
+                    <a class="nav-link" href="../../login.html">Cerrar Sesión</a>
                 </li>
               </ul>
             </div>
@@ -85,34 +87,34 @@
                 <!-- Contenido de la página -->
                 <div class="container-fluid">
                   <div class="container-fluid">
-                      <form>
+                      <form id="perfilxadmin">
                           <h1 class="mb-4"><strong>Datos personales</strong></h1>
                           <div class="row">
                               <div class="col">
                                   <div class="form-group ">
-                                      <label for="exampleFormControlInput1">Nombres</label>
-                                      <input type="text" class="form-control" id="nombreasignatura">
+                                      <label  for="exampleFormControlInput1">Nombres</label>
+                                      <input v-model="nombres"  type="text" class="form-control" disabled>
                                   </div>
                               </div>
                               <div class="col">
                                   <label for="exampleFormControlInput1">Apellidos</label>
-                                  <input type="text" class="form-control" id="codigoasignatura">
+                                  <input v-model="apellidos"  type="text" class="form-control" disabled>
                               </div>
                           </div>
                           <div class="row">
                               <div class="col">
                                   <div class="form-group ">
                                       <label for="exampleFormControlInput1">Correo electrónico</label>
-                                      <input type="text" class="form-control" id="nombreasignatura">
+                                      <input v-model="correo"  type="text" class="form-control" disabled>
                                   </div>
                               </div>
                               <div class="col">
                                   <label for="exampleFormControlInput1">Contraseña</label>
-                                  <input type="password" class="form-control" id="codigoasignatura">
+                                  <input type="password" class="form-control" disabled>
                               </div>
                           </div>
-                          <button type="button" class="btn btn-warning">Editar</button>
-                          <button type="button" class="btn btn-success" style="margin-left: 10px">Guardar</button>
+                          <button type="button" class="btn btn-warning" @click="btnEditar(nombres, apellidos, correo)">Editar</button>
+                         
                       </form>
                   </div>
               </div>
@@ -121,6 +123,14 @@
       <script src="../../js/jquery.min.js"></script>
       <script src="../../js/popper.js"></script>
       <script src="../../js/bootstrap.min.js"></script>
+      <!-- Vue -->
+      <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+      <!-- Axios -->
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+      <!-- Sweet Alert 2 -->
+      <script src="../../plugins/sweetalert2/sweetalert2.all.min.js"></script>
+      <!-- Lógica para login -->
+      <script src="../../js/admin/perfil.js"></script>
       <script src="../../js/main.js"></script>
   </body>
 </html>

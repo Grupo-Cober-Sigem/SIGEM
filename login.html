@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="js/alertifyjs/css/alertify.css">
     <link rel="stylesheet" href="js/alertifyjs/css/themes/default.css">
+    <!-- Sweet Alert 2 -->
+    <link rel="stylesheet" href="plugins/sweetalert2/sweetalert2.min.css">
 
     <style>
         body {      background-image: url('https://static.iris.net.co/semana/upload/images/2019/12/5/643576_1.jpg');
@@ -20,20 +22,20 @@
       </style>
   </head>
   <body>
-      <div class="login-form">
-
+      <div id="app" class="login-form">
+        
         <form id="loginForm" target="_self">
-          <img class="avatar" src="/images/logo.jpg">
+          <img class="avatar" src="images/logo.jpg">
           <h6 class="text-center mb-0">Universidad Libre - Seccional Cúcuta</h6>
           <h4 class="mb-0">Gestión de Microcurriculo Academico</h4>
           <h6 class="text-center mb-5">Facultad de Ingenierías</h6>
             <div class="form-group">
-                <input type="text" id="Usuario" class="form-control" placeholder="Usuario" required="required">
+                <input type="text" id="usuario" class="form-control" placeholder="Usuario" required="required">
             </div>
             <div class="form-group mb-5">
-                <input type="password" id="Pass" class="form-control" placeholder="Contraseña" required="required">
+                <input type="password" id="contraseña" class="form-control" placeholder="Contraseña" required="required">
             </div>
-            <button id="btnIngreso" class="btn btn-warning col-md-12"><strong>Ingresar</strong></button>
+            <button id="btnIngreso" class="btn btn-warning col-md-12" @click.prevent="btnIniciar()"><strong>Ingresar</strong></button>
         </form>
       </div>
 
@@ -41,7 +43,14 @@
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/alertifyjs/alertify.js "></script>
+    <!-- Vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <!-- Axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- Sweet Alert 2 -->
+    <script src="plugins/sweetalert2/sweetalert2.all.min.js"></script>
+    <!-- Lógica para login -->
+    <script src="js/login/iniciar.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/login/login.js"></script>
   </body>
 </html>
