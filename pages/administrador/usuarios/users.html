@@ -129,11 +129,12 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                                    <button type="button" class="btn btn-warning">Agregar</button>
+                                    <button type="button" @click="btnAgregar" class="btn btn-warning">Agregar</button>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <div class="modal fade" id="editarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
@@ -172,11 +173,12 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                                    <button type="button" class="btn btn-success">Guardar</button>
+                                    <button type="button" @click="btnEditar" class="btn btn-success">Guardar</button>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <!-- Tabla resultados de la busqueda -->
                     <div class="table-responsive">
                         <table class="table table-hover table-bordered">
@@ -191,13 +193,15 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>Jonathan</td>
-                                    <td>Bernal</td>
-                                    <td>jonathana-bernalt@unilibre.edu.co</td>
-                                    <td>Docente</td>
-                                    <td><button type="button" class="btn btn-warning col-md-12" data-toggle="modal" data-target="#editarModal" data-whatever="@mdo"><i class="fa fa-edit"></i></button></td>
-                                    <td><button type="button" class="btn btn-danger col-md-8"><i class="fa fa-ban"></i></button></td>
+                                <tr v-for="(user,indice) of datosUsuario">
+                                    <td>{{user.Nombres}}</td>
+                                    <td>{{user.Apellidos}}</td>
+                                    <td>{{user.email}}</td>
+                                    <td>{{user.rol}}</td>
+                                    <td><button type="button" @click="btnEditarUser(user.Cod_User,user.Nombres,user.Apellidos,user.email,user.rol)" 
+                                        class="btn btn-warning col-md-12" data-toggle="modal" data-target="#editarModal" data-whatever="@mdo"><i class="fa fa-edit"></i></button></td>
+                                    <td><button type="button" @click="btnDeshabilitarUser(...)" 
+                                        class="btn btn-danger col-md-8"><i class="fa fa-ban"></i></button></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -209,5 +213,11 @@
     <script src="../../../js/popper.js"></script>
     <script src="../../../js/bootstrap.min.js"></script>
     <script src="../../../js/main.js"></script>
+    <!-- Vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <!-- Axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- Sweet Alert 2 -->
+    <script src="plugins/sweetalert2/sweetalert2.all.min.js"></script>
   </body>
 </html>

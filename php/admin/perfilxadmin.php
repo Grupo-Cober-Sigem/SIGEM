@@ -19,13 +19,13 @@ $correo = (isset($_POST['correo'])) ? $_POST['correo'] : '';
 
 switch($opcion){
     case 1:
-        $consulta = "SELECT Nombres, Apellidos, email FROM datosusuario WHERE Cod_User='$usuario'";
+        $consulta = "SELECT Nombres, Apellidos, email FROM datosUsuario WHERE Cod_User='$usuario'";
         $resultado = $cn->prepare($consulta);
         $resultado->execute();
         $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
         break;
     case 2:
-        $consulta = "UPDATE datosusuario SET Nombres='$nombres', Apellidos='$apellidos', email='$correo' WHERE Cod_User='$usuario' ";
+        $consulta = "UPDATE datosUsuario SET Nombres='$nombres', Apellidos='$apellidos', email='$correo' WHERE Cod_User='$usuario' ";
         $resultado = $cn->prepare($consulta);
         $resultado->execute();
         $data = $resultado->fetchAll(PDO::FETCH_ASSOC);

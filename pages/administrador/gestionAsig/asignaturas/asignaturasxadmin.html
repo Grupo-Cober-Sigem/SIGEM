@@ -183,6 +183,12 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
+                                            <label for="recipient-name" class="col-form-label">Programa de la asignatura</label>
+                                            <select class="form-control" id="docxasig">
+                                                <option>Nombre del programa</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
                                             <label for="recipient-name" class="col-form-label">Área de la asignatura</label>
                                             <select class="form-control" id="docxasig">
                                                 <option>Nombre del área</option>
@@ -274,9 +280,9 @@
                             </thead>
                             <tbody>
                                 <tr class="d-flex">
-                                    <td class="col-1">1</td>
-                                    <td class="col-5"><span>Matematicas discretas</span></td>
-                                    <td class="col-4"><span>Segundo</span></td>
+                                    <td class="col-1">{{asignatura.Cod_Asig}}</td>
+                                    <td class="col-5"><span>{{asignatura.Nombre_Asig}}</span></td>
+                                    <td class="col-4"><span>{{asignatura.Ubicacion_Asig}}</span></td>
                                     <td class="col-1"><span><button type="button" class="btn btn-warning col-md-12" data-toggle="modal" data-target="#editarasigModal" data-whatever="@mdo"><i class="fa fa-eye"> </i></button></span></td>
                                     <td class="col-1"><span><button type="button" class="btn btn-warning col-md-12"><i class="fa fa-eye"> </i></button></span></td>
                                 </tr>
