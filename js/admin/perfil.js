@@ -63,3 +63,24 @@ var app = new Vue({
     }
 
 });
+
+<div class="row">
+    <label class="col-sm-3 col-form-label">Marca</label>
+    <div class="col-sm-7">
+        <input id="marca" type="text" class="form-control">
+    </div>
+</div>
+
+<div class="row">
+    <label class="col-sm-3 col-form-label">Modelo</label>
+    <div class="col-sm-7">
+        <input id="modelo" type="text" class="form-control">
+    </div>
+</div>
+
+<div class="row">
+    <label class="col-sm-3 col-form-label">Stock</label
+    ><div class="col-sm-7">
+        <input id="stock" type="number" min="0" class="form-control">
+    </div>
+</div>

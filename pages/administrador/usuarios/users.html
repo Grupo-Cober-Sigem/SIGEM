@@ -67,152 +67,156 @@
                     </div>
                 </nav>
                 <!-- Contenido de la página -->
-                <div class="container-fluid">
-                    <!-- Barra de busqueda -->
-                    <div class="row">
-                        <div class="col-md-8">
-                            <div class="form-group">
-                                <input class="form-control" type="text" placeholder="Nombre del usuario">
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="form-group">
-                                <button type="button" class="btn btn-warning col-md-12">Buscar</button>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="form-group">
-                                <button type="button" class="btn btn-warning col-md-12" data-toggle="modal" data-target="#agregarModal" data-whatever="@mdo">Agregar</button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Modales -->
-                    <div class="modal fade" id="agregarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Creación de Usuarios</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <div id="seccionUsuarios">
+                    <div class="container-fluid">
+                        <!-- Barra de busqueda -->
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <input class="form-control" type="text" placeholder="Nombre del usuario">
                                 </div>
-                                <div class="modal-body">
-                                    <form>
-                                        <div class="form-group">
-                                            <label for="recipient-name" class="col-form-label">Nombre</label>
-                                            <input type="text" class="form-control" id="recipient-name">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="recipient-name" class="col-form-label">Apellidos</label>
-                                            <input type="text" class="form-control" id="recipient-name">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="recipient-name" class="col-form-label">Documento de identidad</label>
-                                            <input type="text" class="form-control" id="recipient-name" placeholder="En número sin espacios">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="recipient-name" class="col-form-label">Correo electrónico</label>
-                                            <input type="text" class="form-control" id="recipient-name">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="recipient-name" class="col-form-label">Contraseña</label>
-                                            <input type="text" class="form-control" id="recipient-name">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="recipient-name">Rol</label>
-                                            <select class="form-control" id="rol">
-                                                <option>Seleccionar</option>
-                                                <option>Docente</option>
-                                                <option>Jefe de Area</option>
-                                                <option>Decano</option>
-                                            </select>
-                                        </div>
-                                    </form>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <button type="button" class="btn btn-warning col-md-12">Buscar</button>
                                 </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                                    <button type="button" @click="btnAgregar" class="btn btn-warning">Agregar</button>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <button type="button" class="btn btn-warning col-md-12" @click="btnAgregar" data-toggle="modal" data-target="#agregarModal" data-whatever="@mdo">Agregar</button>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="modal fade" id="editarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Edición de Usuarios</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                </div>
-                                <div class="modal-body">
-                                    <form>
-                                        <div class="form-group">
-                                            <label for="recipient-name" class="col-form-label">Nombre</label>
-                                            <input type="text" class="form-control" id="recipient-name">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="recipient-name" class="col-form-label">Apellidos</label>
-                                            <input type="text" class="form-control" id="recipient-name">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="recipient-name" class="col-form-label">Correo electrónico</label>
-                                            <input type="text" class="form-control" id="recipient-name">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="recipient-name" class="col-form-label">Contraseña</label>
-                                            <input type="text" class="form-control" id="recipient-name">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="recipient-name">Rol</label>
-                                            <select class="form-control" id="rol">
-                                                <option>Seleccionar</option>
-                                                <option>Docente</option>
-                                                <option>Jefe de Area</option>
-                                                <option>Decano</option>
-                                            </select>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                                    <button type="button" @click="btnEditar" class="btn btn-success">Guardar</button>
+                        <!-- Modales -->
+                        <div class="modal fade" id="agregarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Creación de Usuarios</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="Nombre" class="col-form-label">Nombre</label>
+                                                <input type="text" class="form-control" id="Nombre">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="Apellido" class="col-form-label">Apellidos</label>
+                                                <input type="text" class="form-control" id="Apellido">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="Cod_User" class="col-form-label">Documento de identidad</label>
+                                                <input type="text" class="form-control" id="Cod_User" placeholder="En número sin espacios">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="email" class="col-form-label">Correo electrónico</label>
+                                                <input type="text" class="form-control" id="email">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="pass" class="col-form-label">Contraseña</label>
+                                                <input type="text" class="form-control" id="pass">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="recipient-name">Rol</label>
+                                                <select class="form-control" id="rol">
+                                                    <option>Seleccionar</option>
+                                                    <option>Docente</option>
+                                                    <option>Jefe de Area</option>
+                                                    <option>Decano</option>
+                                                </select>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                        <button type="button" @click="btnAgregar" class="btn btn-warning">Agregar</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Tabla resultados de la busqueda -->
-                    <div class="table-responsive">
-                        <table class="table table-hover table-bordered">
-                            <thead class="thead-dark">
-                                <tr>
-                                    <th scope="col">Nombre</th>
-                                    <th scope="col">Apellido</th>
-                                    <th scope="col">Email</th>
-                                    <th scope="col">Rol</th>
-                                    <th scope="col"><small>Editar</small></th>
-                                    <th scope="col"><small>Deshabilitar</small></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr v-for="(user,indice) of datosUsuario">
-                                    <td>{{user.Nombres}}</td>
-                                    <td>{{user.Apellidos}}</td>
-                                    <td>{{user.email}}</td>
-                                    <td>{{user.rol}}</td>
-                                    <td><button type="button" @click="btnEditarUser(user.Cod_User,user.Nombres,user.Apellidos,user.email,user.rol)" 
-                                        class="btn btn-warning col-md-12" data-toggle="modal" data-target="#editarModal" data-whatever="@mdo"><i class="fa fa-edit"></i></button></td>
-                                    <td><button type="button" @click="btnDeshabilitarUser(...)" 
-                                        class="btn btn-danger col-md-8"><i class="fa fa-ban"></i></button></td>
-                                </tr>
-                            </tbody>
-                        </table>
+    
+                        <div class="modal fade" id="editarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Edición de Usuarios</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="recipient-name" class="col-form-label">Nombre</label>
+                                                <input type="text" class="form-control" id="recipient-name">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="recipient-name" class="col-form-label">Apellidos</label>
+                                                <input type="text" class="form-control" id="recipient-name">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="recipient-name" class="col-form-label">Correo electrónico</label>
+                                                <input type="text" class="form-control" id="recipient-name">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="recipient-name" class="col-form-label">Contraseña</label>
+                                                <input type="text" class="form-control" id="recipient-name">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="recipient-name">Rol</label>
+                                                <select class="form-control" id="rol">
+                                                    <option>Seleccionar</option>
+                                                    <option>Docente</option>
+                                                    <option>Jefe de Area</option>
+                                                    <option>Decano</option>
+                                                </select>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                        <button type="button" @click="btnEditar" class="btn btn-success">Guardar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Tabla resultados de la busqueda -->
+                        <div class="table-responsive">
+                            <table class="table table-hover table-bordered">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Apellido</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Rol</th>
+                                        <th scope="col"><small>Editar</small></th>
+                                        <th scope="col"><small>Deshabilitar</small></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr v-for="(user,indice) of datosUsuario">
+                                        <td>{{user.Nombres}}</td>
+                                        <td>{{user.Apellidos}}</td>
+                                        <td>{{user.email}}</td>
+                                        <td>{{user.rol}}</td>
+                                        <td><button type="button" @click="btnEditarUser(user.Cod_User,user.Nombres,user.Apellidos,user.email,user.rol)" 
+                                            class="btn btn-warning col-md-12" data-toggle="modal" data-target="#editarModal" data-whatever="@mdo"><i class="fa fa-edit"></i></button></td>
+                                        <td><button type="button" @click="btnDeshabilitarUser(...)" 
+                                            class="btn btn-danger col-md-8"><i class="fa fa-ban"></i></button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
+                
             </div>
       </div>
     <script src="../../../js/jquery.min.js"></script>
     <script src="../../../js/popper.js"></script>
     <script src="../../../js/bootstrap.min.js"></script>
     <script src="../../../js/main.js"></script>
+    <script src="../../../js/admin/usuarios.js"></script>
     <!-- Vue -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <!-- Axios -->
