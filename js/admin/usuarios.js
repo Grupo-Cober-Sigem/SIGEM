@@ -53,7 +53,7 @@ var appUsuarios = new Vue({
             }
         },
         btnEditarUser: async function () { },
-        btnDeshabilitarUser: function () { },
+        btnDeshabilitarUser: async function () { },
 
         //Procedimientos
         listarUsuarios: function(){
@@ -66,5 +66,5 @@ var appUsuarios = new Vue({
     },
     created:function(){
         this.listarUsuarios();
-    },
-})
+    }
+});
