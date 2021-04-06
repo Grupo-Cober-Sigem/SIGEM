@@ -1,20 +1,21 @@
+var url = "../../../php/admin/usersxadmin.php";
 var appUsuarios = new Vue({
     el: "#seccionUsuarios",
     data: {
-        datos: [],
+        datosUsuarios: [],
         cod: "",
         pass: "",
-        nombre: "",
-        apellido: "",
-        correo: "",
+        Nombres: "",
+        Apellidos: "",
+        email: "",
         rol: ""
     },
     methods: {
         btnAgregar: async function () {
             const { value: formValues } = await Swal.fire({
-                //title: 'Agregar',
+                title: 'Agregar',
                 html:
-                    '<div class="modal fade" id="agregarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="exampleModalLabel">Creación de Usuarios</h5><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body"><form>',
+                    '<div class="modal fade" id="agregarModal" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="exampleModalLabel">Creación de Usuarios</h5><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body"><form>',
                 focusConfirm: false,
                 showCancelButton: true,
                 confirmButtonText: 'Guardar',
@@ -50,11 +51,19 @@ var appUsuarios = new Vue({
                     title: '¡Producto Agregado!'
                 })
             }
+        },
+        btnEditarUser: async function () { },
+        btnDeshabilitarUser: function () { },
+
+        //Procedimientos
+        listarUsuarios: function(){
+            axios.post(url,{opcion:1}).then(response=>{
+                this.datos = response.data;
+
+            });
         }
     },
-    btnEditarUser: async function () { },
-    btnDeshabilitarUser: function () { }
-},
-    created: function () { },
-    computed: {}
+    created:function(){
+        this.listarUsuarios();
+    },
 })
