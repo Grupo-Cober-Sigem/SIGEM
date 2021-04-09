@@ -15,7 +15,7 @@ var appUsuarios = new Vue({
             const { value: formValues } = await Swal.fire({
                 title: 'Agregar',
                 html:
-                    '<div class="modal fade" id="agregarModal" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="exampleModalLabel">Creación de Usuarios</h5><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body"><form>',
+                    '<div class="row"><label class="col-sm-3 col-form-label">Nombre</label><div class="col-sm-7"><input id="Nombre" type="text" class="form-control"></div></div><div class="row"><label class="col-sm-3 col-form-label">Apellidos</label><div class="col-sm-7"><input id="Apellidos" type="text" class="form-control"></div></div><div class="row"><label class="col-sm-3 col-form-label">Documento de Identidad</label><div class="col-sm-7"><input id="cod_user" type="number" min="0" class="form-control"></div></div><div class="row"><label class="col-sm-3 col-form-label">Correo Electrónico</label><div class="col-sm-7"><input id="email" type="text" class="form-control"></div></div><div class="row"><label class="col-sm-3 col-form-label">Contraseña</label><div class="col-sm-7"><input id="Pass" type="text" class="form-control"></div></div><div class="row"><label class="col-sm-3 col-form-label">Rol</label><div class="col-sm-7"><select class="form-control" id="rol"><option selected>Seleccionar</option><option value="1">Docente</option><option value="2">Jefe de Area</option><option value="3">Decano</option></select></div></div><div class="row"><label class="col-sm-3 col-form-label">Nombre</label><div class="col-sm-7"><input id="Nombre" type="text" class="form-control"></div></div><div class="row"><label class="col-sm-3 col-form-label">Apellidos</label><div class="col-sm-7"><input id="Apellidos" type="text" class="form-control"></div></div><div class="row"><label class="col-sm-3 col-form-label">Documento de Identidad</label><div class="col-sm-7"><input id="cod_user" type="number" min="0" class="form-control"></div></div><div class="row"><label class="col-sm-3 col-form-label">Correo Electrónico</label><div class="col-sm-7"><input id="email" type="text" class="form-control"></div></div><div class="row"><label class="col-sm-3 col-form-label">Contraseña</label><div class="col-sm-7"><input id="Pass" type="text" class="form-control"></div></div><div class="row"><label class="col-sm-3 col-form-label">Rol</label><div class="col-sm-7"><select class="form-control" id="rol"><option selected>Seleccionar</option><option value="1">Docente</option><option value="2">Jefe de Area</option><option value="3">Decano</option></select></div></div>',
                 focusConfirm: false,
                 showCancelButton: true,
                 confirmButtonText: 'Guardar',
@@ -60,11 +60,10 @@ var appUsuarios = new Vue({
             axios.post(url,{opcion:1}).then(response=>{
                 this.datosUsuarios = response.data;
                 console.log(this.datos);
-
             });
         }
     },
     created:function(){
         this.listarUsuarios();
     }
-});
+});                                 
