@@ -67,123 +67,125 @@
                     </div>
                 </nav>
                 <!-- Contenido de la página -->
-                <div class="container-fluid">
-                    <!-- Barra de busqueda -->
-                    <div class="row">
-                        <div class="col-md-8">
-                            <div class="form-group">
-                                <input class="form-control" type="text" placeholder="Nombre del periodo">
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="form-group">
-                                <button type="button" class="btn btn-warning col-md-12">Buscar</button>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="form-group">
-                                <button type="button" class="btn btn-warning col-md-12" data-toggle="modal" data-target="#agregarModal" data-whatever="@mdo">Agregar</button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Modales -->
-                    <div class="modal fade" id="agregarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Creación de Periodo</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <div id='seccionPeriodos'>
+                    <div class="container-fluid">
+                        <!-- Barra de busqueda -->
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <input class="form-control" type="text" placeholder="Nombre del periodo">
                                 </div>
-                                <div class="modal-body">
-                                    <form>
-                                        <div class="form-group">
-                                            <label for="recipient-name" class="col-form-label">Nombre</label>
-                                            <input type="text" class="form-control" id="recipient-name" placeholder="AAAA-S">
-                                        </div>
-                                        <div class="row">
-                                            <div class="col">
-                                                <div class="form-group">
-                                                    <label for="recipient-name" class="col-form-label">Fecha de Inicio</label>
-                                                    <input type="text" class="form-control" id="recipient-name" placeholder="DD/MM/AAAA">
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <button type="button" class="btn btn-warning col-md-12">Buscar</button>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <button type="button" class="btn btn-warning col-md-12" @click="btnAgregarPeriodos">Agregar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modales -->
+                        <div class="modal fade" id="agregarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Creación de Periodo</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="recipient-name" class="col-form-label">Nombre</label>
+                                                <input type="text" class="form-control" id="recipient-name" placeholder="AAAA-S">
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label for="recipient-name" class="col-form-label">Fecha de Inicio</label>
+                                                        <input type="text" class="form-control" id="recipient-name" placeholder="DD/MM/AAAA">
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label for="recipient-name" class="col-form-label">Fecha de Fin</label>
+                                                        <input type="text" class="form-control" id="recipient-name" placeholder="DD/MM/AAAA">
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="col">
-                                                <div class="form-group">
-                                                    <label for="recipient-name" class="col-form-label">Fecha de Fin</label>
-                                                    <input type="text" class="form-control" id="recipient-name" placeholder="DD/MM/AAAA">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                                    <button type="button" class="btn btn-warning">Agregar</button>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                        <button type="button" class="btn btn-warning">Agregar</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="modal fade" id="editarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Edición de Periodo</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                </div>
-                                <div class="modal-body">
-                                    <form>
-                                        <div class="form-group">
-                                            <label for="recipient-name" class="col-form-label">Nombre</label>
-                                            <input type="text" class="form-control" id="recipient-name" placeholder="AAAA-S">
-                                        </div>
-                                        <div class="row">
-                                            <div class="col">
-                                                <div class="form-group">
-                                                    <label for="recipient-name" class="col-form-label">Fecha de Inicio</label>
-                                                    <input type="text" class="form-control" id="recipient-name" placeholder="DD/MM/AAAA">
+                        <div class="modal fade" id="editarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Edición de Periodo</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="recipient-name" class="col-form-label">Nombre</label>
+                                                <input type="text" class="form-control" id="recipient-name" placeholder="AAAA-S">
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label for="recipient-name" class="col-form-label">Fecha de Inicio</label>
+                                                        <input type="text" class="form-control" id="recipient-name" placeholder="DD/MM/AAAA">
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label for="recipient-name" class="col-form-label">Fecha de Fin</label>
+                                                        <input type="text" class="form-control" id="recipient-name" placeholder="DD/MM/AAAA">
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="col">
-                                                <div class="form-group">
-                                                    <label for="recipient-name" class="col-form-label">Fecha de Fin</label>
-                                                    <input type="text" class="form-control" id="recipient-name" placeholder="DD/MM/AAAA">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                                    <button type="button" class="btn btn-warning">Editar</button>
-                                    <button type="button" class="btn btn-success">Guardar</button>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                        <button type="button" class="btn btn-warning">Editar</button>
+                                        <button type="button" class="btn btn-success">Guardar</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- Tabla resultados de la busqueda -->
-                    <div class="table-responsive">
-                        <table id="productSizes" class="table table-hover table-bordered">
-                            <thead class="thead-dark">
-                                <tr class="d-flex">
-                                    <th class="col-3">Nombre</th>
-                                    <th class="col-2">Inicio</th>
-                                    <th class="col-2">Fin</th>
-                                    <th class="col-1">Editar</th>
-                                    <th class="col-2">Cerrar periodo</th>
-                                    <th class="col-2">Deshabilitar</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="d-flex">
-                                    <td class="col-3">{{periodo.id}}</td>
-                                    <td class="col-2"><span>{{periodo.fechaIni}}</span></td>
-                                    <td class="col-2"><span>{{periodo.fechaFin}}</span></td>
-                                    <td class="col-1"><span><button type="button" class="btn btn-warning col-md-12" data-toggle="modal" data-target="#editarModal" data-whatever="@mdo"><i class="fa fa-edit"> </i></button></span></td>
-                                    <td class="col-2"><span><button type="button" class="btn btn-danger col-md-12"><i class="fa fa-exclamation"></i></button></span></td>
-                                    <td class="col-2"><span><button type="button" class="btn btn-danger col-md-12"><i class="fa fa-ban"></i></button></span></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <!-- Tabla resultados de la busqueda -->
+                        <div class="table-responsive">
+                            <table id="productSizes" class="table table-hover table-bordered">
+                                <thead class="thead-dark">
+                                    <tr class="d-flex">
+                                        <th class="col-3">Nombre</th>
+                                        <th class="col-2">Inicio</th>
+                                        <th class="col-2">Fin</th>
+                                        <th class="col-1">Editar</th>
+                                        <th class="col-2">Cerrar periodo</th>
+                                        <th class="col-2">Deshabilitar</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr v-for="(periodo,indice) of datosUsuarios">
+                                        <td class="col-3">{{periodo.id}}</td>
+                                        <td class="col-2"><span>{{periodo.fechaIni}}</span></td>
+                                        <td class="col-2"><span>{{periodo.fechaFin}}</span></td>
+                                        <td class="col-1"><span><button type="button" class="btn btn-warning col-md-12" data-toggle="modal" data-target="#editarModal" data-whatever="@mdo"><i class="fa fa-edit"> </i></button></span></td>
+                                        <td class="col-2"><span><button type="button" class="btn btn-danger col-md-12"><i class="fa fa-exclamation"></i></button></span></td>
+                                        <td class="col-2"><span><button type="button" class="btn btn-danger col-md-12"><i class="fa fa-ban"></i></button></span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -191,6 +193,13 @@
     <script src="../../../js/jquery.min.js"></script>
     <script src="../../../js/popper.js"></script>
     <script src="../../../js/bootstrap.min.js"></script>
+    <!-- Vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <!-- Axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- Sweet Alert 2 -->
+    <script src="../../../plugins/sweetalert2/sweetalert2.all.min.js"></script>
     <script src="../../../js/main.js"></script>
+    <script src="../../../js/admin/periodo.js"></script>
   </body>
 </html>
