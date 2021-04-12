@@ -15,16 +15,16 @@ var appUsuarios = new Vue({
             const { value: formValues } = await Swal.fire({
                 title: 'Agregar',
                 html:
-                    '<div class="row"><label class="col-sm-3 col-form-label">Nombre</label><div class="col-sm-7"><input id="Nombre" type="text" class="form-control"></div></div><div class="row"><label class="col-sm-3 col-form-label">Apellidos</label><div class="col-sm-7"><input id="Apellidos" type="text" class="form-control"></div></div><div class="row"><label class="col-sm-3 col-form-label">Documento de Identidad</label><div class="col-sm-7"><input id="cod_user" type="number" min="0" class="form-control"></div></div><div class="row"><label class="col-sm-3 col-form-label">Correo Electrónico</label><div class="col-sm-7"><input id="email" type="text" class="form-control"></div></div><div class="row"><label class="col-sm-3 col-form-label">Contraseña</label><div class="col-sm-7"><input id="Pass" type="text" class="form-control"></div></div><div class="row"><label class="col-sm-3 col-form-label">Rol</label><div class="col-sm-7"><select class="form-control" id="rol"><option selected>Seleccionar</option><option value="1">Docente</option><option value="2">Jefe de Area</option><option value="3">Decano</option></select></div></div>',
+                    '<div class="form-group"><div class="row"><label class="col-form-label"></label></div></div><div class="form-group"><div class="row"><label class="col-sm-4 col-form-label text-left">Nombres</label><div class="col-sm-8"><input id="nombre" type="text" class="form-control"></div></div></div><div class="form-group"><div class="row"><label class="col-sm-4 col-form-label text-left">Apellidos</label><div class="col-sm-8"><input id="apellidos" type="text" class="form-control"></div></div></div><div class="form-group"><div class="row"><label class="col-sm-6 col-form-label text-left">Nro. de Identificación</label><div class="col-sm-6"><input id="cod_user" type="number" min="0" class="form-control"></div></div></div><div class="form-group"><div class="row"><label class="col-sm-5 col-form-label text-left">Email Unilibre</label><div class="col-sm-7"><input id="email" type="text" class="form-control"></div></div></div><div class="form-group"><div class="row"><label class="col-sm-4 col-form-label text-left">Contraseña</label><div class="col-sm-8"><input id="pass" type="text" class="form-control"></div></div></div><div class="form-group"><div class="row"><label class="col-sm-4 col-form-label text-left">Rol</label><div class="col-sm-8"><select class="form-control" id="rol"><option selected>Seleccionar</option><option value="1">Docente</option><option value="2">Jefe de Area</option><option value="3">Decano</option></select></div></div></div>',
                 focusConfirm: false,
                 showCancelButton: true,
                 confirmButtonText: 'Guardar',
                 confirmButtonColor: '#1cc88a',
-                cancelButtonColor: "",
-                cancelButtonColor: '#3085d6',
+                showLoaderOnConfirm: true,
+                cancelButtonText: "Cancelar",
+                cancelButtonColor: '#CB3234',
 
                 preConfirm: () => {
-                    
                     return [
                         this.nombre = document.getElementById('Nombre').value,
                         this.apellidos = document.getElementById('Apellidos').value,
