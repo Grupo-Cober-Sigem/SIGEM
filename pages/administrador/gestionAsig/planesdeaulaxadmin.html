@@ -81,118 +81,120 @@
           </div>
         </nav>
                 <!-- Contenido de la página  -->
-                <div class="container-fluid">
-                    <!-- Barra de busqueda -->
-                    <div class="row">
-                      <div class="col-md-4">
-                          <div class="form-group">
-                              <label for="exampleFormControlSelect1">Programa</label>
-                              <select class="form-control" id="nivelformacion">
-                                  <option>Ingeniería en TIC</option>
-                                  <option>Ingeniería industrial</option>
-                              </select>
-                          </div>
-                      </div>
-                      <div class="col-md-3">
-                          <div class="form-group">
-                              <label for="exampleFormControlSelect1">Semestre</label>
-                              <select class="form-control" id="nivelformacion">
-                                  <option>202012</option>
-                              </select>
-                          </div>
-                      </div>
-                      <div class="col-md-3">
-                          <div class="form-group">
-                              <label for="exampleFormControlSelect1">Área</label>
-                              <select class="form-control" id="nivelformacion">
-                                  <option>Básicas de Ingeniería</option>
-                                  <option>Ingeniería Aplicada</option>
-                              </select>
-                          </div>
-                      </div>
-                      <div class="col-md-2">
-                          <div class="form-group">
-                              <button type="button" class="btn btn-warning col-md-12" style="margin-top: 33px;">Buscar</button>
-                          </div>
-                      </div>
-                  </div>
-                    <!-- Modal de Plan de Aula -->
-                    <div class="modal fade" id="planModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-lg" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Plan de Aula</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                </div>
-                                <div class="modal-body">
-                                    <form>
-                                        <div class="row">
-                                            <div class="col">
-                                                <div class="form-group">
-                                                    <label for="exampleFormControlSelect1">Pre - Requesitos</label>
-                                                    <select class="form-control" id="nivelformacion">
-                                                        <option>Aplica</option>
-                                                        <option>No Aplica</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col">
-                                                <label for="exampleFormControlInput1">Bloque</label>
-                                                <input type="text" class="form-control" placeholder="Ubicación del bloque" id="ubicacionasignatura">
-                                            </div>
-                                            <div class="col">
-                                                <label for="exampleFormControlInput1">Aula</label>
-                                                <input type="text" class="form-control" placeholder="Aula de la clase" id="ubicacionasignatura">
-                                            </div>
-                                            <div class="col">
-                                                <div class="form-group">
-                                                    <label for="exampleFormControlInput1">Año</label>
-                                                    <input type="text" class="form-control" placeholder="Año" id="ubicacionasignatura">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col">
-                                                <div class="form-group">
-                                                    <label for="exampleFormControlSelect1">Problema</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                                  <button type="button" class="btn btn-warning">Editar</button>
-                                  <button type="button" class="btn btn-success">Guardar</button>
-                                </div>
+                <div id="seccionPlanes">
+                    <div class="container-fluid">
+                        <!-- Barra de busqueda -->
+                        <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1">Programa</label>
+                                <select class="form-control" id="nivelformacion">
+                                    <option>Ingeniería en TIC</option>
+                                    <option>Ingeniería industrial</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1">Semestre</label>
+                                <select class="form-control" id="nivelformacion">
+                                    <option>202012</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1">Área</label>
+                                <select class="form-control" id="nivelformacion">
+                                    <option>Básicas de Ingeniería</option>
+                                    <option>Ingeniería Aplicada</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <button type="button" class="btn btn-warning col-md-12" style="margin-top: 33px;">Buscar</button>
                             </div>
                         </div>
                     </div>
-                    <!-- Tabla con el resultado de la busqueda -->
-                    <div class="table-responsive">
-                        <table id="productSizes" class="table table-hover table-bordered">
-                            <thead class="thead-dark">
-                                <tr class="d-flex">
-                                    <th class="col-2">Codigo</th>
-                                    <th class="col-4">Nombre</th>
-                                    <th class="col-2">Semestre</th>
-                                    <th class="col-md-2">Ver</th>
-                                    <th class="col-md-2">Imprimir</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="d-flex">
-                                    <td class="col-md-2"><span>1</span></td>
-                                    <td class="col-4"><span>Matematicas discretas</span></td>
-                                    <td class="col-2"><span>Segundo</span></td>
-                                    <td class="col-2"><span><button type="button" class="btn btn-warning col-md-12" data-toggle="modal" data-target="#planModal" data-whatever="@mdo"><i class="fa fa-eye"></i></button></span></td>
-                                    <td class="col-md-2"><button type="button" class="btn btn-dark col-md-12" ><i class="fa fa-print"></i></button></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <!-- Modal de Plan de Aula -->
+                        <div class="modal fade" id="planModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Plan de Aula</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label for="exampleFormControlSelect1">Pre - Requesitos</label>
+                                                        <select class="form-control" id="nivelformacion">
+                                                            <option>Aplica</option>
+                                                            <option>No Aplica</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <label for="exampleFormControlInput1">Bloque</label>
+                                                    <input type="text" class="form-control" placeholder="Ubicación del bloque" id="ubicacionasignatura">
+                                                </div>
+                                                <div class="col">
+                                                    <label for="exampleFormControlInput1">Aula</label>
+                                                    <input type="text" class="form-control" placeholder="Aula de la clase" id="ubicacionasignatura">
+                                                </div>
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label for="exampleFormControlInput1">Año</label>
+                                                        <input type="text" class="form-control" placeholder="Año" id="ubicacionasignatura">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label for="exampleFormControlSelect1">Problema</label>
+                                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                    <button type="button" class="btn btn-warning">Editar</button>
+                                    <button type="button" class="btn btn-success">Guardar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tabla con el resultado de la busqueda -->
+                        <div class="table-responsive">
+                            <table id="productSizes" class="table table-hover table-bordered">
+                                <thead class="thead-dark">
+                                    <tr class="d-flex">
+                                        <th class="col-2">Codigo</th>
+                                        <th class="col-4">Nombre</th>
+                                        <th class="col-2">Semestre</th>
+                                        <th class="col-md-2">Ver</th>
+                                        <th class="col-md-2">Imprimir</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="d-flex" v-for="(plan,indice) of datosUsuarios">
+                                        <td class="col-md-2"><span>{{micro.codigo</span></td>
+                                        <td class="col-4"><span>{{micro.nombre}}</span></td>
+                                        <td class="col-2"><span>{{micro.ubicacion}}</span></td>
+                                        <td class="col-2"><span><button type="button" class="btn btn-warning col-md-12" @click="btnAgregarPlan"><i class="fa fa-eye"></i></button></span></td>
+                                        <td class="col-md-2"><button type="button" class="btn btn-dark col-md-12" ><i class="fa fa-print"></i></button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -200,6 +202,13 @@
     <script src="../../../js/jquery.min.js"></script>
     <script src="../../../js/popper.js"></script>
     <script src="../../../js/bootstrap.min.js"></script>
+     <!-- Vue -->
+     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+     <!-- Axios -->
+     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+     <!-- Sweet Alert 2 -->
+     <script src="../../../plugins/sweetalert2/sweetalert2.all.min.js"></script>
     <script src="../../../js/main.js"></script>
+    <script src="../../../js/admin/planaula/planaula.js"></script>
   </body>
 </html>
