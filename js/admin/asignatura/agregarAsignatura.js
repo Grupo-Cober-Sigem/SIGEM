@@ -15,13 +15,14 @@ var appUsuarios = new Vue({
             const { value: formValues } = await Swal.fire({
                 title: 'Agregar',
                 html:
-                    '',
+                    '<div class="form-group"><label for="recipient-name" class="col-form-label">Nombre</label><input type="text" class="form-control" id="recipient-name"></div><div class="row"><div class="col"><div class="form-group"><label for="recipient-name" class="col-form-label">Código</label><input type="text" class="form-control" id="recipient-name"></div></div><div class="col"><div class="form-group"><label for="recipient-name" class="col-form-label">Semestre</label><select class="form-control" id="nivelformacion"><option value="1">Primero</option></select></div></div><div class="col"><div class="form-group"><label for="recipient-name" class="col-form-label">Estudiantes</label><input type="text" class="form-control" placeholder="Cantidad" id="recipient-name"></div></div></div><div class="form-group"><label for="recipient-name" class="col-form-label">Programa de la asignatura</label><select class="form-control" id="docxasig"><option value="1">Nombre del programa</option></select></div><div class="form-group"><label for="recipient-name" class="col-form-label">Área de la asignatura</label><select class="form-control" id="docxasig"><option value="1">Nombre del área</option></select></div><div class="form-group"><label for="recipient-name" class="col-form-label">Docente</label><select class="form-control" id="docxasig"><option value="1">Maritza Sanchez</option></select></div>',
                 focusConfirm: false,
                 showCancelButton: true,
                 confirmButtonText: 'Guardar',
                 confirmButtonColor: '#1cc88a',
-                cancelButtonColor: "",
-                cancelButtonColor: '#3085d6',
+                showLoaderOnConfirm: true,
+                cancelButtonText: "Cancelar",
+                cancelButtonColor: '#CB3234',
 
                 preConfirm: () => {
                     
