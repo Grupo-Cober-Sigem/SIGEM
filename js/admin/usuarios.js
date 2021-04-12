@@ -3,10 +3,10 @@ var appUsuarios = new Vue({
     el: "#seccionUsuarios",
     data: {
         datosUsuarios: [],
-        cod: "",
+        cod_user: "",
         pass: "",
-        Nombres: "",
-        Apellidos: "",
+        nombre: "",
+        apellidos: "",
         email: "",
         rol: ""
     },
@@ -26,16 +26,16 @@ var appUsuarios = new Vue({
 
                 preConfirm: () => {
                     return [
-                        this.nombre = document.getElementById('Nombre').value,
-                        this.apellidos = document.getElementById('Apellidos').value,
-                        this.Cod_User = document.getElementById('Cod_User').value,
+                        this.nombre = document.getElementById('nombre').value,
+                        this.apellidos = document.getElementById('apellidos').value,
+                        this.cod_user = document.getElementById('cod_user').value,
                         this.email = document.getElementById('email').value,
                         this.pass = document.getElementById('pass').value,
                         this.rol = document.getElementById('rol').value
                     ]
                 }
             })
-            if (this.nombre == "" || this.apellidos == "" || this.Cod_User == 0 || this.email=='') {
+            if (this.nombre == "" || this.apellidos == "" || this.Cod_User == "" || this.email=='') {
                 Swal.fire({
                     type: 'info',
                     title: 'Datos incompletos',
