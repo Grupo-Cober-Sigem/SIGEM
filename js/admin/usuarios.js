@@ -25,7 +25,6 @@ var appUsuarios = new Vue({
                 cancelButtonColor: '#CB3234',
 
                 preConfirm: () => {
-
                     return [
                         this.nombre = document.getElementById('Nombre').value,
                         this.apellidos = document.getElementById('Apellidos').value,
