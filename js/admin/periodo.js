@@ -1,21 +1,18 @@
-var url = "";
+var url = "../../../php/admin/periodos.php";
 var appUsuarios = new Vue({
     el: "#seccionPeriodos",
     data: {
-        datosUsuarios: [],
-        cod: "",
-        pass: "",
-        Nombres: "",
-        Apellidos: "",
-        email: "",
-        rol: ""
+        datosPeriodos: [],
+        periodo: "",
+        fechaFin: "",
+        fechaIni: ""
     },
     methods: {
         btnAgregarPeriodos: async function () {
             const { value: formValues } = await Swal.fire({
                 title: 'Agregar',
                 html:
-                    '<div class="form-group"><label for="recipient-name" class="col-form-label">Nombre</label><input type="text" class="form-control" id="recipient-name" placeholder="AAAA-S"></div><div class="row"><div class="col"><div class="form-group"><label for="recipient-name" class="col-form-label">Fecha de Inicio</label><input type="text" class="form-control" id="recipient-name" placeholder="DD/MM/AAAA"></div></div><div class="col"><div class="form-group"><label for="recipient-name" class="col-form-label">Fecha de Fin</label><input type="text" class="form-control" id="recipient-name" placeholder="DD/MM/AAAA"></div></div></div>',
+                    '<div class="form-group"><label for="periodo" class="col-form-label">Nombre</label><input type="text" class="form-control" id="periodo" placeholder="AAAA-S"></div><div class="row"><div class="col"><div class="form-group"><label for="fechaIni" class="col-form-label">Fecha de Inicio</label><input type="text" class="form-control" id="fechaIni" placeholder="DD/MM/AAAA"></div></div><div class="col"><div class="form-group"><label for="fechaFin" class="col-form-label">Fecha de Fin</label><input type="text" class="form-control" id="fechaFin" placeholder="DD/MM/AAAA"></div></div></div>',
                 focusConfirm: false,
                 showCancelButton: true,
                 confirmButtonText: 'Guardar',
@@ -25,25 +22,21 @@ var appUsuarios = new Vue({
                 cancelButtonColor: '#CB3234',
 
                 preConfirm: () => {
-                    
                     return [
-                        this.nombre = document.getElementById('Nombre').value,
-                        this.apellidos = document.getElementById('Apellidos').value,
-                        this.Cod_User = document.getElementById('Cod_User').value,
-                        this.email = document.getElementById('email').value,
-                        this.pass = document.getElementById('pass').value,
-                        this.rol = document.getElementById('rol').value
+                        this.periodo = document.getElementById('periodo').value,
+                        this.apellidos = document.getElementById('fechaIni').value,
+                        this.Cod_User = document.getElementById('fechaFin').value
                     ]
                 }
             })
-            if (this.nombre == "" || this.apellidos == "" || this.Cod_User == 0 || this.email=='') {
+            if (this.periodo == "" || this.fechaIni == "" || this.fechaFin == "") {
                 Swal.fire({
                     type: 'info',
                     title: 'Datos incompletos',
                 })
             }
             else {
-                this.agregarUsuarios();
+                this.agregarPeriodo();
                 const Toast = Swal.mixin({
                     toast: true,
                     position: 'top-end',
@@ -52,7 +45,7 @@ var appUsuarios = new Vue({
                 });
                 Toast.fire({
                     type: 'success',
-                    title: '¡Usuario Agregado!'
+                    title: 'Periodo Agregado!'
                 })
             }
         },
@@ -60,23 +53,23 @@ var appUsuarios = new Vue({
         btnDeshabilitarUser: async function () { },
 
         //Procedimientos
-        listarUsuarios: function(){
+        listarPeriodos: function(){
             axios.post(url,{opcion:1}).then(response=>{
                 this.datosUsuarios = response.data;
                 console.log(this.datos);
             });
         },
 
-        agregarUsuarios: function(){
-            axios.post(url, {opcion:4, marca:this.marca, modelo:this.modelo,stock:this.stock }).then(response =>{
+        agregarPeriodo: function(){
+            axios.post(url, {opcion:4, periodo:this.periodo, fechaIni:this.fechaIni,fechaFin:this.fechaFin }).then(response =>{
                 this.listarMoviles();
             });        
-             this.marca = "",
-             this.modelo = "",
-             this.stock = 0
+             this.periodo = "",
+             this.fechaIni = "",
+             this.fechaFin = ""
         },
     },
     created:function(){
-        this.listarUsuarios();
+        this.listarPeriodos();
     }
 });                                 
