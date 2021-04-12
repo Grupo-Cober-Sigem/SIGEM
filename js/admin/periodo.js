@@ -11,8 +11,7 @@ var appUsuarios = new Vue({
         btnAgregarPeriodos: async function () {
             const { value: formValues } = await Swal.fire({
                 title: 'Agregar',
-                html:
-                    '<div class="form-group"><label for="periodo" class="col-form-label">Nombre</label><input type="text" class="form-control" id="periodo" placeholder="AAAA-S"></div><div class="row"><div class="col"><div class="form-group"><label for="fechaIni" class="col-form-label">Fecha de Inicio</label><input type="text" class="form-control" id="fechaIni" placeholder="DD/MM/AAAA"></div></div><div class="col"><div class="form-group"><label for="fechaFin" class="col-form-label">Fecha de Fin</label><input type="text" class="form-control" id="fechaFin" placeholder="DD/MM/AAAA"></div></div></div>',
+                html:'<div class="form-group"><label for="recipient-name" class="col-form-label">Nombre</label><input type="text" class="form-control" id="recipient-name" placeholder="AAAA-S"></div><div class="row"><div class="col"><div class="form-group"><label for="recipient-name" class="col-form-label">Fecha de Inicio</label><input type="text" class="form-control" id="recipient-name" placeholder="DD/MM/AAAA"></div></div><div class="col"><div class="form-group"><label for="recipient-name" class="col-form-label">Fecha de Fin</label><input type="text" class="form-control" id="recipient-name" placeholder="DD/MM/AAAA"></div></div></div>',
                 focusConfirm: false,
                 showCancelButton: true,
                 confirmButtonText: 'Guardar',
