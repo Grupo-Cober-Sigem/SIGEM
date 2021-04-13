@@ -67,7 +67,7 @@ var appUsuarios = new Vue({
         },
 
         agregarUsuarios: function(){
-            axios.post(url, {opcion:4, marca:this.marca, modelo:this.modelo,stock:this.stock }).then(response =>{
+            axios.post(url, {opcion:4, Cod_User:this.code_user, Pass:this.pass, Nombres:this.nombre, Apellidos:this.apellidos, email:this.email, rol:this.rol}).then(response =>{
                 this.listarMoviles();
             });        
              this.marca = "",
