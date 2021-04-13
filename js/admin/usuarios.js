@@ -35,13 +35,13 @@ var appUsuarios = new Vue({
                     ]
                 }
             })
-            if (this.nombre == "" || this.apellidos == "" || this.Cod_User == "" || this.email=='') {
+            /*if (this.nombre == "" || this.apellidos == "" || this.Cod_User == "" || this.email=='') {
                 Swal.fire({
                     type: 'info',
                     title: 'Datos incompletos',
                 })
             }
-            else {
+            else {*/
                 this.agregarUsuarios();
                 const Toast = Swal.mixin({
                     toast: true,
@@ -53,7 +53,7 @@ var appUsuarios = new Vue({
                     type: 'success',
                     title: '¡Usuario Agregado!'
                 })
-            }
+            /*}*/
         },
         btnEditarUser: async function () { },
         btnDeshabilitarUser: async function () { },
