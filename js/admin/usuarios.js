@@ -36,9 +36,9 @@ var appUsuarios = new Vue({
                 }
             })
             console.log("Valor del nombre "+this.nombre);
-            if (this.nombre == "" || this.apellidos == "" || this.cod_user == "" || this.email=='') {
+            if (this.nombre == "" || this.apellidos == "" || this.cod_user == 0 || this.email=='') {
                 Swal.fire({
-                    type: 'info',
+                    icon: 'info',
                     title: 'Datos incompletos',
                 })
             }
@@ -51,7 +51,7 @@ var appUsuarios = new Vue({
                     timer: 3000
                 });
                 Toast.fire({
-                    type: 'success',
+                    icon: 'success',
                     title: '¡Usuario Agregado!'
                 })
             }
