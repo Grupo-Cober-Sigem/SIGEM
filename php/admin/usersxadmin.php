@@ -9,11 +9,11 @@
 
     $opcion = (isset($_POST['opcion'])) ? $_POST['opcion'] : '';
 
-    $usuario = (isset($_POST['usuario'])) ? $_POST['usuario'] : '';
+    $usuario = (isset($_POST['cod_user'])) ? $_POST['cod_user'] : '';
     $pass = (isset($_POST['pass'])) ? $_POST['pass'] : '';
-    $nombres = (isset($_POST['nombres'])) ? $_POST['nombres'] : '';
+    $nombres = (isset($_POST['nombre'])) ? $_POST['nombre'] : '';
     $apellidos = (isset($_POST['apellidos'])) ? $_POST['apellidos'] : '';
-    $correo = (isset($_POST['correo'])) ? $_POST['correo'] : '';
+    $correo = (isset($_POST['email'])) ? $_POST['email'] : '';
     $rol= (isset($_POST['rol'])) ? $_POST['rol'] : '';
 
     switch($opcion){
