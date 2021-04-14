@@ -101,7 +101,7 @@
                                               <div class="col">
                                                   <div class="form-group">
                                                       <label for="exampleFormControlSelect1">Área</label>
-                                                      <select class="form-control" id="nivelformacion">
+                                                      <select class="form-control" id="areaasignatura">
                                                           <option>Básicas de Ingeniería</option>
                                                           <option>Ingeniería Aplicada</option>
                                                       </select>
@@ -110,7 +110,7 @@
                                               <div class="col">
                                                   <div class="form-group">
                                                       <label for="exampleFormControlSelect1">Ubicación</label>
-                                                      <select class="form-control" id="nivelformacion">
+                                                      <select class="form-control" id="ubicacionasignatura">
                                                           <option>Semestre 1</option>
                                                           <option>Semestre 1</option>
                                                       </select>
@@ -121,7 +121,7 @@
                                               <div class="col">
                                                   <div class="form-group">
                                                       <label for="exampleFormControlSelect1">Carácter de la asignatura</label>
-                                                      <select class="form-control" id="carasignatura">
+                                                      <select class="form-control" id="caracterasignatura">
                                                           <option>Obligatoria</option>
                                                           <option>Electiva</option>
                                                           <option>Optativa</option>
@@ -146,10 +146,10 @@
                                                       <label for="exampleFormControlInput1">Número de horas Semanales</label>
                                                       <div class="row">
                                                           <div class="col">
-                                                              <input type="text" class="form-control" placeholder="Presenciales" id="ubicacionasignatura">
+                                                              <input type="text" class="form-control" placeholder="Presenciales" id="horaspresensiales">
                                                           </div>
                                                           <div class="col">
-                                                              <input type="text" class="form-control" placeholder="Independientes" id="ubicacionasignatura">
+                                                              <input type="text" class="form-control" placeholder="Independientes" id="horassemanales">
                                                           </div>
                                                       </div>
                                                   </div>
@@ -171,7 +171,7 @@
                                               <div class="col">
                                                   <div class="form-group">
                                                       <label for="exampleFormControlTextarea1">Por favor en el siguiente espacio en blanco digite la justificación de la asignatura</label>
-                                                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                      <textarea class="form-control" id="justificacion" rows="3"></textarea>
                                                   </div>
                                               </div>
                                           </div>
@@ -191,7 +191,7 @@
                                               <div class="col">
                                                   <div class="form-group">
                                                       <label for="exampleFormControlTextarea1">Por favor en el siguiente espacio en blanco digite el objetivo de la asignatura</label>
-                                                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                      <textarea class="form-control" id="objetivogeneral" rows="3"></textarea>
                                                   </div>
                                               </div>
                                           </div>
@@ -211,7 +211,7 @@
                                               <div class="col">
                                                   <div class="form-group ">
                                                       <label for="exampleFormControlInput1">Metodología</label>
-                                                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                      <textarea class="form-control" id="metodologia" rows="3"></textarea>
                                                   </div>
                                               </div>
                                           </div>
@@ -219,7 +219,7 @@
                                               <div class="col">
                                                   <div class="form-group ">
                                                       <label for="exampleFormControlInput1">Apoyos didácticos</label>
-                                                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                      <textarea class="form-control" id="apoyosdidacticos" rows="3"></textarea>
                                                   </div>
                                               </div>
                                           </div>
@@ -239,7 +239,7 @@
                                           <div class="row">
                                               <div class="col">
                                                   <div class="form-group ">
-                                                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                      <textarea class="form-control" id="problemaasignatura" rows="3"></textarea>
                                                   </div>
                                               </div>
                                           </div>
@@ -248,19 +248,19 @@
                                               <div class="col">
                                                   <div class="form-group ">
                                                       <label for="exampleFormControlInput1">Identificación de la competencia</label>
-                                                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                      <textarea class="form-control" id="identificacioncompetencia" rows="3"></textarea>
                                                   </div>
                                               </div>
                                               <div class="col">
                                                   <label for="exampleFormControlInput1">Elementos de la competencia</label>
-                                                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                  <textarea class="form-control" id="elementoscompetencia" rows="3"></textarea>
                                               </div>
                                           </div>
                                           <h5>Criterios de desempeño</h5>
                                           <div class="row">
                                               <div class="col">
                                                   <div class="form-group ">
-                                                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                      <textarea class="form-control" id="criteriosdesempeno" rows="3"></textarea>
                                                   </div>
                                               </div>
                                           </div>
@@ -269,23 +269,23 @@
                                               <div class="col">
                                                   <div class="form-group ">
                                                       <label for="exampleFormControlInput1">Saber conocer</label>
-                                                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                      <textarea class="form-control" id="saberconocer" rows="3"></textarea>
                                                   </div>
                                               </div>
                                               <div class="col">
                                                   <label for="exampleFormControlInput1">Saber hacer</label>
-                                                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                  <textarea class="form-control" id="saberhacer" rows="3"></textarea>
                                               </div>
                                               <div class="col">
                                                   <label for="exampleFormControlInput1">Saber ser</label>
-                                                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                  <textarea class="form-control" id="saberser" rows="3"></textarea>
                                               </div>
                                           </div>
                                           <h5>Rango de aplicación</h5>
                                           <div class="row">
                                               <div class="col">
                                                   <div class="form-group ">
-                                                      <input type="text" class="form-control" placeholder="Escriba aquí el rango de aplicación" id="areaasignatura">
+                                                      <input type="text" class="form-control" placeholder="Escriba aquí el rango de aplicación" id="rangoaplicacion">
                                                   </div>
                                               </div>
                                           </div>
@@ -293,7 +293,7 @@
                                           <div class="row">
                                               <div class="col">
                                                   <div class="form-group ">
-                                                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                      <textarea class="form-control" id="evidenciasrequeridas" rows="3"></textarea>
                                                   </div>
                                               </div>
                                           </div>
@@ -314,7 +314,7 @@
                                           <div class="row">
                                               <div class="col-md-10">
                                                   <div class="form-group">
-                                                      <input type="text" class="form-control" placeholder="Nombre de la unidad" id="nomUnidadTematicaTxt">
+                                                      <input type="text" class="form-control" placeholder="Nombre de la unidad" id="unidadtematica">
                                                   </div>
                                               </div>
                                               <div class="col-md-2">
@@ -340,7 +340,7 @@
                                                             <tbody id="tbodyContenidoTematico">
                                                                 <tr class="d-flex">
                                                                     <td class="col-1"><span>1</span></td>
-                                                                    <td class="col-7"><span><input type="text" class="form-control" placeholder="Nombre de la unidad" id="nomUnidadTematicaTxt"></span></td>
+                                                                    <td class="col-7"><span>Fundamentos</span></td>
                                                                     <td class="col-2"><span><button type="button" class="btn btn-warning"><i class="fa fa-edit"> </i></button></span></td>
                                                                     <td class="col-2"><span><button type="button" class="btn btn-danger"><i class="fa fa-trash"> </i></button></span></td>
                                                                 </tr>
@@ -351,30 +351,39 @@
                                               </div>
                                           </div>
                                           <hr />
-                                          <h5>Temas a tratar</h5>
+                                          <h5>Subtemas</h5>
                                           <!-- Barra de agregar temas -->
-                                          <div class="row">
-                                              <div class="col-md-5">
-                                                  <div class="form-group">
-                                                      <label for="exampleFormControlSelect1">Nombre del Tema</label>
-                                                      <input type="text" class="form-control" id="areaasignatura">
+                                          <div class="form-group">
+                                              <div class="row">
+                                                  <label class="col-sm-1 col-form-label text-left">Nombre</label>
+                                                  <div class="col-sm-11">
+                                                      <input id="nombresubtema" type="text" class="form-control">
                                                   </div>
                                               </div>
-                                              <div class="col-md-5">
-                                                  <div class="form-group">
-                                                      <label for="exampleFormControlSelect1">Unidad</label>
-                                                      <select class="form-control" id="nivelformacion">
+                                          </div>
+                                          <div class="form-group">
+                                              <div class="row">
+                                                  <label class="col-sm-1 col-form-label text-left">Unidad</label>
+                                                  <div class="col-sm-11">
+                                                      <select class="form-control" id="unidadsubtema">
                                                           <option>Básicas de Ingeniería</option>
                                                           <option>Ingeniería Aplicada</option>
                                                       </select>
                                                   </div>
                                               </div>
-                                              <div class="col-md-2">
-                                                  <div class="form-group">
-                                                      <button type="button" class="btn btn-warning col-md-12" style="margin-top: 33px;">Agregar</button>
+                                          </div>
+                                          <div class="form-group">
+                                              <div class="row">
+                                                  <label class="col-sm-1 col-form-label text-left">Semana</label>
+                                                  <div class="col-sm-9">
+                                                      <input id="semanasubtema" type="text" class="form-control" placeholder="Semana X: del XX de XXXXX al XX de XXXXX">
+                                                  </div>
+                                                  <div class="col-sm-2">
+                                                      <button type="button" class="btn btn-warning col-md-12">Agregar</button>
                                                   </div>
                                               </div>
                                           </div>
+
                                           <!-- Tabla de resultados de temas -->
                                           <div class="row">
                                               <div class="col">
@@ -384,8 +393,9 @@
                                                               <thead class="thead-dark">
                                                                   <tr class="d-flex">
                                                                       <th class="col-1">#</th>
-                                                                      <th class="col-4">Unidad</th>
-                                                                      <th class="col-5">Tema</th>
+                                                                      <th class="col-3">Unidad</th>
+                                                                      <th class="col-3">Subtema</th>
+                                                                      <th class="col-3">Semana</th>
                                                                       <th class="col-1">Editar</th>
                                                                       <th class="col-1">Borrar</th>
                                                                   </tr>
@@ -393,8 +403,9 @@
                                                               <tbody>
                                                                   <tr class="d-flex">
                                                                       <td class="col-1"><span>1</span></td>
-                                                                      <td class="col-4"><span>Fundamentos</span></td>
-                                                                      <td class="col-5"><span>Fundamentos</span></td>
+                                                                      <td class="col-3"><span>Fundamentos</span></td>
+                                                                      <td class="col-3"><span>Fundamentos</span></td>
+                                                                      <td class="col-3"><span>Semana 1: Del 12 de Abril al 16 de Abril</span></td>
                                                                       <td class="col-1"><span><button type="button" class="btn btn-warning"><i class="fa fa-edit"> </i></button></span></td>
                                                                       <td class="col-1"><span><button type="button" class="btn btn-danger"><i class="fa fa-trash"> </i></button></span></td>
                                                                   </tr>
@@ -404,78 +415,7 @@
                                                   </div>
                                               </div>
                                           </div>
-                                          <hr />
-                                          <h5>Contenido Tematico</h5>
-                                          <!-- Barra de agregar fechas -->
-                                          <div class="row">
-                                              <div class="col-md-4">
-                                                  <div class="form-group">
-                                                      <label for="exampleFormControlSelect1">Unidad</label>
-                                                            <select class="form-control" id="nivelformacion">
-                                                              <option>Básicas de Ingeniería</option>
-                                                              <option>Ingeniería Aplicada</option>
-                                                            </select>
-                                                  </div>
-                                              </div>
-                                              <div class="col-md-4">
-                                                  <div class="form-group">
-                                                      <label for="exampleFormControlSelect1">Tema</label>
-                                                        <select class="form-control" id="nivelformacion">
-                                                          <option>Básicas de Ingeniería</option>
-                                                          <option>Ingeniería Aplicada</option>
-                                                        </select>
-                                                  </div>
-                                              </div>
-                                              <div class="col-md-2">
-                                                  <div class="form-group">
-                                                      <label for="exampleFormControlSelect1">Fecha de inicio</label>
-                                                    <input type="text" class="form-control" placeholder="DD/MM/AAAA" id="areaasignatura">
-                                                  </div>
-                                              </div>
-                                              <div class="col-md-2">
-                                              <div class="form-group">
-                                                  <label for="exampleFormControlSelect1">Fecha de Fin</label>
-                                                <input type="text" class="form-control" placeholder="DD/MM/AAAA" id="areaasignatura">
-                                              </div>
-                                          </div>
-                                          </div>
-                                          <div class="row">
-                                              <div class="col">
-                                                  <div class="form-group">
-                                                      <label for="exampleFormControlTextarea1">En el siguiente espacio en blanco escriba su bibliografia</label>
-                                                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <button type="button" class="btn btn-warning col-md-12">Agregar</button>
-                                          <!-- Tabla de resultados de fechas -->
-                                          <div class="table-responsive">
-                                              <table class="table table-hover table-bordered">
-                                                  <thead class="thead-dark">
-                                                      <tr>
-                                                          <th scope="col">#</th>
-                                                          <th scope="col">Unidad</th>
-                                                          <th scope="col">Tema</th>
-                                                          <th colspan="2">Semana</th>
-                                                          <th scope="col">Bibliografia</th>
-                                                          <th scope="col"><small>Editar</small></th>
-                                                          <th scope="col"><small>Eliminar</small></th>
-                                                      </tr>
-                                                  </thead>
-                                                  <tbody>
-                                                      <tr>
-                                                          <td>1</td>
-                                                          <td>Sincronica</td>
-                                                          <td>La estudiante Carolina Ramírez no tiene computador, se conecta desde el celular</td>
-                                                          <td>22/02/1999</td>
-                                                          <td>27/02/1999</td>
-                                                          <td>La estudiante Carolina Ramírez no tiene computador, se conecta desde el celular</td>
-                                                          <td><button type="button" class="btn btn-warning col-md-12"><i class="fa fa-edit"></i></button></td>
-                                                          <td><button type="button" class="btn btn-danger col-md-12"><i class="fa fa-trash"></i></button></td>
-                                                      </tr>
-                                                  </tbody>
-                                              </table>
-                                          </div>
+                                          <hr/>
                                       </div>
                                   </div>
                               </div>
@@ -494,7 +434,7 @@
                                               <div class="col-md-12">
                                                   <div class="form-group">
                                                       <label for="exampleFormControlTextarea1">Signatura Topografica</label>
-                                                      <input type="text" class="form-control" id="areaasignatura">
+                                                      <input type="text" class="form-control" id="bbsignaturatopografica">
                                                   </div>
                                               </div>
                                           </div>
@@ -502,7 +442,7 @@
                                               <div class="col">
                                                   <div class="form-group">
                                                       <label for="exampleFormControlTextarea1">Datos del texto existente en la biblioteca de la Universidad</label>
-                                                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                      <textarea class="form-control" id="bbdatos" rows="3"></textarea>
                                                   </div>
                                               </div>
                                           </div>
@@ -537,7 +477,7 @@
                                               <div class="col-md-12">
                                                   <div class="form-group">
                                                       <label for="exampleFormControlTextarea1">Signatura Topografica</label>
-                                                      <input type="text" class="form-control" id="areaasignatura">
+                                                      <input type="text" class="form-control" id="bbpssignaturatopografica">
                                                   </div>
                                               </div>
                                           </div>
@@ -545,7 +485,7 @@
                                               <div class="col">
                                                   <div class="form-group">
                                                       <label for="exampleFormControlTextarea1">Datos de la publicación seriada existente en la biblioteca de la Universidad</label>
-                                                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                      <textarea class="form-control" id="bbpsdatos" rows="3"></textarea>
                                                   </div>
                                               </div>
                                           </div>
@@ -575,17 +515,50 @@
                                           </div>
                                           <hr />
                                           <h5>Bibliografía básica de sitios web</h5>
-                                          <!-- Barra de agregar bibliografia complementaria -->
+                                          <!-- Barra de agregar Bibliografía básica de sitios web -->
                                           <div class="row">
                                               <div class="col">
                                                   <div class="form-group">
                                                       <label for="exampleFormControlTextarea1">Titulo de la página web y enlace web para acceder a él</label>
-                                                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                      <textarea class="form-control" id="bbswtitulo" rows="3"></textarea>
                                                   </div>
                                               </div>
                                           </div>
                                           <button type="button" class="btn btn-warning col-md-12">Agregar</button>
-                                          <!-- Tabla de resultados de fechas -->
+                                          <!-- Tabla de resultados de Bibliografía básica de sitios web -->
+                                          <div class="table-responsive">
+                                              <table class="table table-hover table-bordered">
+                                                  <thead class="thead-dark">
+                                                    <tr>
+                                                      <th scope="col">#</th>
+                                                      <th scope="col">Bibliografía básica de Sitios Web</th>
+                                                      <th scope="col"><small>Editar</small></th>
+                                                      <th scope="col"><small>Eliminar</small></th>
+                                                    </tr>
+                                                  </thead>
+                                                  <tbody>
+                                                    <tr>
+                                                      <td>1</td>
+                                                      <td>CAIRÓ, O.  Metodología de la programación.  Algoritmos, Diagramas de Flujo y Programas.  Tomo 1 y Tomo 2.  Editorial Alfaomega, 1995.</td>
+                                                      <td><button type="button" class="btn btn-warning col-md-12"><i class="fa fa-edit"></i></button></td>
+                                                      <td><button type="button" class="btn btn-danger col-md-12"><i class="fa fa-trash"></i></button></td>
+                                                    </tr>
+                                                  </tbody>
+                                              </table>
+                                          </div>
+                                          <hr />
+                                          <h5>Bibliografía en Segunda Lengua</h5>
+                                          <!-- Barra de agregar Bibliografía en Segunda Lengua -->
+                                          <div class="row">
+                                              <div class="col">
+                                                  <div class="form-group">
+                                                      <label for="exampleFormControlTextarea1">Titulo de la página web y enlace web para acceder a él</label>
+                                                      <textarea class="form-control" id="bsltitulo" rows="3"></textarea>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <button type="button" class="btn btn-warning col-md-12">Agregar</button>
+                                          <!-- Tabla de resultados de Bibliografía en Segunda lengua -->
                                           <div class="table-responsive">
                                               <table class="table table-hover table-bordered">
                                                   <thead class="thead-dark">
@@ -613,7 +586,7 @@
                                               <div class="col-md-12">
                                                   <div class="form-group">
                                                       <label for="exampleFormControlTextarea1">ISBN</label>
-                                                      <input type="text" class="form-control" id="areaasignatura">
+                                                      <input type="text" class="form-control" id="bcisbn">
                                                   </div>
                                               </div>
                                           </div>
@@ -621,7 +594,7 @@
                                               <div class="col">
                                                   <div class="form-group">
                                                       <label for="exampleFormControlTextarea1">Incluir los textos no existentes en la biblioteca requeridos para el desarrollo de la asignatura</label>
-                                                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                      <textarea class="form-control" id="bctitulo" rows="3"></textarea>
                                                   </div>
                                               </div>
                                           </div>
@@ -663,109 +636,35 @@
                                       <div class="card-body">
                                           <h5>Periodos de corte ácademico</h5>
                                           <p class="mb-4">Es un proceso sistémico de continua reflexión que permite valorar y motivar el desempeño individual y colectivo del estudiante en relación con las competencias. Identifica el dominio y la adquisición de conocimientos, las habilidades y las aptitudes. Implica planificación, criterios claros, establecer (medios, momentos, instrumentos y tiempos), retroalimentación reflexiva y acompañamiento al mejoramiento.</p>
-                                          <!-- Barra de agregar Cortes -->
-                                          <div class="row">
-                                              <div class="col-md-5">
-                                                  <div class="form-group">
-                                                      <label for="exampleFormControlSelect1">Corte</label>
-                                                      <input type="text" class="form-control" id="areaasignatura">
-                                                  </div>
-                                              </div>
-                                              <div class="col-md-5">
-                                                  <div class="form-group">
-                                                      <label for="exampleFormControlSelect1">Porcentaje %</label>
-                                                      <input type="text" class="form-control" id="areaasignatura" placeholder="Solo valor númerico sin signo porcentual">
-                                                  </div>
-                                              </div>
-                                              <div class="col-md-2">
-                                                  <div class="form-group">
-                                                      <button type="button" class="btn btn-warning col-md-12" style="margin-top: 33px;">Agregar</button>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <!-- Tabla de resultados de temas -->
-                                          <div class="row">
-                                              <div class="col">
-                                                  <div class="form-group">
-                                                      <div class="table-responsive">
-                                                          <table id="productSizes" class="table table-hover table-bordered">
-                                                              <thead class="thead-dark">
-                                                                  <tr class="d-flex">
-                                                                      <th class="col-1">#</th>
-                                                                      <th class="col-6">Corte</th>
-                                                                      <th class="col-3">% Porcentaje</th>
-                                                                      <th class="col-2">Borrar</th>
-                                                                  </tr>
-                                                              </thead>
-                                                              <tbody>
-                                                                  <tr class="d-flex">
-                                                                      <td class="col-1"><span>1</span></td>
-                                                                      <td class="col-6"><span>Primer corte</span></td>
-                                                                      <td class="col-3"><span>30</span></td>
-                                                                      <td class="col-2"><span><button type="button" class="btn btn-danger col-md-12"><i class="fa fa-trash"> </i></button></span></td>
-                                                                  </tr>
-                                                              </tbody>
-                                                          </table>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <hr />
-                                          <h5>Tipo de actividad o evaluación</h5>
+                                          <p>TIPOS: (E) Escrita; (O) Oral; (X) Exposición; (T) Trabajo, investigación o taller; (Q) Quiz; (P) Parcial; (I) Integral </p>
                                           <!-- Barra de agregar temas -->
                                           <div class="row">
-                                              <div class="col-md-12">
-                                                  <div class="form-group">
-                                                      <div class="form-group row">
-                                                          <div class="col-sm-12">
-                                                              <div class="form-check form-check-inline">
-                                                                  <input class="form-check-input" type="checkbox" id="gridCheck1">
-                                                                  <label class="form-check-label" for="gridCheck1">Escrita (E)</label>
-                                                              </div>
-                                                              <div class="form-check form-check-inline">
-                                                                  <input class="form-check-input" type="checkbox" id="gridCheck2">
-                                                                  <label class="form-check-label" for="gridCheck1">Oral (O)</label>
-                                                              </div>
-                                                              <div class="form-check form-check-inline">
-                                                                  <input class="form-check-input" type="checkbox" id="gridCheck3">
-                                                                  <label class="form-check-label" for="gridCheck1">Exposición (X)</label>
-                                                              </div>
-                                                              <div class="form-check form-check-inline">
-                                                                  <input class="form-check-input" type="checkbox" id="gridCheck4">
-                                                                  <label class="form-check-label" for="gridCheck1">Parcial (P)</label>
-                                                              </div>
-                                                              <div class="form-check form-check-inline">
-                                                                  <input class="form-check-input" type="checkbox" id="gridCheck5">
-                                                                  <label class="form-check-label" for="gridCheck1">Integral (I)</label>
-                                                              </div>
-                                                              <div class="form-check form-check-inline">
-                                                                  <input class="form-check-input" type="checkbox" id="gridCheck6">
-                                                                  <label class="form-check-label" for="gridCheck1">Trabajo, investigación o taller (T)</label>
-                                                              </div>
-                                                          </div>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <div class="row">
-                                              <div class="col-md-4">
+                                              <div class="col-md-2">
                                                   <div class="form-group">
                                                       <label for="exampleFormControlSelect1">Corte académico</label>
-                                                      <select class="form-control" id="nivelformacion">
+                                                      <select class="form-control" id="cecorteacademico">
                                                           <option>Primer corte</option>
                                                       </select>
                                                   </div>
                                               </div>
-                                              <div class="col-md-4">
+                                              <div class="col-md-3">
+                                                  <div class="form-group">
+                                                      <label for="exampleFormControlSelect1">Tipo de Evaluación</label>
+                                                      <input type="text" class="form-control" id="cetipoevaluacion" placeholder="(E), (O), (X), (T), (Q), (P), (I)">
+                                                  </div>
+                                              </div>
+                                              <div class="col-md-3">
                                                   <div class="form-group">
                                                       <label for="exampleFormControlSelect1">Porcentaje %</label>
-                                                      <input type="text" class="form-control" id="areaasignatura" placeholder="Solo valor númerico sin signo porcentual">
+                                                      <input type="text" class="form-control" id="ceporcentaje" placeholder="Solo valor númerico sin signo porcentual">
                                                   </div>
                                               </div>
                                               <div class="col-md-4">
                                                   <div class="form-group">
-                                                      <label for="exampleFormControlSelect1">Semanas</label>
-                                                      <input type="text" class="form-control" id="areaasignatura" >
+                                                      <label for="exampleFormControlSelect1">Semana</label>
+                                                      <select class="form-control" id="cesemana">
+                                                          <option>Semana X: del XX de XXXXX al XX de XXXXX</option>
+                                                      </select>
                                                   </div>
                                               </div>
                                           </div>
@@ -782,8 +681,7 @@
                                                           <table id="productSizes" class="table table-hover table-bordered">
                                                               <thead class="thead-dark">
                                                                   <tr class="d-flex">
-                                                                      <th class="col-1">#</th>
-                                                                      <th class="col-3">Corte académico</th>
+                                                                      <th class="col-4">Corte académico</th>
                                                                       <th class="col-4">Tipo de actividad o evaluación</th>
                                                                       <th class="col-1">%</th>
                                                                       <th class="col-2">Semanas</th>
@@ -792,11 +690,10 @@
                                                               </thead>
                                                               <tbody>
                                                                   <tr class="d-flex">
-                                                                      <td class="col-1"><span>1</span></td>
-                                                                      <td class="col-3"><span>Primer corte</span></td>
+                                                                      <td class="col-4"><span>Primer corte</span></td>
                                                                       <td class="col-4"><span>E O X P</span></td>
                                                                       <td class="col-1"><span>10</span></td>
-                                                                      <td class="col-2"><span>1 - 5</span></td>
+                                                                      <td class="col-2"><span>Semana X del XX de XXXXX al XX de XXXXX</span></td>
                                                                       <td class="col-1"><span><button type="button" class="btn btn-danger"><i class="fa fa-trash"> </i></button></span></td>
                                                                   </tr>
                                                               </tbody>
