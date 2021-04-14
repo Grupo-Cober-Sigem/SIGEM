@@ -101,7 +101,7 @@
                                               <div class="col">
                                                   <div class="form-group">
                                                       <label for="exampleFormControlSelect1">Área</label>
-                                                      <select class="form-control" id="nivelformacion">
+                                                      <select class="form-control" id="areaasignatura">
                                                           <option>Básicas de Ingeniería</option>
                                                           <option>Ingeniería Aplicada</option>
                                                       </select>
@@ -110,7 +110,7 @@
                                               <div class="col">
                                                   <div class="form-group">
                                                       <label for="exampleFormControlSelect1">Ubicación</label>
-                                                      <select class="form-control" id="nivelformacion">
+                                                      <select class="form-control" id="ubicacionasignatura">
                                                           <option>Semestre 1</option>
                                                           <option>Semestre 1</option>
                                                       </select>
@@ -121,7 +121,7 @@
                                               <div class="col">
                                                   <div class="form-group">
                                                       <label for="exampleFormControlSelect1">Carácter de la asignatura</label>
-                                                      <select class="form-control" id="carasignatura">
+                                                      <select class="form-control" id="caracterasignatura">
                                                           <option>Obligatoria</option>
                                                           <option>Electiva</option>
                                                           <option>Optativa</option>
@@ -146,10 +146,10 @@
                                                       <label for="exampleFormControlInput1">Número de horas Semanales</label>
                                                       <div class="row">
                                                           <div class="col">
-                                                              <input type="text" class="form-control" placeholder="Presenciales" id="ubicacionasignatura">
+                                                              <input type="text" class="form-control" placeholder="Presenciales" id="horaspresensiales">
                                                           </div>
                                                           <div class="col">
-                                                              <input type="text" class="form-control" placeholder="Independientes" id="ubicacionasignatura">
+                                                              <input type="text" class="form-control" placeholder="Independientes" id="horassemanales">
                                                           </div>
                                                       </div>
                                                   </div>
@@ -171,7 +171,7 @@
                                               <div class="col">
                                                   <div class="form-group">
                                                       <label for="exampleFormControlTextarea1">Por favor en el siguiente espacio en blanco digite la justificación de la asignatura</label>
-                                                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                      <textarea class="form-control" id="justificacion" rows="3"></textarea>
                                                   </div>
                                               </div>
                                           </div>
@@ -191,7 +191,7 @@
                                               <div class="col">
                                                   <div class="form-group">
                                                       <label for="exampleFormControlTextarea1">Por favor en el siguiente espacio en blanco digite el objetivo de la asignatura</label>
-                                                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                      <textarea class="form-control" id="objetivogeneral" rows="3"></textarea>
                                                   </div>
                                               </div>
                                           </div>
@@ -211,7 +211,7 @@
                                               <div class="col">
                                                   <div class="form-group ">
                                                       <label for="exampleFormControlInput1">Metodología</label>
-                                                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                      <textarea class="form-control" id="metodologia" rows="3"></textarea>
                                                   </div>
                                               </div>
                                           </div>
@@ -219,7 +219,7 @@
                                               <div class="col">
                                                   <div class="form-group ">
                                                       <label for="exampleFormControlInput1">Apoyos didácticos</label>
-                                                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                      <textarea class="form-control" id="apoyosdidacticos" rows="3"></textarea>
                                                   </div>
                                               </div>
                                           </div>
@@ -239,7 +239,7 @@
                                           <div class="row">
                                               <div class="col">
                                                   <div class="form-group ">
-                                                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                      <textarea class="form-control" id="problemaasignatura" rows="3"></textarea>
                                                   </div>
                                               </div>
                                           </div>
@@ -248,19 +248,19 @@
                                               <div class="col">
                                                   <div class="form-group ">
                                                       <label for="exampleFormControlInput1">Identificación de la competencia</label>
-                                                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                      <textarea class="form-control" id="identificacioncompetencia" rows="3"></textarea>
                                                   </div>
                                               </div>
                                               <div class="col">
                                                   <label for="exampleFormControlInput1">Elementos de la competencia</label>
-                                                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                  <textarea class="form-control" id="elementoscompetencia" rows="3"></textarea>
                                               </div>
                                           </div>
                                           <h5>Criterios de desempeño</h5>
                                           <div class="row">
                                               <div class="col">
                                                   <div class="form-group ">
-                                                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                      <textarea class="form-control" id="criteriosdesempeno" rows="3"></textarea>
                                                   </div>
                                               </div>
                                           </div>
@@ -269,23 +269,23 @@
                                               <div class="col">
                                                   <div class="form-group ">
                                                       <label for="exampleFormControlInput1">Saber conocer</label>
-                                                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                      <textarea class="form-control" id="saberconocer" rows="3"></textarea>
                                                   </div>
                                               </div>
                                               <div class="col">
                                                   <label for="exampleFormControlInput1">Saber hacer</label>
-                                                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                  <textarea class="form-control" id="saberhacer" rows="3"></textarea>
                                               </div>
                                               <div class="col">
                                                   <label for="exampleFormControlInput1">Saber ser</label>
-                                                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                  <textarea class="form-control" id="saberser" rows="3"></textarea>
                                               </div>
                                           </div>
                                           <h5>Rango de aplicación</h5>
                                           <div class="row">
                                               <div class="col">
                                                   <div class="form-group ">
-                                                      <input type="text" class="form-control" placeholder="Escriba aquí el rango de aplicación" id="areaasignatura">
+                                                      <input type="text" class="form-control" placeholder="Escriba aquí el rango de aplicación" id="rangoaplicacion">
                                                   </div>
                                               </div>
                                           </div>
@@ -293,7 +293,7 @@
                                           <div class="row">
                                               <div class="col">
                                                   <div class="form-group ">
-                                                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                      <textarea class="form-control" id="evidenciasrequeridas" rows="3"></textarea>
                                                   </div>
                                               </div>
                                           </div>
@@ -314,7 +314,7 @@
                                           <div class="row">
                                               <div class="col-md-10">
                                                   <div class="form-group">
-                                                      <input type="text" class="form-control" placeholder="Nombre de la unidad" id="nomUnidadTematicaTxt">
+                                                      <input type="text" class="form-control" placeholder="Nombre de la unidad" id="unidadtematica">
                                                   </div>
                                               </div>
                                               <div class="col-md-2">
@@ -340,7 +340,7 @@
                                                             <tbody id="tbodyContenidoTematico">
                                                                 <tr class="d-flex">
                                                                     <td class="col-1"><span>1</span></td>
-                                                                    <td class="col-7"><span><input type="text" class="form-control" placeholder="Nombre de la unidad" id="nomUnidadTematicaTxt"></span></td>
+                                                                    <td class="col-7"><span>Fundamentos</span></td>
                                                                     <td class="col-2"><span><button type="button" class="btn btn-warning"><i class="fa fa-edit"> </i></button></span></td>
                                                                     <td class="col-2"><span><button type="button" class="btn btn-danger"><i class="fa fa-trash"> </i></button></span></td>
                                                                 </tr>
@@ -357,7 +357,7 @@
                                               <div class="row">
                                                   <label class="col-sm-1 col-form-label text-left">Nombre</label>
                                                   <div class="col-sm-11">
-                                                      <input id="nombre" type="text" class="form-control">
+                                                      <input id="nombresubtema" type="text" class="form-control">
                                                   </div>
                                               </div>
                                           </div>
@@ -365,7 +365,7 @@
                                               <div class="row">
                                                   <label class="col-sm-1 col-form-label text-left">Unidad</label>
                                                   <div class="col-sm-11">
-                                                      <select class="form-control" id="nivelformacion">
+                                                      <select class="form-control" id="unidadsubtema">
                                                           <option>Básicas de Ingeniería</option>
                                                           <option>Ingeniería Aplicada</option>
                                                       </select>
@@ -376,7 +376,7 @@
                                               <div class="row">
                                                   <label class="col-sm-1 col-form-label text-left">Semana</label>
                                                   <div class="col-sm-9">
-                                                      <input id="nombre" type="text" class="form-control" placeholder="Semana X: del XX de XXXXX al XX de XXXXX">
+                                                      <input id="semanasubtema" type="text" class="form-control" placeholder="Semana X: del XX de XXXXX al XX de XXXXX">
                                                   </div>
                                                   <div class="col-sm-2">
                                                       <button type="button" class="btn btn-warning col-md-12">Agregar</button>
@@ -434,7 +434,7 @@
                                               <div class="col-md-12">
                                                   <div class="form-group">
                                                       <label for="exampleFormControlTextarea1">Signatura Topografica</label>
-                                                      <input type="text" class="form-control" id="areaasignatura">
+                                                      <input type="text" class="form-control" id="bbsignaturatopografica">
                                                   </div>
                                               </div>
                                           </div>
@@ -442,7 +442,7 @@
                                               <div class="col">
                                                   <div class="form-group">
                                                       <label for="exampleFormControlTextarea1">Datos del texto existente en la biblioteca de la Universidad</label>
-                                                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                      <textarea class="form-control" id="bbdatos" rows="3"></textarea>
                                                   </div>
                                               </div>
                                           </div>
@@ -477,7 +477,7 @@
                                               <div class="col-md-12">
                                                   <div class="form-group">
                                                       <label for="exampleFormControlTextarea1">Signatura Topografica</label>
-                                                      <input type="text" class="form-control" id="areaasignatura">
+                                                      <input type="text" class="form-control" id="bbpssignaturatopografica">
                                                   </div>
                                               </div>
                                           </div>
@@ -485,7 +485,7 @@
                                               <div class="col">
                                                   <div class="form-group">
                                                       <label for="exampleFormControlTextarea1">Datos de la publicación seriada existente en la biblioteca de la Universidad</label>
-                                                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                      <textarea class="form-control" id="bbpsdatos" rows="3"></textarea>
                                                   </div>
                                               </div>
                                           </div>
@@ -520,7 +520,7 @@
                                               <div class="col">
                                                   <div class="form-group">
                                                       <label for="exampleFormControlTextarea1">Titulo de la página web y enlace web para acceder a él</label>
-                                                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                      <textarea class="form-control" id="bbswtitulo" rows="3"></textarea>
                                                   </div>
                                               </div>
                                           </div>
@@ -553,7 +553,7 @@
                                               <div class="col">
                                                   <div class="form-group">
                                                       <label for="exampleFormControlTextarea1">Titulo de la página web y enlace web para acceder a él</label>
-                                                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                      <textarea class="form-control" id="bsltitulo" rows="3"></textarea>
                                                   </div>
                                               </div>
                                           </div>
@@ -586,7 +586,7 @@
                                               <div class="col-md-12">
                                                   <div class="form-group">
                                                       <label for="exampleFormControlTextarea1">ISBN</label>
-                                                      <input type="text" class="form-control" id="areaasignatura">
+                                                      <input type="text" class="form-control" id="bcisbn">
                                                   </div>
                                               </div>
                                           </div>
@@ -594,7 +594,7 @@
                                               <div class="col">
                                                   <div class="form-group">
                                                       <label for="exampleFormControlTextarea1">Incluir los textos no existentes en la biblioteca requeridos para el desarrollo de la asignatura</label>
-                                                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                      <textarea class="form-control" id="bctitulo" rows="3"></textarea>
                                                   </div>
                                               </div>
                                           </div>
@@ -642,7 +642,7 @@
                                               <div class="col-md-2">
                                                   <div class="form-group">
                                                       <label for="exampleFormControlSelect1">Corte académico</label>
-                                                      <select class="form-control" id="nivelformacion">
+                                                      <select class="form-control" id="cecorteacademico">
                                                           <option>Primer corte</option>
                                                       </select>
                                                   </div>
@@ -650,19 +650,19 @@
                                               <div class="col-md-3">
                                                   <div class="form-group">
                                                       <label for="exampleFormControlSelect1">Tipo de Evaluación</label>
-                                                      <input type="text" class="form-control" id="areaasignatura" placeholder="(E), (O), (X), (T), (Q), (P), (I)">
+                                                      <input type="text" class="form-control" id="cetipoevaluacion" placeholder="(E), (O), (X), (T), (Q), (P), (I)">
                                                   </div>
                                               </div>
                                               <div class="col-md-3">
                                                   <div class="form-group">
                                                       <label for="exampleFormControlSelect1">Porcentaje %</label>
-                                                      <input type="text" class="form-control" id="areaasignatura" placeholder="Solo valor númerico sin signo porcentual">
+                                                      <input type="text" class="form-control" id="ceporcentaje" placeholder="Solo valor númerico sin signo porcentual">
                                                   </div>
                                               </div>
                                               <div class="col-md-4">
                                                   <div class="form-group">
                                                       <label for="exampleFormControlSelect1">Semana</label>
-                                                      <select class="form-control" id="nivelformacion">
+                                                      <select class="form-control" id="cesemana">
                                                           <option>Semana X: del XX de XXXXX al XX de XXXXX</option>
                                                       </select>
                                                   </div>
