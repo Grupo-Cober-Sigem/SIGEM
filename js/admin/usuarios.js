@@ -29,8 +29,8 @@ var appUsuarios = new Vue({
                         this.nombre = document.getElementById('nombre').value,
                         this.apellidos = document.getElementById('apellidos').value,
                         this.cod_user = document.getElementById('cod_user').value,
-                        /*this.email = document.getElementById('email').value,
-                        this.pass = document.getElementById('pass').value,
+                        this.email = document.getElementById('email').value,
+                        /*this.pass = document.getElementById('pass').value,
                         this.rol = document.getElementById('rol').value*/
                     ]
                 }
@@ -38,8 +38,8 @@ var appUsuarios = new Vue({
             console.log("Valor del nombre "+this.nombre);
             console.log("Valor del apellidos "+this.apellidos);
             console.log("Valor del cod "+this.cod_user);
-            /*console.log("Valor del email "+this.email);
-            console.log("Valor del pass "+this.pass);
+            console.log("Valor del email "+this.email);
+            /*console.log("Valor del pass "+this.pass);
             console.log("Valor del rol "+this.rol);*/
 
             /*if (this.nombre == "" || this.apellidos == "" || this.cod_user == 0 || this.email=='') {
