@@ -1,14 +1,11 @@
-var url = "";
-var appUsuarios = new Vue({
+/*var url = "";
+var appAsignatura = new Vue({
     el: "#seccionAsignatura",
     data: {
-        datosUsuarios: [],
-        cod: "",
-        pass: "",
-        Nombres: "",
-        Apellidos: "",
-        email: "",
-        rol: ""
+        datosAsignatura: [],
+        arrayUnidades:[],
+        arraySesiones:[],
+        arraySubtemas:[]
     },
     methods: {
         btnAgregarAsignatura: async function () {
@@ -60,16 +57,16 @@ var appUsuarios = new Vue({
         btnDeshabilitarUser: async function () { },
 
         //Procedimientos
-        listarUsuarios: function(){
+        listarAsignatura: function(){
             axios.post(url,{opcion:1}).then(response=>{
                 this.datosUsuarios = response.data;
                 console.log(this.datos);
             });
         },
 
-        agregarUsuarios: function(){
+        AgregarAsignatura: function(){
             axios.post(url, {opcion:4, marca:this.marca, modelo:this.modelo,stock:this.stock }).then(response =>{
-                this.listarMoviles();
+                this.listarAsignatura();
             });        
              this.marca = "",
              this.modelo = "",
@@ -79,4 +76,4 @@ var appUsuarios = new Vue({
     created:function(){
         this.listarUsuarios();
     }
-});                                 
+});*/
