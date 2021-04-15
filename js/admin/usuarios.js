@@ -27,11 +27,11 @@ var appUsuarios = new Vue({
                 preConfirm: () => {
                     return [
                         this.nombre = Swal.getPopup().querySelector('#nombre').value,
-                        this.apellidos = document.getElementById('#apellidos').value,
-                        this.cod_user = document.getElementById('#cod_user').value,
-                        this.email = document.getElementById('#email').value,
-                        this.pass = document.getElementById('#pass').value,
-                        this.rol = document.getElementById('#rol').value
+                        this.apellidos = Swal.getPopup().querySelector('#apellidos').value,
+                        this.cod_user = Swal.getPopup().querySelector('#cod_user').value,
+                        this.email = Swal.getPopup().querySelector('#email').value,
+                        this.pass = Swal.getPopup().querySelector('#pass').value,
+                        this.rol = Swal.getPopup().querySelector('#rol').value
                         /*this.nombre = document.getElementById('nombre').value,
                         this.apellidos = document.getElementById('apellidos').value,
                         this.cod_user = document.getElementById('cod_user').value,
