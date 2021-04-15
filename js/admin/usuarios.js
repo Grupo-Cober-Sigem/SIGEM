@@ -26,12 +26,18 @@ var appUsuarios = new Vue({
 
                 preConfirm: () => {
                     return [
-                        this.nombre = document.getElementById('nombre').value,
+                        this.nombre = Swal.getPopup().querySelector('#nombre').value,
+                        this.apellidos = document.getElementById('#apellidos').value,
+                        this.cod_user = document.getElementById('#cod_user').value,
+                        this.email = document.getElementById('#email').value,
+                        this.pass = document.getElementById('#pass').value,
+                        this.rol = document.getElementById('#rol').value
+                        /*this.nombre = document.getElementById('nombre').value,
                         this.apellidos = document.getElementById('apellidos').value,
                         this.cod_user = document.getElementById('cod_user').value,
                         this.email = document.getElementById('email').value,
                         this.pass = document.getElementById('pass').value,
-                        this.rol = document.getElementById('rol').value
+                        this.rol = document.getElementById('rol').value*/
                     ]
                 }
             })
