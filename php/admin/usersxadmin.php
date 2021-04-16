@@ -29,13 +29,14 @@
             $resultado->execute();
             $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
             break;
-        case 3: // Eliminar
-            $consulta = "DELETE FROM datosUsuario WHERE Cod_User='$usuario' ";
+        case 3: // Deshabilitar
+            $d=0;
+            $consulta = "UPDATE datosUsuario SET habilitado='$a' WHERE Cod_User='$usuario' ";
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             break;
         case 4: // Agregar
-            $consulta = "INSERT INTO datosUsuario (Cod_User, Pass, Nombres, Apellidos, email, rol) VALUES ('$usuario','$pass','$nombres','$apellidos','$correo','$rol')";
+            $consulta = "INSERT INTO datosUsuario (Cod_User, Pass, Nombres, Apellidos, email, rol, habilitado) VALUES ('$usuario','$pass','$nombres','$apellidos','$correo','$rol',1)";
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             break;
