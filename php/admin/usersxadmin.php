@@ -18,13 +18,13 @@
 
     switch($opcion){
         case 1: //Seleccionar
-            $consulta = "SELECT Nombres, Apellidos, email, rol FROM datosUsuario";
+            $consulta = "SELECT Cod_User, Nombres, Apellidos, email, rol FROM datosUsuario";
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
             break;
         case 2: //Modificar
-            $consulta = "UPDATE datosUsuario SET Nombres='$nombres', Apellidos='$apellidos', email='$correo', rol='$rol' WHERE Cod_User='$usuario' ";
+            $consulta = "UPDATE datosUsuario SET Pass='$pass', Nombres='$nombres', Apellidos='$apellidos', email='$correo', rol='$rol' WHERE Cod_User='$usuario' ";
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
