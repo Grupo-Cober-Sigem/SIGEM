@@ -2,6 +2,7 @@ var url = "../../../php/admin/usersxadmin.php";
 var appUsuarios = new Vue({
     el: "#seccionUsuarios",
     data: {
+        areas:[],
         datosUsuarios: [],
         cod_user: 0,
         pass: "",
@@ -61,7 +62,7 @@ var appUsuarios = new Vue({
         },
         btnEditarUser: async function (cod_user,nombre,apellidos,email,pass,rol) { 
             await Swal.fire({
-                title: 'EDITAR',
+                title: 'Editar',
                 html:
                 '<div class="form-group"><div class="row"><label class="col-form-label"></label></div></div><div class="form-group"><div class="row"><label class="col-sm-4 col-form-label text-left">Nombres</label><div class="col-sm-8"><input id="nombre" value="'+nombre+'" type="text" class="form-control"></div></div></div><div class="form-group"><div class="row"><label class="col-sm-4 col-form-label text-left">Apellidos</label><div class="col-sm-8"><input id="apellidos" value="'+apellidos+'" type="text" class="form-control"></div></div></div><div class="form-group"><div class="row"><label class="col-sm-6 col-form-label text-left">Nro. de Identificación</label><div class="col-sm-6"><input id="cod_user" value="'+cod_user+'"type="number" min="0" class="form-control" disabled></div></div></div><div class="form-group"><div class="row"><label class="col-sm-5 col-form-label text-left">Email Unilibre</label><div class="col-sm-7"><input id="email" value="'+email+'" type="text" class="form-control"></div></div></div><div class="form-group"><div class="row"><label class="col-sm-4 col-form-label text-left">Contraseña</label><div class="col-sm-8"><input id="pass" value="'+pass+'"type="text" class="form-control"></div></div></div><div class="form-group"><div class="row"><label class="col-sm-4 col-form-label text-left">Rol</label><div class="col-sm-8"><select class="form-control" id="rol"><option value="'+rol+'" disabled selected>Seleccionar</option><option value="1">Docente</option><option value="2">Jefe de Area</option><option value="3">Decano</option></select></div></div></div>', 
                 focusConfirm: false,
@@ -74,13 +75,6 @@ var appUsuarios = new Vue({
                     email = Swal.getPopup().querySelector('#email').value,
                     pass = Swal.getPopup().querySelector('#pass').value,
                     rol = Swal.getPopup().querySelector('#rol').value                    
-                    
-                    console.log("Valor de nombre antes de editar: "+nombre);
-                    console.log("Valor de apellidos antes de editar: "+apellidos);
-                    console.log("Valor de cod_user antes de editar: "+cod_user);
-                    console.log("Valor de email antes de editar: "+email);
-                    console.log("Valor de pass antes de editar: "+pass);
-                    console.log("Valor de rol antes de editar: "+rol);
 
                     this.editarUsuarios(cod_user,pass,nombre,apellidos,email,rol);
                     Swal.fire(
@@ -118,7 +112,7 @@ var appUsuarios = new Vue({
             this.apellidos="",
             this.email="",
             this.rol=0
-        },
+        }
     },
     created:function(){
         this.listarUsuarios();

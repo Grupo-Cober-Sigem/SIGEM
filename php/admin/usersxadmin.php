@@ -27,7 +27,6 @@
             $consulta = "UPDATE datosUsuario SET Pass='$pass', Nombres='$nombres', Apellidos='$apellidos', email='$correo', rol='$rol' WHERE Cod_User='$usuario' ";
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
-            $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
             break;
         case 3: // Deshabilitar
             $d=0;
