@@ -61,7 +61,7 @@ var appUsuarios = new Vue({
         listarMicrocurriculo: function(){
             axios.post(url,{opcion:1}).then(response=>{
                 this.datosMicrocurriculo = response.data;
-                console.log(this.datos);
+                console.log(this.datosMicrocurriculo);
             });
         }
     },
