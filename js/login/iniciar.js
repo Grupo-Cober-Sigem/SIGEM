@@ -27,6 +27,7 @@ var app = new Vue({
         consultarUsuario: function(usuario, contraseña){
             axios.post(url, {opcion:1, usuario:usuario, contraseña:contraseña}).then(response => {
                 this.datos = response.data;
+                console.log("Valor del array datos: "+this.datos);
                 if(this.datos != '')
                 {
                     if(this.datos[0].habilitado==1)
