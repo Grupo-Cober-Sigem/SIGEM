@@ -66,7 +66,9 @@ var appUsuarios = new Vue({
                 html:
                 '<div class="form-group"><div class="row"><label class="col-form-label"></label></div></div><div class="form-group"><div class="row"><label class="col-sm-4 col-form-label text-left">Nombres</label><div class="col-sm-8"><input id="nombre" value="'+nombre+'" type="text" class="form-control"></div></div></div><div class="form-group"><div class="row"><label class="col-sm-4 col-form-label text-left">Apellidos</label><div class="col-sm-8"><input id="apellidos" value="'+apellidos+'" type="text" class="form-control"></div></div></div><div class="form-group"><div class="row"><label class="col-sm-6 col-form-label text-left">Nro. de Identificación</label><div class="col-sm-6"><input id="cod_user" value="'+cod_user+'"type="number" min="0" class="form-control" disabled></div></div></div><div class="form-group"><div class="row"><label class="col-sm-5 col-form-label text-left">Email Unilibre</label><div class="col-sm-7"><input id="email" value="'+email+'" type="text" class="form-control"></div></div></div><div class="form-group"><div class="row"><label class="col-sm-4 col-form-label text-left">Contraseña</label><div class="col-sm-8"><input id="pass" value="'+pass+'"type="text" class="form-control"></div></div></div><div class="form-group"><div class="row"><label class="col-sm-4 col-form-label text-left">Rol</label><div class="col-sm-8"><select class="form-control" id="rol"><option value="'+rol+'" disabled selected>Seleccionar</option><option value="1">Docente</option><option value="2">Jefe de Area</option><option value="3">Decano</option></select></div></div></div>', 
                 focusConfirm: false,
-                showCancelButton: true,                         
+                showCancelButton: true,
+                cancelButtonText: "Cancelar",
+
                 }).then((result) => {
                   if (result.value) {                                             
                     nombre = Swal.getPopup().querySelector('#nombre').value,
@@ -86,7 +88,23 @@ var appUsuarios = new Vue({
                 });
         },
 
-        btnDeshabilitarUser: async function () { },
+        btnDeshabilitarUser: async function (cod_user,habilitado) { 
+            await Swal.fire({
+                    title: 'Deshabilitar Usuario',
+                    text: "El no podrá acceder al sistema",
+                    icon: 'warning',
+                    confirmButtonText: 'Deshabilitar',
+                    confirmButtonColor: '#1cc88a',
+                    showCancelButton: true,
+                    cancelButtonText: "Cancelar",
+                    cancelButtonColor: '#CB3234',
+
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        this.deshabilitarUsuarios(cod_user,habilitado);
+                    }
+                })
+        },
 
         //Procedimientos
         listarUsuarios: function(){
@@ -112,6 +130,29 @@ var appUsuarios = new Vue({
             this.apellidos="",
             this.email="",
             this.rol=0
+        },
+
+        deshabilitarUsuarios: function(cod_user,habilitado){
+            if(habilitado==1)
+            {
+                axios.post(url,{opcion:3, cod_user:cod_user}).then(response =>{           
+                    this.listarUsuarios();
+
+                    Swal.fire(
+                        'Deshabilitado',
+                        'El usuario ya no tiene acceso al sistema',
+                        'success'
+                    )
+                });  
+            }else
+            {
+                Swal.fire(
+                    'Deshabilitado',
+                    'El usuario ya se encuentra deshabilitado',
+                    'info'
+                )
+            }
+            
         }
     },
     created:function(){

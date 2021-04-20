@@ -18,7 +18,7 @@
 
     switch($opcion){
         case 1: //Seleccionar
-            $consulta = "SELECT Cod_User, Pass, Nombres, Apellidos, email, rol FROM datosUsuario";
+            $consulta = "SELECT Cod_User, Pass, Nombres, Apellidos, email, rol, habilitado FROM datosUsuario";
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             $data = $resultado->fetchAll(PDO::FETCH_ASSOC);

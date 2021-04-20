@@ -18,7 +18,7 @@ $contraseña = (isset($_POST['contraseña'])) ? $_POST['contraseña'] : '';
 
 switch($opcion){
     case 1:
-        $consulta = "SELECT Cod_User, Nombres, Apellidos, email FROM datosUsuario WHERE Cod_User='$usuario' and Pass='$contraseña'";
+        $consulta = "SELECT Cod_User, Nombres, Apellidos, email, rol, habilitado FROM datosUsuario WHERE Cod_User='$usuario' and Pass='$contraseña'";
         $resultado = $cn->prepare($consulta);
         $resultado->execute();
         $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
