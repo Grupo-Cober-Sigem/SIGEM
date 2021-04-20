@@ -30,25 +30,25 @@ var app = new Vue({
                 console.log("Valor del array datos: "+this.datos);
                 if(this.datos != '')
                 {
-                    if(this.datos[0].habilitado==1)
+                    if(this.datos[0].habilitado=="1")
                     {
                         localStorage.setItem("usuario", this.datos[0].Cod_User);
                         localStorage.setItem("rol",this.datos[0].rol);
                         switch(this.datos[0].rol)
                         {
-                            case 1:
+                            case "1":
                                 window.location.href = "./pages/docentes/indexdoc.html";
                                 break;
 
-                            case 2:
+                            case "2":
                                 window.location.href = "./pages/jefearea/indexja.html";
                                 break;
 
-                            case 3:
+                            case "3":
                                 window.location.href = "./pages/decano/indexdec.html";
                                 break;
 
-                            case 5:
+                            case "5":
                                 window.location.href = "./pages/administrador/indexadmin.html";
                                 break;
                         }
