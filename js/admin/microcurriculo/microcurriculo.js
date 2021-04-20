@@ -1,4 +1,4 @@
-var url = "";
+var url = "../../../php/admin/microcurriculo/microcurriculo.php";
 var appUsuarios = new Vue({
     el: "#seccionMicrocurriculo",
     data: {
