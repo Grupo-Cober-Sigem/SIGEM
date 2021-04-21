@@ -62,7 +62,7 @@
                                 <li class="nav-item"><a class="nav-link" href="../../../pages/administrador/indexadmin.html">Inicio</a></li>
                                 <li class="nav-item"><a class="nav-link" href="http://siul.unilibre.edu.co/sinugwt/">SIUL</a></li>
                                 <li class="nav-item"><a class="nav-link" href="../../../pages/administrador/perfilxadmin.html">Perfil</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Cerrar Sesión</a></li>
+                                <li class="nav-item"><a class="nav-link" onclick="cerrarSesion()">Cerrar Sesión</a></li>
                             </ul>
                         </div>
                     </div>
@@ -85,98 +85,6 @@
                             <div class="col-md-2">
                                 <div class="form-group">
                                     <button type="button" class="btn btn-warning col-md-12" @click="btnAgregar" >Agregar</button>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Modales -->
-                        <div class="modal fade" id="agregarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Creación de Usuarios</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form>
-                                            <div class="form-group">
-                                                <label for="Nombre" class="col-form-label">Nombre</label>
-                                                <input type="text" class="form-control" id="Nombre">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="Apellido" class="col-form-label">Apellidos</label>
-                                                <input type="text" class="form-control" id="Apellido">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="Cod_User" class="col-form-label">Documento de identidad</label>
-                                                <input type="text" class="form-control" id="Cod_User" placeholder="En número sin espacios">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="email" class="col-form-label">Correo electrónico</label>
-                                                <input type="text" class="form-control" id="email">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="pass" class="col-form-label">Contraseña</label>
-                                                <input type="text" class="form-control" id="pass">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="recipient-name">Rol</label>
-                                                <select class="form-control" id="rol">
-                                                    <option>Seleccionar</option>
-                                                    <option>Docente</option>
-                                                    <option>Jefe de Area</option>
-                                                    <option>Decano</option>
-                                                </select>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                                        <button type="button" @click="btnAgregar" class="btn btn-warning">Agregar</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="modal fade" id="editarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Edición de Usuarios</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form>
-                                            <div class="form-group">
-                                                <label for="recipient-name" class="col-form-label">Nombre</label>
-                                                <input type="text" class="form-control" id="recipient-name">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="recipient-name" class="col-form-label">Apellidos</label>
-                                                <input type="text" class="form-control" id="recipient-name">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="recipient-name" class="col-form-label">Correo electrónico</label>
-                                                <input type="text" class="form-control" id="recipient-name">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="recipient-name" class="col-form-label">Contraseña</label>
-                                                <input type="text" class="form-control" id="recipient-name">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="recipient-name">Rol</label>
-                                                <select class="form-control" id="rol">
-                                                    <option>Seleccionar</option>
-                                                    <option>Docente</option>
-                                                    <option>Jefe de Area</option>
-                                                    <option>Decano</option>
-                                                </select>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                                        <button type="button" @click="btnEditarUser" class="btn btn-success">Guardar</button>
-                                    </div>
                                 </div>
                             </div>
                         </div>

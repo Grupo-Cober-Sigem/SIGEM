@@ -8,3 +8,9 @@ switch(rol)
     default:
         document.location.href="/";
 }
+
+async function cerrarSesion(){
+    
+    localStorage.clear();
+    document.location.href="/";
+}
