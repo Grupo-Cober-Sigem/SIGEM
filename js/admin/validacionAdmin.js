@@ -2,7 +2,7 @@ var rol= localStorage.getItem("rol");
 
 switch(rol)
 {
-    case 5:
+    case "5":
         break;
 
     default:
