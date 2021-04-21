@@ -49,7 +49,7 @@ var app = new Vue({
                 this.nombres = this.datos[0].Nombres;
                 this.apellidos = this.datos[0].Apellidos;
                 this.correo = this.datos[0].email;
-                this.pass = this.datos[0].pass;
+                this.pass = this.datos[0].Pass;
             });
         },
 
