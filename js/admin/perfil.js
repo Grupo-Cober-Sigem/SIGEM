@@ -13,7 +13,7 @@ var app = new Vue({
     },
     // Se definen las acciones de los botones
     methods: {
-        btnEditar: async function (nombres, apellidos, correo) {
+        btnEditar: async function (nombres, apellidos, correo, pass) {
             await Swal.fire({
                 title: 'EDITAR',
                 html:
@@ -25,7 +25,7 @@ var app = new Vue({
                     nombres = document.getElementById('nombres').value,    
                     apellidos = document.getElementById('apellidos').value,
                     correo = document.getElementById('correo').value,                
-                    pass = document.getElementById('pass')
+                    pass = document.getElementById('pass').value
 
                     this.actualizarDatos(nombres, apellidos, correo, pass);
                     Swal.fire(
