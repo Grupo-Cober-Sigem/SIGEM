@@ -9,7 +9,7 @@ switch(rol)
         document.location.href="/";
 }
 
-async function cerrarSesion(){
+function cerrarSesion(){
     
     localStorage.clear();
     document.location.href="/";
