@@ -48,14 +48,13 @@ var appUsuarios = new Vue({
                 })
             }
         },
-        btnEditarUser: async function () { },
-        btnDeshabilitarUser: async function () { },
+        btnEditarPeriodo: async function () { },
 
         //Procedimientos
         listarPeriodos: function(){
             axios.post(url,{opcion:1}).then(response=>{
-                this.datosUsuarios = response.data;
-                console.log(this.datos);
+                this.datosPeriodos = response.data;
+                console.log(this.datosPeriodos);
             });
         },
 
