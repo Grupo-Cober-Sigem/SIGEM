@@ -111,7 +111,7 @@ var appUsuarios = new Vue({
             axios.post(url,{opcion:1}).then(response=>{
                 this.datosUsuarios = response.data;
 
-                this.datosUsuarios.forEach(rol => {
+                this.datosUsuarios.forEach(function(rol){
                     switch (rol){
                         case "1":
                             rol.value="docente";
