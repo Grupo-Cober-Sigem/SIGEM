@@ -1,4 +1,4 @@
-var url = "../../php/admin/usersxadmin.php";
+var url = "../../../php/admin/usersxadmin.php";
 var appUsuarios = new Vue({
     el: "#seccionUsuarios",
     data: {
