@@ -110,6 +110,24 @@ var appUsuarios = new Vue({
         listarUsuarios: function(){
             axios.post(url,{opcion:1}).then(response=>{
                 this.datosUsuarios = response.data;
+
+                this.datosUsuarios.forEach(rol => {
+                    switch (rol){
+                        case 1:
+                            rol.value="docente";
+                            break;
+                        case 2:
+                            rol.value="jefe de area";
+                            break;
+                        case 3:
+                            rol.value="decano";
+                            break;
+                        case 5:
+                            rol.value="Admin";
+                            break;
+                    }
+                });
+
                 console.log(this.datosUsuarios);
             });
         },
