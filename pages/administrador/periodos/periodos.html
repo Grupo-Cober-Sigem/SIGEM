@@ -168,21 +168,19 @@
                                 <thead class="thead-dark">
                                     <tr>
                                         <th class="col-3">Nombre</th>
-                                        <th class="col-2">Inicio</th>
-                                        <th class="col-2">Fin</th>
+                                        <th class="col-3">Inicio</th>
+                                        <th class="col-3">Fin</th>
                                         <th class="col-1">Editar</th>
                                         <th class="col-2">Cerrar periodo</th>
-                                        <th class="col-2">Deshabilitar</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr v-for="(periodo,indice) of datosPeriodos">
                                         <td class="col-3">{{periodo.idPeriodo}}</td>
-                                        <td class="col-2"><span>{{periodo.fechaIni}}</span></td>
-                                        <td class="col-2"><span>{{periodo.fechaFin}}</span></td>
+                                        <td class="col-3"><span>{{periodo.fechaIni}}</span></td>
+                                        <td class="col-3"><span>{{periodo.fechaFin}}</span></td>
                                         <td class="col-1"><span><button type="button" class="btn btn-warning col-md-12" @click="btnEditarPeriodo(periodo.idPeriodo,periodo.fechaIni,periodo.fechaFin)"><i class="fa fa-edit"> </i></button></span></td>
                                         <td class="col-2"><span><button type="button" class="btn btn-danger col-md-12"><i class="fa fa-exclamation"></i></button></span></td>
-                                        <td class="col-2"><span><button type="button" class="btn btn-danger col-md-12"><i class="fa fa-ban"></i></button></span></td>
                                     </tr>
                                 </tbody>
                             </table>
