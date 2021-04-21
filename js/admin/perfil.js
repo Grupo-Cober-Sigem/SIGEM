@@ -8,7 +8,8 @@ var app = new Vue({
         cod: "",
         nombres: "",
         apellidos: "",
-        correo: ""
+        correo: "",
+        pass:""
     },
     // Se definen las acciones de los botones
     methods: {
@@ -16,7 +17,7 @@ var app = new Vue({
             await Swal.fire({
                 title: 'EDITAR',
                 html:
-                '<div class="form-group"><div class="row"><label class="col-sm-4 col-form-label">Nombres</label><div class="col-sm-7"><input id="nombres" value="'+nombres+'" type="text" class="form-control"></div></div><div class="row"><label class="col-sm-4 col-form-label">Apellidos</label><div class="col-sm-7"><input id="apellidos" value="'+apellidos+'" type="text" class="form-control"></div></div><div class="row"><label class="col-sm-4 col-form-label">Correo</label><div class="col-sm-7"><input id="correo" value="'+correo+'" class="form-control"></div></div></div>', 
+                '<div class="form-group"><div class="row"><label class="col-sm-4 col-form-label">Nombres</label><div class="col-sm-7"><input id="nombres" value="'+nombres+'" type="text" class="form-control"></div></div><div class="row"><label class="col-sm-4 col-form-label">Apellidos</label><div class="col-sm-7"><input id="apellidos" value="'+apellidos+'" type="text" class="form-control"></div></div><div class="row"><label class="col-sm-4 col-form-label">Correo</label><div class="col-sm-7"><input id="correo" value="'+correo+'" class="form-control"></div></div><div class="form-group"><div class="row"><label class="col-sm-4 col-form-label">Contraseña</label><div class="col-sm-7"><input id="pass" value="'+pass+'" type="text" class="form-control"></div></div></div>', 
                 focusConfirm: false,
                 showCancelButton: true,                         
                 }).then((result) => {
@@ -24,8 +25,9 @@ var app = new Vue({
                     nombres = document.getElementById('nombres').value,    
                     apellidos = document.getElementById('apellidos').value,
                     correo = document.getElementById('correo').value,                
-                    
-                    this.actualizarDatos(nombres, apellidos, correo);
+                    pass = document.getElementById('pass')
+
+                    this.actualizarDatos(nombres, apellidos, correo, pass);
                     Swal.fire(
                       '¡Actualizado!',
                       'El registro ha sido actualizado.',
@@ -47,11 +49,12 @@ var app = new Vue({
                 this.nombres = this.datos[0].Nombres;
                 this.apellidos = this.datos[0].Apellidos;
                 this.correo = this.datos[0].email;
+                this.pass = this.datos[0].pass;
             });
         },
 
-        actualizarDatos: async function(nombres, apellidos, correo) {
-            axios.post(url, {opcion:2, usuario:this.cod, nombres:nombres, apellidos:apellidos, correo:correo}).then(response => {
+        actualizarDatos: async function(nombres, apellidos, correo, pass) {
+            axios.post(url, {opcion:2, usuario:this.cod, nombres:nombres, apellidos:apellidos, correo:correo, pass:pass}).then(response => {
                 this.listarDatos();
             });
         }

@@ -111,10 +111,10 @@
                               </div>
                               <div class="col">
                                   <label for="exampleFormControlInput1">Contraseña</label>
-                                  <input type="password" class="form-control" disabled>
+                                  <input v-model="pass" type="password" class="form-control" disabled>
                               </div>
                           </div>
-                          <button type="button" class="btn btn-warning" @click="btnEditar(nombres, apellidos, correo)">Editar</button>
+                          <button type="button" class="btn btn-warning" @click="btnEditar(nombres, apellidos, correo, pass)">Editar</button>
                          
                       </form>
                   </div>

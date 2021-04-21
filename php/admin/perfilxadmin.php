@@ -16,16 +16,17 @@ $usuario = (isset($_POST['usuario'])) ? $_POST['usuario'] : '';
 $nombres = (isset($_POST['nombres'])) ? $_POST['nombres'] : '';
 $apellidos = (isset($_POST['apellidos'])) ? $_POST['apellidos'] : '';
 $correo = (isset($_POST['correo'])) ? $_POST['correo'] : '';
+$pass = (isset($_POST['pass'])) ? $_POST['pass'] : '';
 
 switch($opcion){
     case 1:
-        $consulta = "SELECT Nombres, Apellidos, email FROM datosUsuario WHERE Cod_User='$usuario'";
+        $consulta = "SELECT Nombres, Apellidos, email, Pass FROM datosUsuario WHERE Cod_User='$usuario'";
         $resultado = $cn->prepare($consulta);
         $resultado->execute();
         $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
         break;
     case 2:
-        $consulta = "UPDATE datosUsuario SET Nombres='$nombres', Apellidos='$apellidos', email='$correo' WHERE Cod_User='$usuario' ";
+        $consulta = "UPDATE datosUsuario SET Nombres='$nombres', Apellidos='$apellidos', email='$correo' , Pass='$pass' WHERE Cod_User='$usuario' ";
         $resultado = $cn->prepare($consulta);
         $resultado->execute();
         $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
