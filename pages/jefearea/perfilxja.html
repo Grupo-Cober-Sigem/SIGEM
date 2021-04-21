@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="../../css/style.css">
+    <!-- Sweet Alert 2 -->
+    <link rel="stylesheet" href="../../plugins/sweetalert2/sweetalert2.min.css">
   </head>
   <body>
       <div class="wrapper d-flex align-items-stretch">
@@ -61,36 +63,37 @@
               </nav>
               <!-- Contenido de la página -->
               <div class="container-fluid">
-                      <form>
+                  <div class="container-fluid">
+                      <form id="perfilxadmin">
                           <h1 class="mb-4"><strong>Datos personales</strong></h1>
                           <div class="row">
                               <div class="col">
                                   <div class="form-group ">
-                                      <label for="exampleFormControlInput1">Nombres</label>
-                                      <input type="text" class="form-control" id="nombreasignatura">
+                                      <label  for="exampleFormControlInput1">Nombres</label>
+                                      <input v-model="nombres"  type="text" class="form-control" disabled>
                                   </div>
                               </div>
                               <div class="col">
                                   <label for="exampleFormControlInput1">Apellidos</label>
-                                  <input type="text" class="form-control" id="codigoasignatura">
+                                  <input v-model="apellidos"  type="text" class="form-control" disabled>
                               </div>
                           </div>
                           <div class="row">
                               <div class="col">
                                   <div class="form-group ">
                                       <label for="exampleFormControlInput1">Correo electrónico</label>
-                                      <input type="text" class="form-control" id="nombreasignatura">
+                                      <input v-model="correo"  type="text" class="form-control" disabled>
                                   </div>
                               </div>
                               <div class="col">
                                   <label for="exampleFormControlInput1">Contraseña</label>
-                                  <input type="password" class="form-control" id="codigoasignatura">
+                                  <input v-model="pass" type="password" class="form-control" disabled>
                               </div>
                           </div>
-                          <button type="button" class="btn btn-warning">Editar</button>
-                          <button type="button" class="btn btn-success" style="margin-left: 10px">Guardar</button>
+                          <button type="button" class="btn btn-warning" @click="btnEditar(nombres, apellidos, correo, pass)">Editar</button>
                       </form>
                   </div>
+              </div>
           </div>
       </div>
     <script src="../../js/jquery.min.js"></script>
