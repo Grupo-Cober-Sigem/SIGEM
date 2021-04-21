@@ -113,16 +113,16 @@ var appUsuarios = new Vue({
 
                 this.datosUsuarios.forEach(rol => {
                     switch (rol){
-                        case 1:
+                        case "1":
                             rol.value="docente";
                             break;
-                        case 2:
+                        case "2":
                             rol.value="jefe de area";
                             break;
-                        case 3:
+                        case "3":
                             rol.value="decano";
                             break;
-                        case 5:
+                        case "5":
                             rol.value="Admin";
                             break;
                     }
