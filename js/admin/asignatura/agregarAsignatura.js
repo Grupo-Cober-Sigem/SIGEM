@@ -1,4 +1,4 @@
-/*var url = "";
+var url = "";
 var appAsignatura = new Vue({
     el: "#seccionAsignatura",
     data: {
@@ -76,4 +76,4 @@ var appAsignatura = new Vue({
     created:function(){
         this.listarUsuarios();
     }
-});*/
+});
