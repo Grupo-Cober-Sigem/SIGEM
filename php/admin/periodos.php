@@ -9,7 +9,8 @@
 
     $opcion = (isset($_POST['opcion'])) ? $_POST['opcion'] : '';
 
-    $periodo = (isset($_POST['periodo'])) ? $_POST['periodo'] : '';
+    $periodoAnterior = (isset($_POST['periodoAnterior'])) ? $_POST['periodoAnterior'] : '';
+    $periodoActual = (isset($_POST['periodoActual'])) ? $_POST['periodoActual'] : '';
     $fechaIni = (isset($_POST['fechaIni'])) ? $_POST['fechaIni'] : '';
     $fechaFin = (isset($_POST['fechaFin'])) ? $_POST['fechaFin'] : '';
 
@@ -21,7 +22,7 @@
             $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
             break;
         case 2: //Modificar
-            $consulta = "UPDATE periodoAcademico SET fechaIni='$fechaIni', fechaFin='$fechaFin' WHERE idPeriodo='$periodo' ";
+            $consulta = "UPDATE periodoAcademico SET idPeriodo='$periodoActual' fechaIni='$fechaIni', fechaFin='$fechaFin' WHERE idPeriodo='$periodoAnterior' ";
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
