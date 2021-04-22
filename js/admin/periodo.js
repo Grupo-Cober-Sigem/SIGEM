@@ -59,9 +59,9 @@ var appUsuarios = new Vue({
 
                 }).then((result) => {
                   if (result.value) {                                             
-                    periodo = Swal.getPopup().querySelector('#nombre').value,
-                    fechaIni = Swal.getPopup().querySelector('#apellidos').value,
-                    fechaFin = Swal.getPopup().querySelector('#cod_user').value              
+                    periodo = Swal.getPopup().querySelector('#periodo').value,
+                    fechaIni = Swal.getPopup().querySelector('#fechaIni').value,
+                    fechaFin = Swal.getPopup().querySelector('#fechaFin').value              
 
                     this.editarPeriodos(periodo,fechaIni,fechaFin);
                     Swal.fire(
