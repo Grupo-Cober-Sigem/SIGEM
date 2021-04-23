@@ -80,8 +80,22 @@ var appUsuarios = new Vue({
                 });
         },
 
-        btnCerrarPeriodo: async function(periodo,periodoActivo){
+        btnCerrarPeriodo: async function(periodo,activo){
+            await Swal.fire({
+                title: 'Cerrar Periodo Académico',
+                text: "Una vez cerrado el periodo académico, la información dejará de ser editable, y se le requerirá que cree el nuevo periodo académico para revisar nuevamente ¿Está seguro de cerrarlo?",
+                icon: 'warning',
+                confirmButtonText: 'Deshabilitar',
+                confirmButtonColor: '#1cc88a',
+                showCancelButton: true,
+                cancelButtonText: "Cancelar",
+                cancelButtonColor: '#CB3234',
 
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    this.cerrarPeriodo(periodo,activo);
+                }
+            })
         },
 
         //Procedimientos
@@ -99,13 +113,34 @@ var appUsuarios = new Vue({
         },
         
         agregarPeriodo: function(){
-            axios.post(url, {opcion:4, periodo:this.periodo, fechaIni:this.fechaIni,fechaFin:this.fechaFin,activo:1 }).then(response =>{
+            axios.post(url, {opcion:4, periodoActual:this.periodo, fechaIni:this.fechaIni,fechaFin:this.fechaFin,activo:1 }).then(response =>{
                 this.listarPeriodos();
             });        
              this.periodo = "",
              this.fechaIni = "",
              this.fechaFin = ""
         },
+
+        cerrarPeriodo: function(periodo,activo){
+            if(activo=="1")
+            {
+                axios.post(url,{opcion:3,periodoActual:periodo,activo:activo}).then(response=>{
+                    this.listarPeriodos();
+                });
+                Swal.fire(
+                    'Periodo cerrado con éxito',
+                    'Cree el nuevo periodo para replicar la información',
+                    'success'
+                )
+            }else
+            {
+                Swal.fire(
+                    'Periodo cerrado',
+                    'El periodo indicado ya se encuentra cerrado.',
+                    'info'
+                )
+            }
+        }
     },
     created:function(){
         this.listarPeriodos();

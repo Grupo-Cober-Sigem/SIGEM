@@ -171,7 +171,7 @@ var appUsuarios = new Vue({
         },
 
         deshabilitarUsuarios: function(cod_user,habilitado){
-            if(habilitado==1)
+            if(habilitado=="1")
             {
                 axios.post(url,{opcion:3, cod_user:cod_user}).then(response =>{           
                     this.listarUsuarios();

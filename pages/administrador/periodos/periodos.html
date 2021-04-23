@@ -101,7 +101,7 @@
                                         <td>{{periodo.fechaIni}}</td>
                                         <td>{{periodo.fechaFin}}</td>
                                         <td><button type="button" class="btn btn-warning col-md-12" @click="btnEditarPeriodo(periodo.idPeriodo,periodo.fechaIni,periodo.fechaFin)"><i class="fa fa-edit"> </i></button></td>
-                                        <td><button type="button" class="btn btn-danger col-md-12"><i class="fa fa-exclamation"></i></button></td>
+                                        <td><button type="button" class="btn btn-danger col-md-12" @click="btnCerrarPeriodo(periodo.idPeriodo,periodo.activo)"><i class="fa fa-exclamation"></i></button></td>
                                     </tr>
                                 </tbody>
                             </table>

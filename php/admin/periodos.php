@@ -29,12 +29,13 @@
             $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
             break;
         case 3: // Cerrar periodo
-            $consulta = "UPDATE periodoAcademico SET periodoActivo='$activo' WHERE idPeriodo='$periodoActual' ";
+            $consulta = "UPDATE periodoAcademico SET activo='$activo' WHERE idPeriodo='$periodoActual' ";
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             break;
         case 4: // Agregar
-            $consulta = "INSERT INTO periodoAcademico (idPeriodo, fechaIni, fechaFin, activo) VALUES ('$periodo','$fechaIni','$fechaFin','1')";
+            $activo=1;
+            $consulta = "INSERT INTO periodoAcademico (idPeriodo, fechaIni, fechaFin, activo) VALUES ('$periodoActual','$fechaIni','$fechaFin','$activo')";
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             break;
