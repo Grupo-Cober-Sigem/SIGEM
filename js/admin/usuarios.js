@@ -124,19 +124,24 @@ var appUsuarios = new Vue({
         {
             let nombre = document.getElementById("campoBusqueda").value;
 
-            if(nombre != "" || nombre !=null)
+            switch(nombre)
             {
-                axios.post(url,{opcion:5,nombre:nombre}).then(response=>{
-                    this.datosUsuarios = response.data;
-                    console.log(this.datosUsuarios);
-                    nombre="";
-                });
-            }else
-            {
-                this.listarUsuarios();
-                nombre="";
+                case "":
+                    this.listarUsuarios();
+                    break;
+
+                case null:
+                    this.listarUsuarios();
+                    break;
+                
+                default:
+                    axios.post(url,{opcion:5,nombre:nombre}).then(response=>{
+                        this.datosUsuarios = response.data;
+                        console.log(this.datosUsuarios);
+                        nombre="";
+                    });
+                    break;
             }
-            
         },
 
         //Procedimientos
