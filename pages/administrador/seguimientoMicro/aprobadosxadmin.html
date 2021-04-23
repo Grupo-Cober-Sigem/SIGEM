@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="es">
   <head>
-  	<title>SIGEM - Seguimiento</title>
+  	<title>SIGEM - Revisión</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="../../../images/logo.jpg" type="image/icon type">
@@ -28,14 +28,15 @@
                     <li class="active">
                     <a href="#gestionMicroSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Seguimiento a Microcurriculo</a>
 	                    <ul class="collapse list-unstyled" id="gestionMicroSubmenu">
-                        <li class="active"><a href="../../../pages/administrador/seguimientoMicro/seguimientoxadmin.html">Registro de seguimientos</a></li>
-                        <li><a href="../../../pages/administrador/seguimientoMicro/aprobadosxadmin.html">Seguimientos aprobados</a></li>
+                        <li><a href="../../../pages/administrador/seguimientoMicro/seguimientoxadmin.html">Registro de seguimientos</a></li>
+                        <li class="active"><a href="../../../pages/administrador/seguimientoMicro/aprobadosxadmin.html">Seguimientos aprobados</a></li>
                         <li><a href="../../../pages/administrador/seguimientoMicro/revisionxadmin.html">Seguimientos por revisar</a></li>
                         <li><a href="../seguimientoMicro/controlcambios.html">Control de cambios realizados</a></li>
 	                    </ul>
 	                </li>
                     <li><a href="../estadisticas/statisticsgxadmin.html">Estadísticas</a></li>
                     </ul>
+
 	            <div class="footer">
                     <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados |
@@ -44,9 +45,9 @@
 	            </div>
 	      </div>
     	</nav>
-          <!-- Contenido de la página -->
+          <!-- Sección derecha de la página  -->
           <div id="content" class="p-4 p-md-5">
-              <!-- Menu Flotante superior -->
+              <!-- Menu superior flotante  -->
               <nav class="navbar navbar-expand-lg navbar-light bg-light">
                   <div class="container-fluid">
                       <button type="button" id="sidebarCollapse" class="btn btn-primary"><i class="fa fa-bars"></i><span class="sr-only">Toggle Menu</span></button>
@@ -61,9 +62,9 @@
                       </div>
                   </div>
               </nav>
-              <!-- Contenido de la Página  -->
+              <!-- Contenido de la página  -->
               <div class="container-fluid">
-                  <!-- Barra de busqueda -->
+                  <!-- Barra de busqueda  -->
                   <div class="row">
                       <div class="col-md-3">
                           <div class="form-group">
@@ -83,7 +84,7 @@
                               </select>
                           </div>
                       </div>
-                      <div class="col-md-2">
+                      <div class="col-md-3">
                           <div class="form-group">
                               <label for="exampleFormControlSelect1">Asignatura</label>
                               <select class="form-control" id="nivelformacion">
@@ -104,106 +105,7 @@
                               <button type="button" class="btn btn-warning col-md-12" style="margin-top: 33px;"><i class="fa fa-search"></i></button>
                           </div>
                       </div>
-                      <div class="col-md-1">
-                          <div class="form-group">
-                              <button type="button" class="btn btn-warning col-md-12" style="margin-top: 33px;" data-toggle="modal" data-target="#seguimientoModal" data-whatever="@mdo"><i class="fa fa-plus-square"> </i></button>
-                          </div>
-                      </div>
                   </div>
-                  <!-- Modal de edición -->
-                  <div class="modal fade" id="seguimientoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-lg" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Seguimiento</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <form>
-                                        <div class="form-group">
-                                            <div class="row">
-                                                <div class="col">
-                                                    <label for="exampleFormControlInput1">Día</label>
-                                                    <input type="text" class="form-control" placeholder="DD/MM/AAAA" id="nombreasignatura">
-                                                </div>
-                                                <div class="col">
-                                                    <label for="exampleFormControlInput1">Hora</label>
-                                                    <input type="text" class="form-control" placeholder="HH:MM" id="codigoasignatura">
-                                                </div>
-                                                <div class="col">
-                                                    <label for="exampleFormControlInput1">Cantidad de participantes</label>
-                                                    <input type="text" class="form-control" id="cdcxignatura">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col">
-                                                <div class="form-group">
-                                                    <label for="exampleFormControlSelect1">Unidad</label>
-                                                    <select class="form-control" id="nivelformacion">
-                                                        <option>Unidad 1</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="col">
-                                                <div class="form-group">
-                                                    <label for="exampleFormControlSelect1">Tema</label>
-                                                    <select class="form-control" id="nivelformacion">
-                                                        <option>Tema 1</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col">
-                                                <div class="form-group">
-                                                    <label for="exampleFormControlSelect1">Actividad</label>
-                                                    <input type="text" class="form-control" id="nombreasignatura">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row mb-4">
-                                            <div class="col">
-                                                <label for="exampleFormControlInput1">Recurso usado</label>
-                                                <input type="text" class="form-control" id="nombreasignatura">
-                                            </div>
-                                            <div class="col">
-                                                <label for="exampleFormControlInput1">Material empleado</label>
-                                                <input type="text" class="form-control" id="codigoasignatura">
-                                            </div>
-                                            <div class="col">
-                                                <label for="exampleFormControlInput1">Actividad desarrollada</label>
-                                                <select class="form-control" id="nivelformacion">
-                                                        <option>Sincronica</option>
-                                                        <option>Asincronica</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col">
-                                                <div class="form-group">
-                                                    <label for="exampleFormControlSelect1">Observaciones</label>
-                                                    <input type="text" class="form-control" id="nombreasignatura">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row mb-4">
-                                            <div class="col">
-                                                <label for="exampleFormControlInput1">Soporte</label>
-                                                <input type="text" class="form-control" id="nombreasignatura">
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                                    <button type="button" class="btn btn-success">Guardar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                   <!-- Tabla resultado de busqueda -->
                   <div class="table-responsive">
                       <table class="table table-hover table-bordered">
@@ -211,17 +113,15 @@
                               <tr>
                                   <th scope="col"><small>Día</small></th>
                                   <th scope="col"><small>Hora</small></th>
-                                  <th scope="col"><small>Tematica</small></th>
-                                  <th scope="col"><small>Subtema</small></th>
+                                  <th scope="col"><small>Unidad</small></th>
+                                  <th scope="col"><small>Tema</small></th>
                                   <th scope="col"><small>Actividad</small></th>
                                   <th scope="col"><small>Recurso usado</small></th>
                                   <th scope="col"><small>Material Empleado</small></th>
                                   <th scope="col"><small>Actividad desarrollada</small></th>
-                                  <th scope="col"><small>Nro. Participantes</small></th>
+                                  <th scope="col"><small>Cantidad de Participantes</small></th>
                                   <th scope="col"><small>Observaciones</small></th>
                                   <th scope="col"><small>Soporte</small></th>
-                                  <th scope="col"><small>Estado</small></th>
-                                  <th scope="col"><small>Observaciones Jefe de Área</small></th>
                               </tr>
                           </thead>
                           <tbody>
@@ -237,11 +137,32 @@
                                   <td><small>11</small></td>
                                   <td><small>La estudiante Carolina Ramírez no tiene computador, se conecta desde el celular</small></td>
                                   <td><small>Soporte</small></td>
-                                  <td><small>Aprobado</small></td>
-                                  <td><small>Observaciones Jefe de Área</small></td>
                               </tr>
                           </tbody>
                       </table>
+                  </div>
+                  <!-- Modal -->
+                  <div class="modal fade" id="observacionModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel">Observaciones</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                              </div>
+                              <div class="modal-body">
+                                  <form>
+                                      <div class="form-group">
+                                          <label for="message-text" class="col-form-label">Por favor escriba las observaciones que tiene para el docente</label>
+                                          <textarea class="form-control" id="message-text"></textarea>
+                                      </div>
+                                  </form>
+                              </div>
+                              <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                  <button type="button" class="btn btn-danger">Devolver</button>
+                              </div>
+                          </div>
+                      </div>
                   </div>
               </div>
           </div>
