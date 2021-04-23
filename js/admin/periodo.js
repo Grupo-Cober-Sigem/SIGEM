@@ -5,7 +5,8 @@ var appUsuarios = new Vue({
         datosPeriodos: [],
         periodo: "",
         fechaFin: "",
-        fechaIni: ""
+        fechaIni: "",
+        activo:0,
     },
     methods: {
         btnAgregarPeriodos: async function () {
@@ -98,7 +99,7 @@ var appUsuarios = new Vue({
         },
         
         agregarPeriodo: function(){
-            axios.post(url, {opcion:4, periodo:this.periodo, fechaIni:this.fechaIni,fechaFin:this.fechaFin }).then(response =>{
+            axios.post(url, {opcion:4, periodo:this.periodo, fechaIni:this.fechaIni,fechaFin:this.fechaFin,activo:1 }).then(response =>{
                 this.listarPeriodos();
             });        
              this.periodo = "",

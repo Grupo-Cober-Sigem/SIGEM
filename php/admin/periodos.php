@@ -13,6 +13,7 @@
     $periodoActual = (isset($_POST['periodoActual'])) ? $_POST['periodoActual'] : '';
     $fechaIni = (isset($_POST['fechaIni'])) ? $_POST['fechaIni'] : '';
     $fechaFin = (isset($_POST['fechaFin'])) ? $_POST['fechaFin'] : '';
+    $activo = (isset($_POST['activo'])) ? $_POST['activo'] : '';
 
     switch($opcion){
         case 1: //Seleccionar
@@ -28,13 +29,12 @@
             $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
             break;
         case 3: // Cerrar periodo
-            $c=0;
-            $consulta = "UPDATE periodoAcademico SET periodoActivo='$c' WHERE idPeriodo='$periodoActual' ";
+            $consulta = "UPDATE periodoAcademico SET periodoActivo='$activo' WHERE idPeriodo='$periodoActual' ";
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             break;
         case 4: // Agregar
-            $consulta = "INSERT INTO periodoAcademico (idPeriodo, fechaIni, fechaFin) VALUES ('$periodo','$fechaIni','$fechaFin')";
+            $consulta = "INSERT INTO periodoAcademico (idPeriodo, fechaIni, fechaFin, activo) VALUES ('$periodo','$fechaIni','$fechaFin','$activo')";
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             break;
