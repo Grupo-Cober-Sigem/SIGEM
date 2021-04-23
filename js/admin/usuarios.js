@@ -120,6 +120,30 @@ var appUsuarios = new Vue({
                 })
         },
 
+        btnFiltrarUsuarios: async function()
+        {
+            let nombre = document.getElementById("campoBusqueda").value;
+
+            switch(nombre)
+            {
+                case "":
+                    this.listarUsuarios();
+                    break;
+
+                case null:
+                    this.listarUsuarios();
+                    break;
+                
+                default:
+                    axios.post(url,{opcion:5,nombre:nombre}).then(response=>{
+                        this.datosUsuarios = response.data;
+                        console.log(this.datosUsuarios);
+                        nombre="";
+                    });
+                    break;
+            }
+        },
+
         //Procedimientos
         listarUsuarios: function(){
             axios.post(url,{opcion:1}).then(response=>{
@@ -169,6 +193,7 @@ var appUsuarios = new Vue({
             
         }
     },
+
     created:function(){
         this.listarUsuarios();
     }
