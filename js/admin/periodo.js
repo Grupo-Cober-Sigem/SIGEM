@@ -48,6 +48,7 @@ var appUsuarios = new Vue({
                 })
             }
         },
+
         btnEditarPeriodo: async function (periodo,fechaIni,fechaFin) {
             let periodoAnterior = periodo;
             
@@ -76,6 +77,10 @@ var appUsuarios = new Vue({
                     )                  
                   }
                 });
+        },
+
+        btnCerrarPeriodo: async function(periodo,periodoActivo){
+
         },
 
         //Procedimientos

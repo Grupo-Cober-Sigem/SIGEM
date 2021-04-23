@@ -30,7 +30,7 @@
             break;
         case 3: // Deshabilitar
             $d=0;
-            $consulta = "UPDATE datosUsuario SET habilitado='$a' WHERE Cod_User='$usuario' ";
+            $consulta = "UPDATE datosUsuario SET habilitado='$d' WHERE Cod_User='$usuario' ";
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             break;
@@ -39,7 +39,7 @@
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             break;
-        case 5:
+        case 5: //Filtrar
             $consulta = "SELECT Cod_User, Pass, Nombres, Apellidos, email, rol, habilitado FROM datosUsuario WHERE Nombres LIKE CONCAT('%','$nombres','%') OR Apellidos LIKE CONCAT('%','$nombres','%')" ;
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
