@@ -123,11 +123,18 @@ var appUsuarios = new Vue({
         btnFiltrarUsuarios: async function()
         {
             let nombre = document.getElementById("campoBusqueda").value;
-    
-            axios.post(url,{opcion:5,nombre:nombre}).then(response=>{
-                this.datosUsuarios = response.data;
-                console.log(this.datosUsuarios);
-            });
+
+            if(nombre != "" || nombre !=null)
+            {
+                axios.post(url,{opcion:5,nombre:nombre}).then(response=>{
+                    this.datosUsuarios = response.data;
+                    console.log(this.datosUsuarios);
+                });
+            }else
+            {
+                this.listarUsuarios();
+            }
+            
         },
 
         //Procedimientos

@@ -40,7 +40,7 @@
             $resultado->execute();
             break;
         case 5:
-            $consulta = "SELECT Cod_User, Pass, Nombres, Apellidos, email, rol, habilitado FROM datosUsuario WHERE Nombres LIKE '%'$nombres'%' OR Apellidos LIKE '%'$nombres'%'" ;
+            $consulta = "SELECT Cod_User, Pass, Nombres, Apellidos, email, rol, habilitado FROM datosUsuario WHERE Nombres LIKE \'%'$nombres'%\' OR Apellidos LIKE '%'$nombres'%'" ;
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
