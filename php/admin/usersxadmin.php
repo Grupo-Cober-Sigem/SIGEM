@@ -39,6 +39,11 @@
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             break;
+        case 5:
+            $consulta = "SELECT Cod_User, Pass, Nombres, Apellidos, email, rol, habilitado FROM datosUsuario WHERE Nombres OR Apellidos LIKE %'$nombres'%";
+            $resultado = $cn->prepare($consulta);
+            $resultado->execute();
+            $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
     }
     // Enviar el array final en formato JSON a Javascript
     print json_encode($data, JSON_UNESCAPED_UNICODE);
