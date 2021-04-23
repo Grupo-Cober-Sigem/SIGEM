@@ -129,10 +129,12 @@ var appUsuarios = new Vue({
                 axios.post(url,{opcion:5,nombre:nombre}).then(response=>{
                     this.datosUsuarios = response.data;
                     console.log(this.datosUsuarios);
+                    nombre="";
                 });
             }else
             {
                 this.listarUsuarios();
+                nombre="";
             }
             
         },
