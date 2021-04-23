@@ -34,7 +34,7 @@
             $resultado->execute();
             break;
         case 4: // Agregar
-            $consulta = "INSERT INTO periodoAcademico (idPeriodo, fechaIni, fechaFin, activo) VALUES ('$periodo','$fechaIni','$fechaFin','$activo')";
+            $consulta = "INSERT INTO periodoAcademico (idPeriodo, fechaIni, fechaFin, activo) VALUES ('$periodo','$fechaIni','$fechaFin','1')";
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             break;
