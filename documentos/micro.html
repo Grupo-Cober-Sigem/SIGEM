@@ -7,107 +7,139 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body {text-align: center}>
-
-        <header>
-            <div align="center"><img src="/images/logo.jpg" width="102" height="100"></div>
-            <h3 align="center">
-                UNIVERSIDAD LIBRE - SECCIONAL CÚCUTA<br>
-                FACULTAD DE INGENIERÍAS<br>
-            </h3>
-            <p align="center">NOMBRE DEL PROGRAMA</p>
-            <p align="center">
-                <b>MICROCURRÍCULO</b><br>
-                <i>Por competencias</i>
-            </p>
-        </header>
-
-        <table cellpadding="5" border="1" style="margin: 0 auto;" WIDTH=950 HEIGHT=55>
+        <table cellpadding="5" border="0" style="margin: 0 auto;" WIDTH=950 HEIGHT=55>
+            <colgroup>
+				<col style="width: 15%"/>
+				<col style="width: 70%"/>
+				<col style="width: 15%"/>
+			</colgroup>
             <tr>
-				<td bgcolor="lightgray" colspan="2"><b>NOMBRE DE LA ASIGNATURA</b></td>
-                <td colspan="2">Celda 1</td>
+				<td ROWspan="3" align="center"><img src="/images/logo.jpg" width="102" height="100"></td>
+                <td align="center"><b>UNIVERSIDAD LIBRE - SECCIONAL CÚCUTA<br>FACULTAD DE INGENIERÍAS</b></td>
+                <td align="center">Celda X</td>
 			</tr>
             <tr>
-				<td bgcolor="lightgray" colspan="2"><b>CÓDIGO DE LA ASIGNATURA</b></td>
-                <td colspan="2">Celda 2</td>
+				<td align="center">NOMBRE DEL PROGRAMA</td>
+                <td align="center">Celda XX</td>
 			</tr>
             <tr>
-				<td bgcolor="lightgray" colspan="2"><b>ÁREA DE LA ASIGNATURA</b></td>
-                <td colspan="2">Celda 3</td>
-			</tr>
-            <tr>
-				<td bgcolor="lightgray" colspan="2"><b>UBICACIÓN DE LA ASIGNATURA</b></td>
-                <td colspan="2">Celda 4</td>
-			</tr>
-            <tr>
-				<td bgcolor="lightgray" colspan="2"><b>NIVEL DE FORMACIÓN</b></td>
-				<td colspan="2">Celda 5</td>
+				<td ROWspan="1" align="center"><b>CONTENIDO PROGRAMATICO</b></td>
+                <td align="center">Celda XXX</td>
 			</tr>
         </table>
         <br>
+        <!-- ENCABEZADO: DATOS BASICOS DE LA ASIGNATURA -->
+        <table cellpadding="5" border="1" style="margin: 0 auto;" WIDTH=950 HEIGHT=55>
+            <colgroup>
+				<col style="width: 30%"/>
+				<col style="width: 70%"/>
+			</colgroup>
+            <tr>
+				<td bgcolor="lightgray"><b>NOMBRE DE LA ASIGNATURA</b></td>
+                <td>Celda 1</td>
+			</tr>
+            <tr>
+				<td bgcolor="lightgray"><b>CÓDIGO DE LA ASIGNATURA</b></td>
+                <td>Celda 2</td>
+			</tr>
+            <tr>
+				<td bgcolor="lightgray"><b>ÁREA DE LA ASIGNATURA</b></td>
+                <td>Celda 3</td>
+			</tr>
+            <tr>
+				<td bgcolor="lightgray"><b>UBICACIÓN DE LA ASIGNATURA</b></td>
+                <td >Celda 4</td>
+			</tr>
+            <tr>
+				<td bgcolor="lightgray"><b>NIVEL DE FORMACIÓN</b></td>
+				<td>Celda 5</td>
+			</tr>
+        </table>
+        <br>
+        <!-- PERIODICIDAD E INTENSIDAD HORARIA -->
         <table cellpadding="5" border="1" style="margin: 0 auto;" WIDTH=950 HEIGHT=55>
             <colgroup>
 				<col style="width: 40%"/>
 				<col style="width: 30%"/>
-				<col style="width: 30%"/>
+				<col style="width: 15%"/>
+                <col style="width: 15%"/>
 			</colgroup>
+
             <tr>
-				<th bgcolor="lightgray" colspan="4">PERIODICIDAD E INTENSIDAD HORARIA</th>
+				<td bgcolor="lightgray" ROWspan="6" COLspan="1"><b>PERIODICIDAD E INTENSIDAD HORARIA</b></td>
+                <td bgcolor="lightgray" COLspan="1"><b>INTENSIDAD ACADEMICA</b></td>
+                <td bgcolor="lightgray" COLspan="2"><b>NRO. DE HORAS</b></td>
 			</tr>
             <tr>
-				<td ROWspan="2"><b>SEMANAL</b></td>
-                <td><b>PRESENCIAL</b></td>
+                <td rowspan="2">SEMANAL</td>
+                <td>Presencial</td>
                 <td>Celda 6</td>
-			</tr>
+            </tr>
             <tr>
-				<td><b>INDEPENDIENTE</b></td>
+                <td>Independiente</td>
                 <td>Celda 7</td>
-			</tr>
+            </tr>
             <tr>
-				<td ROWspan="2"><b>SEMESTRAL</b></td>
-                <td><b>PRESENCIAL</b></td>
+                <td rowspan="2">SEMESTRAL</td>
+                <td>Presencial</td>
                 <td>Celda 8</td>
-			</tr>
+            </tr>
             <tr>
-				<td><b>INDEPENDIENTE</b></td>
+                <td>Independiente</td>
                 <td>Celda 9</td>
-			</tr>
+            </tr>
             <tr>
-				<td bgcolor="lightgray" COLspan="2"><b>TOTAL HORAS</b></td>
-                <td><b>Celda 10</b></td>
-			</tr>
+                <td rowspan="1" colspan="2">TOTAL HORAS</td>
+                <td>Celda 10</td>
+            </tr>
+
 
         </table>
         <br>
+        <!-- CONTINUACION DE DATOS BASICOS PROPIOS DE LA ASIGNATURA -->
         <table cellpadding="5" border="1" style="margin: 0 auto;" WIDTH=950 HEIGHT=55>
+            <colgroup>
+				<col style="width: 25%"/>
+				<col style="width: 15%"/>
+				<col style="width: 20%"/>
+                <col style="width: 40%"/>
+			</colgroup>
             <tr>
-				<td bgcolor="lightgray" colspan="2"><b>CREDITOS ACADÉMICOS</b></td>
-                <td colspan="2">Celda 11</td>
+				<td bgcolor="lightgray" COLspan="3"><b>CREDITOS ACADÉMICOS</b></td>
+                <td>Celda 11</td>
 			</tr>
             <tr>
-				<td bgcolor="lightgray" colspan="2"><b>MODALIDAD</b></td>
-                <td colspan="2">Celda 12</td>
+				<td bgcolor="lightgray" COLspan="3"><b>MODALIDAD</b></td>
+                <td>Celda 12</td>
 			</tr>
             <tr>
-				<td bgcolor="lightgray" colspan="2"><b>CARÁCTER DE LA ASIGNATURA</b></td>
-                <td colspan="2">Celda 13</td>
+				<td bgcolor="lightgray" COLspan="3"><b>CARÁCTER DE LA ASIGNATURA</b></td>
+                <td>Celda 13</td>
 			</tr>
             <tr>
-				<td bgcolor="lightgray" colspan="2"><b>TIPO DE ASIGNATURA</b></td>
-                <td colspan="2">Celda 14</td>
+				<td bgcolor="lightgray" COLspan="3"><b>TIPO DE ASIGNATURA</b></td>
+                <td>Celda 14</td>
 			</tr>
             <tr>
-				<td bgcolor="lightgray" colspan="2"><b>FECHA DE ACTUALIZACIÓN</b></td>
-				<td colspan="2">Celda 15</td>
+				<td bgcolor="lightgray" COLspan="1"><b>PERIODO ACADÉMICO</b></td>
+                <td>Celda 15</td>
+                <td bgcolor="lightgray" COLspan="1"><b>ACTUALIZADO POR</b></td>
+                <td>Celda 16</td>
 			</tr>
         </table>
         <br>
+        <!-- CONTINUACION DE DATOS BASICOS PROPIOS DE LA ASIGNATURA -->
         <table cellpadding="5" border="1" style="margin: 0 auto;" WIDTH=950 HEIGHT=55>
             <tr><th bgcolor="lightgray">JUSTIFICACIÓN</th></tr>
             <tr><td>Celda 16</td></tr>
-            <tr><th bgcolor="lightgray">OBJETIVO GENERAL</th></tr>
+            <tr><th bgcolor="lightgray">ASIGNATURAS CON LAS CUALES SE RELACIONA</th></tr>
             <tr><td>Celda 17</td></tr>
-            <tr><th bgcolor="lightgray">ESTRATEGIAS DE ENSEÑANZA</th></tr>
+            <tr><th bgcolor="lightgray">PROBLEMA DE LA ASIGNATURA</th></tr>
             <tr><td>Celda 18</td></tr>
+            <tr><th bgcolor="lightgray">COMPETENCIA</th></tr>
+            <tr><td>Celda 19</td></tr>
+            <tr><th bgcolor="lightgray">RESULTADOS DE APRENDIZAJE</th></tr>
+            <tr><td>Celda 20</td></tr>
         </table>
         <br>
         <table cellpadding="5" border="1" style="margin: 0 auto;" WIDTH=950 HEIGHT=55>

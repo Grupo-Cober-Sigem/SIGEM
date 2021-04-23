@@ -28,9 +28,10 @@
                     <li>
                     <a href="#gestionMicroSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Seguimiento a Microcurriculo</a>
 	                    <ul class="collapse list-unstyled" id="gestionMicroSubmenu">
-                        <li><a href="../../../pages/administrador/seguimientoMicro/seguimientoxadmin.html">Seguimiento</a></li>
-                        <li><a href="../../../pages/administrador/seguimientoMicro/revisionxadmin.html">Revisión</a></li>
-                        <li><a href="../seguimientoMicro/controlcambios.html">Control de cambios</a></li>
+                        <li><a href="../../../pages/administrador/seguimientoMicro/seguimientoxadmin.html">Registro de seguimientos</a></li>
+                        <li><a href="../../../pages/administrador/seguimientoMicro/aprobadosxadmin.html">Seguimientos aprobados</a></li>
+                        <li><a href="../../../pages/administrador/seguimientoMicro/revisionxadmin.html">Seguimientos por revisar</a></li>
+                        <li><a href="../seguimientoMicro/controlcambios.html">Control de cambios realizados</a></li>
 	                    </ul>
 	                </li>
                     <li><a href="../estadisticas/statisticsgxadmin.html">Estadísticas</a></li>
@@ -67,7 +68,7 @@
                     <a class="nav-link" href="../../../pages/administrador/perfilxadmin.html">Perfil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" onclick="cerrarSesion()>Cerrar Sesión</a>
+                    <a class="nav-link" onclick="cerrarSesion()">Cerrar Sesión</a>
                 </li>
               </ul>
             </div>
@@ -174,7 +175,7 @@
                                         <th class="col-4">Nombre</th>
                                         <th class="col-2">Semestre</th>
                                         <th class="col-md-2">Ver</th>
-                                        <th class="col-md-2">Imprimir</th>
+                                        <th class="col-md-2">Descargar</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -183,7 +184,7 @@
                                         <td class="col-4"><span>{{micro.nombre}}</span></td>
                                         <td class="col-2"><span>{{micro.ubicacion}}</span></td>
                                         <td class="col-2"><span><button type="button" class="btn btn-warning col-md-12" @click="btnAgregarPlan"><i class="fa fa-eye"></i></button></span></td>
-                                        <td class="col-md-2"><button type="button" class="btn btn-dark col-md-12" ><i class="fa fa-print"></i></button></td>
+                                        <td class="col-md-2"><button type="button" class="btn btn-dark col-md-12" ><i class="fa fa-download"></i></button></td>
                                     </tr>
                                 </tbody>
                             </table>
