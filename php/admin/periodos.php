@@ -10,7 +10,7 @@
     $opcion = (isset($_POST['opcion'])) ? $_POST['opcion'] : '';
 
     $periodoAnterior = (isset($_POST['periodoAnterior'])) ? $_POST['periodoAnterior'] : '';
-    $periodoActual = (isset($_POST['periodoActual'])) ? $_POST['periodoActual'] : '';
+    $periodo = (isset($_POST['periodo'])) ? $_POST['periodo'] : '';
     $fechaIni = (isset($_POST['fechaIni'])) ? $_POST['fechaIni'] : '';
     $fechaFin = (isset($_POST['fechaFin'])) ? $_POST['fechaFin'] : '';
     $activo = (isset($_POST['activo'])) ? $_POST['activo'] : '';
@@ -23,19 +23,19 @@
             $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
             break;
         case 2: //Modificar
-            $consulta = "UPDATE periodoAcademico SET idPeriodo='$periodoActual' fechaIni='$fechaIni', fechaFin='$fechaFin' WHERE idPeriodo='$periodoAnterior' ";
+            $consulta = "UPDATE periodoAcademico SET idPeriodo='$periodo' fechaIni='$fechaIni', fechaFin='$fechaFin' WHERE idPeriodo='$periodoAnterior' ";
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
             break;
         case 3: // Cerrar periodo
-            $consulta = "UPDATE periodoAcademico SET activo='$activo' WHERE idPeriodo='$periodoActual' ";
+            $consulta = "UPDATE periodoAcademico SET activo='$activo' WHERE idPeriodo='$periodo' ";
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             break;
         case 4: // Agregar
             $activo=1;
-            $consulta = "INSERT INTO periodoAcademico (idPeriodo, fechaIni, fechaFin, activo) VALUES ('$periodoActual','$fechaIni','$fechaFin','$activo')";
+            $consulta = "INSERT INTO periodoAcademico (idPeriodo, fechaIni, fechaFin, activo) VALUES ('$periodo','$fechaIni','$fechaFin','$activo')";
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             break;
@@ -49,5 +49,4 @@
     print json_encode($data, JSON_UNESCAPED_UNICODE);
     // Cerramos la conexión
     $conexion = NULL;
-
 ?>

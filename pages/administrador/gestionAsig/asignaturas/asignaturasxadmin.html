@@ -70,14 +70,14 @@
                 <div id="seccionAsignatura">
                     <div class="container-fluid">
                         <!-- Barra de busqueda -->
-                        <form id="bAsignatura" name="bAsignatura" action="asigConsulta.php" method="post">
+                        <form id="bAsignatura" name="bAsignatura"  >
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="exampleFormControlSelect1">Programa</label>
                                     <select class="form-control" id="asPrograma" name="asigPrograma">
-                                        <option value="0">Seleccionar Programa</option>  
-                                        <option value=""></option>
+                                        <option value="0">Seleccione Programa</option>  
+                                        <option></option>
                                     </select>
                                 </div>
                             </div>
@@ -85,6 +85,8 @@
                                 <div class="form-group">
                                     <label for="exampleFormControlSelect1">Área</label>
                                     <select class="form-control" id="asigArea" name="asigArea">
+                                        <option value="0">Seleccione Area</option>
+                                        <option></option>
                                     </select>
                                 </div>
                             </div>
@@ -92,17 +94,17 @@
                                 <div class="form-group">
                                     <label for="exampleFormControlSelect1">Semestre</label>
                                     <select class="form-control" id="asigSemestre">
-                                        <option>Seleccionar</option>
-                                        <option>Primero</option>
-                                        <option>Segundo</option>
-                                        <option>Tercero</option>
-                                        <option>Cuarto</option>
-                                        <option>Quinto</option>
-                                        <option>Sexto</option>
-                                        <option>Séptimo</option>
-                                        <option>Octavo</option>
-                                        <option>Noveno</option>
-                                        <option>Décimo</option>
+                                        <option value="">Seleccionar</option>
+                                        <option value="Primer">Primero</option>
+                                        <option value="Segundo">Segundo</option>
+                                        <option value="Tercero">Tercero</option>
+                                        <option value="Cuarto">Cuarto</option>
+                                        <option value="Quinto">Quinto</option>
+                                        <option value="Sexto">Sexto</option>
+                                        <option value="Septimo">Séptimo</option>
+                                        <option value="Octavo">Octavo</option>
+                                        <option value="Noveno">Noveno</option>
+                                        <option value="Decimo">Décimo</option>
                                     </select>
                                 </div>
                             </div>
@@ -118,126 +120,6 @@
                             </div>
                         </div>
                         </form>
-                        <!-- Modales -->
-                        <div class="modal fade" id="agregarasigModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Creación de Asignaturas</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form>
-                                            <div class="form-group">
-                                                <label for="recipient-name" class="col-form-label">Nombre</label>
-                                                <input type="text" class="form-control" id="recipient-name">
-                                            </div>
-                                            <div class="row">
-                                                <div class="col">
-                                                    <div class="form-group">
-                                                        <label for="recipient-name" class="col-form-label">Código</label>
-                                                        <input type="text" class="form-control" id="recipient-name">
-                                                    </div>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="form-group">
-                                                        <label for="recipient-name" class="col-form-label">Semestre</label>
-                                                        <select class="form-control" id="nivelformacion">
-                                                            <option>Primero</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="form-group">
-                                                        <label for="recipient-name" class="col-form-label">Estudiantes</label>
-                                                        <input type="text" class="form-control" placeholder="Cantidad" id="recipient-name">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="recipient-name" class="col-form-label">Programa de la asignatura</label>
-                                                <select class="form-control" id="docxasig">
-                                                    <option>Nombre del programa</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="recipient-name" class="col-form-label">Área de la asignatura</label>
-                                                <select class="form-control" id="docxasig">
-                                                    <option>Nombre del área</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="recipient-name" class="col-form-label">Docente</label>
-                                                <select class="form-control" id="docxasig">
-                                                    <option>Maritza Sanchez</option>
-                                                </select>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                                        <button type="button" class="btn btn-warning">Agregar</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal fade" id="editarasigModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Edición datos básicos de asignaturas</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form>
-                                            <div class="form-group">
-                                                <label for="recipient-name" class="col-form-label">Nombre</label>
-                                                <input type="text" class="form-control" id="recipient-name">
-                                            </div>
-                                            <div class="row">
-                                                <div class="col">
-                                                    <div class="form-group">
-                                                        <label for="recipient-name" class="col-form-label">Código</label>
-                                                        <input type="text" class="form-control" id="recipient-name">
-                                                    </div>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="form-group">
-                                                        <label for="recipient-name" class="col-form-label">Semestre</label>
-                                                        <select class="form-control" id="nivelformacion">
-                                                            <option>Primero</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="form-group">
-                                                        <label for="recipient-name" class="col-form-label">Estudiantes</label>
-                                                        <input type="text" class="form-control" placeholder="Cantidad" id="recipient-name">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="recipient-name" class="col-form-label">Área de la asignatura</label>
-                                                <select class="form-control" id="docxasig">
-                                                    <option>Nombre del área</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="recipient-name" class="col-form-label">Docente</label>
-                                                <select class="form-control" id="docxasig">
-                                                    <option>Maritza Sanchez</option>
-                                                </select>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                                        <button type="button" class="btn btn-warning">Editar</button>
-                                        <button type="button" class="btn btn-success">Guardar</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         <!-- Tabla resultado de la busqueda  -->
                         <div class="table-responsive">
                             <table id="productSizes" class="table table-hover table-bordered">
@@ -251,7 +133,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr class="d-flex" v-for="(asignatura,indice) of datosUsuarios">
+                                    <tr class="d-flex" v-for="(asignatura,indice) of datosAsignatura">
                                         <td class="col-1">{{asignatura.Cod_Asig}}</td>
                                         <td class="col-5"><span>{{asignatura.Nombre_Asig}}</span></td>
                                         <td class="col-4"><span>{{asignatura.Ubicacion_Asig}}</span></td>

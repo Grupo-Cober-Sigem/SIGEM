@@ -66,11 +66,11 @@ var appUsuarios = new Vue({
 
                 }).then((result) => {
                   if (result.value) {                                             
-                    periodoActual = Swal.getPopup().querySelector('#periodo').value,
+                    periodo = Swal.getPopup().querySelector('#periodo').value,
                     fechaIni = Swal.getPopup().querySelector('#fechaIni').value,
                     fechaFin = Swal.getPopup().querySelector('#fechaFin').value              
 
-                    this.editarPeriodos(periodoAnterior,periodoActual,fechaIni,fechaFin);
+                    this.editarPeriodos(periodoAnterior,periodo,fechaIni,fechaFin);
                     Swal.fire(
                       '¡Actualizado!',
                       'El registro ha sido actualizado.',
