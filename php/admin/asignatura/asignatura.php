@@ -16,7 +16,7 @@
     $programa = (isset($_POST['programa'])) ? $_POST['programa'] : '';
     $area = (isset($_POST['area'])) ? $_POST['area'] : '';
     $docente = (isset($_POST['docente'])) ? $_POST['docente'] : '';
-
+    echo $nombre;
     switch($opcion){
         case 1: //Seleccionar Programa para filtro
             $consulta = "SELECT * FROM Programa";
@@ -40,7 +40,7 @@
             $resultado->execute();
             break;
         case 5: //Filtrar
-            $consulta = "SELECT Cod_Asignatura, Nombre_Asig, Ubicacion_Asig, Cod_Area, Cod_User FROM Asignatura WHERE Nombre_Asig LIKE CONCAT('%','$nombre','%')" ;
+            $consulta = "SELECT Cod_Asignatura, Nombre_Asig, Ubicacion_Asig, Cod_Area, Cod_User FROM Asignatura WHERE Nombre_Asig LIKE CONCAT('%','$nombre','%')";
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
