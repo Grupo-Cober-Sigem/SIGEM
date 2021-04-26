@@ -138,7 +138,7 @@
                                         <td class="col-5"><span>{{asignatura.Nombre_Asig}}</span></td>
                                         <td class="col-4"><span>{{asignatura.Ubicacion_Asig}}</span></td>
                                         <td class="col-1"><span><button type="button" class="btn btn-warning col-md-12" @click="btnEditarAsignatura(asignatura.Nombre_Asig, asignatura.Cod_Asignatura, asignatura.Ubicacion_Asig, asignatura.Cod_User, asignatura.Cod_Area)"><i class="fa fa-eye"> </i></button></span></td>
-                                        <td class="col-1"><span><button type="button" class="btn btn-warning col-md-12"><i class="fa fa-eye"> </i></button></span></td>
+                                        <td class="col-1"><span><button type="button" class="btn btn-warning col-md-12" @click="btnDatosGenerales(asignatura.Cod_Asignatura)"><i class="fa fa-eye"> </i></button></span></td>
                                     </tr>
                                 </tbody>
                             </table>
