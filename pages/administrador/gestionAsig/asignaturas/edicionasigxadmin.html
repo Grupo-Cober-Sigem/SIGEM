@@ -65,712 +65,721 @@
             </div>
         </nav>
             <!-- Contenido de la página  -->
-            <div class="container-fluid">
-                  <div class="container-fluid">
-                      <p cclass="font-weight-bold"></p>
-                      <form>
-                          <div class="accordion" id="accordionExample">
-                              <!-- SECCION 1 - Datos básicos de la asignatura -->
-                              <div class="card">
-                                  <div class="card-header bg-warning" id="headingOne">
-                                      <h2 class="mb-0">
-                                          <button class="btn text-left text-white" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1"><h5>Datos básicos de la asignatura</h5></button>
-                                      </h2>
-                                  </div>
-                                  <div id="collapse1" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                      <div class="card-body">
-                                          <div class="row">
-                                              <div class="col">
-                                                  <div class="form-group ">
-                                                      <label for="exampleFormControlInput1">Nombre</label>
-                                                      <input type="text" class="form-control" placeholder="Nombre de la asignatura" id="nombreasignatura">
-                                                  </div>
-                                              </div>
-                                              <div class="col">
-                                                  <label for="exampleFormControlInput1">Código</label>
-                                                  <input type="text" class="form-control" placeholder="Código de la asignatura" id="codigoasignatura">
-                                              </div>
-                                          </div>
-                                          <div class="row">
-                                              <div class="col">
-                                                  <div class="form-group">
-                                                      <label for="exampleFormControlSelect1">Área</label>
-                                                      <select class="form-control" id="areaasignatura">
-                                                          <option>Básicas de Ingeniería</option>
-                                                          <option>Ingeniería Aplicada</option>
-                                                      </select>
-                                                  </div>
-                                              </div>
-                                              <div class="col">
-                                                  <div class="form-group">
-                                                      <label for="exampleFormControlSelect1">Ubicación</label>
-                                                      <select class="form-control" id="ubicacionasignatura">
-                                                          <option>Semestre 1</option>
-                                                          <option>Semestre 1</option>
-                                                      </select>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <div class="row">
-                                              <div class="col">
-                                                  <div class="form-group">
-                                                      <label for="exampleFormControlSelect1">Carácter de la asignatura</label>
-                                                      <select class="form-control" id="caracterasignatura">
-                                                          <option>Obligatoria</option>
-                                                          <option>Electiva</option>
-                                                          <option>Optativa</option>
-                                                      </select>
-                                                  </div>
-                                              </div>
-                                              <div class="col">
-                                                  <div class="form-group">
-                                                      <label for="exampleFormControlSelect1">Tipo de asignatura</label>
-                                                      <select class="form-control" id="tipoasignatura">
-                                                          <option>Teórica</option>
-                                                          <option>Práctica</option>
-                                                          <option>Teórica Práctica</option>
-                                                      </select>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <h4>Periodicidad e intensidad horaria</h4>
-                                          <div class="row">
-                                              <div class="col">
-                                                  <div class="form-group">
-                                                      <label for="exampleFormControlInput1">Número de horas Semanales</label>
-                                                      <div class="row">
-                                                          <div class="col">
-                                                              <input type="text" class="form-control" placeholder="Presenciales" id="horaspresensiales">
-                                                          </div>
-                                                          <div class="col">
-                                                              <input type="text" class="form-control" placeholder="Independientes" id="horassemanales">
-                                                          </div>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <!-- SECCION 2 - Justificación -->
-                              <div class="card">
-                                  <div class="card-header bg-warning" id="headingOne">
-                                      <h2 class="mb-0">
-                                          <button class="btn text-left text-white" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="true" aria-controls="collapse2"><h5>Justificación</h5></button>
-                                      </h2>
-                                  </div>
-                                  <div id="collapse2" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                      <div class="card-body">
-                                          <div class="row">
-                                              <div class="col">
-                                                  <div class="form-group">
-                                                      <label for="exampleFormControlTextarea1">Por favor en el siguiente espacio en blanco digite la justificación de la asignatura</label>
-                                                      <textarea class="form-control" id="justificacion" rows="3"></textarea>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <!-- SECCION 3 - Asignaturas con las cuales se relaciona -->
-                              <div class="card">
-                                  <div class="card-header bg-warning" id="headingOne">
-                                      <h2 class="mb-0">
-                                          <button class="btn  text-left text-white" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="true" aria-controls="collapse3"><h5>Asignaturas con las cuales se relaciona</h5></button>
-                                      </h2>
-                                  </div>
-                                  <div id="collapse3" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                      <div class="card-body">
-                                          <div class="row">
-                                              <div class="col">
-                                                  <div class="form-group">
-                                                      <label for="exampleFormControlTextarea1">Por favor en el siguiente espacio en blanco digite las asignaturas con las cuales se relaciona</label>
-                                                      <textarea class="form-control" id="objetivogeneral" rows="3"></textarea>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <!-- SECCION 4 - Problema de la asignatura -->
-                              <div class="card">
-                                  <div class="card-header bg-warning" id="headingOne">
-                                      <h2 class="mb-0">
-                                          <button class="btn  text-left text-white" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="true" aria-controls="collapse3"><h5>Problema de la asignatura</h5></button>
-                                      </h2>
-                                  </div>
-                                  <div id="collapse3" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                      <div class="card-body">
-                                          <div class="row">
-                                              <div class="col">
-                                                  <div class="form-group">
-                                                      <label for="exampleFormControlTextarea1">Por favor en el siguiente espacio en blanco digite el problema de la asignatura</label>
-                                                      <textarea class="form-control" id="objetivogeneral" rows="3"></textarea>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <!-- SECCION 5 - Competencia -->
-                              <div class="card">
-                                  <div class="card-header bg-warning" id="headingOne">
-                                      <h2 class="mb-0">
-                                          <button class="btn  text-left text-white" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="true" aria-controls="collapse3"><h5>Competencia</h5></button>
-                                      </h2>
-                                  </div>
-                                  <div id="collapse3" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                      <div class="card-body">
-                                          <div class="row">
-                                              <div class="col">
-                                                  <div class="form-group">
-                                                      <label for="exampleFormControlTextarea1">Por favor en el siguiente espacio en blanco digite la competencia de la asignatura</label>
-                                                      <textarea class="form-control" id="objetivogeneral" rows="3"></textarea>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <!-- SECCION 6 - Resultados de aprendizaje -->
-                              <div class="card">
-                                  <div class="card-header bg-warning" id="headingOne">
-                                      <h2 class="mb-0">
-                                          <button class="btn  text-left text-white" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="true" aria-controls="collapse3"><h5>Resultados de aprendizaje</h5></button>
-                                      </h2>
-                                  </div>
-                                  <div id="collapse3" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                      <div class="card-body">
-                                          <div class="row">
-                                              <div class="col">
-                                                  <div class="form-group">
-                                                      <label for="exampleFormControlTextarea1">Por favor en el siguiente espacio en blanco digite los resultados de aprendizaje de la asignatura</label>
-                                                      <textarea class="form-control" id="objetivogeneral" rows="3"></textarea>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <!-- SECCION 7 - Planificación Metodológica -->
-                              <div class="card">
-                                  <div class="card-header bg-warning" id="headingOne">
-                                      <h2 class="mb-0">
-                                          <button class="btn text-white text-left" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="true" aria-controls="collapse4"><h5>Estrategias de enseñanza</h5></button>
-                                      </h2>
-                                  </div>
-                                  <div id="collapse4" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                      <div class="card-body">
-                                          <div class="row">
-                                              <div class="col">
-                                                  <div class="form-group ">
-                                                      <label for="exampleFormControlInput1">Metodología</label>
-                                                      <textarea class="form-control" id="metodologia" rows="3"></textarea>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <div class="row">
-                                              <div class="col">
-                                                  <div class="form-group ">
-                                                      <label for="exampleFormControlInput1">Actividades dentro del aula</label>
-                                                      <textarea class="form-control" id="actdenaula" rows="3"></textarea>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <div class="row">
-                                              <div class="col">
-                                                  <div class="form-group ">
-                                                      <label for="exampleFormControlInput1">Actividades fuera del aula</label>
-                                                      <textarea class="form-control" id="actfueaula" rows="3"></textarea>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <div class="row">
-                                              <div class="col">
-                                                  <div class="form-group ">
-                                                      <label for="exampleFormControlInput1">Apoyos didácticos</label>
-                                                      <textarea class="form-control" id="apoyosdidacticos" rows="3"></textarea>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <!-- SECCION 8 - Criterios de evaluación -->
-                              <div class="card">
-                                  <div class="card-header bg-warning" id="headingOne">
-                                      <h2 class="mb-0">
-                                          <button class="btn text-white text-left" type="button" data-toggle="collapse" data-target="#collapse9" aria-expanded="true" aria-controls="collapse9"><h5>Criterios de evaluación</h5></button>
-                                      </h2>
-                                  </div>
-                                  <div id="collapse9" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                      <div class="card-body">
-                                          <div class="row">
-                                              <div class="col">
-                                                  <div class="form-group ">
-                                                      <label for="exampleFormControlTextarea1">Por favor en el siguiente espacio en blanco digite la explicación en la forma de evaluar la asignatura</label>
-                                                      <textarea class="form-control" id="metodologia" rows="10"></textarea>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <!-- Barra de agregar actividades de evaluación -->
-                                          <div class="row">
-                                              <div class="col">
-                                                  <div class="form-group">
-                                                      <label for="exampleFormControlTextarea1">Concepto</label>
-                                                      <textarea class="form-control" id="concepto" rows="1"></textarea>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <div class="row">
-                                              <div class="col">
-                                                  <div class="form-group">
-                                                      <label for="exampleFormControlTextarea1">Tipo (Individual, grupal o ambos)</label>
-                                                      <textarea class="form-control" id="tipo" rows="1"></textarea>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <div class="row">
-                                              <div class="col">
-                                                  <div class="form-group">
-                                                      <label for="exampleFormControlTextarea1">Instrumento</label>
-                                                      <textarea class="form-control" id="instrumento" rows="1"></textarea>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <div class="row">
-                                              <div class="col">
-                                                  <div class="form-group">
-                                                      <label for="exampleFormControlTextarea1">Porcentaje</label>
-                                                      <textarea class="form-control" id="porcentaje" rows="1"></textarea>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <div class="row">
-                                              <div class="col">
-                                                  <div class="form-group">
-                                                      <label for="exampleFormControlTextarea1">Fecha</label>
-                                                      <textarea class="form-control" id="porcentaje" rows="1"></textarea>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <button type="button" class="btn btn-warning col-md-12">Agregar</button>
-                                          <!-- Tabla de resultados de temas -->
-                                          <div class="row">
-                                              <div class="col">
-                                                  <div class="form-group">
-                                                      <div class="table-responsive">
-                                                          <table id="productSizes" class="table table-hover table-bordered">
-                                                              <thead class="thead-dark">
-                                                                  <tr class="d-flex">
-                                                                      <th class="col-3">Concepto</th>
-                                                                      <th class="col-2">Tipo</th>
-                                                                      <th class="col-3">Instrumento</th>
-                                                                      <th class="col-1">Valor %</th>
-                                                                      <th class="col-2">Fecha</th>
-                                                                      <th class="col-1">Borrar</th>
-                                                                  </tr>
-                                                              </thead>
-                                                              <tbody>
-                                                                  <tr class="d-flex">
-                                                                      <td class="col-3"><span>Talleres prácticos</span></td>
-                                                                      <td class="col-2"><span>Individual o grupal</span></td>
-                                                                      <td class="col-3"><span>Productos valorados pro escala</span></td>
-                                                                      <td class="col-1"><span>10</span></td>
-                                                                      <td class="col-2"><span>Semanalmente</span></td>
-                                                                      <td class="col-1"><span><button type="button" class="btn btn-danger"><i class="fa fa-trash"> </i></button></span></td>
-                                                                  </tr>
-                                                              </tbody>
-                                                          </table>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <!-- SECCION 9 - Bibliografía -->
-                              <div class="card">
-                                  <div class="card-header bg-warning" id="headingOne">
-                                      <h2 class="mb-0">
-                                          <button class="btn text-white text-left" type="button" data-toggle="collapse" data-target="#collapse7" aria-expanded="true" aria-controls="collapse7"><h5>Bibliografía</h5></button>
-                                      </h2>
-                                  </div>
-                                  <div id="collapse7" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                      <div class="card-body">
-                                          <h5>Bibliografía Básica</h5>
-                                          <!-- Barra de agregar bibliografia básica -->
-                                          <div class="row">
-                                              <div class="col-md-12">
-                                                  <div class="form-group">
-                                                      <label for="exampleFormControlTextarea1">Signatura Topografica</label>
-                                                      <input type="text" class="form-control" id="bbsignaturatopografica">
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <div class="row">
-                                              <div class="col">
-                                                  <div class="form-group">
-                                                      <label for="exampleFormControlTextarea1">Datos del texto existente en la biblioteca de la Universidad</label>
-                                                      <textarea class="form-control" id="bbdatos" rows="3"></textarea>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <button type="button" class="btn btn-warning col-md-12">Agregar</button>
-                                          <!-- Tabla de resultados de fechas -->
-                                          <div class="table-responsive">
-                                              <table class="table table-hover table-bordered">
-                                                  <thead class="thead-dark">
-                                                    <tr>
-                                                      <th scope="col">Signatura Topográfica</th>
-                                                      <th scope="col">Datos del texto existentes en la biblioteca de la Universidad</th>
-                                                      <th scope="col"><small>Eliminar</small></th>
-                                                    </tr>
-                                                  </thead>
-                                                  <tbody>
-                                                    <tr>
-                                                      <td>005.1 C136M</td>
-                                                      <td>CAIRÓ, O.  Metodología de la programación.  Algoritmos, Diagramas de Flujo y Programas.  Tomo 1 y Tomo 2.  Editorial Alfaomega, 1995.</td>
-                                                      <td><button type="button" class="btn btn-danger col-md-12"><i class="fa fa-trash"></i></button></td>
-                                                    </tr>
-                                                  </tbody>
-                                              </table>
-                                          </div>
-                                          <hr />
-                                          <h5>Bibliografía Básica publicaciones seriadas</h5>
-                                          <!-- Barra de agregar bibliografia básica publicaciones seriadas -->
-                                          <div class="row">
-                                              <div class="col-md-12">
-                                                  <div class="form-group">
-                                                      <label for="exampleFormControlTextarea1">Signatura Topografica</label>
-                                                      <input type="text" class="form-control" id="bbpssignaturatopografica">
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <div class="row">
-                                              <div class="col">
-                                                  <div class="form-group">
-                                                      <label for="exampleFormControlTextarea1">Datos de la publicación seriada existente en la biblioteca de la Universidad</label>
-                                                      <textarea class="form-control" id="bbpsdatos" rows="3"></textarea>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <button type="button" class="btn btn-warning col-md-12">Agregar</button>
-                                          <!-- Tabla de resultados de fechas -->
-                                          <div class="table-responsive">
-                                              <table class="table table-hover table-bordered">
-                                                  <thead class="thead-dark">
-                                                    <tr>
-                                                      <th scope="col">Signatura Topográfica</th>
-                                                      <th scope="col">Datos de la publicación seriada existente en la biblioteca de la Universidad</th>
-                                                      <th scope="col"><small>Eliminar</small></th>
-                                                    </tr>
-                                                  </thead>
-                                                  <tbody>
-                                                    <tr>
-                                                      <td>005.1 C136M</td>
-                                                      <td>CAIRÓ, O.  Metodología de la programación.  Algoritmos, Diagramas de Flujo y Programas.  Tomo 1 y Tomo 2.  Editorial Alfaomega, 1995.</td>
-                                                      <td><button type="button" class="btn btn-danger col-md-12"><i class="fa fa-trash"></i></button></td>
-                                                    </tr>
-                                                  </tbody>
-                                              </table>
-                                          </div>
-                                          <hr />
-                                          <h5>Bibliografía básica de sitios web</h5>
-                                          <!-- Barra de agregar Bibliografía básica de sitios web -->
-                                          <div class="row">
-                                              <div class="col">
-                                                  <div class="form-group">
-                                                      <label for="exampleFormControlTextarea1">Titulo de la página web y enlace web para acceder a él</label>
-                                                      <textarea class="form-control" id="bbswtitulo" rows="3"></textarea>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <button type="button" class="btn btn-warning col-md-12">Agregar</button>
-                                          <!-- Tabla de resultados de Bibliografía básica de sitios web -->
-                                          <div class="table-responsive">
-                                              <table class="table table-hover table-bordered">
-                                                  <thead class="thead-dark">
-                                                    <tr>
-                                                      <th scope="col">Bibliografía básica de Sitios Web</th>
-                                                      <th scope="col"><small>Eliminar</small></th>
-                                                    </tr>
-                                                  </thead>
-                                                  <tbody>
-                                                    <tr>
-                                                      <td>CAIRÓ, O.  Metodología de la programación.  Algoritmos, Diagramas de Flujo y Programas.  Tomo 1 y Tomo 2.  Editorial Alfaomega, 1995.</td>
-                                                      <td><button type="button" class="btn btn-danger col-md-12"><i class="fa fa-trash"></i></button></td>
-                                                    </tr>
-                                                  </tbody>
-                                              </table>
-                                          </div>
-                                          <hr />
-                                          <h5>Bibliografía en Segunda Lengua</h5>
-                                          <!-- Barra de agregar Bibliografía en Segunda Lengua -->
-                                          <div class="row">
-                                              <div class="col">
-                                                  <div class="form-group">
-                                                      <label for="exampleFormControlTextarea1">Titulo de la página web y enlace web para acceder a él</label>
-                                                      <textarea class="form-control" id="bsltitulo" rows="3"></textarea>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <button type="button" class="btn btn-warning col-md-12">Agregar</button>
-                                          <!-- Tabla de resultados de Bibliografía en Segunda lengua -->
-                                          <div class="table-responsive">
-                                              <table class="table table-hover table-bordered">
-                                                  <thead class="thead-dark">
-                                                    <tr>
-                                                      <th scope="col">Bibliografía básica de Sitios Web</th>
-                                                      <th scope="col"><small>Eliminar</small></th>
-                                                    </tr>
-                                                  </thead>
-                                                  <tbody>
-                                                    <tr>
-                                                      <td>CAIRÓ, O.  Metodología de la programación.  Algoritmos, Diagramas de Flujo y Programas.  Tomo 1 y Tomo 2.  Editorial Alfaomega, 1995.</td>
-                                                      <td><button type="button" class="btn btn-danger col-md-12"><i class="fa fa-trash"></i></button></td>
-                                                    </tr>
-                                                  </tbody>
-                                              </table>
-                                          </div>
-                                          <hr />
-                                          <h5>Bibliografía Complementaria</h5>
-                                          <!-- Barra de agregar bibliografia complementaria -->
-                                          <div class="row">
-                                              <div class="col-md-12">
-                                                  <div class="form-group">
-                                                      <label for="exampleFormControlTextarea1">ISBN</label>
-                                                      <input type="text" class="form-control" id="bcisbn">
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <div class="row">
-                                              <div class="col">
-                                                  <div class="form-group">
-                                                      <label for="exampleFormControlTextarea1">Incluir los textos no existentes en la biblioteca requeridos para el desarrollo de la asignatura</label>
-                                                      <textarea class="form-control" id="bctitulo" rows="3"></textarea>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <button type="button" class="btn btn-warning col-md-12">Agregar</button>
-                                          <!-- Tabla de resultados de fechas -->
-                                          <div class="table-responsive">
-                                              <table class="table table-hover table-bordered">
-                                                  <thead class="thead-dark">
-                                                    <tr>
-                                                      <th scope="col">ISBN</th>
-                                                      <th scope="col">Incluir los textos no existentes en la biblioteca requeridos para el desarrollo de la asignatura</th>
-                                                      <th scope="col"><small>Eliminar</small></th>
-                                                    </tr>
-                                                  </thead>
-                                                  <tbody>
-                                                    <tr>
-                                                      <td>005.1 C136M</td>
-                                                      <td>CAIRÓ, O.  Metodología de la programación.  Algoritmos, Diagramas de Flujo y Programas.  Tomo 1 y Tomo 2.  Editorial Alfaomega, 1995.</td>
-                                                      <td><button type="button" class="btn btn-danger col-md-12"><i class="fa fa-trash"></i></button></td>
-                                                    </tr>
-                                                  </tbody>
-                                              </table>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <!-- SECCION 10 - Contenido tematica -->
-                              <div class="card">
-                                  <div class="card-header bg-warning" id="headingOne">
-                                      <h2 class="mb-0">
-                                          <button class="btn text-white text-left" type="button" data-toggle="collapse" data-target="#collapse6" aria-expanded="true" aria-controls="collapse6"><h5>Contenido tematico</h5></button>
-                                      </h2>
-                                  </div>
-                                  <div id="collapse6" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                      <div class="card-body">
-                                          <h5>Unidad Tematica</h5>
-                                          <!-- Barra de agregar unidad -->
-                                          <div class="row">
-                                              <div class="col-md-10">
-                                                  <div class="form-group">
-                                                      <input type="text" class="form-control" placeholder="Nombre de la unidad" id="unidadtematica">
-                                                  </div>
-                                              </div>
-                                              <div class="col-md-2">
-                                                  <div class="form-group">
-                                                      <button type="button" class="btn btn-warning col-md-12" id="btnUnidadTematicaTxt">Agregar</button>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <!-- Tabla de resultados de unidades -->
-                                          <div class="row">
-                                              <div class="col">
-                                                  <div class="form-group">
-                                                      <div class="table-responsive">
-                                                        <table id="tablaContenidoTematico" class="table table-hover table-bordered">
-                                                            <thead class="thead-dark">
-                                                                <tr class="d-flex">
-                                                                    <th class="col-10">Nombre de la Unidad</th>
-                                                                    <th class="col-2">Eliminar</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody id="tbodyContenidoTematico">
-                                                                <tr class="d-flex">
-                                                                    <td class="col-10"><span>Fundamentos</span></td>
-                                                                    <td class="col-2"><span><button type="button" class="btn btn-danger"><i class="fa fa-trash"> </i></button></span></td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
+                <div id="seccionDatosGenerales">
+                    <div class="container-fluid">
+                        <div class="container-fluid">
+                            <p cclass="font-weight-bold"></p>
+                            <form>
+                                <div class="accordion" id="accordionExample">
+                                    <!-- SECCION 1 - Datos básicos de la asignatura -->
+                                    <div class="card">
+                                        <div class="card-header bg-warning" id="headingOne">
+                                            <h2 class="mb-0">
+                                                <button class="btn text-left text-white" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1"><h5>Datos básicos de la asignatura</h5></button>
+                                            </h2>
+                                        </div>
+                                        <div id="collapse1" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="form-group ">
+                                                            <label for="exampleFormControlInput1">Nombre</label>
+                                                            <input type="text" class="form-control" placeholder="Nombre de la asignatura" id="nombreasignatura">
+                                                        </div>
                                                     </div>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <hr />
-                                          <h5>Subtemas</h5>
-                                          <!-- Barra de agregar temas -->
-                                          <div class="form-group">
-                                              <div class="row">
-                                                  <label class="col-sm-1 col-form-label text-left">Nombre</label>
-                                                  <div class="col-sm-11">
-                                                      <input id="nombresubtema" type="text" class="form-control">
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <div class="form-group">
-                                              <div class="row">
-                                                  <label class="col-sm-1 col-form-label text-left">Unidad</label>
-                                                  <div class="col-sm-11">
-                                                      <select class="form-control" id="unidadsubtema">
-                                                          <option>Básicas de Ingeniería</option>
-                                                          <option>Ingeniería Aplicada</option>
-                                                      </select>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <div class="form-group">
-                                              <div class="row">
-                                                  <label class="col-sm-1 col-form-label text-left">Semana</label>
-                                                  <div class="col-sm-9">
-                                                      <input id="semanasubtema" type="text" class="form-control" placeholder="Semana X: del XX de XXXXX al XX de XXXXX">
-                                                  </div>
-                                                  <div class="col-sm-2">
-                                                      <button type="button" class="btn btn-warning col-md-12">Agregar</button>
-                                                  </div>
-                                              </div>
-                                          </div>
-
-                                          <!-- Tabla de resultados de temas -->
-                                          <div class="row">
-                                              <div class="col">
-                                                  <div class="form-group">
-                                                      <div class="table-responsive">
-                                                          <table id="productSizes" class="table table-hover table-bordered">
-                                                              <thead class="thead-dark">
-                                                                  <tr class="d-flex">
-                                                                      <th class="col-3">Unidad</th>
-                                                                      <th class="col-4">Subtema</th>
-                                                                      <th class="col-4">Semana</th>
-                                                                      <th class="col-1">Borrar</th>
-                                                                  </tr>
-                                                              </thead>
-                                                              <tbody>
-                                                                  <tr class="d-flex">
-                                                                      <td class="col-3"><span>Fundamentos</span></td>
-                                                                      <td class="col-4"><span>Fundamentos</span></td>
-                                                                      <td class="col-4"><span>Semana 1: Del 12 de Abril al 16 de Abril</span></td>
-                                                                      <td class="col-1"><span><button type="button" class="btn btn-danger"><i class="fa fa-trash"> </i></button></span></td>
-                                                                  </tr>
-                                                              </tbody>
-                                                          </table>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <hr/>
-                                          <h5>Bibliografía por subtemas</h5>
-                                          <!-- Barra de agregar Bibliografia por temas -->
-                                          <div class="form-group">
-                                              <div class="row">
-                                                  <label class="col-sm-1 col-form-label text-left">Unidad</label>
-                                                  <div class="col-sm-11">
-                                                      <select class="form-control" id="unidadb">
-                                                          <option>Básicas de Ingeniería</option>
-                                                          <option>Ingeniería Aplicada</option>
-                                                      </select>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <div class="form-group">
-                                              <div class="row">
-                                                  <label class="col-sm-1 col-form-label text-left">Subtema</label>
-                                                  <div class="col-sm-11">
-                                                      <select class="form-control" id="subtemab">
-                                                          <option>Básicas de Ingeniería</option>
-                                                          <option>Ingeniería Aplicada</option>
-                                                      </select>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <div class="form-group">
-                                              <div class="row">
-                                                  <label class="col-sm-1 col-form-label text-left">Bibliografía</label>
-                                                  <div class="col-sm-11">
-                                                      <select class="form-control" id="unidadsubtemab">
-                                                          <option>Básicas de Ingeniería</option>
-                                                          <option>Ingeniería Aplicada</option>
-                                                      </select>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <div class="form-group">
-                                              <div class="row">
-                                                  <label class="col-sm-2 col-form-label text-left">Trabajos y seguimientos</label>
-                                                  <div class="col-sm-8">
-                                                      <input id="semanasubtema" type="text" class="form-control">
-                                                  </div>
-                                                  <div class="col-sm-2">
-                                                      <button type="button" class="btn btn-warning col-md-12">Agregar</button>
-                                                  </div>
-                                              </div>
-                                          </div>
-
-                                          <!-- Tabla de resultados de temas -->
-                                          <div class="row">
-                                              <div class="col">
-                                                  <div class="form-group">
-                                                      <div class="table-responsive">
-                                                          <table id="productSizes" class="table table-hover table-bordered">
-                                                              <thead class="thead-dark">
-                                                                  <tr class="d-flex">
-                                                                      <th class="col-3">Unidad</th>
-                                                                      <th class="col-4">Subtema</th>
-                                                                      <th class="col-4">Semana</th>
-                                                                      <th class="col-1">Borrar</th>
-                                                                  </tr>
-                                                              </thead>
-                                                              <tbody>
-                                                                  <tr class="d-flex">
-                                                                      <td class="col-3"><span>Fundamentos</span></td>
-                                                                      <td class="col-4"><span>Fundamentos</span></td>
-                                                                      <td class="col-4"><span>Semana 1: Del 12 de Abril al 16 de Abril</span></td>
-                                                                      <td class="col-1"><span><button type="button" class="btn btn-danger"><i class="fa fa-trash"> </i></button></span></td>
-                                                                  </tr>
-                                                              </tbody>
-                                                          </table>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <hr/>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                          <button type="button" class="btn btn-success col-md-12" style="margin-top: 33px;">Guardar</button>
-                      </form>
+                                                    <div class="col">
+                                                        <label for="exampleFormControlInput1">Código</label>
+                                                        <input type="text" class="form-control" placeholder="Código de la asignatura" id="codigoasignatura">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="form-group">
+                                                            <label for="exampleFormControlSelect1">Área</label>
+                                                            <select class="form-control" id="areaasignatura">
+                                                                <option>Básicas de Ingeniería</option>
+                                                                <option>Ingeniería Aplicada</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="form-group">
+                                                            <label for="exampleFormControlSelect1">Ubicación</label>
+                                                            <select class="form-control" id="ubicacionasignatura">
+                                                                <option>Semestre 1</option>
+                                                                <option>Semestre 1</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="form-group">
+                                                            <label for="exampleFormControlSelect1">Carácter de la asignatura</label>
+                                                            <select class="form-control" id="caracterasignatura">
+                                                                <option>Obligatoria</option>
+                                                                <option>Electiva</option>
+                                                                <option>Optativa</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="form-group">
+                                                            <label for="exampleFormControlSelect1">Tipo de asignatura</label>
+                                                            <select class="form-control" id="tipoasignatura">
+                                                                <option>Teórica</option>
+                                                                <option>Práctica</option>
+                                                                <option>Teórica Práctica</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <h4>Periodicidad e intensidad horaria</h4>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="form-group">
+                                                            <label for="exampleFormControlInput1">Número de horas Semanales</label>
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <input type="text" class="form-control" placeholder="Presenciales" id="horaspresensiales">
+                                                                </div>
+                                                                <div class="col">
+                                                                    <input type="text" class="form-control" placeholder="Independientes" id="horassemanales">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- SECCION 2 - Justificación -->
+                                    <div class="card">
+                                        <div class="card-header bg-warning" id="headingOne">
+                                            <h2 class="mb-0">
+                                                <button class="btn text-left text-white" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="true" aria-controls="collapse2"><h5>Justificación</h5></button>
+                                            </h2>
+                                        </div>
+                                        <div id="collapse2" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="form-group">
+                                                            <label for="exampleFormControlTextarea1">Por favor en el siguiente espacio en blanco digite la justificación de la asignatura</label>
+                                                            <textarea class="form-control" id="justificacion" rows="3"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- SECCION 3 - Asignaturas con las cuales se relaciona -->
+                                    <div class="card">
+                                        <div class="card-header bg-warning" id="headingOne">
+                                            <h2 class="mb-0">
+                                                <button class="btn  text-left text-white" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="true" aria-controls="collapse3"><h5>Asignaturas con las cuales se relaciona</h5></button>
+                                            </h2>
+                                        </div>
+                                        <div id="collapse3" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="form-group">
+                                                            <label for="exampleFormControlTextarea1">Por favor en el siguiente espacio en blanco digite las asignaturas con las cuales se relaciona</label>
+                                                            <textarea class="form-control" id="objetivogeneral" rows="3"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- SECCION 4 - Problema de la asignatura -->
+                                    <div class="card">
+                                        <div class="card-header bg-warning" id="headingOne">
+                                            <h2 class="mb-0">
+                                                <button class="btn  text-left text-white" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="true" aria-controls="collapse3"><h5>Problema de la asignatura</h5></button>
+                                            </h2>
+                                        </div>
+                                        <div id="collapse3" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="form-group">
+                                                            <label for="exampleFormControlTextarea1">Por favor en el siguiente espacio en blanco digite el problema de la asignatura</label>
+                                                            <textarea class="form-control" id="objetivogeneral" rows="3"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- SECCION 5 - Competencia -->
+                                    <div class="card">
+                                        <div class="card-header bg-warning" id="headingOne">
+                                            <h2 class="mb-0">
+                                                <button class="btn  text-left text-white" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="true" aria-controls="collapse3"><h5>Competencia</h5></button>
+                                            </h2>
+                                        </div>
+                                        <div id="collapse3" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="form-group">
+                                                            <label for="exampleFormControlTextarea1">Por favor en el siguiente espacio en blanco digite la competencia de la asignatura</label>
+                                                            <textarea class="form-control" id="objetivogeneral" rows="3"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- SECCION 6 - Resultados de aprendizaje -->
+                                    <div class="card">
+                                        <div class="card-header bg-warning" id="headingOne">
+                                            <h2 class="mb-0">
+                                                <button class="btn  text-left text-white" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="true" aria-controls="collapse3"><h5>Resultados de aprendizaje</h5></button>
+                                            </h2>
+                                        </div>
+                                        <div id="collapse3" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="form-group">
+                                                            <label for="exampleFormControlTextarea1">Por favor en el siguiente espacio en blanco digite los resultados de aprendizaje de la asignatura</label>
+                                                            <textarea class="form-control" id="objetivogeneral" rows="3"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- SECCION 7 - Planificación Metodológica -->
+                                    <div class="card">
+                                        <div class="card-header bg-warning" id="headingOne">
+                                            <h2 class="mb-0">
+                                                <button class="btn text-white text-left" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="true" aria-controls="collapse4"><h5>Estrategias de enseñanza</h5></button>
+                                            </h2>
+                                        </div>
+                                        <div id="collapse4" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="form-group ">
+                                                            <label for="exampleFormControlInput1">Metodología</label>
+                                                            <textarea class="form-control" id="metodologia" rows="3"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="form-group ">
+                                                            <label for="exampleFormControlInput1">Actividades dentro del aula</label>
+                                                            <textarea class="form-control" id="actdenaula" rows="3"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="form-group ">
+                                                            <label for="exampleFormControlInput1">Actividades fuera del aula</label>
+                                                            <textarea class="form-control" id="actfueaula" rows="3"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="form-group ">
+                                                            <label for="exampleFormControlInput1">Apoyos didácticos</label>
+                                                            <textarea class="form-control" id="apoyosdidacticos" rows="3"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- SECCION 8 - Criterios de evaluación -->
+                                    <div class="card">
+                                        <div class="card-header bg-warning" id="headingOne">
+                                            <h2 class="mb-0">
+                                                <button class="btn text-white text-left" type="button" data-toggle="collapse" data-target="#collapse9" aria-expanded="true" aria-controls="collapse9"><h5>Criterios de evaluación</h5></button>
+                                            </h2>
+                                        </div>
+                                        <div id="collapse9" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="form-group ">
+                                                            <label for="exampleFormControlTextarea1">Por favor en el siguiente espacio en blanco digite la explicación en la forma de evaluar la asignatura</label>
+                                                            <textarea class="form-control" id="metodologia" rows="10"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Barra de agregar actividades de evaluación -->
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="form-group">
+                                                            <label for="exampleFormControlTextarea1">Concepto</label>
+                                                            <textarea class="form-control" id="concepto" rows="1"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="form-group">
+                                                            <label for="exampleFormControlTextarea1">Tipo (Individual, grupal o ambos)</label>
+                                                            <textarea class="form-control" id="tipo" rows="1"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="form-group">
+                                                            <label for="exampleFormControlTextarea1">Instrumento</label>
+                                                            <textarea class="form-control" id="instrumento" rows="1"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="form-group">
+                                                            <label for="exampleFormControlTextarea1">Porcentaje</label>
+                                                            <textarea class="form-control" id="porcentaje" rows="1"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="form-group">
+                                                            <label for="exampleFormControlTextarea1">Fecha</label>
+                                                            <textarea class="form-control" id="porcentaje" rows="1"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button type="button" @click="" class="btn btn-warning col-md-12">Agregar</button>
+                                                <!-- Tabla de resultados de temas -->
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="form-group">
+                                                            <div class="table-responsive">
+                                                                <table id="productSizes" class="table table-hover table-bordered">
+                                                                    <thead class="thead-dark">
+                                                                        <tr class="d-flex">
+                                                                            <th class="col-3">Concepto</th>
+                                                                            <th class="col-2">Tipo</th>
+                                                                            <th class="col-3">Instrumento</th>
+                                                                            <th class="col-1">Valor %</th>
+                                                                            <th class="col-2">Fecha</th>
+                                                                            <th class="col-1">Borrar</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="d-flex">
+                                                                            <td class="col-3"><span>Talleres prácticos</span></td>
+                                                                            <td class="col-2"><span>Individual o grupal</span></td>
+                                                                            <td class="col-3"><span>Productos valorados pro escala</span></td>
+                                                                            <td class="col-1"><span>10</span></td>
+                                                                            <td class="col-2"><span>Semanalmente</span></td>
+                                                                            <td class="col-1"><span><button type="button" class="btn btn-danger"><i class="fa fa-trash"> </i></button></span></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- SECCION 9 - Bibliografía -->
+                                    <div class="card">
+                                        <div class="card-header bg-warning" id="headingOne">
+                                            <h2 class="mb-0">
+                                                <button class="btn text-white text-left" type="button" data-toggle="collapse" data-target="#collapse7" aria-expanded="true" aria-controls="collapse7"><h5>Bibliografía</h5></button>
+                                            </h2>
+                                        </div>
+                                        <div id="collapse7" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <h5>Bibliografía Básica</h5>
+                                                <!-- Barra de agregar bibliografia básica -->
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label for="exampleFormControlTextarea1">Signatura Topografica</label>
+                                                            <input type="text" class="form-control" id="bbsignaturatopografica">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="form-group">
+                                                            <label for="exampleFormControlTextarea1">Datos del texto existente en la biblioteca de la Universidad</label>
+                                                            <textarea class="form-control" id="bbdatos" rows="3"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button type="button" class="btn btn-warning col-md-12">Agregar</button>
+                                                <!-- Tabla de resultados de fechas -->
+                                                <div class="table-responsive">
+                                                    <table class="table table-hover table-bordered">
+                                                        <thead class="thead-dark">
+                                                          <tr>
+                                                            <th scope="col">Signatura Topográfica</th>
+                                                            <th scope="col">Datos del texto existentes en la biblioteca de la Universidad</th>
+                                                            <th scope="col"><small>Eliminar</small></th>
+                                                          </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                          <tr>
+                                                            <td>005.1 C136M</td>
+                                                            <td>CAIRÓ, O.  Metodología de la programación.  Algoritmos, Diagramas de Flujo y Programas.  Tomo 1 y Tomo 2.  Editorial Alfaomega, 1995.</td>
+                                                            <td><button type="button" class="btn btn-danger col-md-12"><i class="fa fa-trash"></i></button></td>
+                                                          </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <hr />
+                                                <h5>Bibliografía Básica publicaciones seriadas</h5>
+                                                <!-- Barra de agregar bibliografia básica publicaciones seriadas -->
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label for="exampleFormControlTextarea1">Signatura Topografica</label>
+                                                            <input type="text" class="form-control" id="bbpssignaturatopografica">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="form-group">
+                                                            <label for="exampleFormControlTextarea1">Datos de la publicación seriada existente en la biblioteca de la Universidad</label>
+                                                            <textarea class="form-control" id="bbpsdatos" rows="3"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button type="button" class="btn btn-warning col-md-12">Agregar</button>
+                                                <!-- Tabla de resultados de fechas -->
+                                                <div class="table-responsive">
+                                                    <table class="table table-hover table-bordered">
+                                                        <thead class="thead-dark">
+                                                          <tr>
+                                                            <th scope="col">Signatura Topográfica</th>
+                                                            <th scope="col">Datos de la publicación seriada existente en la biblioteca de la Universidad</th>
+                                                            <th scope="col"><small>Eliminar</small></th>
+                                                          </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                          <tr>
+                                                            <td>005.1 C136M</td>
+                                                            <td>CAIRÓ, O.  Metodología de la programación.  Algoritmos, Diagramas de Flujo y Programas.  Tomo 1 y Tomo 2.  Editorial Alfaomega, 1995.</td>
+                                                            <td><button type="button" class="btn btn-danger col-md-12"><i class="fa fa-trash"></i></button></td>
+                                                          </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <hr />
+                                                <h5>Bibliografía básica de sitios web</h5>
+                                                <!-- Barra de agregar Bibliografía básica de sitios web -->
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="form-group">
+                                                            <label for="exampleFormControlTextarea1">Titulo de la página web y enlace web para acceder a él</label>
+                                                            <textarea class="form-control" id="bbswtitulo" rows="3"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button type="button" class="btn btn-warning col-md-12">Agregar</button>
+                                                <!-- Tabla de resultados de Bibliografía básica de sitios web -->
+                                                <div class="table-responsive">
+                                                    <table class="table table-hover table-bordered">
+                                                        <thead class="thead-dark">
+                                                          <tr>
+                                                            <th scope="col">Bibliografía básica de Sitios Web</th>
+                                                            <th scope="col"><small>Eliminar</small></th>
+                                                          </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                          <tr>
+                                                            <td>CAIRÓ, O.  Metodología de la programación.  Algoritmos, Diagramas de Flujo y Programas.  Tomo 1 y Tomo 2.  Editorial Alfaomega, 1995.</td>
+                                                            <td><button type="button" class="btn btn-danger col-md-12"><i class="fa fa-trash"></i></button></td>
+                                                          </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <hr />
+                                                <h5>Bibliografía en Segunda Lengua</h5>
+                                                <!-- Barra de agregar Bibliografía en Segunda Lengua -->
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="form-group">
+                                                            <label for="exampleFormControlTextarea1">Titulo de la página web y enlace web para acceder a él</label>
+                                                            <textarea class="form-control" id="bsltitulo" rows="3"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button type="button" class="btn btn-warning col-md-12">Agregar</button>
+                                                <!-- Tabla de resultados de Bibliografía en Segunda lengua -->
+                                                <div class="table-responsive">
+                                                    <table class="table table-hover table-bordered">
+                                                        <thead class="thead-dark">
+                                                          <tr>
+                                                            <th scope="col">Bibliografía básica de Sitios Web</th>
+                                                            <th scope="col"><small>Eliminar</small></th>
+                                                          </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                          <tr>
+                                                            <td>CAIRÓ, O.  Metodología de la programación.  Algoritmos, Diagramas de Flujo y Programas.  Tomo 1 y Tomo 2.  Editorial Alfaomega, 1995.</td>
+                                                            <td><button type="button" class="btn btn-danger col-md-12"><i class="fa fa-trash"></i></button></td>
+                                                          </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <hr />
+                                                <h5>Bibliografía Complementaria</h5>
+                                                <!-- Barra de agregar bibliografia complementaria -->
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label for="exampleFormControlTextarea1">ISBN</label>
+                                                            <input type="text" class="form-control" id="bcisbn">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="form-group">
+                                                            <label for="exampleFormControlTextarea1">Incluir los textos no existentes en la biblioteca requeridos para el desarrollo de la asignatura</label>
+                                                            <textarea class="form-control" id="bctitulo" rows="3"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button type="button" class="btn btn-warning col-md-12">Agregar</button>
+                                                <!-- Tabla de resultados de fechas -->
+                                                <div class="table-responsive">
+                                                    <table class="table table-hover table-bordered">
+                                                        <thead class="thead-dark">
+                                                          <tr>
+                                                            <th scope="col">ISBN</th>
+                                                            <th scope="col">Incluir los textos no existentes en la biblioteca requeridos para el desarrollo de la asignatura</th>
+                                                            <th scope="col"><small>Eliminar</small></th>
+                                                          </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                          <tr>
+                                                            <td>005.1 C136M</td>
+                                                            <td>CAIRÓ, O.  Metodología de la programación.  Algoritmos, Diagramas de Flujo y Programas.  Tomo 1 y Tomo 2.  Editorial Alfaomega, 1995.</td>
+                                                            <td><button type="button" class="btn btn-danger col-md-12"><i class="fa fa-trash"></i></button></td>
+                                                          </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- SECCION 10 - Contenido tematica -->
+                                    <div class="card">
+                                        <div class="card-header bg-warning" id="headingOne">
+                                            <h2 class="mb-0">
+                                                <button class="btn text-white text-left" type="button" data-toggle="collapse" data-target="#collapse6" aria-expanded="true" aria-controls="collapse6"><h5>Contenido tematico</h5></button>
+                                            </h2>
+                                        </div>
+                                        <div id="collapse6" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <h5>Unidad Tematica</h5>
+                                                <!-- Barra de agregar unidad -->
+                                                <div class="row">
+                                                    <div class="col-md-10">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" placeholder="Nombre de la unidad" id="unidadtematica">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="form-group">
+                                                            <button type="button" class="btn btn-warning col-md-12" id="btnUnidadTematicaTxt">Agregar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Tabla de resultados de unidades -->
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="form-group">
+                                                            <div class="table-responsive">
+                                                              <table id="tablaContenidoTematico" class="table table-hover table-bordered">
+                                                                  <thead class="thead-dark">
+                                                                      <tr class="d-flex">
+                                                                          <th class="col-10">Nombre de la Unidad</th>
+                                                                          <th class="col-2">Eliminar</th>
+                                                                      </tr>
+                                                                  </thead>
+                                                                  <tbody id="tbodyContenidoTematico">
+                                                                      <tr class="d-flex">
+                                                                          <td class="col-10"><span>Fundamentos</span></td>
+                                                                          <td class="col-2"><span><button type="button" class="btn btn-danger"><i class="fa fa-trash"> </i></button></span></td>
+                                                                      </tr>
+                                                                  </tbody>
+                                                              </table>
+                                                          </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <hr />
+                                                <h5>Subtemas</h5>
+                                                <!-- Barra de agregar temas -->
+                                                <div class="form-group">
+                                                    <div class="row">
+                                                        <label class="col-sm-1 col-form-label text-left">Nombre</label>
+                                                        <div class="col-sm-11">
+                                                            <input id="nombresubtema" type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="row">
+                                                        <label class="col-sm-1 col-form-label text-left">Unidad</label>
+                                                        <div class="col-sm-11">
+                                                            <select class="form-control" id="unidadsubtema">
+                                                                <option>Básicas de Ingeniería</option>
+                                                                <option>Ingeniería Aplicada</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="row">
+                                                        <label class="col-sm-1 col-form-label text-left">Semana</label>
+                                                        <div class="col-sm-9">
+                                                            <input id="semanasubtema" type="text" class="form-control" placeholder="Semana X: del XX de XXXXX al XX de XXXXX">
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <button type="button" class="btn btn-warning col-md-12">Agregar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+      
+                                                <!-- Tabla de resultados de temas -->
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="form-group">
+                                                            <div class="table-responsive">
+                                                                <table id="productSizes" class="table table-hover table-bordered">
+                                                                    <thead class="thead-dark">
+                                                                        <tr class="d-flex">
+                                                                            <th class="col-3">Unidad</th>
+                                                                            <th class="col-4">Subtema</th>
+                                                                            <th class="col-4">Semana</th>
+                                                                            <th class="col-1">Borrar</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="d-flex">
+                                                                            <td class="col-3"><span>Fundamentos</span></td>
+                                                                            <td class="col-4"><span>Fundamentos</span></td>
+                                                                            <td class="col-4"><span>Semana 1: Del 12 de Abril al 16 de Abril</span></td>
+                                                                            <td class="col-1"><span><button type="button" class="btn btn-danger"><i class="fa fa-trash"> </i></button></span></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <hr/>
+                                                <h5>Bibliografía por subtemas</h5>
+                                                <!-- Barra de agregar Bibliografia por temas -->
+                                                <div class="form-group">
+                                                    <div class="row">
+                                                        <label class="col-sm-1 col-form-label text-left">Unidad</label>
+                                                        <div class="col-sm-11">
+                                                            <select class="form-control" id="unidadb">
+                                                                <option>Básicas de Ingeniería</option>
+                                                                <option>Ingeniería Aplicada</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="row">
+                                                        <label class="col-sm-1 col-form-label text-left">Subtema</label>
+                                                        <div class="col-sm-11">
+                                                            <select class="form-control" id="subtemab">
+                                                                <option>Básicas de Ingeniería</option>
+                                                                <option>Ingeniería Aplicada</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="row">
+                                                        <label class="col-sm-1 col-form-label text-left">Bibliografía</label>
+                                                        <div class="col-sm-11">
+                                                            <select class="form-control" id="unidadsubtemab">
+                                                                <option>Básicas de Ingeniería</option>
+                                                                <option>Ingeniería Aplicada</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="row">
+                                                        <label class="col-sm-2 col-form-label text-left">Trabajos y seguimientos</label>
+                                                        <div class="col-sm-8">
+                                                            <input id="semanasubtema" type="text" class="form-control">
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <button type="button" class="btn btn-warning col-md-12">Agregar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+      
+                                                <!-- Tabla de resultados de temas -->
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="form-group">
+                                                            <div class="table-responsive">
+                                                                <table id="productSizes" class="table table-hover table-bordered">
+                                                                    <thead class="thead-dark">
+                                                                        <tr class="d-flex">
+                                                                            <th class="col-3">Unidad</th>
+                                                                            <th class="col-4">Subtema</th>
+                                                                            <th class="col-4">Semana</th>
+                                                                            <th class="col-1">Borrar</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="d-flex">
+                                                                            <td class="col-3"><span>Fundamentos</span></td>
+                                                                            <td class="col-4"><span>Fundamentos</span></td>
+                                                                            <td class="col-4"><span>Semana 1: Del 12 de Abril al 16 de Abril</span></td>
+                                                                            <td class="col-1"><span><button type="button" class="btn btn-danger"><i class="fa fa-trash"> </i></button></span></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <hr/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-success col-md-12" style="margin-top: 33px;">Guardar</button>
+                            </form>
+                        </div>
                   </div>
-              </div>
+                </div>
             </div>
       </div>
     <script src="../../../../js/jquery.min.js"></script>
     <script src="../../../../js/popper.js"></script>
     <script src="../../../../js/bootstrap.min.js"></script>
+    <!-- Vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <!-- Axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- Sweet Alert 2 -->
+    <script src="../../../../plugins/sweetalert2/sweetalert2.all.min.js"></script>
     <script src="../../../../js/main.js"></script>
+    <script src="../../../../js/admin/asignatura/datosGenerajes.js"></script>
   </body>
 </html>

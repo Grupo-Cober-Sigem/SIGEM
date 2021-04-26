@@ -144,7 +144,10 @@ var appAsignatura = new Vue({
                   }
                 });
         },
-        
+
+        btnDatosGenerales: async function (codigo){
+
+        },
 
         //Procedimientos
         traerPrograma: function(){
