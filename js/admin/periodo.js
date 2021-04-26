@@ -69,6 +69,12 @@ var appUsuarios = new Vue({
                     periodo = Swal.getPopup().querySelector('#periodo').value,
                     fechaIni = Swal.getPopup().querySelector('#fechaIni').value,
                     fechaFin = Swal.getPopup().querySelector('#fechaFin').value              
+                    
+                    console.log("Valor periodo ante: "+periodoAnterior);
+                    console.log("Valor periodo: "+periodo);
+                    console.log("Valor fechaIni: "+fechaIni);
+                    console.log("Valor fechaFin: "+fechaFin);
+
 
                     this.editarPeriodos(periodoAnterior,periodo,fechaIni,fechaFin);
                     Swal.fire(
@@ -124,7 +130,7 @@ var appUsuarios = new Vue({
         cerrarPeriodo: function(periodo,activo){
             if(activo=="1")
             {
-                axios.post(url,{opcion:3,periodoActual:periodo,activo:activo}).then(response=>{
+                axios.post(url,{opcion:3,periodo:periodo,activo:activo}).then(response=>{
                     this.listarPeriodos();
                 });
                 Swal.fire(
