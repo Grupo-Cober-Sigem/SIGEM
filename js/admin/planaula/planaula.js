@@ -38,7 +38,7 @@ var appUsuarios = new Vue({
                 preConfirm: () => {
                     
                     return [
-                        this.codigo = Swal.getPopup().querySelector('#codigo').value,
+                        this.codigo = codigo,
                         this.preRequisitos = Swal.getPopup().querySelector('#preRequisitos').value,
                         this.periodo = Swal.getPopup().querySelector('#periodo').value,
                         this.bloque = Swal.getPopup().querySelector('#bloque').value,
@@ -75,13 +75,10 @@ var appUsuarios = new Vue({
             });
         },
 
-        editarPlan: function(){
-            axios.post(url, {opcion:4, marca:this.marca, modelo:this.modelo,stock:this.stock }).then(response =>{
-                this.listarMoviles();
+        editarPlan: function(codigo,preRequisitos,periodo,bloque,aula){
+            axios.post(url, {opcion:2, codigo:codigo, preRequisitos:preRequisitos, periodo:periodo, bloque:bloque, aula:aula }).then(response =>{
+                this.listarPlan();
             });        
-             this.marca = "",
-             this.modelo = "",
-             this.stock = 0
         },
     },
     created:function(){
