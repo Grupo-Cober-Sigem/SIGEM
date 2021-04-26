@@ -44,6 +44,7 @@
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
+        case 6: //Listar Asignaturas
     }
     // Enviar el array final en formato JSON a Javascript
     print json_encode($data, JSON_UNESCAPED_UNICODE);

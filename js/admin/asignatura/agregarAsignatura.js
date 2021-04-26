@@ -2,9 +2,13 @@ var url = "../../../php/admin/asignatura/asignatura.php";
 var appAsignatura = new Vue({
     el: "#seccionAsignatura",
     data: {
+        //Variables para filtros
+        programaSeleccionado:0,
         filtroProgramas:[],
+        areaSeleccionada:0,
         filtroAreas:[],
-        filtroDocentes:[],
+        semestreSeleccionado:0,
+        //Variables para registros
         datosAsignatura: [],
         nombre:"",
         codigo:0,
@@ -87,15 +91,27 @@ var appAsignatura = new Vue({
 
         //Procedimientos
         traerPrograma: function(){
+            axios.post(url,{opcion:1}).then(response=>{
 
+                this.filtroProgramas = response.data;
+                this.areaSeleccionada=0;
+                this.filtroAreas="";
+                this.semestreSeleccionado=0;
+            });
         },
 
         traerArea: function(){
+            axios.post(url,{opcion:2, programa:this.programaSeleccionado}).then(response=>{
 
+                this.filtroAreas = response.data;
+                this.areaSeleccionada=0;
+                this.semestreSeleccionado=0;
+            })
         },
 
         listarAsignatura: function(){
-            axios.post(url,{opcion:1}).then(response=>{
+            axios.post(url,{opcion:6}).then(response=>{
+
                 this.datosAsignatura = response.data;
                 console.log(this.datos);
             });
