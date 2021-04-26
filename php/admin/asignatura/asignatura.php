@@ -16,7 +16,9 @@
     $programa = (isset($_POST['programa'])) ? $_POST['programa'] : '';
     $area = (isset($_POST['area'])) ? $_POST['area'] : '';
     $docente = (isset($_POST['docente'])) ? $_POST['docente'] : '';
-    echo $nombre;
+
+    echo valor variable nombre $nombre;
+
     switch($opcion){
         case 1: //Seleccionar Programa para filtro
             $consulta = "SELECT * FROM Programa";
