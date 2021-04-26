@@ -145,6 +145,29 @@ var appAsignatura = new Vue({
                 });
         },
 
+        btnFiltrarAsignatura: function(){
+            let valor = document.getElementById("campoBusqueda").value;
+
+            switch(valor)
+            {
+                case "":
+                    this.listarAsignatura();
+                    break;
+
+                case null:
+                    this.listarAsignatura();
+                    break;
+                
+                default:
+                    axios.post(url,{opcion:5,nombre:valor}).then(response=>{
+                        this.datosAsignatura = response.data;
+                        console.log(this.datosAsignatura);
+                        valor="";
+                    });
+                    break;
+            }
+        },
+
         btnDatosGenerales: async function (codigo){
 
         },
