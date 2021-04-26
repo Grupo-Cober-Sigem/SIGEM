@@ -38,7 +38,7 @@
             $resultado->execute();
             break;
         case 3: //Filtrar
-            $consulta = "SELECT Asignatura.Nombre_Asig, Asignatura.Cod_Asignatura, Asignatura.Creditos_Micro, Asignatura.Cod_Area, Asignatura.Ubicacion_Asig, Asignatura.wPresen_Asig, Asignatura.wIndepe_Asig, Microcurriculo.Nivel_Micro, Microcurriculo.Mod_Micro, Microcurriculo.Carac_Micro, Microcurriculo.tipoAsig_Micro  FROM Asignatura INNER JOIN Microcurriculo WHERE Asignatura.Cod_Asignatura = Microcurriculo.Cod_Asignatura AND Asignatura.Cod_Asignatura LIKE CONCAT('%','$nombre','%')";
+            $consulta = "SELECT Asignatura.Nombre_Asig, Asignatura.Cod_Asignatura, Asignatura.Creditos_Micro, Asignatura.Cod_Area, Asignatura.Ubicacion_Asig, Asignatura.wPresen_Asig, Asignatura.wIndepe_Asig, Microcurriculo.Nivel_Micro, Microcurriculo.Mod_Micro, Microcurriculo.Carac_Micro, Microcurriculo.tipoAsig_Micro  FROM Asignatura INNER JOIN Microcurriculo WHERE Asignatura.Cod_Asignatura = Microcurriculo.Cod_Asignatura AND Asignatura.Nombre_Asig LIKE CONCAT('%','$nombre','%')";
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             $data = $resultado->fetchAll(PDO::FETCH_ASSOC);

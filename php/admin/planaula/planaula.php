@@ -28,7 +28,7 @@
             $resultado->execute();
             break;
         case 3: //Filtrar
-            $consulta = "SELECT Asignatura.Nombre_Asig, Asignatura.Cod_Asignatura, Asignatura.Ubicacion_Asig FROM Asignatura INNER JOIN planAula WHERE Asignatura.Cod_Asignatura = planAula.Cod_Asignatura AND Asignatura.Cod_Asignatura LIKE CONCAT('%','$codigo','%')";
+            $consulta = "SELECT Asignatura.Nombre_Asig, Asignatura.Cod_Asignatura, Asignatura.Ubicacion_Asig FROM Asignatura INNER JOIN planAula WHERE Asignatura.Cod_Asignatura = planAula.Cod_Asignatura AND Asignatura.Nombre_Asig LIKE CONCAT('%','$codigo','%')";
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
