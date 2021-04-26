@@ -70,12 +70,6 @@ var appUsuarios = new Vue({
                     fechaIni = Swal.getPopup().querySelector('#fechaIni').value,
                     fechaFin = Swal.getPopup().querySelector('#fechaFin').value              
                     
-                    console.log("Valor periodo ante: "+periodoAnterior);
-                    console.log("Valor periodo: "+periodo);
-                    console.log("Valor fechaIni: "+fechaIni);
-                    console.log("Valor fechaFin: "+fechaFin);
-
-
                     this.editarPeriodos(periodoAnterior,periodo,fechaIni,fechaFin);
                     Swal.fire(
                       '¡Actualizado!',
@@ -108,7 +102,6 @@ var appUsuarios = new Vue({
         listarPeriodos: function(){
             axios.post(url,{opcion:1}).then(response=>{
                 this.datosPeriodos = response.data;
-                console.log(this.datosPeriodos);
             });
         },
 

@@ -192,6 +192,6 @@ var appAsignatura = new Vue({
         },
     },
     created:function(){
-        this.listarUsuarios();
+        this.listarAsignatura();
     }
 });
