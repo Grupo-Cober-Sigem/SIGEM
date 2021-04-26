@@ -17,7 +17,11 @@ var app = new Vue({
             await Swal.fire({
                 title: 'EDITAR',
                 html:
-                '<div class="form-group"><div class="row"><label class="col-sm-4 col-form-label">Nombres</label><div class="col-sm-7"><input id="nombres" value="'+nombres+'" type="text" class="form-control"></div></div><div class="row"><label class="col-sm-4 col-form-label">Apellidos</label><div class="col-sm-7"><input id="apellidos" value="'+apellidos+'" type="text" class="form-control"></div></div><div class="row"><label class="col-sm-4 col-form-label">Correo</label><div class="col-sm-7"><input id="correo" value="'+correo+'" class="form-control"></div></div><div class="form-group"><div class="row"><label class="col-sm-4 col-form-label">Contraseña</label><div class="col-sm-7"><input id="pass" value="'+pass+'" type="text" class="form-control"></div></div></div>', 
+                '<div class="form-group"><div class="row">'+
+                '<label class="col-sm-4 col-form-label">Nombres</label><div class="col-sm-7"><input id="nombres" value="'+nombres+'" type="text" class="form-control" disabled></div></div><div class="row">'+
+                '<label class="col-sm-4 col-form-label">Apellidos</label><div class="col-sm-7"><input id="apellidos" value="'+apellidos+'" type="text" class="form-control" password></div></div><div class="row">'+
+                '<label class="col-sm-4 col-form-label">Correo</label><div class="col-sm-7"><input id="correo" value="'+correo+'" class="form-control" disabled></div></div><div class="form-group"><div class="row">'+
+                '<label class="col-sm-4 col-form-label">Contraseña</label><div class="col-sm-7"><input id="pass" value="'+pass+'" type="password" class="form-control"></div></div></div>', 
                 focusConfirm: false,
                 showCancelButton: true,                         
                 }).then((result) => {

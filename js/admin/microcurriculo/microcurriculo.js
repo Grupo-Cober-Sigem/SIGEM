@@ -19,7 +19,49 @@ var appUsuarios = new Vue({
         btnEditarMicro: async function (nombre,codigo,creditos,area,ubicacion,nivel,modalidad,caracter,tipo,horaPresencial,horaIndependiente) {
             const { value: formValues } = await Swal.fire({
                 title: 'Editar',
-                html:'<div class="form-group"><label for="exampleFormControlInput1">Nombre</label><input type="text" class="form-control" placeholder="Nombre de la asignatura" id="nombre" value="'+nombre+'"></div><div class="form-group"><div class="row"><div class="col"><label for="exampleFormControlInput1">Código</label><input type="text" class="form-control" placeholder="Código de la asignatura" id="codigo" value="'+codigo+'"></div><div class="col"><label for="exampleFormControlInput1">Nro. de Creditos</label><input type="text" class="form-control" placeholder="Cantidad de Creditos" id="creditos" value="'+creditos+'"></div></div></div><div class="row"><div class="col"><div class="form-group"><label for="exampleFormControlSelect1">Área</label><select class="form-control" id="area"><option value="1">Básicas de Ingeniería</option><option value="2">Ingeniería Aplicada</option></select></div></div><div class="col"><div class="form-group"><label for="exampleFormControlSelect1">Ubicación</label><select class="form-control" id="nivel"><option value="1">Semestre 1</option><option value="2">Semestre 2</option></select></div></div></div><div class="row"><div class="col"><div class="form-group"><label for="exampleFormControlSelect1">Nivel de formación</label><select class="form-control" id="nivel"><option value="1">Pregado</option><option value="2">Posgrado</option><option value="3">Tecnología</option><option value="4">Técnico</option></select></div></div><div class="col"><div class="form-group"><label for="exampleFormControlSelect1">Modalidad</label><select class="form-control" id="modalidad"><option value="1">Presencial</option><option value="2">A distancia</option><option value="3">Tutoriada</option><option value="4">Virtual</option><option value="5">Escenarios múltiples</option></select></div></div></div><div class="row"><div class="col"><div class="form-group"><label for="exampleFormControlSelect1">Carácter</label><select class="form-control" id="caracter"><option value="1">Obligatoria</option><option value="2">Electiva</option><option value="3">Optativa</option></select></div></div><div class="col"><div class="form-group"><label for="exampleFormControlSelect1">Tipo de asignatura</label><select class="form-control" id="tipo"><option value="1">Teórica</option><option value="2">Práctica</option><option value="3">Teórica Práctica</option></select></div></div></div><div class="row"><div class="col"><div class="form-group"><label for="exampleFormControlInput1">Número de horas Semanales</label><div class="row"><div class="col"><input type="text" class="form-control" placeholder="Presenciales" id="horaPresencial" value="'+horaPresencial+'"></div><div class="col"><input type="text" class="form-control" placeholder="Independientes" id="horaIndependiente" value="'+horaIndependiente+'"></div></div></div></div></div>',
+                html:'<div class="form-group">'+
+/*Nombre*/      '<label for="nombre">Nombre</label><input type="text" class="form-control" placeholder="Nombre de la asignatura" id="nombre" value="'+nombre+'" disabled></div>'+
+                '<div class="form-group"><div class="row"><div class="col">'+
+/*Codigo*/      '<label for="codigo">Código</label><input type="text" class="form-control" placeholder="Código de la asignatura" id="codigo" value="'+codigo+'" disabled></div><div class="col">'+
+/*Creditos*/    '<label for="creditos">Nro. de Creditos</label><input type="text" class="form-control" placeholder="Cantidad de Creditos" id="creditos" value="'+creditos+'"></div></div></div>'+
+                '<div class="row"><div class="col"><div class="form-group">'+
+/*Area*/        '<label for="area">Área</label><select class="form-control" id="area" disabled>'+
+                    '<option value="1">Básicas de Ingeniería</option>'+
+                    '<option value="2">Ingeniería Aplicada</option></select></div></div><div class="col"><div class="form-group">'+
+/*Semestre*/    '<label for="ubicacion">Semestre</label><select class="form-control" id="ubicacion" disabled>'+
+                    '<option value="Primer">Primero</option>'+
+                    '<option value="Segundo">Segundo</option>'+
+                    '<option value="Tercer">Tercero</option>'+
+                    '<option value="Cuarto">Cuarto</option>'+
+                    '<option value="Quinto">Quinto</option>'+
+                    '<option value="Sexto">Sexto</option>'+
+                    '<option value="Septimo">Septimo</option>'+
+                    '<option value="Octavo">Octavo</option>'+
+                    '<option value="Noveno">Noveno</option>'+
+                    '<option value="Decimo">Decimo</option></select></div></div></div><div class="row"><div class="col"><div class="form-group">'+
+/*Nivel*/       '<label for="nivel">Nivel de formación</label><select class="form-control" id="nivel">'+
+                    '<option value="Pregrado">Pregado</option>'+
+                    '<option value="Postgrado">Postgrado</option>'+
+                    '<option value="Tecnológico">Tecnológico</option>'+
+                    '<option value="Técnico">Técnico</option></select></div></div><div class="col"><div class="form-group">'+
+/*Modalidad*/   '<label for="modalidad">Modalidad</label><select class="form-control" id="modalidad">'+
+                    '<option value="Presencial">Presencial</option>'+
+                    '<option value="A distancia">A distancia</option>'+
+                    '<option value="Tutoriada">Tutoriada</option>'+
+                    '<option value="Virtual">Virtual</option>'+
+                    '<option value="Escenarios múltiples">Escenarios múltiples</option></select></div></div></div><div class="row"><div class="col"><div class="form-group">'+
+/*Caracter*/    '<label for="caracter">Carácter</label><select class="form-control" id="caracter">'+
+                    '<option value="Obligatoria">Obligatoria</option>'+
+                    '<option value="Electiva">Electiva</option>'+
+                    '<option value="Optativa">Optativa</option></select></div></div><div class="col"><div class="form-group">'+
+/*Tipo*/        '<label for="tipo">Tipo de asignatura</label><select class="form-control" id="tipo">'+
+                    '<option value="Teórica">Teórica</option>'+
+                    '<option value="Práctica">Práctica</option>'+
+                    '<option value="Teórica Práctica">Teórica Práctica</option></select></div></div></div>'+
+                '<div class="row"><div class="col"><div class="form-group">'+
+                '<label for="horaPresencial">Número de horas Semanales</label><div class="row"><div class="col">'+
+/*hPresencial*/     '<input type="text" class="form-control" placeholder="Presenciales" id="horaPresencial" value="'+horaPresencial+'"></div><div class="col">'+
+/*hIndependiente*/  '<input type="text" class="form-control" placeholder="Independientes" id="horaIndependiente" value="'+horaIndependiente+'"></div></div></div></div></div>',
                 focusConfirm: false,
                 showCancelButton: true,
                 confirmButtonText: 'Guardar',
