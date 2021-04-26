@@ -17,7 +17,7 @@
     $area = (isset($_POST['area'])) ? $_POST['area'] : '';
     $docente = (isset($_POST['docente'])) ? $_POST['docente'] : '';
 
-    echo valor variable nombre $nombre;
+    echo $nombre;
 
     switch($opcion){
         case 1: //Seleccionar Programa para filtro
