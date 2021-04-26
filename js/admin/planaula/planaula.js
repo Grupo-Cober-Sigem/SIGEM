@@ -80,6 +80,30 @@ var appUsuarios = new Vue({
                 this.listarPlan();
             });        
         },
+
+        btnFiltrarPlan: async function()
+        {
+            let nombre = document.getElementById("campoBusqueda").value;
+
+            switch(nombre)
+            {
+                case "":
+                    this.listarPlan();
+                    break;
+
+                case null:
+                    this.listarPlan();
+                    break;
+                
+                default:
+                    axios.post(url,{opcion:3,codigo:nombre}).then(response=>{
+                        this.datosPlan = response.data;
+                        console.log(this.datosPlan);
+                        nombre="";
+                    });
+                    break;
+            }
+        },
     },
     created:function(){
         this.listarPlan();

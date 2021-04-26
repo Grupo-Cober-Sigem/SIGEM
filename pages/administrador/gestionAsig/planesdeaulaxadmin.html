@@ -31,7 +31,7 @@
                         <li><a href="../../../pages/administrador/seguimientoMicro/seguimientoxadmin.html">Registro de seguimientos</a></li>
                         <li><a href="../../../pages/administrador/seguimientoMicro/aprobadosxadmin.html">Seguimientos aprobados</a></li>
                         <li><a href="../../../pages/administrador/seguimientoMicro/revisionxadmin.html">Seguimientos por revisar</a></li>
-                        <li><a href="../seguimientoMicro/controlcambios.html">Control de cambios realizados</a></li>
+                        <!--<li><a href="../seguimientoMicro/controlcambios.html">Control de cambios realizados</a></li>-->
 	                    </ul>
 	                </li>
                     <li><a href="../estadisticas/statisticsgxadmin.html">Estadísticas</a></li>
@@ -79,35 +79,14 @@
                     <div class="container-fluid">
                         <!-- Barra de busqueda -->
                         <div class="row">
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label for="exampleFormControlSelect1">Programa</label>
-                                <select class="form-control" id="nivelformacion">
-                                    <option>Ingeniería en TIC</option>
-                                    <option>Ingeniería industrial</option>
-                                </select>
+                        <div class="col-md-10">
+                                <div class="form-group">
+                                    <input class="form-control" type="text" placeholder="Nombre de la asignatura" id="campoBusqueda">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="form-group">
-                                <label for="exampleFormControlSelect1">Semestre</label>
-                                <select class="form-control" id="nivelformacion">
-                                    <option>202012</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="form-group">
-                                <label for="exampleFormControlSelect1">Área</label>
-                                <select class="form-control" id="nivelformacion">
-                                    <option>Básicas de Ingeniería</option>
-                                    <option>Ingeniería Aplicada</option>
-                                </select>
-                            </div>
-                        </div>
                         <div class="col-md-2">
                             <div class="form-group">
-                                <button type="button" class="btn btn-warning col-md-12" style="margin-top: 33px;">Buscar</button>
+                                <button type="button" class="btn btn-warning col-md-12" @click="btnFiltrarPlan">Buscar</button>
                             </div>
                         </div>
                     </div>
@@ -119,18 +98,16 @@
                                     <tr class="d-flex">
                                         <th class="col-md-2">Codigo</th>
                                         <th class="col-md-4">Nombre</th>
-                                        <th class="col-md-2">Semestre</th>
-                                        <th class="col-md-2">Ver</th>
-                                        <th class="col-md-2">Descargar</th>
+                                        <th class="col-md-4">Semestre</th>
+                                        <th class="col-md-2">Editar</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr class="d-flex" v-for="(plan,indice) of datosPlan">
                                         <td class="col-md-2"><span>{{plan.Cod_Asignatura</span></td>
                                         <td class="col-md-4"><span>{{plan.Nombre_Asig}}</span></td>
-                                        <td class="col-md-2"><span>{{plan.Ubicacion_Asig}}</span></td>
-                                        <td class="col-md-2"><span><button type="button" class="btn btn-warning col-md-12" @click="btnEditarPlan(plan.Cod_Asignatura,)"><i class="fa fa-eye"></i></button></span></td>
-                                        <td class="col-md-2"><button type="button" class="btn btn-dark col-md-12" ><i class="fa fa-download"></i></button></td>
+                                        <td class="col-md-4"><span>{{plan.Ubicacion_Asig}}</span></td>
+                                        <td class="col-md-2"><span><button type="button" class="btn btn-warning col-md-12" @click="btnEditarPlan(plan.Cod_Asignatura,)"><i class="fa fa-edit"></i></button></span></td>
                                     </tr>
                                 </tbody>
                             </table>

@@ -99,6 +99,30 @@ var appUsuarios = new Vue({
              });  
          },
 
+         btnFiltrarMicro: async function()
+        {
+            let nombre = document.getElementById("campoBusqueda").value;
+
+            switch(nombre)
+            {
+                case "":
+                    this.listarMicrocurriculo();
+                    break;
+
+                case null:
+                    this.listarMicrocurriculo();
+                    break;
+                
+                default:
+                    axios.post(url,{opcion:3,nombre:nombre}).then(response=>{
+                        this.datosMicrocurriculo = response.data;
+                        console.log(this.datosMicrocurriculo);
+                        nombre="";
+                    });
+                    break;
+            }
+        },
+
         //Procedimientos
         listarMicrocurriculo: function(){
             axios.post(url,{opcion:1}).then(response=>{

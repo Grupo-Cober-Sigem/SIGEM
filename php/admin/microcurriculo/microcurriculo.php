@@ -32,10 +32,16 @@
             $consulta = "UPDATE Asignatura SET Nombre_Asig='$nombre', Creditos_Micro='$creditos', Cod_Area='$area', Ubicacion_Asig='$ubicacion', wPresen_Asig='$horaPresencial', wIndepe_Asig='$horaIndependiente' WHERE Cod_Asignatura='$codigo' ";
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
-            
+        
             $consulta = "UPDATE Microcurriculo SET Nivel_Micro='$nivel', Mod_Micro='$modalidad', Carac_Micro='$caracter', tipoAsig_Micro='$tipo' WHERE Cod_Asignatura='$codigo' ";
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
+            break;
+        case 3: //Filtrar
+            $consulta = "SELECT Asignatura.Nombre_Asig, Asignatura.Cod_Asignatura, Asignatura.Creditos_Micro, Asignatura.Cod_Area, Asignatura.Ubicacion_Asig, Asignatura.wPresen_Asig, Asignatura.wIndepe_Asig, Microcurriculo.Nivel_Micro, Microcurriculo.Mod_Micro, Microcurriculo.Carac_Micro, Microcurriculo.tipoAsig_Micro  FROM Asignatura INNER JOIN Microcurriculo WHERE Asignatura.Cod_Asignatura = Microcurriculo.Cod_Asignatura AND Asignatura.Cod_Asignatura LIKE CONCAT('%','$nombre','%')";
+            $resultado = $cn->prepare($consulta);
+            $resultado->execute();
+            $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
             break;
     }
     // Enviar el array final en formato JSON a Javascript
