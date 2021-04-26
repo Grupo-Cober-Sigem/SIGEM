@@ -72,40 +72,9 @@
                         <!-- Barra de busqueda -->
                         <form id="bAsignatura" name="bAsignatura"  >
                         <div class="row">
-                            <div class="col-md-4">
+                            <div class="col-md-10">
                                 <div class="form-group">
-                                    <label for="exampleFormControlSelect1">Programa</label>
-                                    <select class="form-control" v-model="programaSeleccionado" @change="traerPrograma()">
-                                        <option value="0">Seleccione Programa</option>  
-                                        <option v-for="(programa,indice) of filtroProgramas" :value="programa.Cod_programa">{{programa.Nombre_prog}}</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label >Área</label>
-                                    <select class="form-control" v-model="areaSeleccionada" @change="traerArea()">
-                                        <option value="0">Seleccione Area</option>
-                                        <option></option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <label for="asigSemestre">Semestre</label>
-                                    <select class="form-control" id="semestreSeleccionado">
-                                        <option value="">Seleccionar</option>
-                                        <option value="Primer">Primero</option>
-                                        <option value="Segundo">Segundo</option>
-                                        <option value="Tercero">Tercero</option>
-                                        <option value="Cuarto">Cuarto</option>
-                                        <option value="Quinto">Quinto</option>
-                                        <option value="Sexto">Sexto</option>
-                                        <option value="Septimo">Séptimo</option>
-                                        <option value="Octavo">Octavo</option>
-                                        <option value="Noveno">Noveno</option>
-                                        <option value="Decimo">Décimo</option>
-                                    </select>
+                                    <input class="form-control" type="text" placeholder="Nombre de la asiginatura">
                                 </div>
                             </div>
                             <div class="col-md-1">
