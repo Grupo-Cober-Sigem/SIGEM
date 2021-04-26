@@ -37,9 +37,17 @@
             $resultado->execute();
             break;
         case 4: // Agregar Asignatura
-            $consulta = "INSERT INTO Asignatura (Cod_Asignatura, Nombre_Asig, Cod_Area, ubicacion_Asig) VALUES ('$usuario','$pass','$nombre','$apellidos','$correo','$rol',1)";
+            $consulta = "INSERT INTO Asignatura (Cod_Asignatura, Nombre_Asig, Cod_Area, ubicacion_Asig) VALUES ('$codigo','$nombre','$area','$nivelFormacion')";
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
+
+            $consulta = "INSERT INTO Microcurriculo (Cod_Micro, Cod_Asignatura) VALUES ('null','$codigo')";
+            $resultado = $cn->prepare($consulta);
+            $resultado->execute();
+
+            $consulta = "INSERT INTO planAula (Cod_Plan, Cod_Asignatura) VALUES ('null','$codigo')";
+            $resultado = $cn->prepare($consulta);
+            $resultado->execute(); 
             break;
         case 5: //Filtrar
             $consulta = "SELECT Cod_Asignatura, Nombre_Asig, Ubicacion_Asig, Cod_Area, Cod_User FROM Asignatura WHERE ";
