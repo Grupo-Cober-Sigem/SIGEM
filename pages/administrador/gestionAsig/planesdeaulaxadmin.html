@@ -126,10 +126,10 @@
                                 </thead>
                                 <tbody>
                                     <tr class="d-flex" v-for="(plan,indice) of datosPlan">
-                                        <td class="col-md-2"><span>{{plan.codigo</span></td>
-                                        <td class="col-4"><span>{{plan.nombre}}</span></td>
-                                        <td class="col-2"><span>{{plan.ubicacion}}</span></td>
-                                        <td class="col-2"><span><button type="button" class="btn btn-warning col-md-12" @click="btnEditarPlan()"><i class="fa fa-eye"></i></button></span></td>
+                                        <td class="col-md-2"><span>{{plan.Cod_Asignatura</span></td>
+                                        <td class="col-4"><span>{{plan.Nombre_Asig}}</span></td>
+                                        <td class="col-2"><span>{{plan.Ubicacion_Asig}}</span></td>
+                                        <td class="col-2"><span><button type="button" class="btn btn-warning col-md-12" @click="btnEditarPlan(plan.Cod_Asignatura,)"><i class="fa fa-eye"></i></button></span></td>
                                         <td class="col-md-2"><button type="button" class="btn btn-dark col-md-12" ><i class="fa fa-download"></i></button></td>
                                     </tr>
                                 </tbody>

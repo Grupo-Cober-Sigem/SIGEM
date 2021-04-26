@@ -10,7 +10,6 @@
     $opcion = (isset($_POST['opcion'])) ? $_POST['opcion'] : '';
 
     $codigo = (isset($_POST['codigo'])) ? $_POST['codigo'] : '';
-    $ubicacion = (isset($_POST['ubicacion'])) ? $_POST['ubicacion'] : '';
     $preRequisitos = (isset($_POST['preRequisitos'])) ? $_POST['preRequisitos'] : '';
     $periodo = (isset($_POST['periodo'])) ? $_POST['periodo'] : '';
     $bloque = (isset($_POST['bloque'])) ? $_POST['bloque'] : '';
@@ -24,7 +23,7 @@
             $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
             break;
         case 2: //Modificar
-            $consulta = "UPDATE planAula SET preRequisitos_Plan='$preRequisitos', Bloque_Plan='$modalidad', Carac_Micro='$caracter', tipoAsig_Micro='$tipo' WHERE Cod_Asignatura='$codigo' ";
+            $consulta = "UPDATE planAula SET preRequisitos_Plan='$preRequisitos', Bloque_Plan='$bloque', Aula_Plan='$aula', ano_Plan='$periodo' WHERE Cod_Asignatura='$codigo' ";
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             break;
