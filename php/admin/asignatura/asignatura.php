@@ -17,6 +17,8 @@
     $area = (isset($_POST['area'])) ? $_POST['area'] : '';
     $docente = (isset($_POST['docente'])) ? $_POST['docente'] : '';
 
+    echo $nombre;
+
     switch($opcion){
         case 1: //Seleccionar Programa para filtro
             $consulta = "SELECT * FROM Programa";
@@ -35,17 +37,25 @@
             $resultado->execute();
             break;
         case 4: // Agregar Asignatura
-            $consulta = "INSERT INTO Asignatura (Cod_Asignatura, Nombre_Asig, Cod_Area, ubicacion_Asig) VALUES ('$usuario','$pass','$nombres','$apellidos','$correo','$rol',1)";
+            $consulta = "INSERT INTO Asignatura (Cod_Asignatura, Nombre_Asig, Cod_Area, ubicacion_Asig) VALUES ('$codigo','$nombre','$area','$nivelFormacion')";
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
+
+            $consulta = "INSERT INTO Microcurriculo (Cod_Micro, Cod_Asignatura) VALUES ('null','$codigo')";
+            $resultado = $cn->prepare($consulta);
+            $resultado->execute();
+
+            $consulta = "INSERT INTO planAula (Cod_Plan, Cod_Asignatura) VALUES ('null','$codigo')";
+            $resultado = $cn->prepare($consulta);
+            $resultado->execute(); 
             break;
         case 5: //Filtrar
-            $consulta = "" ;
+            $consulta = "SELECT Cod_Asignatura, Nombre_Asig, Ubicacion_Asig, Cod_Area, Cod_User FROM Asignatura WHERE ";
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
         case 6: //Listar Asignaturas
-            $consulta = "SELECT Cod_Asignatura, Nombre_Asig, Ubicacion_Asig, Cod_Area, Cod_User FROM Asignatura" ;
+            $consulta = "SELECT Cod_Asignatura, Nombre_Asig, Ubicacion_Asig, Cod_Area, Cod_User FROM Asignatura";
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             $data = $resultado->fetchAll(PDO::FETCH_ASSOC);

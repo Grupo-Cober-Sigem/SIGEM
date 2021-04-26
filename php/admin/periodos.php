@@ -40,7 +40,7 @@
             $resultado->execute();
             break;
         case 5: //Filtrar
-            $consulta = "";
+            $consulta = "SELECT idPeriodo, fechaIni, fechaFin, activo FROM periodoAcademico WHERE idPeriodo LIKE CONCAT('%','$periodo','%')";
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             $data = $resultado->fetchAll(PDO::FETCH_ASSOC);

@@ -145,8 +145,33 @@ var appAsignatura = new Vue({
                 });
         },
 
-        btnDatosGenerales: async function (codigo){
+        btnFiltrarAsignatura: async function()
+        {
+            let nombre = document.getElementById("campoBusqueda").value;
 
+            switch(nombre)
+            {
+                case "":
+                    this.listarAsignatura();
+                    break;
+
+                case null:
+                    this.listarAsignatura();
+                    break;
+                
+                default:
+                    axios.post(url,{opcion:5,nombre:nombre}).then(response=>{
+                        this.datosAsignatura = response.data;
+                        console.log(this.datosAsignatura);
+                        nombre="";
+                    });
+                    break;
+            }
+        },
+
+        btnDatosGenerales: async function (codigo){
+            localStorage.setItem("cod_asignatura",codigo);
+            document.location.href="edicionasigxadmin.html"
         },
 
         //Procedimientos
@@ -173,7 +198,7 @@ var appAsignatura = new Vue({
             axios.post(url,{opcion:6}).then(response=>{
 
                 this.datosAsignatura = response.data;
-                console.log(this.datos);
+                console.log(this.datosAsignatura);
             });
         },
 

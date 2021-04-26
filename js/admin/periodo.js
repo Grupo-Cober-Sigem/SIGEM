@@ -98,6 +98,30 @@ var appUsuarios = new Vue({
             })
         },
 
+        btnFiltrarPeriodo: async function()
+        {
+            let valor = document.getElementById("campoBusqueda").value;
+
+            switch(valor)
+            {
+                case "":
+                    this.listarPeriodos();
+                    break;
+
+                case null:
+                    this.listarPeriodos();
+                    break;
+                
+                default:
+                    axios.post(url,{opcion:5,periodo:valor}).then(response=>{
+                        this.datosPeriodos = response.data;
+                        console.log(this.datosPeriodos);
+                        valor="";
+                    });
+                    break;
+            }
+        },
+
         //Procedimientos
         listarPeriodos: function(){
             axios.post(url,{opcion:1}).then(response=>{

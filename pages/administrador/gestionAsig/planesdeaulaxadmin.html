@@ -81,12 +81,12 @@
                         <div class="row">
                         <div class="col-md-10">
                                 <div class="form-group">
-                                    <input class="form-control" type="text" placeholder="Nombre de la asiginatura">
+                                    <input class="form-control" type="text" placeholder="Nombre de la asignatura" id="campoBusqueda">
                                 </div>
                             </div>
                         <div class="col-md-2">
                             <div class="form-group">
-                                <button type="button" class="btn btn-warning col-md-12">Buscar</button>
+                                <button type="button" class="btn btn-warning col-md-12" @click="btnFiltrarPlan">Buscar</button>
                             </div>
                         </div>
                     </div>
@@ -104,7 +104,7 @@
                                 </thead>
                                 <tbody>
                                     <tr class="d-flex" v-for="(plan,indice) of datosPlan">
-                                        <td class="col-md-2"><span>{{plan.Cod_Asignatura</span></td>
+                                        <td class="col-md-2"><span>{{plan.Cod_Asignatura}}</span></td>
                                         <td class="col-md-4"><span>{{plan.Nombre_Asig}}</span></td>
                                         <td class="col-md-4"><span>{{plan.Ubicacion_Asig}}</span></td>
                                         <td class="col-md-2"><span><button type="button" class="btn btn-warning col-md-12" @click="btnEditarPlan(plan.Cod_Asignatura,)"><i class="fa fa-edit"></i></button></span></td>
