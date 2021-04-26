@@ -106,14 +106,14 @@ var appUsuarios = new Vue({
             });
         },
 
-        editarPeriodos:function(periodoAnterior,periodoActual,fechaIni,fechaFin){
-            axios.post(url,{opcion:2, periodoAnterior:periodoAnterior,periodoActual:periodoActual, fechaIni:fechaIni, fechaFin:fechaFin}).then(response => {
+        editarPeriodos:function(periodoAnterior,periodo,fechaIni,fechaFin){
+            axios.post(url,{opcion:2, periodoAnterior:periodoAnterior,periodo:periodo, fechaIni:fechaIni, fechaFin:fechaFin}).then(response => {
                 this.listarPeriodos();
             });
         },
         
         agregarPeriodo: function(){
-            axios.post(url, {opcion:4, periodoActual:this.periodo, fechaIni:this.fechaIni,fechaFin:this.fechaFin,activo:1 }).then(response =>{
+            axios.post(url, {opcion:4, periodo:this.periodo, fechaIni:this.fechaIni,fechaFin:this.fechaFin,activo:1 }).then(response =>{
                 this.listarPeriodos();
             });        
              this.periodo = "",
