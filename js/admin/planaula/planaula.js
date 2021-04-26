@@ -1,21 +1,32 @@
-var url = "";
+var url = "../../../php/admin/planaula/planaula.php";
 var appUsuarios = new Vue({
     el: "#seccionPlanes",
     data: {
-        datosUsuarios: [],
-        cod: "",
-        pass: "",
-        Nombres: "",
-        Apellidos: "",
-        email: "",
-        rol: ""
+        datosPlan: [],
+        codigo: 0,
+        nombre: "",
+        ubicacion: "",
+        preRequisitos: "",
+        periodo: "",
+        bloque: "",
+        aula: ""
     },
     methods: {
-        btnAgregarPlan: async function () {
+        btnEditarPlan: async function (codigo,preRequisitos,periodo,bloque,aula) {
             const { value: formValues } = await Swal.fire({
-                title: 'Agregar',
+                title: 'Editar',
                 html:
-                    '<div class="row"><div class="col-sm-8"><div class="form-group"><label for="exampleFormControlSelect1">Pre - Requesitos</label><select class="form-control" id="nivelformacion"><option>Aplica</option><option>No Aplica</option></select></div></div><div class="col-sm-4"><div class="form-group"><label for="exampleFormControlInput1">Año</label><input type="text" class="form-control" placeholder="Año" id="ubicacionasignatura"></div></div></div><div class="row"><div class="col"><label for="exampleFormControlInput1">Bloque</label><input type="text" class="form-control" placeholder="Ubicación del bloque" id="ubicacionasignatura"></div><div class="col"><label for="exampleFormControlInput1">Aula</label><input type="text" class="form-control" placeholder="Aula de la clase" id="ubicacionasignatura"></div></div><div class="form-group"><div class="row"><label class="col-form-label"></label></div></div><div class="row"><div class="col"><div class="form-group"><label for="exampleFormControlSelect1">Problema</label><textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></div></div></div>',
+                    '<div class="row"><div class="col-sm-8"><div class="form-group">'+
+/*preRequisitos*/   '<label for="preRequisitos">Pre - Requesitos</label><select class="form-control" id="preRequisitos">'+
+                        '<option value="'+preRequisitos+'">'+preRequisitos+'</option>'+
+                        '<option value="Aplica">Aplica</option>'+
+                        '<option value="No Aplica">No Aplica</option></select></div></div><div class="col-sm-4"><div class="form-group">'+
+/*Periodo*/         '<label for="periodo">Año</label><input type="text" class="form-control" placeholder="Año" id="periodo" value="'+periodo+'"></div></div></div>'+
+                    '<div class="row"><div class="col">'+
+/*Bloque*/          '<label for="bloque">Bloque</label><input type="text" class="form-control" placeholder="Ubicación del bloque" id="bloque" value="'+bloque+'"></div><div class="col">'+
+/*Aula*/            '<label for="aula">Aula</label><input type="text" class="form-control" placeholder="Aula de la clase" id="aula" value="'+aula+'"></div></div>'+
+                    '<div class="form-group"><div class="row">'+
+                    '<label class="col-form-label"></label></div></div><div class="row"><div class="col"></div></div>',
                 focusConfirm: false,
                 showCancelButton: true,
                 confirmButtonText: 'Guardar',
@@ -27,23 +38,22 @@ var appUsuarios = new Vue({
                 preConfirm: () => {
                     
                     return [
-                        this.nombre = document.getElementById('Nombre').value,
-                        this.apellidos = document.getElementById('Apellidos').value,
-                        this.Cod_User = document.getElementById('Cod_User').value,
-                        this.email = document.getElementById('email').value,
-                        this.pass = document.getElementById('pass').value,
-                        this.rol = document.getElementById('rol').value
+                        this.codigo = Swal.getPopup().querySelector('#codigo').value,
+                        this.preRequisitos = Swal.getPopup().querySelector('#preRequisitos').value,
+                        this.periodo = Swal.getPopup().querySelector('#periodo').value,
+                        this.bloque = Swal.getPopup().querySelector('#bloque').value,
+                        this.aula = Swal.getPopup().querySelector('#aula').value
                     ]
                 }
             })
-            if (this.nombre == "" || this.apellidos == "" || this.Cod_User == 0 || this.email=='') {
+            if (this.codigo==0 || this.nombre == "" || this.ubicacion == "" || this.preRequisitos == "" || this.periodo=="" || this.bloque=="" || this.aula=="") {
                 Swal.fire({
                     type: 'info',
                     title: 'Datos incompletos',
                 })
             }
             else {
-                this.agregarUsuarios();
+                this.editarPlan();
                 const Toast = Swal.mixin({
                     toast: true,
                     position: 'top-end',
@@ -52,22 +62,20 @@ var appUsuarios = new Vue({
                 });
                 Toast.fire({
                     type: 'success',
-                    title: '¡Usuario Agregado!'
+                    title: 'El registro ha sido actualizado.'
                 })
             }
         },
-        btnEditarUser: async function () { },
-        btnDeshabilitarUser: async function () { },
 
         //Procedimientos
-        listarUsuarios: function(){
+        listarPlan: function(){
             axios.post(url,{opcion:1}).then(response=>{
-                this.datosUsuarios = response.data;
-                console.log(this.datos);
+                this.datosPlan = response.data;
+                console.log(this.datosPlan);
             });
         },
 
-        agregarUsuarios: function(){
+        editarPlan: function(){
             axios.post(url, {opcion:4, marca:this.marca, modelo:this.modelo,stock:this.stock }).then(response =>{
                 this.listarMoviles();
             });        
@@ -77,6 +85,6 @@ var appUsuarios = new Vue({
         },
     },
     created:function(){
-        this.listarUsuarios();
+        this.listarPlan();
     }
 });                                 

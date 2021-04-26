@@ -86,8 +86,65 @@ var appAsignatura = new Vue({
                 })
             }
         },
-        btnEditarUser: async function () { },
-        btnDeshabilitarUser: async function () { },
+
+        btnEditarAsignatura: async function (nombre,codigo,semestre,nroEstudiantes,programa,area,docente) {
+            await Swal.fire({
+                title: 'Editar',
+                html:'<div class="form-group">'+
+/*Nombre*/          '<label for="nombre" class="col-form-label">Nombre</label><input type="text" class="form-control" id="nombre" value="'+nombre+'"></div>'+
+                    '<div class="row"><div class="col"><div class="form-group">'+
+/*Codigo */         '<label for="codigo" class="col-form-label">Código</label><input type="text" class="form-control" id="codigo" value="'+codigo+'"></div></div>'+
+/*Semestre*/        '<div class="col"><div class="form-group"><label for="nivelFormacion" class="col-form-label">Semestre</label><select class="form-control" id="nivelFormacion">'+
+                        '<option value="'+semestre+'" selected disabled>'+semestre+'</option>'+
+                        '<option value="Primer">Primero</option>'+
+                        '<option value="Segundo">Segundo</option>'+
+                        '<option value="Tercer">Tercero</option>'+
+                        '<option value="Cuarto">Cuarto</option>'+
+                        '<option value="Quinto">Quinto</option>'+
+                        '<option value="Sexto">Sexto</option>'+
+                        '<option value="Septimo">Septimo</option>'+
+                        '<option value="Octavo">Octavo</option>'+
+                        '<option value="Noveno">Noveno</option>'+
+                        '<option value="Decimo">Decimo</option></select></div></div>'+
+/*# Estudiantes*/   '<div class="col"><div class="form-group"><label for="nroEstudiantes" class="col-form-label">Nro. Estudiantes</label><input type="text" class="form-control" placeholder="Cantidad" id="nroEstudiantes" value="'+nroEstudiantes+'">'+
+                    '</div></div></div><div class="form-group">'+
+/*Programa*/        '<label for="programa" class="col-form-label">Programa de la asignatura</label><select class="form-control" id="programa">'+
+                        '<option value="'+programa+'">Nombre del programa</option>'+
+                        '<option value="1">Nombre del programa</option></select></div><div class="form-group">'+
+/*Area*/            '<label for="area" class="col-form-label">Área de la asignatura</label><select class="form-control" id="area">'+
+                        '<option value="'+area+'">Nombre del área</option>'+
+                        '<option value="1">Nombre del área</option></select></div><div class="form-group">'+
+/*Docente*/         '<label for="docente" class="col-form-label">Docente</label><select class="form-control" id="docente">'+
+                        '<option value="'+docente+'">Maritza Sanchez</option>'+
+                        '<option value="1">Maritza Sanchez</option></select></div>', 
+                focusConfirm: false,
+                showCancelButton: true,
+                confirmButtonText: 'Guardar',
+                confirmButtonColor: '#1cc88a',
+                showLoaderOnConfirm: true,
+                cancelButtonText: "Cancelar",
+                cancelButtonColor: '#CB3234',
+
+                }).then((result) => {
+                  if (result.value) {                                             
+                    nombre = Swal.getPopup().querySelector('#nombre').value,
+                    codigo = Swal.getPopup().querySelector('#codigo').value,
+                    semestre = Swal.getPopup().querySelector('#semestre').value,
+                    nroEstudiantes = Swal.getPopup().querySelector('#nroEstudiantes').value,
+                    programa = Swal.getPopup().querySelector('#programa').value,
+                    area = Swal.getPopup().querySelector('#area').value,
+                    docente = Swal.getPopup().querySelector('#docente').value                      
+
+                    this.editarAsignatura(codigo,nombre,semestre);
+                    Swal.fire(
+                      '¡Actualizado!',
+                      'El registro ha sido actualizado.',
+                      'success'
+                    )                  
+                  }
+                });
+        },
+        
 
         //Procedimientos
         traerPrograma: function(){
@@ -117,6 +174,10 @@ var appAsignatura = new Vue({
             });
         },
 
+        editarAsignatura:function(){
+
+        },
+
         agregarAsignatura: function(){
             axios.post(url, {opcion:4, nombre:this.nombre, codigo:this.codigo ,nivelFormacion:this.nivelFormacion, nroEstudiantes:this.nroEstudiantes, programa:this.programa, area:this.area, docente:this.docente }).then(response =>{
                 this.listarAsignatura();
@@ -124,7 +185,10 @@ var appAsignatura = new Vue({
              this.nombre = "",
              this.codigo = 0,
              this.nivelFormacion = "",
-             this.nroEstudiantes = 0
+             this.nroEstudiantes = 0,
+             this.programa=0,
+             this.area=0,
+             this.docente=0
         },
     },
     created:function(){

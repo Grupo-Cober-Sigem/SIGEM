@@ -45,6 +45,10 @@
             $resultado->execute();
             $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
         case 6: //Listar Asignaturas
+            $consulta = "SELECT Cod_Asignatura, Nombre_Asig, Ubicacion_Asig, Cod_User FROM Asignatura" ;
+            $resultado = $cn->prepare($consulta);
+            $resultado->execute();
+            $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
     }
     // Enviar el array final en formato JSON a Javascript
     print json_encode($data, JSON_UNESCAPED_UNICODE);
