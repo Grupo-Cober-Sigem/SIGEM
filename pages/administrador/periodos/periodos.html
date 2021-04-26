@@ -87,21 +87,21 @@
                         <div class="table-responsive">
                             <table class="table table-hover table-bordered">
                                 <thead class="thead-dark">
-                                    <tr>
-                                        <th scope="col">Nombre</th>
-                                        <th scope="col">Inicio</th>
-                                        <th scope="col">Fin</th>
-                                        <th scope="col">Editar</th>
-                                        <th scope="col">Cerrar periodo</th>
+                                    <tr class="d-flex">
+                                        <th class="col-md-2">Nombre</th>
+                                        <th class="col-md-3">Inicio</th>
+                                        <th class="col-md-3">Fin</th>
+                                        <th class="col-md-2">Editar</th>
+                                        <th class="col-md-2">Cerrar periodo</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr v-for="(periodo,indice) of datosPeriodos">
-                                        <td>{{periodo.idPeriodo}}</td>
-                                        <td>{{periodo.fechaIni}}</td>
-                                        <td>{{periodo.fechaFin}}</td>
-                                        <td><button type="button" class="btn btn-warning col-md-12" @click="btnEditarPeriodo(periodo.idPeriodo,periodo.fechaIni,periodo.fechaFin)"><i class="fa fa-edit"> </i></button></td>
-                                        <td><button type="button" class="btn btn-danger col-md-12" @click="btnCerrarPeriodo(periodo.idPeriodo,periodo.activo)"><i class="fa fa-exclamation"></i></button></td>
+                                    <tr class="d-flex" v-for="(periodo,indice) of datosPeriodos">
+                                        <td class="col-md-2">{{periodo.idPeriodo}}</td>
+                                        <td class="col-md-3">{{periodo.fechaIni}}</td>
+                                        <td class="col-md-3">{{periodo.fechaFin}}</td>
+                                        <td class="col-md-2"><button type="button" class="btn btn-warning col-md-12" @click="btnEditarPeriodo(periodo.idPeriodo,periodo.fechaIni,periodo.fechaFin)"><i class="fa fa-edit"> </i></button></td>
+                                        <td class="col-md-2"><button type="button" class="btn btn-danger col-md-12" @click="btnCerrarPeriodo(periodo.idPeriodo,periodo.activo)"><i class="fa fa-exclamation"></i></button></td>
                                     </tr>
                                 </tbody>
                             </table>
