@@ -87,7 +87,7 @@ var appAsignatura = new Vue({
             }
         },
 
-        btnEditarAsignatura: async function (nombre,codigo,semestre,nroEstudiantes,programa,area,docente) {
+        btnEditarAsignatura: async function (nombre,codigo,semestre,docente,area,programa,nroEstudiantes) {
             await Swal.fire({
                 title: 'Editar',
                 html:'<div class="form-group">'+
@@ -129,7 +129,7 @@ var appAsignatura = new Vue({
                   if (result.value) {                                             
                     nombre = Swal.getPopup().querySelector('#nombre').value,
                     codigo = Swal.getPopup().querySelector('#codigo').value,
-                    semestre = Swal.getPopup().querySelector('#semestre').value,
+                    nivelFormacion = Swal.getPopup().querySelector('#nivelFormacion').value,
                     nroEstudiantes = Swal.getPopup().querySelector('#nroEstudiantes').value,
                     programa = Swal.getPopup().querySelector('#programa').value,
                     area = Swal.getPopup().querySelector('#area').value,
