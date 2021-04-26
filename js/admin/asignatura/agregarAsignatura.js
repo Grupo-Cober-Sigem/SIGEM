@@ -170,7 +170,8 @@ var appAsignatura = new Vue({
         },
 
         btnDatosGenerales: async function (codigo){
-
+            localStorage.setItem("cod_asignatura",codigo);
+            document.location.href="edicionasigxadmin.html"
         },
 
         //Procedimientos
