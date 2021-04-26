@@ -35,7 +35,7 @@
             $resultado->execute();
             break;
         case 4: // Agregar Asignatura
-            $consulta = "INSERT INTO Asignatura (Cod_Asignatura, Nombre_Asig, Cod_Area, ubicacion_Asig) VALUES ('$usuario','$pass','$nombres','$apellidos','$correo','$rol',1)";
+            $consulta = "INSERT INTO Asignatura (Cod_Asignatura, Nombre_Asig, Cod_Area, ubicacion_Asig) VALUES ('$usuario','$pass','$nombre','$apellidos','$correo','$rol',1)";
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             break;

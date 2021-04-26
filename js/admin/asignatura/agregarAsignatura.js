@@ -145,7 +145,8 @@ var appAsignatura = new Vue({
                 });
         },
 
-        btnFiltrarAsignatura: function(){
+        btnFiltrarAsignatura: async function()
+        {
             let nombre = document.getElementById("campoBusqueda").value;
 
             switch(nombre)
