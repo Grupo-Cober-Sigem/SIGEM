@@ -23,7 +23,7 @@
             $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
             break;
         case 2: //Modificar
-            $consulta = "UPDATE periodoAcademico SET idPeriodo='$periodo' fechaIni='$fechaIni', fechaFin='$fechaFin' WHERE idPeriodo='$periodoAnterior' ";
+            $consulta = "UPDATE periodoAcademico SET idPeriodo='$periodo', fechaIni='$fechaIni', fechaFin='$fechaFin' WHERE idPeriodo='$periodoAnterior' ";
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
