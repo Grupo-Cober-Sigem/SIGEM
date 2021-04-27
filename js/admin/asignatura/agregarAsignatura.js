@@ -37,7 +37,7 @@ var appAsignatura = new Vue({
                         '<option value="Octavo">Octavo</option>'+
                         '<option value="Noveno">Noveno</option>'+
                         '<option value="Decimo">Decimo</option></select></div></div>'+
-/*# Estudiantes*/   '<div class="col"><div class="form-group"><label for="nroEstudiantes" class="col-form-label" placeholder="Cantidad">Estudiantes</label><input type="text" class="form-control" placeholder="Cantidad" id="nroEstudiantes">'+
+/*# Estudiantes*/   '<div class="col"><div class="form-group"><label for="nroEstudiantes" class="col-form-label">Estudiantes</label><input type="text" class="form-control" placeholder="Cantidad" id="nroEstudiantes">'+
                     '</div></div></div><div class="form-group">'+
 /*Programa*/        '<label for="programa" class="col-form-label">Programa de la asignatura</label><select class="form-control" id="programa">'+
                         '<option value="1">Nombre del programa</option></select></div><div class="form-group">'+
