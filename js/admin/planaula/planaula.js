@@ -46,7 +46,7 @@ var appUsuarios = new Vue({
                     ]
                 }
             })
-            if (this.codigo==0 || this.nombre == "" || this.ubicacion == "" || this.preRequisitos == "" || this.periodo=="" || this.bloque=="" || this.aula=="") {
+            if (this.codigo=="" || this.nombre == "" || this.ubicacion == "" || this.preRequisitos == "" || this.periodo=="" || this.bloque=="" || this.aula=="") {
                 Swal.fire({
                     type: 'info',
                     title: 'Datos incompletos',
