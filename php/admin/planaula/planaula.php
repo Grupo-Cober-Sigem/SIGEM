@@ -17,7 +17,7 @@
 
     switch($opcion){
         case 1: //Seleccionar
-            $consulta = "SELECT Asignatura.Nombre_Asig, Asignatura.Cod_Asignatura, Asignatura.Ubicacion_Asig FROM Asignatura INNER JOIN planAula WHERE Asignatura.Cod_Asignatura = planAula.Cod_Asignatura";
+            $consulta = "SELECT Asignatura.Nombre_Asig, Asignatura.Cod_Asignatura, Asignatura.Ubicacion_Asig, planAula.preRequisitos_Plan, planAula.Bloque_Plan, planAula.Aula_Plan, planAula.Ano_Plan FROM Asignatura INNER JOIN planAula WHERE Asignatura.Cod_Asignatura = planAula.Cod_Asignatura";
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
