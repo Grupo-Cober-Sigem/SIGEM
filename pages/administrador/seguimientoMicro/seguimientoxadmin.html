@@ -9,6 +9,11 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="../../../css/style.css">
   </head>
+    <style>
+    #mdialTamanio{
+      width: 80% !important;
+    }
+  </style>
   <body>
       <div class="wrapper d-flex align-items-stretch">
           <!-- Menu lateral Izquierdo -->
@@ -83,7 +88,7 @@
                   </div>
                   <!-- Modal de edición -->
                   <div class="modal fade" id="seguimientoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-dialog modal-lg" id="mdialTamanio" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="exampleModalLabel">Seguimiento</h5>
@@ -135,7 +140,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                         <!-- Recurso Usado -->
+                                        <hr />
+                                        <!-- Recurso Usado -->
                                         <div class="row">
                                             <div class="col">
                                                 <div class="form-group">
@@ -163,6 +169,7 @@
                                             </div>
                                         </div>
                                         <!-- Fin Recurso Usado -->
+                                        <hr />
                                         <!-- Material empleado -->
                                         <div class="row mb-4">
                                             <div class="col">
@@ -182,6 +189,8 @@
                                                     <label class="form-check-label" for="flexCheckDefault">Instructivo en excel o word</label>
                                                 </div>
                                             </div>
+                                        </div>
+                                        <div class="row">
                                             <div class="col">
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
@@ -194,12 +203,16 @@
                                                     <label class="form-check-label" for="flexCheckDefault">Videos</label>
                                                 </div>
                                             </div>
+                                        </div>
+                                        <div class="row">
                                             <div class="col">
                                                 <div class="form-group">
                                                     <input type="text" class="form-control" id="otromaterial" placeholder="Otro">
                                                 </div>
                                             </div>
                                         </div>
+                                        <hr />
+                                        <!-- Fin de Material empleado -->
                                         <div class="row">
                                             <div class="col">
                                                 <div class="form-group">
