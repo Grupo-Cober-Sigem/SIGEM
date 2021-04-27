@@ -33,7 +33,7 @@
             $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
             break;
         case 3: // Seleccionar Usuarios para filtro
-            $consulta = "SELECT Cod_User, Nombres, Apellidos FROM datosUsuario WHERE habilitado='1'";
+            $consulta = "SELECT Cod_User, Nombres, Apellidos FROM datosUsuario WHERE habilitado='1' AND rol NOT LIKE CONCAT('%','5','%')";
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
