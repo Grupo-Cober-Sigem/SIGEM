@@ -27,7 +27,7 @@
             $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
             break;
         case 2: //Seleccionar Area para filtro
-            $consulta = "SELECT Cod_Area, Nombre_Area FROM Area WHERE Cod_programa='$programa'";
+            $consulta = "SELECT Cod_Area, Nombre_Area FROM Area";
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             break;

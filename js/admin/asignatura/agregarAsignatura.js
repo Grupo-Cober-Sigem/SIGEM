@@ -8,6 +8,7 @@ var appAsignatura = new Vue({
         areaSeleccionada:0,
         filtroAreas:[],
         semestreSeleccionado:0,
+        docentes:[],
         //Variables para registros
         datosAsignatura: [],
         nombre:"",
@@ -42,13 +43,21 @@ var appAsignatura = new Vue({
 /*Programa*/        '<label for="programa" class="col-form-label">Programa de la asignatura</label><select class="form-control" id="programa">'+
                         '<option value="0" disabled>Nombre del programa</option>'+
                         this.filtroProgramas.map(programa=>
-                            '<option value="'+programa.Cod_programa+'">'+programa.Nombre_prog+'/option>'
+                            '<option value="'+programa.Cod_programa+'">'+programa.Nombre_prog+'</option>'
                         )
                         + '</select></div><div class="form-group">'+
 /*Area*/            '<label for="area" class="col-form-label">Área de la asignatura</label><select class="form-control" id="area">'+
-                        '<option value="1">Nombre del área</option></select></div><div class="form-group">'+
+                        '<option value="0" disabled>Nombre del área</option>'+
+                        this.filtroAreas.map(area=>
+                            '<option value="'+area.Cod_Area+'">'+area.Nombre_Area+'</option>'
+                        )
+                        +'</select></div><div class="form-group">'+
 /*Docente*/         '<label for="docente" class="col-form-label">Docente</label><select class="form-control" id="docente">'+
-                        '<option value="1">Maritza Sanchez</option></select></div>',
+                        '<option value="0" disabled >Nombre del docente</option>'+
+                        this.docentes.map(docente=>
+                            '<option value="'+docente.Cod_User+'">'+docente.Nombres+' '+docente.Apellidos+'</option>'
+                        )
+                        +'</select></div>',
                 focusConfirm: false,
                 showCancelButton: true,
                 confirmButtonText: 'Guardar',
@@ -114,13 +123,22 @@ var appAsignatura = new Vue({
                     '</div></div></div><div class="form-group">'+
 /*Programa*/        '<label for="programa" class="col-form-label">Programa de la asignatura</label><select class="form-control" id="programa">'+
                         '<option value="'+programa+'">Nombre del programa</option>'+
-                        '<option value="1">Nombre del programa</option></select></div><div class="form-group">'+
+                        this.filtroProgramas.map(programa=>
+                            '<option value="'+programa.Cod_programa+'">'+programa.Nombre_prog+'</option>'
+                        )
+                        +'</select></div><div class="form-group">'+
 /*Area*/            '<label for="area" class="col-form-label">Área de la asignatura</label><select class="form-control" id="area">'+
                         '<option value="'+area+'">Nombre del área</option>'+
-                        '<option value="1">Nombre del área</option></select></div><div class="form-group">'+
+                        this.filtroAreas.map(area=>
+                            '<option value="'+area.Cod_Area+'">'+area.Nombre_Area+'</option>'
+                        )
+                        +'<option value="1">Nombre del área</option></select></div><div class="form-group">'+
 /*Docente*/         '<label for="docente" class="col-form-label">Docente</label><select class="form-control" id="docente">'+
-                        '<option value="'+docente+'">Maritza Sanchez</option>'+
-                        '<option value="1">Maritza Sanchez</option></select></div>', 
+                        '<option value="'+docente+'"></option>'+
+                        this.docentes.map(docente=>
+                            '<option value="'+docente.Cod_User+'">'+docente.Nombres+' '+docente.Apellidos+'</option>'
+                        )
+                        +'</select></div>', 
                 focusConfirm: false,
                 showCancelButton: true,
                 confirmButtonText: 'Guardar',
@@ -190,7 +208,7 @@ var appAsignatura = new Vue({
         },
 
         traerArea: function(){
-            axios.post(url,{opcion:2, programa:this.programaSeleccionado}).then(response=>{
+            axios.post(url,{opcion:2}).then(response=>{
 
                 this.filtroAreas = response.data;
                 this.areaSeleccionada=0;
@@ -198,6 +216,13 @@ var appAsignatura = new Vue({
             })
         },
 
+        traerUsuarios: function(){
+            axios.post(url,{opcion:3}).then(response=>{
+
+                this.docentes = response.data;
+            });
+        },
+          
         listarAsignatura: function(){
             axios.post(url,{opcion:6}).then(response=>{
 
@@ -226,5 +251,7 @@ var appAsignatura = new Vue({
     created:function(){
         this.listarAsignatura();
         this.traerPrograma();
+        this.traerArea();
+        this.traerUsuarios();
     }
 });
