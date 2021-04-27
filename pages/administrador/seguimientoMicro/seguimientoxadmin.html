@@ -62,212 +62,231 @@
                   </div>
               </nav>
               <!-- Contenido de la Página  -->
-              <div class="container-fluid">
-                  <!-- Barra de busqueda -->
-                  <div class="row">
-                      <div class="col-md-10">
-                                <div class="form-group">
-                                    <input class="form-control" type="text" placeholder="Nombre de la asginatura">
-                                </div>
+              <div id="crearSeguimiento">
+                <div class="container-fluid">
+                    <!-- Barra de busqueda -->
+                    <div class="row">
+                        <div class="col-md-10">
+                                  <div class="form-group">
+                                      <input class="form-control" type="text" placeholder="Nombre de la asginatura">
+                                  </div>
+                              </div>
+                        <div class="col-md-1">
+                            <div class="form-group">
+                                <button type="button" class="btn btn-warning col-md-12"><i class="fa fa-search"></i></button>
                             </div>
-                      <div class="col-md-1">
-                          <div class="form-group">
-                              <button type="button" class="btn btn-warning col-md-12"><i class="fa fa-search"></i></button>
-                          </div>
-                      </div>
-                      <div class="col-md-1">
-                          <div class="form-group">
-                              <button type="button" class="btn btn-warning col-md-12" data-toggle="modal" data-target="#seguimientoModal" data-whatever="@mdo"><i class="fa fa-plus-square"> </i></button>
-                          </div>
-                      </div>
-                  </div>
-                  <!-- Modal de edición -->
-                  <div class="modal fade" id="seguimientoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-xl" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Seguimiento</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <form>
-                                        <div class="form-group">
-                                            <div class="row">
-                                                <div class="col">
-                                                    <label for="exampleFormControlInput1">Día</label>
-                                                    <input type="text" class="form-control" placeholder="DD/MM/AAAA" id="nombreasignatura">
-                                                </div>
-                                                <div class="col">
-                                                    <label for="exampleFormControlInput1">Hora</label>
-                                                    <input type="text" class="form-control" placeholder="HH:MM" id="codigoasignatura">
-                                                </div>
-                                                <div class="col">
-                                                    <label for="exampleFormControlInput1">Cantidad de participantes</label>
-                                                    <input type="text" class="form-control" id="cdcxignatura">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col">
-                                                <div class="form-group">
-                                                    <label for="exampleFormControlSelect1">Unidad</label>
-                                                    <select class="form-control" id="nivelformacion">
-                                                        <option>Unidad 1</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="col">
-                                                <div class="form-group">
-                                                    <label for="exampleFormControlSelect1">Tema</label>
-                                                    <select class="form-control" id="nivelformacion">
-                                                        <option>Tema 1</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col">
-                                                <div class="form-group">
-                                                    <label for="exampleFormControlSelect1">Actividad</label>
-                                                    <input type="text" class="form-control" id="nombreasignatura">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <hr />
-                                        <!-- Recurso Usado -->
-                                        <div class="row">
-                                            <div class="col">
-                                                <div class="form-group">
-                                                    <label for="exampleFormControlSelect1">Recurso Usado</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                                    <label class="form-check-label" for="flexCheckDefault">Microsoft Teams</label>
-                                                </div>
-                                            </div>
-                                            <div class="col">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                                    <label class="form-check-label" for="flexCheckDefault">Plataforma ELibre</label>
-                                                </div>
-                                            </div>
-                                            <div class="col">
-                                                <div class="form-group">
-                                                    <input type="text" class="form-control" id="otrorecurso" placeholder="Otro recurso">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Fin Recurso Usado -->
-                                        <hr />
-                                        <!-- Material empleado -->
-                                        <div class="col">
-                                            <label for="exampleFormControlInput1">Material empleado</label>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                                    <label class="form-check-label" for="flexCheckDefault">Guia de aprendizaje</label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                                    <label class="form-check-label" for="flexCheckDefault">Instructivo en excel o word</label>
-                                                </div>
-                                            </div>
-                                            <div class="col">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                                    <label class="form-check-label" for="flexCheckDefault">Presentacion de diapositivas</label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                                    <label class="form-check-label" for="flexCheckDefault">Videos</label>
-                                                </div>
-                                            </div>
-                                            <div class="col">
-                                                <div class="form-group">
-                                                    <input type="text" class="form-control" id="otromaterial" placeholder="Otro material">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <hr />
-                                        <!-- Fin de Material empleado -->
-                                        <div class="row">
-                                            <div class="col">
-                                                <div class="form-group">
-                                                    <label for="exampleFormControlSelect1">Observaciones</label>
-                                                    <input type="text" class="form-control" id="nombreasignatura">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row mb-4">
-                                            <div class="col">
-                                                <label for="exampleFormControlInput1">Soporte</label>
-                                                <input type="text" class="form-control" id="nombreasignatura">
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                                    <button type="button" class="btn btn-success">Guardar</button>
-                                </div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="form-group">
+                                <button type="button" class="btn btn-warning col-md-12" data-toggle="modal" data-target="#seguimientoModal" data-whatever="@mdo"><i class="fa fa-plus-square"> </i></button>
                             </div>
                         </div>
                     </div>
-                  <!-- Tabla resultado de busqueda -->
-                  <div class="table-responsive">
-                      <table class="table table-hover table-bordered">
-                          <thead class="thead-dark">
-                              <tr>
-                                  <th scope="col"><small>Día</small></th>
-                                  <th scope="col"><small>Hora</small></th>
-                                  <th scope="col"><small>Tematica</small></th>
-                                  <th scope="col"><small>Subtema</small></th>
-                                  <th scope="col"><small>Actividad</small></th>
-                                  <th scope="col"><small>Recurso usado</small></th>
-                                  <th scope="col"><small>Material Empleado</small></th>
-                                  <th scope="col"><small>Actividad desarrollada</small></th>
-                                  <th scope="col"><small>Nro. Participantes</small></th>
-                                  <th scope="col"><small>Observaciones</small></th>
-                                  <th scope="col"><small>Soporte</small></th>
-                                  <th scope="col"><small>Estado</small></th>
-                                  <th scope="col"><small>Observaciones Jefe de Área</small></th>
-                                  <th scope="col"><small>Editar</small></th>
-                              </tr>
-                          </thead>
-                          <tbody>
-                              <tr>
-                                  <td><small>25/09</small></td>
-                                  <td><small>06:00PM</small></td>
-                                  <td><small>Introducción a la programación</small></td>
-                                  <td><small>Inducción y caracterización de estudiantes nuevos Socialización de microcurrículo y plan de aula.</small></td>
-                                  <td><small>Explicación de metodología para determinar la capacidad de procesos</small></td>
-                                  <td><small>Microsoft Teams</small></td>
-                                  <td><small>Guia de aprendizaje</small></td>
-                                  <td><small>Sincronica</small></td>
-                                  <td><small>11</small></td>
-                                  <td><small>La estudiante Carolina Ramírez no tiene computador, se conecta desde el celular</small></td>
-                                  <td><small>Soporte</small></td>
-                                  <td><small>Aprobado</small></td>
-                                  <td><small>Observaciones Jefe de Área</small></td>
-                                  <td><button type="button" class="btn btn-warning col-md-12"><i class="fa fa-edit"></i></button></td>
-                              </tr>
-                          </tbody>
-                      </table>
-                  </div>
+                    <!-- Modal de edición -->
+                    <div class="modal fade" id="seguimientoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-xl" role="document">
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                      <h5 class="modal-title" id="exampleModalLabel">Seguimiento</h5>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body">
+                                      <form>
+                                          <div class="form-group">
+                                              <div class="row">
+                                                  <div class="col">
+                                                      <label for="diaSeguimiento">Día</label>
+                                                      <input type="text" class="form-control" placeholder="DD/MM/AAAA" id="diaSeguimiento">
+                                                  </div>
+                                                  <div class="col">
+                                                      <label for="horaSeguimiento">Hora</label>
+                                                      <input type="text" class="form-control" placeholder="HH:MM" id="horaSeguimiento">
+                                                  </div>
+                                                  <div class="col">
+                                                      <label for="nroEstudiantes">Cantidad de participantes</label>
+                                                      <input type="text" class="form-control" id="nroEstudiantes">
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="row">
+                                              <div class="col">
+                                                  <div class="form-group">
+                                                      <label for="unidad">Unidad</label>
+                                                      <select v-model="unidadSeleccionada" class="form-control" id="unidad">
+                                                          <option v-for="(unidad,indice) of unidades" :value="unidad.Cod_Unidad">{{unidad.Nombre_Unidad}}</option>
+                                                      </select>
+                                                  </div>
+                                              </div>
+                                              <div class="col">
+                                                  <div class="form-group">
+                                                      <label for="exampleFormControlSelect1">Tema</label>
+                                                      <select v-model="subtemaSeleccionado" class="form-control" id="subtema">
+                                                          <option v-for="(subtema,indice) of subtemas" :value="subtema.Cod_Subte">{{subtema.Nombre_Subte}}</option>
+                                                      </select>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="row">
+                                              <div class="col">
+                                                  <div class="form-group">
+                                                      <label for="exampleFormControlSelect1">Actividad</label>
+                                                      <input type="text" class="form-control" id="Actividad">
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <hr />
+                                          <!-- Recurso Usado -->
+                                          <div class="row">
+                                              <div class="col">
+                                                  <div class="form-group">
+                                                      <label for="exampleFormControlSelect1">Recurso Usado</label>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="row">
+                                              <div class="col">
+                                                  <div class="form-check">
+                                                      <input class="form-check-input" type="checkbox" value="" id="recursoTeams">
+                                                      <label class="form-check-label" for="flexCheckDefault">Microsoft Teams</label>
+                                                  </div>
+                                              </div>
+                                              <div class="col">
+                                                  <div class="form-check">
+                                                      <input class="form-check-input" type="checkbox" value="" id="recursoElibre">
+                                                      <label class="form-check-label" for="flexCheckDefault">Plataforma ELibre</label>
+                                                  </div>
+                                              </div>
+                                              <div class="col">
+                                                  <div class="form-group">
+                                                      <input type="text" class="form-control" id="recursoOtro" placeholder="Otro recurso">
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <!-- Fin Recurso Usado -->
+                                          <hr />
+                                          <!-- Material empleado -->
+                                          <div class="col">
+                                              <label for="exampleFormControlInput1">Material empleado</label>
+                                          </div>
+                                          <div class="row">
+                                              <div class="col">
+                                                  <div class="form-check">
+                                                      <input class="form-check-input" type="checkbox" value="" id="materialGuia">
+                                                      <label class="form-check-label" for="flexCheckDefault">Guia de aprendizaje</label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                      <input class="form-check-input" type="checkbox" value="" id="materialInstructivo">
+                                                      <label class="form-check-label" for="flexCheckDefault">Instructivo en excel o word</label>
+                                                  </div>
+                                              </div>
+                                              <div class="col">
+                                                  <div class="form-check">
+                                                      <input class="form-check-input" type="checkbox" value="" id="materialDiapositiva">
+                                                      <label class="form-check-label" for="flexCheckDefault">Presentacion de diapositivas</label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                      <input class="form-check-input" type="checkbox" value="" id="materialVideo">
+                                                      <label class="form-check-label" for="flexCheckDefault">Videos</label>
+                                                  </div>
+                                              </div>
+                                              <div class="col">
+                                                  <div class="form-group">
+                                                      <input type="text" class="form-control" id="materialOtro" placeholder="Otro material">
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <hr />
+                                          <!-- Fin de Material empleado -->
+                                          <div class="row">
+                                              <div class="col">
+                                                  <div class="form-group">
+                                                      <label for="exampleFormControlSelect1">Observaciones</label>
+                                                      <input type="text" class="form-control" id="observaciones">
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="row mb-4">
+                                              <div class="col">
+                                                  <label for="exampleFormControlInput1">Soporte</label>
+                                                  <input type="text" class="form-control" id="soporte">
+                                              </div>
+                                          </div>
+                                      </form>
+                                  </div>
+                                  <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                      <button type="button" class="btn btn-success">Guardar</button>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                    <!-- Tabla resultado de busqueda -->
+                    <div class="table-responsive">
+                        <table class="table table-hover table-bordered">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col"><small>Día</small></th>
+                                    <th scope="col"><small>Hora</small></th>
+                                    <th scope="col"><small>Tematica</small></th>
+                                    <th scope="col"><small>Subtema</small></th>
+                                    <th scope="col"><small>Actividad</small></th>
+                                    <th scope="col"><small>Recurso usado</small></th>
+                                    <th scope="col"><small>Material Empleado</small></th>
+                                    <th scope="col"><small>Actividad desarrollada</small></th>
+                                    <th scope="col"><small>Nro. Participantes</small></th>
+                                    <th scope="col"><small>Observaciones</small></th>
+                                    <th scope="col"><small>Soporte</small></th>
+                                    <th scope="col"><small>Estado</small></th>
+                                    <th scope="col"><small>Observaciones Jefe de Área</small></th>
+                                    <th scope="col"><small>Editar</small></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="(seguimiento,indice) of seguimientos">
+                                    <td><small>{{seguimiento.Dia_Segui}}</small></td>
+                                    <td><small>{{seguimiento.Horario_Segui}}</small></td>
+                                    <td><small>{{seguimiento.Cod_Unidad}}</small></td>
+                                    <td><small>{{seguimiento.Cod_Subte}}</small></td>
+                                    <td><small>{{seguimiento.Actividad_Segui}}</small></td>
+                                    <td><small>
+                                        {{seguimiento.estrategiaTeams}}<br>
+                                        {{seguimiento.estrategiaElibre}}<br>
+                                        {{seguimiento.estrategiaOtro}}
+                                    </small></td>
+                                    <td><small>
+                                        {{seguimiento.materialGuias}}<br>
+                                        {{seguimiento.materialWord}}<br>
+                                        {{seguimiento.materialDiapositiva}}<br>
+                                        {{seguimiento.materialVideos}}<br>
+                                        {{seguimiento.materialOtro}}
+                                    </small></td>
+                                    <td><small>{{seguimiento.actSincronica_Segui}}</small></td>
+                                    <td><small>{{seguimiento.Participante_Ssegui}}</small></td>
+                                    <td><small>{{seguimiento.Observa_Segui}}</small></td>
+                                    <td><small>{{seguimiento.Soporte}}</small></td>
+                                    <td><small>{{seguimiento.Estado}}</small></td>
+                                    <td><small>{{seguimiento.jefeObserva_Segui}}</small></td>
+                                    <td><button type="button" class="btn btn-warning col-md-12"><i class="fa fa-edit"></i></button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
               </div>
           </div>
       </div>
     <script src="../../../js/jquery.min.js"></script>
     <script src="../../../js/popper.js"></script>
     <script src="../../../js/bootstrap.min.js"></script>
+    <!-- Vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <!-- Axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- Sweet Alert 2 -->
+    <script src="../../../plugins/sweetalert2/sweetalert2.all.min.js"></script>
     <script src="../../../js/main.js"></script>
+    <script src="../../../js/admin/seguimientoMicro/seguimiento.js"></script>
   </body>
 </html>
