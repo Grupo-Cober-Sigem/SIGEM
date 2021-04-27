@@ -40,7 +40,11 @@ var appAsignatura = new Vue({
 /*# Estudiantes*/   '<div class="col"><div class="form-group"><label for="nroEstudiantes" class="col-form-label">Estudiantes</label><input type="text" class="form-control" placeholder="Cantidad" id="nroEstudiantes">'+
                     '</div></div></div><div class="form-group">'+
 /*Programa*/        '<label for="programa" class="col-form-label">Programa de la asignatura</label><select class="form-control" id="programa">'+
-                        '<option value="1">Nombre del programa</option></select></div><div class="form-group">'+
+                        '<option value="0" disabled>Nombre del programa</option>'+
+                        this.filtroProgramas.map(programa=>
+                            '<option value="'+programa.Cod_programa+'">'+programa.Nombre_prog+'/option>'
+                        )
+                        + '</select></div><div class="form-group">'+
 /*Area*/            '<label for="area" class="col-form-label">Área de la asignatura</label><select class="form-control" id="area">'+
                         '<option value="1">Nombre del área</option></select></div><div class="form-group">'+
 /*Docente*/         '<label for="docente" class="col-form-label">Docente</label><select class="form-control" id="docente">'+
@@ -221,5 +225,6 @@ var appAsignatura = new Vue({
     },
     created:function(){
         this.listarAsignatura();
+        this.traerPrograma();
     }
 });
