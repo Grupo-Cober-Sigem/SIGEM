@@ -18,7 +18,7 @@ var appUsuarios = new Vue({
                 html:
                     '<div class="row"><div class="col-sm-8"><div class="form-group">'+
 /*preRequisitos*/   '<label for="preRequisitos">Pre - Requesitos</label><select class="form-control" id="preRequisitos">'+
-                        '<option value="'+preRequisitos+'">'+preRequisitos+'</option>'+
+                        '<option value="'+preRequisitos+'" disabled>'+preRequisitos+'</option>'+
                         '<option value="Aplica">Aplica</option>'+
                         '<option value="No Aplica">No Aplica</option></select></div></div><div class="col-sm-4"><div class="form-group">'+
 /*Periodo*/         '<label for="periodo">Año</label><input type="text" class="form-control" placeholder="Año" id="periodo" value="'+periodo+'"></div></div></div>'+
@@ -46,7 +46,7 @@ var appUsuarios = new Vue({
                     ]
                 }
             })
-            if (this.codigo=="" || this.nombre == "" || this.ubicacion == "" || this.preRequisitos == "" || this.periodo=="" || this.bloque=="" || this.aula=="") {
+            if (this.codigo=="" || this.nombre == "" || this.preRequisitos == "" || this.periodo=="" || this.bloque=="" || this.aula=="") {
                 Swal.fire({
                     type: 'info',
                     title: 'Datos incompletos',
