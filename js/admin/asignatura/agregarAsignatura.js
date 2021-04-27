@@ -225,6 +225,6 @@ var appAsignatura = new Vue({
     },
     created:function(){
         this.listarAsignatura();
-        this.traerArea();
+        this.traerPrograma();
     }
 });
