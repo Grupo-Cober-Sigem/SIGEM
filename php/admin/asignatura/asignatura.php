@@ -30,11 +30,13 @@
             $consulta = "SELECT Cod_Area, Nombre_Area FROM Area";
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
+            $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
             break;
         case 3: // Seleccionar Usuarios para filtro
             $consulta = "SELECT Cod_User, Nombres, Apellidos FROM datosUsuario WHERE habilitado='1'";
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
+            $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
             break;
         case 4: // Agregar Asignatura
             $consulta = "INSERT INTO Asignatura (Cod_Asignatura, Nombre_Asig, Cod_Area, ubicacion_Asig) VALUES ('$codigo','$nombre','$area','$nivelFormacion')";
