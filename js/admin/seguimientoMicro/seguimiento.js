@@ -1,4 +1,5 @@
-var url = "../../../php/admin/seguimientoMicro/seguimiento.php";
+var url = "../../../../php/admin/seguimientoMicro/seguimiento.php";
+
 var appUsuarios = new Vue({
     el: "#crearSeguimiento",
     data: {
