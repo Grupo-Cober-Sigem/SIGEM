@@ -47,71 +47,94 @@
 	            </div>
 	      </div>
     	</nav>
-            <!-- Menu Flotante  -->
+            <!-- Sección derecha de la página  -->
             <div id="content" class="p-4 p-md-5">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <div class="container-fluid">
-                        <button type="button" id="sidebarCollapse" class="btn btn-primary">
-                            <i class="fa fa-bars"></i><span class="sr-only">Toggle Menu</span>
-                        </button>
-                        <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="nav navbar-nav ml-auto">
-                                <li class="nav-item"><a class="nav-link" href="../../../pages/administrador/indexadmin.html">Inicio</a></li>
-                                <li class="nav-item"><a class="nav-link" href="http://siul.unilibre.edu.co/sinugwt/">SIUL</a></li>
-                                <li class="nav-item"><a class="nav-link" href="../../../pages/administrador/perfilxadmin.html">Perfil</a></li>
-                                <li class="nav-item"><a class="nav-link" onclick="cerrarSesion()">Cerrar Sesión</a></li>
-                            </ul>
-                        </div>
+                <!-- Menu superior Flotante  -->
+                <nav id="sidebar">
+				<div class="p-4 pt-5">
+                    <a href="../indexadmin.html" class="img logo rounded-circle mb-5" style="background-image: url(../../../images/logo.jpg);"></a>
+                    <ul class="list-unstyled components mb-5">
+                    <li><a href="../../../pages/administrador/usuarios/users.html">Usuarios</a></li>
+                    <li><a href="../../../pages/administrador/periodos/periodos.html">Periodos</a></li>
+                    <li><a href="#gestionSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Gestión de Asignaturas</a>
+                        <ul class="collapse list-unstyled" id="gestionSubmenu">
+                        <li><a href="../gestionAsig/asignaturas/asignaturasxadmin.html">Asignaturas</a></li>
+                        <li><a href="../gestionAsig/microcurriculosxadmin.html">Microcurriculos</a></li>
+                        <li><a href="../gestionAsig/planesdeaulaxadmin.html">Planes de aula</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                    <a href="#gestionMicroSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Seguimiento a Microcurriculo</a>
+	                    <ul class="collapse list-unstyled" id="gestionMicroSubmenu">
+                        <li><a href="../seguimientoMicro/seguimientoxadmin.html">Registro de seguimientos</a></li>
+                        <li><a href="../seguimientoMicro/aprobadosxadmin.html">Seguimientos aprobados</a></li>
+                        <li><a href="../seguimientoMicro/revisionxadmin.html">Seguimientos por revisar</a></li>
+                        <!-- <li><a href="../seguimientoMicro/controlcambios.html">Control de cambios realizados</a></li> -->
+	                    </ul>
+	                </li>
+                    <li class="active"><a href="../estadisticas/statisticsgxadmin.html">Estadísticas</a></li>
+                    </ul>
+                    <div class="footer">
+                    <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados |
+                    Desarrollado <i  class="icon-heart" aria-hidden="true"></i> por <a href="https://colorlib.com" target="_blank">Andrés Alfonso - Jonathan Bernal</a>
+                    </p>
+                    </div>
                     </div>
                 </nav>
-            </div>
                 <!-- Contenido de la página -->
-                <div class="container-fluid">
-                    <!-- Barra de busqueda -->
-                    <form id="bEstadistica" name="bEstadistica"  >
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="exampleFormControlSelect1">Programa</label>
-                                    <select class="form-control" id="asPrograma" name="asigPrograma">
-                                        <option value="0">Seleccione Programa</option>
-                                        <option></option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="exampleFormControlSelect1">Área</label>
-                                    <select class="form-control" id="asigArea" name="asigArea">
-                                        <option value="0">Seleccione Area</option>
-                                        <option></option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="form-group">
-                                    <label for="exampleFormControlSelect1">Asignatura</label>
-                                    <select class="form-control" id="asigSemestre">
-                                        <option value="">Seleccionar</option>
-                                        <option value="Primer">Primero</option>
-                                        <option value="Segundo">Segundo</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-1">
-                                <div class="form-group">
-                                    <button type="button" class="btn btn-warning col-md-12" style="margin-top: 33px;"><i class="fa fa-search"></i></button>
-                                </div>
-                            </div>
+                  <div class="container-fluid">
+                      <!-- Barra de busqueda  -->
+                      <div class="row">
+                          <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">Programa</label>
+                            <select class="form-control" id="nivelformacion">
+                                <option>Ingeniería en TIC</option>
+                                <option>Ingeniería industrial</option>
+                            </select>
                         </div>
-                    </form>
-                </div>
-            <!-- Sección de estadisticas -->
-            <div class="container-fluid">
-                <canvas id="grafica"></canvas>
-                <script src="script.js"></script>
-            </div>
+                    </div>
+                          <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">Área</label>
+                            <select class="form-control" id="nivelformacion">
+                                <option>Básicas de Ingeniería</option>
+                                <option>Ingeniería Aplicada</option>
+                            </select>
+                        </div>
+                    </div>
+                          <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">Asignatura</label>
+                            <select class="form-control" id="nivelformacion">
+                                <option>Matematicas discretas</option>
+
+                            </select>
+                        </div>
+                    </div>
+                          <div class="col-md-2">
+                              <div class="form-group">
+                            <label for="exampleFormControlSelect1">Semestre</label>
+                            <select class="form-control" id="nivelformacion">
+                                <option>2020-1</option>
+
+                            </select>
+                        </div>
+                          </div>
+                          <div class="col-md-1">
+                              <div class="form-group">
+                                  <button type="button" class="btn btn-warning col-md-12" style="margin-top: 33px;"><i class="fa fa-search"></i></button>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- Sección de estadisticas -->
+                      <div class="container-fluid">
+                          <canvas id="grafica"></canvas>
+                          <script src="script.js"></script>
+                      </div>
+                  </div>
+          </div>
         </div>
         <script src="../../js/jquery.min.js"></script>
         <script src="../../js/popper.js"></script>
