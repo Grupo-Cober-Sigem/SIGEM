@@ -136,11 +136,10 @@ var appUsuarios = new Vue({
         //Procedimientos
         listarSeguimientos: function(){
             axios.post(url,{opcion:1}).then(response=>{
-
                 this.datosSeguimientos = response.data;
                 console.log(this.datosSeguimientos);
             });
-        },
+        }
     },
 
     created:function(){
