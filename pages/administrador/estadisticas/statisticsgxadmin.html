@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="../../../css/style.css">
+      <!-- Insertando chartJS -->
+      <script src="https://cdn.jsdelivr.net/npm/chart.js@latest/dist/Chart.min.js"></script>
   </head>
     <body>
 		<div class="wrapper d-flex align-items-stretch">
@@ -63,9 +65,10 @@
                         </div>
                     </div>
                 </nav>
+                <!-- Contenido de la página -->
                 <div class="container-fluid">
                     <!-- Barra de busqueda -->
-                        <form id="bEstadistica" name="bEstadistica"  >
+                    <form id="bEstadistica" name="bEstadistica"  >
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="form-group">
@@ -101,13 +104,26 @@
                                 </div>
                             </div>
                         </div>
-                        </form>
+                    </form>
                 </div>
             </div>
-      </div>
-      <script src="../../../js/jquery.min.js"></script>
-      <script src="../../../js/popper.js"></script>
-      <script src="../../../js/bootstrap.min.js"></script>
-      <script src="../../../js/main.js"></script>
+            <!-- Sección de estadisticas -->
+            <div class="container-fluid">
+                <canvas id="grafica"></canvas>
+                <script src="script.js"></script>
+            </div>
+        </div>
+        <script src="../../js/jquery.min.js"></script>
+        <script src="../../js/popper.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <!-- Vue -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+        <!-- Axios -->
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <!-- Sweet Alert 2 -->
+        <script src="../../plugins/sweetalert2/sweetalert2.all.min.js"></script>
+        <!-- Lógica para login -->
+        <script src="../../js/admin/perfil.js"></script>
+        <script src="../../js/main.js"></script>
     </body>
 </html>
