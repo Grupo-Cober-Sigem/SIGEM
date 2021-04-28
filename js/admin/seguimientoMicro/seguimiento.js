@@ -140,31 +140,31 @@ var appUsuarios = new Vue({
                 this.datosSeguimientos = response.data;
                 this.datosSeguimientos.map(function(seguimiento){
 
-                    if(seguimiento.estrategiaTeams=="1"){
+                    if(seguimiento.estrategiaTeams==1){
                         seguimiento.estrategiaTeams=="Microsoft Teams";
                     }else{
                         seguimiento.estrategiaTeams=="";
                     }
 
-                    if(seguimiento.estrategiaElibre=="1"){
+                    if(seguimiento.estrategiaElibre==1){
                         seguimiento.estrategiaElibre=="Plataforma Elibre";
                     }else{
                         seguimiento.estrategiaElibre=="";
                     }
 
-                    if(seguimiento.materialGuias=="1"){
+                    if(seguimiento.materialGuias==1){
                         seguimiento.materialGuias=="Instructivo en excel o word";
                     }else{
                         seguimiento.materialGuias=="";
                     }
 
-                    if(seguimiento.materialDiapositiva=="1"){
+                    if(seguimiento.materialDiapositiva==1){
                         seguimiento.materialDiapositiva=="Presentación diapositivas";
                     }else{
                         seguimiento.materialDiapositiva=="";
                     }
 
-                    if(seguimiento.materialVideos=="1"){
+                    if(seguimiento.materialVideos==1){
                         seguimiento.materialVideos=="Videos";
                     }else{
                         seguimiento.materialVideos=="";
