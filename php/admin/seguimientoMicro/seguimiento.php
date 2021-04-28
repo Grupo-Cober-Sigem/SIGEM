@@ -18,10 +18,12 @@
 
     switch($opcion){
         case 1: //Listar
-            $consulta = "SELECT Cod_Segui, Cod_Asignatura, Cod_User, Nombre_Asig, Horario_Segui, Dia_Segui, Cod_Unidad, Cod_Subte, Actividad_Segui, estrategiaTeams, estrategiaElibre, estrategiaOtro, materialGuias, materialWord, materialDiapositiva, materialVideos, materialOtro, actSincronica_Segui, Participantes_Segui, Observa_Segui, Soprte, Estado, jefeObserva_Segui FROM Seguimiento";
+            $consulta = "SELECT Cod_Segui, Cod_Asignatura, Cod_User, Horario_Segui, Dia_Segui, Cod_Unidad, Cod_Subte, Actividad_Segui, estrategiaTeams, estrategiaElibre, estrategiaOtro, materialGuias, materialWord, materialDiapositiva, materialVideo, materialOtro, actSincronica_Segui, Participantes_Segui, Observa_Segui, Soporte, Estado, jefeObserva_Segui FROM Seguimiento";
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
+
+            echo $data
             break;
         
     }
