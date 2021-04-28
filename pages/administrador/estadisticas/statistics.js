@@ -1,20 +1,27 @@
 // Obtener una referencia al elemento canvas del DOM
 const $grafica = document.querySelector("#grafica");
 // Las etiquetas son las que van en el eje X.
-const etiquetas = ["Enero", "Febrero", "Marzo", "Abril"]
+const etiquetas = ["Estado"]
 // Podemos tener varios conjuntos de datos
-const datosVentas2020 = {
-    label: "Ventas por mes - 2020",
-    data: [5000, 1500, 8000, 5102], // La data es un arreglo que debe tener la misma cantidad de valores que la cantidad de etiquetas
-    backgroundColor: 'rgba(54, 162, 235, 0.2)', // Color de fondo
-    borderColor: 'rgba(54, 162, 235, 1)', // Color del borde
+const seguimientosaprobados = {
+    label: "Seguimientos Aprobados",
+    data: [8], // La data es un arreglo que debe tener la misma cantidad de valores que la cantidad de etiquetas
+    backgroundColor: 'rgba(0, 143, 57, 0.2)', // Color de fondo
+    borderColor: 'rgba(0, 143, 57, 1)', // Color del borde
     borderWidth: 1,// Ancho del borde
 };
-const datosVentas2021 = {
-    label: "Ventas por mes - 2021",
-    data: [10000, 1700, 5000, 5989], // La data es un arreglo que debe tener la misma cantidad de valores que la cantidad de etiquetas
-    backgroundColor: 'rgba(255, 159, 64, 0.2)',// Color de fondo
-    borderColor: 'rgba(255, 159, 64, 1)',// Color del borde
+const seguimientosporrevisar = {
+    label: "Seguimientos por Revisar",
+    data: [10], // La data es un arreglo que debe tener la misma cantidad de valores que la cantidad de etiquetas
+    backgroundColor: 'rgba(255, 128, 0, 0.2)',// Color de fondo
+    borderColor: 'rgba(255, 128, 0, 1)',// Color del borde
+    borderWidth: 1,// Ancho del borde
+};
+const seguimientosrechazados = {
+    label: "Seguimientos Rechazados",
+    data: [2], // La data es un arreglo que debe tener la misma cantidad de valores que la cantidad de etiquetas
+    backgroundColor: 'rgba(255, 0, 0, 0.2)',// Color de fondo
+    borderColor: 'rgba(255, 0, 0, 1)',// Color del borde
     borderWidth: 1,// Ancho del borde
 };
 
@@ -23,8 +30,9 @@ new Chart($grafica, {
     data: {
         labels: etiquetas,
         datasets: [
-            datosVentas2020,
-            datosVentas2021,
+            seguimientosaprobados,
+            seguimientosporrevisar,
+            seguimientosrechazados,
             // Aquí más datos...
         ]
     },
