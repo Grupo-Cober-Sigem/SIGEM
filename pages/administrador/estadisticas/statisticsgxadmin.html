@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="../../../css/style.css">
+      <!-- Insertando chartJS -->
+      <script src="https://cdn.jsdelivr.net/npm/chart.js@latest/dist/Chart.min.js"></script>
   </head>
     <body>
 		<div class="wrapper d-flex align-items-stretch">
@@ -45,69 +47,90 @@
 	            </div>
 	      </div>
     	</nav>
-            <!-- Menu Flotante  -->
+            <!-- Sección derecha de la página  -->
             <div id="content" class="p-4 p-md-5">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <div class="container-fluid">
-                        <button type="button" id="sidebarCollapse" class="btn btn-primary">
-                            <i class="fa fa-bars"></i><span class="sr-only">Toggle Menu</span>
-                        </button>
-                        <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="nav navbar-nav ml-auto">
-                                <li class="nav-item"><a class="nav-link" href="../../../pages/administrador/indexadmin.html">Inicio</a></li>
-                                <li class="nav-item"><a class="nav-link" href="http://siul.unilibre.edu.co/sinugwt/">SIUL</a></li>
-                                <li class="nav-item"><a class="nav-link" href="../../../pages/administrador/perfilxadmin.html">Perfil</a></li>
-                                <li class="nav-item"><a class="nav-link" onclick="cerrarSesion()">Cerrar Sesión</a></li>
-                            </ul>
+                <!-- Menu superior flotante  -->
+                  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                      <div class="container-fluid">
+                          <button type="button" id="sidebarCollapse" class="btn btn-primary"><i class="fa fa-bars"></i><span class="sr-only">Toggle Menu</span></button>
+                          <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+                          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                              <ul class="nav navbar-nav ml-auto">
+                                  <li class="nav-item"><a class="nav-link" href="../../../pages/administrador/indexadmin.html">Inicio</a></li>
+                                  <li class="nav-item"><a class="nav-link" href="http://siul.unilibre.edu.co/sinugwt/">SIUL</a></li>
+                                  <li class="nav-item"><a class="nav-link" href="../../../pages/administrador/perfilxadmin.html">Perfil</a></li>
+                                  <li class="nav-item"><a class="nav-link" onclick="cerrarSesion()">Cerrar Sesión</a></li>
+                              </ul>
+                          </div>
+                      </div>
+                  </nav>
+                <!-- Contenido de la página -->
+                  <div class="container-fluid">
+                      <!-- Barra de busqueda  -->
+                      <div class="row">
+                          <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">Programa</label>
+                            <select class="form-control" id="nivelformacion">
+                                <option>Ingeniería en TIC</option>
+                                <option>Ingeniería industrial</option>
+                            </select>
                         </div>
                     </div>
-                </nav>
-                <div class="container-fluid">
-                    <!-- Barra de busqueda -->
-                        <form id="bEstadistica" name="bEstadistica"  >
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="exampleFormControlSelect1">Programa</label>
-                                    <select class="form-control" id="asPrograma" name="asigPrograma">
-                                        <option value="0">Seleccione Programa</option>
-                                        <option></option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="exampleFormControlSelect1">Área</label>
-                                    <select class="form-control" id="asigArea" name="asigArea">
-                                        <option value="0">Seleccione Area</option>
-                                        <option></option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="form-group">
-                                    <label for="exampleFormControlSelect1">Asignatura</label>
-                                    <select class="form-control" id="asigSemestre">
-                                        <option value="">Seleccionar</option>
-                                        <option value="Primer">Primero</option>
-                                        <option value="Segundo">Segundo</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-1">
-                                <div class="form-group">
-                                    <button type="button" class="btn btn-warning col-md-12" style="margin-top: 33px;"><i class="fa fa-search"></i></button>
-                                </div>
-                            </div>
+                          <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">Área</label>
+                            <select class="form-control" id="nivelformacion">
+                                <option>Básicas de Ingeniería</option>
+                                <option>Ingeniería Aplicada</option>
+                            </select>
                         </div>
-                        </form>
-                </div>
-            </div>
-      </div>
-      <script src="../../../js/jquery.min.js"></script>
-      <script src="../../../js/popper.js"></script>
-      <script src="../../../js/bootstrap.min.js"></script>
-      <script src="../../../js/main.js"></script>
+                    </div>
+                          <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">Asignatura</label>
+                            <select class="form-control" id="nivelformacion">
+                                <option>Matematicas discretas</option>
+
+                            </select>
+                        </div>
+                    </div>
+                          <div class="col-md-2">
+                              <div class="form-group">
+                            <label for="exampleFormControlSelect1">Semestre</label>
+                            <select class="form-control" id="nivelformacion">
+                                <option>2020-1</option>
+
+                            </select>
+                        </div>
+                          </div>
+                          <div class="col-md-1">
+                              <div class="form-group">
+                                  <button type="button" class="btn btn-warning col-md-12" style="margin-top: 33px;"><i class="fa fa-search"></i></button>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- Sección de estadisticas -->
+                      <div class="row">
+                          <div class="container-fluid">
+                              <canvas id="grafica"></canvas>
+                              <script src="../../../js/admin/estadisticas/statistics.js"></script>
+                          </div>
+                      </div>
+                  </div>
+          </div>
+        </div>
+        <script src="../../../js/jquery.min.js"></script>
+        <script src="../../../js/popper.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <!-- Vue -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+        <!-- Axios -->
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <!-- Sweet Alert 2 -->
+        <script src="../../plugins/sweetalert2/sweetalert2.all.min.js"></script>
+        <!-- Lógica para login -->
+        <script src="../../js/admin/perfil.js"></script>
+        <script src="../../js/main.js"></script>
     </body>
 </html>
