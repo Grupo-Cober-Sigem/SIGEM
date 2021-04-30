@@ -138,42 +138,45 @@ var appUsuarios = new Vue({
             axios.post(url,{opcion:1}).then(response=>{
 
                 this.datosSeguimientos = response.data;
+
+                this.datosSeguimientos.map(function(seguimiento){
+
+                    if(seguimiento.estrategiaTeams=="1"){
+    
+                        console.log("VAlor de estrategiaTeams: "+seguimiento.estrategiaTeams);
+                        seguimiento.estrategiaTeams=="Microsoft Teams";
+                    }else{
+                        seguimiento.estrategiaTeams=="";
+                    }
+    
+                    if(seguimiento.estrategiaElibre=="1"){
+                        seguimiento.estrategiaElibre=="Plataforma Elibre";
+                    }else{
+                        seguimiento.estrategiaElibre=="";
+                    }
+    
+                    if(seguimiento.materialGuias=="1"){
+                        seguimiento.materialGuias=="Instructivo en excel o word";
+                    }else{
+                        seguimiento.materialGuias=="";
+                    }
+    
+                    if(seguimiento.materialDiapositiva=="1"){
+                        seguimiento.materialDiapositiva=="Presentación diapositivas";
+                    }else{
+                        seguimiento.materialDiapositiva=="";
+                    }
+    
+                    if(seguimiento.materialVideos=="1"){
+                        seguimiento.materialVideos=="Videos";
+                    }else{
+                        seguimiento.materialVideos=="";
+                    }
+                });
                 
             });
 
-            this.datosSeguimientos.map(function(seguimiento){
-
-                if(seguimiento.estrategiaTeams=="1"){
-                    console.log("VAlor de estrategiaTeams: "+seguimiento.estrategiaTeams);
-                    seguimiento.estrategiaTeams=="Microsoft Teams";
-                }else{
-                    seguimiento.estrategiaTeams=="";
-                }
-
-                if(seguimiento.estrategiaElibre=="1"){
-                    seguimiento.estrategiaElibre=="Plataforma Elibre";
-                }else{
-                    seguimiento.estrategiaElibre=="";
-                }
-
-                if(seguimiento.materialGuias=="1"){
-                    seguimiento.materialGuias=="Instructivo en excel o word";
-                }else{
-                    seguimiento.materialGuias=="";
-                }
-
-                if(seguimiento.materialDiapositiva=="1"){
-                    seguimiento.materialDiapositiva=="Presentación diapositivas";
-                }else{
-                    seguimiento.materialDiapositiva=="";
-                }
-
-                if(seguimiento.materialVideos=="1"){
-                    seguimiento.materialVideos=="Videos";
-                }else{
-                    seguimiento.materialVideos=="";
-                }
-            });
+            
             console.log(this.datosSeguimientos);
         }
     },
