@@ -154,11 +154,17 @@ var appUsuarios = new Vue({
                     }
     
                     if(seguimiento.materialGuias=="1"){
-                        seguimiento.materialGuias="Instructivo en excel o word";
+                        seguimiento.materialGuias="Guia de aprendizaje";
                     }else{
                         seguimiento.materialGuias="";
                     }
-    
+                    
+                    if(seguimiento.materialWord=="1"){
+                        seguimiento.materialWord="Instructivo en excel o word";
+                    }else{
+                        seguimiento.materialWord="";
+                    }
+
                     if(seguimiento.materialDiapositiva=="1"){
                         seguimiento.materialDiapositiva="Presentación diapositivas";
                     }else{
@@ -171,11 +177,8 @@ var appUsuarios = new Vue({
                         seguimiento.materialVideos="";
                     }
                 });
-                
-            });
-
-            
-            console.log(this.datosSeguimientos);
+                console.log(this.datosSeguimientos);
+            });            
         }
     },
 
