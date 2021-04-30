@@ -138,7 +138,7 @@ var appUsuarios = new Vue({
             axios.post(url,{opcion:1}).then(response=>{
 
                 this.datosSeguimientos = response.data;
-                console.log(this.datosSeguimientos);
+                
             });
 
             this.datosSeguimientos.map(function(seguimiento){
@@ -173,6 +173,7 @@ var appUsuarios = new Vue({
                     seguimiento.materialVideos=="";
                 }
             });
+            console.log(this.datosSeguimientos);
         }
     },
 
