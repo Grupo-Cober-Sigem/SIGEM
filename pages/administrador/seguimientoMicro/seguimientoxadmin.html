@@ -114,8 +114,18 @@
                                           <div class="row">
                                               <div class="col">
                                                   <div class="form-group">
+                                                      <label for="unidad">Asignatura</label>
+                                                      <select v-model="asignaturaSeleccionada" class="form-control" id="unidad" required>
+                                                          <option v-for="(unidad,indice) of unidades" :value="unidad.Cod_Unidad">{{unidad.Nombre_Unidad}}</option>
+                                                      </select>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="row">
+                                              <div class="col">
+                                                  <div class="form-group">
                                                       <label for="unidad">Unidad</label>
-                                                      <select v-model="unidadSeleccionada" class="form-control" id="unidad">
+                                                      <select v-model="unidadSeleccionada" class="form-control" id="unidad" required>
                                                           <option v-for="(unidad,indice) of unidades" :value="unidad.Cod_Unidad">{{unidad.Nombre_Unidad}}</option>
                                                       </select>
                                                   </div>
@@ -123,7 +133,7 @@
                                               <div class="col">
                                                   <div class="form-group">
                                                       <label for="exampleFormControlSelect1">Tema</label>
-                                                      <select v-model="subtemaSeleccionado" class="form-control" id="subtema">
+                                                      <select v-model="subtemaSeleccionado" class="form-control" id="subtema" required>
                                                           <option v-for="(subtema,indice) of subtemas" :value="subtema.Cod_Subte">{{subtema.Nombre_Subte}}</option>
                                                       </select>
                                                   </div>
@@ -133,7 +143,7 @@
                                               <div class="col">
                                                   <div class="form-group">
                                                       <label for="exampleFormControlSelect1">Actividad</label>
-                                                      <input type="text" class="form-control" id="Actividad">
+                                                      <input type="text" class="form-control" id="Actividad" required>
                                                   </div>
                                               </div>
                                           </div>
