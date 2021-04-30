@@ -4,12 +4,12 @@ var appUsuarios = new Vue({
     el: "#crearSeguimiento",
     data: {
         //Variables para filtros y combobox
+        asignaturaSeleccionada:"",
+        asignaturas:[],
         unidadSeleccionada:"",
         unidades:[],
         subtemaSeleccionado:"",
         subtemas:[],
-        docenteSeleccionado:"",
-        docentes:[],
         //Variables para gestión de registros
         datosSeguimientos:[],
         codSeguimiento:"",
@@ -91,88 +91,64 @@ var appUsuarios = new Vue({
                 });
         },
 
-        btnDeshabilitarUser: async function (cod_user,habilitado) { 
-            await Swal.fire({
-                    title: 'Deshabilitar Usuario',
-                    text: "El no podrá acceder al sistema",
-                    icon: 'warning',
-                    confirmButtonText: 'Deshabilitar',
-                    confirmButtonColor: '#1cc88a',
-                    showCancelButton: true,
-                    cancelButtonText: "Cancelar",
-                    cancelButtonColor: '#CB3234',
-
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        this.deshabilitarUsuarios(cod_user,habilitado);
-                    }
-                })
-        },
-
-        btnFiltrarUsuarios: async function()
-        {
-            let nombre = document.getElementById("campoBusqueda").value;
-
-            switch(nombre)
-            {
-                case "":
-                    this.listarUsuarios();
-                    break;
-
-                case null:
-                    this.listarUsuarios();
-                    break;
-                
-                default:
-                    axios.post(url,{opcion:5,nombre:nombre}).then(response=>{
-                        this.datosUsuarios = response.data;
-                        console.log(this.datosUsuarios);
-                        nombre="";
-                    });
-                    break;
-            }
-        },
-
         //Procedimientos
+        traerAsignatura: function(){
+            axios.post(url,{opcion:2}).then(response=>{
+
+                this.asignaturas = response.data;
+                this.unidadSeleccionada="";
+                this.unidades=[];
+                this.subtemaSeleccionado="";
+                this.subtemas=[];
+            })
+        },
+
+        traerUnidades: function(){
+
+        },
+
+        traerSubtemas: function(){
+
+        },
+
         listarSeguimientos: function(){
             axios.post(url,{opcion:1}).then(response=>{
 
                 this.datosSeguimientos = response.data;
-
                 this.datosSeguimientos.map(function(seguimiento){
 
                     if(seguimiento.estrategiaTeams=="1"){
-                        seguimiento.estrategiaTeams="Microsoft Teams";
+                        seguimiento.estrategiaTeams="Microsoft Teams.";
                     }else{
                         seguimiento.estrategiaTeams="";
                     }
     
                     if(seguimiento.estrategiaElibre=="1"){
-                        seguimiento.estrategiaElibre="Plataforma Elibre";
+                        seguimiento.estrategiaElibre="Plataforma Elibre.";
                     }else{
                         seguimiento.estrategiaElibre="";
                     }
     
                     if(seguimiento.materialGuias=="1"){
-                        seguimiento.materialGuias="Guia de aprendizaje";
+                        seguimiento.materialGuias="Guia de aprendizaje.";
                     }else{
                         seguimiento.materialGuias="";
                     }
                     
                     if(seguimiento.materialWord=="1"){
-                        seguimiento.materialWord="Instructivo en excel o word";
+                        seguimiento.materialWord="Instructivo en excel o word.";
                     }else{
                         seguimiento.materialWord="";
                     }
 
                     if(seguimiento.materialDiapositiva=="1"){
-                        seguimiento.materialDiapositiva="Presentación diapositivas";
+                        seguimiento.materialDiapositiva="Presentación diapositivas.";
                     }else{
                         seguimiento.materialDiapositiva="";
                     }
     
                     if(seguimiento.materialVideos=="1"){
-                        seguimiento.materialVideos="Videos";
+                        seguimiento.materialVideos="Videos.";
                     }else{
                         seguimiento.materialVideos="";
                     }
@@ -184,5 +160,6 @@ var appUsuarios = new Vue({
 
     created:function(){
         this.listarSeguimientos();
+        this.traerAsignatura();
     }
 });                                 
