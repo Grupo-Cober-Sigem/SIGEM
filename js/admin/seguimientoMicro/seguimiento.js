@@ -144,6 +144,7 @@ var appUsuarios = new Vue({
             this.datosSeguimientos.map(function(seguimiento){
 
                 if(seguimiento.estrategiaTeams=="1"){
+                    console.log("VAlor de estrategiaTeams: "+seguimiento.estrategiaTeams);
                     seguimiento.estrategiaTeams=="Microsoft Teams";
                 }else{
                     seguimiento.estrategiaTeams=="";
