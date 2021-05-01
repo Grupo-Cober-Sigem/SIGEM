@@ -24,7 +24,6 @@
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
-            echo $data
 
         case 3: //Listar Unidades de la asignatura
             $consulta = "SELECT * FROM Unidades LEFT OUTER JOIN Microcurriculo ON Unidades.Cod_Micro = Microcurriculo.Cod_Micro INNER JOIN Asignatura WHERE Microcurriculo.Cod_Asignatura = Asignatura.Cod_Asignatura";
