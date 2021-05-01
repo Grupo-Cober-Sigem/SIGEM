@@ -96,6 +96,8 @@ var appUsuarios = new Vue({
             axios.post(url,{opcion:2}).then(response=>{
 
                 this.asignaturas = response.data;
+                console.log("Valor del array Asignatura"+this.asignaturas);
+
                 this.unidadSeleccionada="";
                 this.unidades=[];
                 this.subtemaSeleccionado="";
