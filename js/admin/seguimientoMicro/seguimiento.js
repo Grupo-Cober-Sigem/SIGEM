@@ -114,7 +114,11 @@ var appUsuarios = new Vue({
         },
 
         traerSubtemas: function(){
+            axios.post(url,{opcion:4, unidad:this.unidadSeleccionada}).then(response=>{
 
+                this.subtemas = response.data;
+                this.unidadSeleccionada="";
+            });
         },
 
         listarSeguimientos: function(){

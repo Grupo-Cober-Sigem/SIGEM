@@ -125,7 +125,7 @@
                                               <div class="col">
                                                   <div class="form-group">
                                                       <label for="unidad">Unidad</label>
-                                                      <select v-model="unidadSeleccionada" class="form-control" id="unidad" required>
+                                                      <select v-model="unidadSeleccionada" class="form-control" id="unidad" @change="traerSubtemas()" required>
                                                           <option v-for="(unidad,indice) of unidades" :value="unidad.Cod_Unidad">{{unidad.Nombre_Unidad}}</option>
                                                       </select>
                                                   </div>

@@ -35,7 +35,7 @@
             break;
         
         case 4: //Listar subtemas de la asignatura
-            $consulta = "SELECT Cod_Subte, Nombre_Subte FROM Subtemas LEFT OUTER JOIN Unidades WHERE Subtemas.Cod_Unidad = Unidades.Cod_Unidad";
+            $consulta = "SELECT Cod_Subte, Nombre_Subte FROM Subtemas LEFT OUTER JOIN Unidades WHERE Subtemas.Cod_Unidad='$unidad' AND Subtemas.Cod_Unidad = Unidades.Cod_Unidad";
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
