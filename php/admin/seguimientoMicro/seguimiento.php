@@ -24,18 +24,21 @@
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
+            break;
 
         case 3: //Listar Unidades de la asignatura
             $consulta = "SELECT * FROM Unidades LEFT OUTER JOIN Microcurriculo ON Unidades.Cod_Micro = Microcurriculo.Cod_Micro INNER JOIN Asignatura WHERE Microcurriculo.Cod_Asignatura = Asignatura.Cod_Asignatura";
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
+            break;
         
         case 4: //Listar subtemas de la asignatura
             $consulta = "SELECT Cod_Subte, Nombre_Subte FROM Subtemas LEFT OUTER JOIN Unidades WHERE Subtemas.Cod_Unidad = Unidades.Cod_Unidad";
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
+            break;
     };
     // Enviar el array final en formato JSON a Javascript
     print json_encode($data, JSON_UNESCAPED_UNICODE);
