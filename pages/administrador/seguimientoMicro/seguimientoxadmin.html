@@ -115,8 +115,8 @@
                                               <div class="col">
                                                   <div class="form-group">
                                                       <label for="unidad">Asignatura</label>
-                                                      <select v-model="asignaturaSeleccionada" class="form-control" id="unidad" required>
-                                                          <option v-for="(unidad,indice) of unidades" :value="unidad.Cod_Unidad">{{unidad.Nombre_Unidad}}</option>
+                                                      <select v-model="asignaturaSeleccionada" class="form-control" id="asignatura" required>
+                                                          <option v-for="(asignatura,indice) of asignaturas" :value="asignatura.Cod_Asignatura">{{asignatura.Nombre_Asig}}</option>
                                                       </select>
                                                   </div>
                                               </div>
