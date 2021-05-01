@@ -117,7 +117,7 @@ var appUsuarios = new Vue({
             axios.post(url,{opcion:4, unidad:this.unidadSeleccionada}).then(response=>{
 
                 this.subtemas = response.data;
-                this.unidadSeleccionada="";
+                this.subtemaSeleccionado="";
             });
         },
 
