@@ -8,6 +8,7 @@
     $_POST = json_decode(file_get_contents("php://input"), true);
 
     $opcion = (isset($_POST['opcion'])) ? $_POST['opcion'] : '';
+    $asignatura = (isset($_POST['asignatura'])) ? $_POST['asignatura'] : '';
     $unidad = (isset($_POST['unidad'])) ? $_POST['unidad'] : '';
     $subtema = (isset($_POST['subtema'])) ? $_POST['subtema'] : '';
 
@@ -27,7 +28,7 @@
             break;
 
         case 3: //Listar Unidades de la asignatura
-            $consulta = "SELECT * FROM Unidades LEFT OUTER JOIN Microcurriculo ON Unidades.Cod_Micro = Microcurriculo.Cod_Micro INNER JOIN Asignatura WHERE Microcurriculo.Cod_Asignatura = Asignatura.Cod_Asignatura";
+            $consulta = "SELECT * FROM Unidades LEFT OUTER JOIN Microcurriculo ON Unidades.Cod_Micro = Microcurriculo.Cod_Micro INNER JOIN Asignatura WHERE Microcurriculo.Cod_Asignatura ='$asignatura' AND Microcurriculo.Cod_Asignatura = Asignatura.Cod_Asignatura";
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
