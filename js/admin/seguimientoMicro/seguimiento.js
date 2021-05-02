@@ -108,7 +108,7 @@ var appUsuarios = new Vue({
 
                 this.unidades = response.data;
                 this.unidadSeleccionada="";
-                this.traerSubtemas=[];
+                this.subtemas=[];
                 this.subtemaSeleccionado="";
             });
         },
