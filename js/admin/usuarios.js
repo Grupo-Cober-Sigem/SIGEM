@@ -88,10 +88,10 @@ var appUsuarios = new Vue({
                         '<option value="'+rol+'" disabled selected>'+nombreRol+'</option>'+
                         '<option value="1">Docente</option><option value="2">Jefe de Area</option>'+
                         '<option value="3">Decano</option></select></div></div></div><div class="form-group"><div class="row">'+
-                    '<label class="col-sm-4 col-form-label text-left">Rol</label><div class="col-sm-8"><select class="form-control" id="programa">'+
+                    '<label class="col-sm-4 col-form-label text-left">Programa</label><div class="col-sm-8"><select class="form-control" id="programa">'+
                         '<option value="'+rol+'" disabled selected>'+nombreRol+'</option>'+
-                        '<option value="1">Docente</option><option value="2">Jefe de Area</option><div class="form-group"><div class="row">'+
-                    '<label class="col-sm-4 col-form-label text-left">Rol</label><div class="col-sm-8"><select class="form-control" id="programa">'+
+                        '<option value="1">Docente</option><option value="2">Jefe de Area</option></select></div></div></div><div class="form-group"><div class="row">'+
+                    '<label class="col-sm-4 col-form-label text-left">Área</label><div class="col-sm-8"><select class="form-control" id="programa">'+
                         '<option value="'+rol+'" disabled selected>'+nombreRol+'</option>',
                 focusConfirm: false,
                 showCancelButton: true,
