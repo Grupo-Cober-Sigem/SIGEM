@@ -87,7 +87,12 @@ var appUsuarios = new Vue({
                     '<label class="col-sm-4 col-form-label text-left">Rol</label><div class="col-sm-8"><select class="form-control" id="rol">'+
                         '<option value="'+rol+'" disabled selected>'+nombreRol+'</option>'+
                         '<option value="1">Docente</option><option value="2">Jefe de Area</option>'+
-                        '<option value="3">Decano</option></select></div></div></div>', 
+                        '<option value="3">Decano</option></select></div></div></div><div class="form-group"><div class="row">'+
+                    '<label class="col-sm-4 col-form-label text-left">Rol</label><div class="col-sm-8"><select class="form-control" id="programa">'+
+                        '<option value="'+rol+'" disabled selected>'+nombreRol+'</option>'+
+                        '<option value="1">Docente</option><option value="2">Jefe de Area</option><div class="form-group"><div class="row">'+
+                    '<label class="col-sm-4 col-form-label text-left">Rol</label><div class="col-sm-8"><select class="form-control" id="programa">'+
+                        '<option value="'+rol+'" disabled selected>'+nombreRol+'</option>',
                 focusConfirm: false,
                 showCancelButton: true,
                 cancelButtonText: "Cancelar",
@@ -206,4 +211,4 @@ var appUsuarios = new Vue({
     created:function(){
         this.listarUsuarios();
     }
-});                                 
+});
