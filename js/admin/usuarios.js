@@ -88,7 +88,7 @@ var appUsuarios = new Vue({
                         '<option value="'+rol+'" disabled selected>'+nombreRol+'</option>'+
                         '<option value="1">Docente</option><option value="2">Jefe de Area</option>'+
                         '<option value="3">Decano</option></select></div></div></div><div class="form-group"><div class="row">'+
-                    '<label class="col-sm-12 col-form-label text-left">DATOS PROPIOS DEL JEFE DE ÁREA</label></div></div><div class="form-group"><div class="row">'+
+                    '<label class="col-sm-12 col-form-label text-left" align="center">DATOS PROPIOS DEL JEFE DE ÁREA</label></div></div><div class="form-group"><div class="row">'+
                     '<label class="col-sm-4 col-form-label text-left">Programa</label><div class="col-sm-8"><select class="form-control" id="programa">'+
                         '<option value="'+rol+'" disabled selected>'+nombreRol+'</option>'+
                         '<option value="1">Ingeniería Industrial</option><option value="2">Ingeniería en TIC</option></select></div></div></div><div class="form-group"><div class="row">'+
