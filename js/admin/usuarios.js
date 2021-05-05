@@ -15,7 +15,17 @@ var appUsuarios = new Vue({
         btnAgregar: async function () {
             const { value: formValues } = await Swal.fire({
                 title: 'Agregar',
-                html: '<div class="form-group"><div class="row"><label class="col-form-label"></label></div></div><div class="form-group"><div class="row"><label class="col-sm-4 col-form-label text-left">Nombres</label><div class="col-sm-8"><input id="nombre" type="text" class="form-control"></div></div></div><div class="form-group"><div class="row"><label class="col-sm-4 col-form-label text-left">Apellidos</label><div class="col-sm-8"><input id="apellidos" type="text" class="form-control"></div></div></div><div class="form-group"><div class="row"><label class="col-sm-6 col-form-label text-left">Nro. de Identificación</label><div class="col-sm-6"><input id="cod_user" type="number" min="0" class="form-control"></div></div></div><div class="form-group"><div class="row"><label class="col-sm-5 col-form-label text-left">Email Unilibre</label><div class="col-sm-7"><input id="email" type="text" class="form-control"></div></div></div><div class="form-group"><div class="row"><label class="col-sm-4 col-form-label text-left">Contraseña</label><div class="col-sm-8"><input id="pass" type="password" class="form-control"></div></div></div><div class="form-group"><div class="row"><label class="col-sm-4 col-form-label text-left">Rol</label><div class="col-sm-8"><select class="form-control" id="rol"><option value="">Seleccionar</option><option value="1">Docente</option><option value="2">Jefe de Area</option><option value="3">Decano</option></select></div></div></div>',
+                html: '<div class="form-group"><div class="row"><label class="col-form-label"></label></div></div><div class="form-group"><div class="row"><label class="col-sm-4 col-form-label text-left">Nombres</label><div class="col-sm-8"><input id="nombre" type="text" class="form-control"></div></div></div><div class="form-group"><div class="row"><label class="col-sm-4 col-form-label text-left">Apellidos</label><div class="col-sm-8"><input id="apellidos" type="text" class="form-control"></div></div></div><div class="form-group"><div class="row"><label class="col-sm-6 col-form-label text-left">Nro. de Identificación</label><div class="col-sm-6"><input id="cod_user" type="number" min="0" class="form-control"></div></div></div><div class="form-group"><div class="row"><label class="col-sm-5 col-form-label text-left">Email Unilibre</label><div class="col-sm-7"><input id="email" type="text" class="form-control"></div></div></div><div class="form-group"><div class="row"><label class="col-sm-4 col-form-label text-left">Contraseña</label><div class="col-sm-8"><input id="pass" type="password" class="form-control"></div></div></div><div class="form-group"><div class="row"><label class="col-sm-4 col-form-label text-left">Rol</label><div class="col-sm-8"><select class="form-control" id="rol"><option value="">Seleccionar</option><option value="1">Docente</option><option value="2">Jefe de Area</option><option value="3">Decano</option></select></div></div></div><div class="form-group"><div class="row">'+
+                '<label class="col-sm-4 col-form-label text-left">Rol</label><div class="col-sm-8"><select class="form-control" id="rol">'+
+                '<option value="'+rol+'" disabled selected>'+nombreRol+'</option>'+
+                '<option value="1">Docente</option><option value="2">Jefe de Area</option>'+
+                '<option value="3">Decano</option></select></div></div></div><div class="form-group"><div class="row">'+
+                '<label class="col-sm-12 col-form-label text-center"><b>DATOS PROPIOS DEL JEFE DE ÁREA</b></label></div></div><div class="form-group"><div class="row">'+
+                '<label class="col-sm-4 col-form-label text-left">Programa</label><div class="col-sm-8"><select class="form-control" id="programa">'+
+                '<option value="'+rol+'" disabled selected>'+nombreRol+'</option>'+
+                '<option value="1">Ingeniería Industrial</option><option value="2">Ingeniería en TIC</option></select></div></div></div><div class="form-group"><div class="row">'+
+                '<label class="col-sm-4 col-form-label text-left">Área</label><div class="col-sm-8"><select class="form-control" id="programa">'+
+                '<option value="'+rol+'" disabled selected>'+nombreRol+'</option>',
                 focusConfirm: false,
                 showCancelButton: true,
                 confirmButtonText: 'Guardar',
@@ -87,7 +97,13 @@ var appUsuarios = new Vue({
                     '<label class="col-sm-4 col-form-label text-left">Rol</label><div class="col-sm-8"><select class="form-control" id="rol">'+
                         '<option value="'+rol+'" disabled selected>'+nombreRol+'</option>'+
                         '<option value="1">Docente</option><option value="2">Jefe de Area</option>'+
-                        '<option value="3">Decano</option></select></div></div></div>', 
+                        '<option value="3">Decano</option></select></div></div></div><div class="form-group"><div class="row">'+
+                    '<label class="col-sm-12 col-form-label text-center"><b>DATOS PROPIOS DEL JEFE DE ÁREA</b></label></div></div><div class="form-group"><div class="row">'+
+                    '<label class="col-sm-4 col-form-label text-left">Programa</label><div class="col-sm-8"><select class="form-control" id="programa">'+
+                        '<option value="'+rol+'" disabled selected>'+nombreRol+'</option>'+
+                        '<option value="1">Ingeniería Industrial</option><option value="2">Ingeniería en TIC</option></select></div></div></div><div class="form-group"><div class="row">'+
+                    '<label class="col-sm-4 col-form-label text-left">Área</label><div class="col-sm-8"><select class="form-control" id="programa">'+
+                        '<option value="'+rol+'" disabled selected>'+nombreRol+'</option>',
                 focusConfirm: false,
                 showCancelButton: true,
                 cancelButtonText: "Cancelar",
@@ -206,4 +222,4 @@ var appUsuarios = new Vue({
     created:function(){
         this.listarUsuarios();
     }
-});                                 
+});
