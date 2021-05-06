@@ -99,15 +99,15 @@
                                               <div class="row">
                                                   <div class="col">
                                                       <label for="diaSeguimiento">Día</label>
-                                                      <input type="text" class="form-control" placeholder="DD/MM/AAAA" id="diaSeguimiento">
+                                                      <input type="text" class="form-control limpiar" placeholder="DD/MM/AAAA" id="diaSeguimiento">
                                                   </div>
                                                   <div class="col">
                                                       <label for="horaSeguimiento">Hora</label>
-                                                      <input type="text" class="form-control" placeholder="HH:MM" id="horaSeguimiento">
+                                                      <input type="text" class="form-control limpiar" placeholder="HH:MM" id="horaSeguimiento">
                                                   </div>
                                                   <div class="col">
                                                       <label for="nroEstudiantes">Cantidad de participantes</label>
-                                                      <input type="text" class="form-control" id="nroEstudiantes">
+                                                      <input type="text" class="form-control limpiar" id="nroEstudiantes">
                                                   </div>
                                               </div>
                                           </div>
@@ -118,6 +118,7 @@
                                                       <select v-model="asignaturaSeleccionada" class="form-control" id="asignatura" @change="traerUnidades()" required>
                                                           <option v-for="(asignatura,indice) of asignaturas" :value="asignatura.Cod_Asignatura">{{asignatura.Nombre_Asig}}</option>
                                                       </select>
+                                                      {{asignaturaSeleccionada}}
                                                   </div>
                                               </div>
                                           </div>
@@ -128,6 +129,7 @@
                                                       <select v-model="unidadSeleccionada" class="form-control" id="unidad" @change="traerSubtemas()" required>
                                                           <option v-for="(unidad,indice) of unidades" :value="unidad.Cod_Unidad">{{unidad.Nombre_Unidad}}</option>
                                                       </select>
+                                                      {{unidadSeleccionada}}
                                                   </div>
                                               </div>
                                               <div class="col">
@@ -136,6 +138,7 @@
                                                       <select v-model="subtemaSeleccionado" class="form-control" id="subtema" required>
                                                           <option v-for="(subtema,indice) of subtemas" :value="subtema.Cod_Subte">{{subtema.Nombre_Subte}}</option>
                                                       </select>
+                                                      {{subtemaSeleccionado}}
                                                   </div>
                                               </div>
                                           </div>
@@ -143,7 +146,7 @@
                                               <div class="col">
                                                   <div class="form-group">
                                                       <label for="exampleFormControlSelect1">Actividad</label>
-                                                      <input type="text" class="form-control" id="Actividad" required>
+                                                      <input type="text" class="form-control limpiar" id="Actividad" required>
                                                   </div>
                                               </div>
                                           </div>
@@ -159,19 +162,19 @@
                                           <div class="row">
                                               <div class="col">
                                                   <div class="form-check">
-                                                      <input class="form-check-input" type="checkbox" value="" id="recursoTeams">
+                                                      <input class="form-check-input limpiar" type="checkbox" value="" id="recursoTeams">
                                                       <label class="form-check-label" for="flexCheckDefault">Microsoft Teams</label>
                                                   </div>
                                               </div>
                                               <div class="col">
                                                   <div class="form-check">
-                                                      <input class="form-check-input" type="checkbox" value="" id="recursoElibre">
+                                                      <input class="form-check-input limpiar" type="checkbox" value="" id="recursoElibre">
                                                       <label class="form-check-label" for="flexCheckDefault">Plataforma ELibre</label>
                                                   </div>
                                               </div>
                                               <div class="col">
                                                   <div class="form-group">
-                                                      <input type="text" class="form-control" id="recursoOtro" placeholder="Otro recurso">
+                                                      <input type="text" class="form-control limpiar" id="recursoOtro" placeholder="Otro recurso">
                                                   </div>
                                               </div>
                                           </div>
@@ -184,44 +187,56 @@
                                           <div class="row">
                                               <div class="col">
                                                   <div class="form-check">
-                                                      <input class="form-check-input" type="checkbox" value="" id="materialGuia">
+                                                      <input class="form-check-input limpiar" type="checkbox" value="" id="materialGuia">
                                                       <label class="form-check-label" for="flexCheckDefault">Guia de aprendizaje</label>
                                                   </div>
                                                   <div class="form-check">
-                                                      <input class="form-check-input" type="checkbox" value="" id="materialInstructivo">
+                                                      <input class="form-check-input limpiar" type="checkbox" value="" id="materialInstructivo">
                                                       <label class="form-check-label" for="flexCheckDefault">Instructivo en excel o word</label>
                                                   </div>
                                               </div>
                                               <div class="col">
                                                   <div class="form-check">
-                                                      <input class="form-check-input" type="checkbox" value="" id="materialDiapositiva">
+                                                      <input class="form-check-input limpiar" type="checkbox" value="" id="materialDiapositiva">
                                                       <label class="form-check-label" for="flexCheckDefault">Presentacion de diapositivas</label>
                                                   </div>
                                                   <div class="form-check">
-                                                      <input class="form-check-input" type="checkbox" value="" id="materialVideo">
+                                                      <input class="form-check-input limpiar" type="checkbox" value="" id="materialVideo">
                                                       <label class="form-check-label" for="flexCheckDefault">Videos</label>
                                                   </div>
                                               </div>
                                               <div class="col">
                                                   <div class="form-group">
-                                                      <input type="text" class="form-control" id="materialOtro" placeholder="Otro material">
+                                                      <input type="text" class="form-control limpiar" id="materialOtro" placeholder="Otro material">
                                                   </div>
                                               </div>
                                           </div>
                                           <hr />
                                           <!-- Fin de Material empleado -->
                                           <div class="row">
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label for="nivelFormacion" class="col-form-label">Semestre</label>
+                                                        <select class="form-control" id="nivelFormacion">
+                                                            <option value="" disabled>Seleccione</option>
+                                                            <option value="Sincronica">Primero</option>
+                                                            <option value="Asincronica">Segundo</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                          </div>
+                                          <div class="row">
                                               <div class="col">
                                                   <div class="form-group">
                                                       <label for="exampleFormControlSelect1">Observaciones</label>
-                                                      <input type="text" class="form-control" id="observaciones">
+                                                      <input type="text" class="form-control limpiar" id="observaciones">
                                                   </div>
                                               </div>
                                           </div>
                                           <div class="row mb-4">
                                               <div class="col">
                                                   <label for="exampleFormControlInput1">Soporte</label>
-                                                  <input type="text" class="form-control" id="soporte">
+                                                  <input type="text" class="form-control limpiar" id="soporte">
                                               </div>
                                           </div>
                                       </form>

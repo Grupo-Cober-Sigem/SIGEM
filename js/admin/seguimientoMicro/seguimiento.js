@@ -33,10 +33,20 @@ var appUsuarios = new Vue({
     },
     methods: {
         btnAgregarSeguimiento: async function () {
-            
+            this.limpiarModal();
+
             this.dia = document.getElementById("diaSeguimiento").value;
             this.hora = document.getElementById("horaSeguimiento").value;
             this.nroEstudiantes = document.getElementById("nroEstudiantes").value;
+            this.recursoTeams = validarChechbox(document.getElementById("recursoTeams").checked);
+            this.recursoElibre
+            this.recursoOtro
+            this.materialGuias
+            this.materialWord
+            this.materialDiapositiva
+            this.materialVideos
+            this.materialOtro
+            this.sincronico
             this.actividad = document.getElementById("Actividad").value;
         },
 
@@ -163,8 +173,28 @@ var appUsuarios = new Vue({
                         seguimiento.materialVideos="";
                     }
                 });
-                console.log(this.datosSeguimientos);
             });            
+        },
+
+        limpiarModal: function(){
+
+            var controles= document.getElementsByClassName("limpiar");
+            var ncontroles= controles.length;
+
+            for(var i=0;i<ncontroles;i++){
+    
+                controles[i].value="";
+            }
+        },
+
+        validarChechbox: function(valor){
+            
+            if(valor==true){
+
+                return 1;
+            }else{
+                return 0;
+            }
         }
     },
 
