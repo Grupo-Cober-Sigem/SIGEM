@@ -112,13 +112,13 @@
                                               </div>
                                           </div>
                                           <div class="row">
-                                              <div class="col-md-2">
+                                              <div class="col-md-1">
                                                   <div class="form-group">
                                                       <label for="unidad">Código</label><br>
                                                       <label><font SIZE=3>{{asignaturaSeleccionada}}</font></label>
                                                   </div>
                                               </div>
-                                              <div class="col-md-10">
+                                              <div class="col-md-11">
                                                   <div class="form-group">
                                                       <label for="unidad">Asignatura</label>
                                                       <select v-model="asignaturaSeleccionada" class="form-control" id="asignatura" @change="traerUnidades()" required>
@@ -134,7 +134,6 @@
                                                       <select v-model="unidadSeleccionada" class="form-control" id="unidad" @change="traerSubtemas()" required>
                                                           <option v-for="(unidad,indice) of unidades" :value="unidad.Cod_Unidad">{{unidad.Nombre_Unidad}}</option>
                                                       </select>
-                                                      {{unidadSeleccionada}}
                                                   </div>
                                               </div>
                                               <div class="col">
@@ -143,7 +142,6 @@
                                                       <select v-model="subtemaSeleccionado" class="form-control" id="subtema" required>
                                                           <option v-for="(subtema,indice) of subtemas" :value="subtema.Cod_Subte">{{subtema.Nombre_Subte}}</option>
                                                       </select>
-                                                      {{subtemaSeleccionado}}
                                                   </div>
                                               </div>
                                           </div>
