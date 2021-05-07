@@ -34,9 +34,7 @@ var appUsuarios = new Vue({
     },
     methods: {
         btnAgregarSeguimiento: async function () {
-            console.log("Valor dia antes de: "+document.getElementById("diaSeguimiento").value);
             this.dia = document.getElementById("diaSeguimiento").value;
-            console.log("Valor dia después de: "+this.dia);
             this.hora = document.getElementById("horaSeguimiento").value;
             this.nroEstudiantes = document.getElementById("nroEstudiantes").value;
             this.recursoTeams = this.validarChechbox(document.getElementById("recursoTeams").checked);
@@ -51,8 +49,6 @@ var appUsuarios = new Vue({
             this.observaciones = document.getElementById("observaciones").value;
             this.actividad = document.getElementById("Actividad").value;
             this.soporte = document.getElementById("soporte").value;
-
-            
             
             axios.post(url,{opcion:5, 
                 asignatura:this.asignaturaSeleccionada,
@@ -72,6 +68,7 @@ var appUsuarios = new Vue({
                 materialOtro: this.materialOtro,
                 actSincronica: this.sincronico,
                 nroEstudiantes: this.nroEstudiantes,
+                observaciones: this.observaciones,
                 soporte: this.soporte
 
             }).then(response=>{
