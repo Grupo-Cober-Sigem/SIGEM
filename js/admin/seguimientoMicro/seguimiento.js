@@ -28,26 +28,53 @@ var appUsuarios = new Vue({
         materialOtro:"",
         sincronico:"",
         nroEstudiantes:0,
-        observaciones:0
+        observaciones:"",
+        soporte:""
     
     },
     methods: {
         btnAgregarSeguimiento: async function () {
-            this.limpiarModal();
+            limpiarModal();
 
             this.dia = document.getElementById("diaSeguimiento").value;
             this.hora = document.getElementById("horaSeguimiento").value;
             this.nroEstudiantes = document.getElementById("nroEstudiantes").value;
             this.recursoTeams = validarChechbox(document.getElementById("recursoTeams").checked);
-            this.recursoElibre
-            this.recursoOtro
-            this.materialGuias
-            this.materialWord
-            this.materialDiapositiva
-            this.materialVideos
-            this.materialOtro
-            this.sincronico
+            this.recursoElibre = validarChechbox(document.getElementById("recursoElibre").checked);
+            this.recursoOtro = document.getElementById("recursoOtro").value;
+            this.materialGuias = validarChechbox(document.getElementById("materialGuia").checked);
+            this.materialWord = validarChechbox(document.getElementById("materialInstructivo").checked);
+            this.materialDiapositiva = validarChechbox(document.getElementById("materialDiapositiva").checked);
+            this.materialVideos = validarChechbox(document.getElementById("materialVideo").checked);
+            this.materialOtro = document.getElementById("materialOtro").value;
+            this.sincronico = document.getElementById("actSincronica").value;
+            this.observaciones = document.getElementById("observaciones").value;
             this.actividad = document.getElementById("Actividad").value;
+            this.soporte = document.getElementById("soporte").value;
+
+            axios.post(url,{opcion:5, 
+                asignatura:this.asignaturaSeleccionada,
+                codigoUser:localStorage.getItem("usuario"),
+                hora: this.hora,
+                dia: this.dia,
+                unidad: this.unidadSeleccionada,
+                subtema: this.subtemaSeleccionado,
+                actividad: this.actividad,
+                teams: this.recursoTeams,
+                elibre: this.recursoElibre,
+                estrategiaOtro: this.recursoOtro,
+                guias: this.materialGuias,
+                word: this.materialWord,
+                diapositiva: this.materialDiapositiva,
+                video: this.materialVideos,
+                materialOtro: this.materialOtro,
+                actSincronica: this.sincronico,
+                nroEstudiantes: this.nroEstudiantes,
+                soporte: this.soporte
+
+            }).then(response=>{
+
+            })
         },
 
         btnEditarSeguimiento: async function (cod_user,nombre,apellidos,email,pass,rol) {

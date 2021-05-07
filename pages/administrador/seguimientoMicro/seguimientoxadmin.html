@@ -99,15 +99,15 @@
                                               <div class="row">
                                                   <div class="col">
                                                       <label for="diaSeguimiento">Día</label>
-                                                      <input type="text" class="form-control limpiar" placeholder="DD/MM/AAAA" id="diaSeguimiento">
+                                                      <input type="text" class="form-control limpiar" placeholder="DD/MM/AAAA" id="diaSeguimiento" required>
                                                   </div>
                                                   <div class="col">
                                                       <label for="horaSeguimiento">Hora</label>
-                                                      <input type="text" class="form-control limpiar" placeholder="HH:MM" id="horaSeguimiento">
+                                                      <input type="text" class="form-control limpiar" placeholder="HH:MM" id="horaSeguimiento" required>
                                                   </div>
                                                   <div class="col">
                                                       <label for="nroEstudiantes">Cantidad de participantes</label>
-                                                      <input type="text" class="form-control limpiar" id="nroEstudiantes">
+                                                      <input type="text" class="form-control limpiar" id="nroEstudiantes" required>
                                                   </div>
                                               </div>
                                           </div>
@@ -217,7 +217,7 @@
                                                 <div class="col">
                                                     <div class="form-group">
                                                         <label for="nivelFormacion" class="col-form-label">Actividad Desarrollada</label>
-                                                        <select class="form-control" id="actSincronica">
+                                                        <select class="form-control" id="actSincronica" required>
                                                             <option value="" disabled>Seleccione</option>
                                                             <option value="Sincronica">Sincronica</option>
                                                             <option value="Asincronica">Asincronica</option>
@@ -229,21 +229,21 @@
                                               <div class="col">
                                                   <div class="form-group">
                                                       <label for="exampleFormControlSelect1">Observaciones</label>
-                                                      <input type="text" class="form-control limpiar" id="observaciones">
+                                                      <input type="text" class="form-control limpiar" id="observaciones" required>
                                                   </div>
                                               </div>
                                           </div>
                                           <div class="row mb-4">
                                               <div class="col">
                                                   <label for="exampleFormControlInput1">Soporte</label>
-                                                  <input type="text" class="form-control limpiar" id="soporte">
+                                                  <input type="text" class="form-control limpiar" id="soporte" required>
                                               </div>
                                           </div>
                                       </form>
                                   </div>
                                   <div class="modal-footer">
                                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                                      <button type="button" class="btn btn-success">Guardar</button>
+                                      <button type="button" class="btn btn-success" onclick="btnAgregarSeguimiento()">Guardar</button>
                                   </div>
                               </div>
                           </div>
