@@ -34,9 +34,9 @@ var appUsuarios = new Vue({
     },
     methods: {
         btnAgregarSeguimiento: async function () {
-            this.limpiarModal();
-
+            console.log("Valor dia antes de: "+document.getElementById("diaSeguimiento").value);
             this.dia = document.getElementById("diaSeguimiento").value;
+            console.log("Valor dia después de: "+this.dia);
             this.hora = document.getElementById("horaSeguimiento").value;
             this.nroEstudiantes = document.getElementById("nroEstudiantes").value;
             this.recursoTeams = this.validarChechbox(document.getElementById("recursoTeams").checked);
@@ -52,6 +52,8 @@ var appUsuarios = new Vue({
             this.actividad = document.getElementById("Actividad").value;
             this.soporte = document.getElementById("soporte").value;
 
+            
+            
             axios.post(url,{opcion:5, 
                 asignatura:this.asignaturaSeleccionada,
                 codigoUser:localStorage.getItem("usuario"),
@@ -96,6 +98,8 @@ var appUsuarios = new Vue({
             this.observaciones="",
             this.actividad="",
             this.soporte=""
+
+            this.limpiarModal();
         },
 
         btnEditarSeguimiento: async function (cod_user,nombre,apellidos,email,pass,rol) {
