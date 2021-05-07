@@ -73,8 +73,24 @@ var appUsuarios = new Vue({
                 soporte: this.soporte
 
             }).then(response=>{
+                this.listarSeguimientos();
+            });
 
-            })
+            this.dia="",
+            this.hora="",
+            this.nroEstudiantes=0,
+            this.recursoTeams=0,
+            this.recursoElibre=0
+            this.recursoOtro="",
+            this.materialGuias=0,
+            this.materialWord=0,
+            this.materialDiapositiva=0,
+            this.materialVideos=0,
+            this.materialOtro="",
+            this.sincronico="",
+            this.observaciones="",
+            this.actividad="",
+            this.soporte=""
         },
 
         btnEditarSeguimiento: async function (cod_user,nombre,apellidos,email,pass,rol) {
