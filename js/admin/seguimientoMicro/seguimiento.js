@@ -74,6 +74,11 @@ var appUsuarios = new Vue({
 
             }).then(response=>{
                 this.listarSeguimientos();
+                Swal.fire(
+                    '¡Registro exitoso!',
+                    'El registro ha sido agregado.',
+                    'success'
+                  )
             });
 
             this.dia="",
