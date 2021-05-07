@@ -1,3 +1,4 @@
+<script src="../../../js/docente/validacionDoc.js"></script>
 <!doctype html>
 <html lang="es">
   <head>
@@ -26,7 +27,8 @@
                       <li class="active">
                           <a href="#gestionMicroSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Seguimiento a Microcurriculo</a>
                           <ul class="collapse list-unstyled" id="gestionMicroSubmenu">
-                              <li class="active"><a href="../seguimiento/seguimientoxdoc.html">Seguimiento</a></li>
+                              <li class="active"><a href="../seguimiento/seguimientoxdoc.html">Registro de seguimientos</a></li>
+                              <li><a href="../seguimiento/aprobadosxdoc.html">Seguimientos aprobados</a></li>
                           </ul>
                       </li>
                   </ul>
@@ -52,7 +54,7 @@
                                 <li class="nav-item"><a class="nav-link" href="../../../pages/docentes/indexdoc.html">Inicio</a></li>
                                 <li class="nav-item"><a class="nav-link" href="http://siul.unilibre.edu.co/sinugwt/">SIUL</a></li>
                                 <li class="nav-item"><a class="nav-link" href="../../../pages/docentes/perfilxdoc.html">Perfil</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Cerrar Sesión</a></li>
+                                <li class="nav-item"><a class="nav-link" onclick="cerrarSesion()">Cerrar Sesión</a></li>
                             </ul>
                         </div>
                     </div>
