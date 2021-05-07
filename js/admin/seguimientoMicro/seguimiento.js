@@ -34,7 +34,7 @@ var appUsuarios = new Vue({
     },
     methods: {
         btnAgregarSeguimiento: async function () {
-            limpiarModal();
+            this.limpiarModal();
 
             this.dia = document.getElementById("diaSeguimiento").value;
             this.hora = document.getElementById("horaSeguimiento").value;
