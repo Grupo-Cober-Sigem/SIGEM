@@ -50,35 +50,43 @@ var appUsuarios = new Vue({
             this.actividad = document.getElementById("Actividad").value;
             this.soporte = document.getElementById("soporte").value;
             
-            axios.post(url,{opcion:5, 
-                asignatura:this.asignaturaSeleccionada,
-                codigoUser:localStorage.getItem("usuario"),
-                hora: this.hora,
-                dia: this.dia,
-                unidad: this.unidadSeleccionada,
-                subtema: this.subtemaSeleccionado,
-                actividad: this.actividad,
-                teams: this.recursoTeams,
-                elibre: this.recursoElibre,
-                estrategiaOtro: this.recursoOtro,
-                guias: this.materialGuias,
-                word: this.materialWord,
-                diapositiva: this.materialDiapositiva,
-                video: this.materialVideos,
-                materialOtro: this.materialOtro,
-                actSincronica: this.sincronico,
-                nroEstudiantes: this.nroEstudiantes,
-                observaciones: this.observaciones,
-                soporte: this.soporte
+            if(this.dia=="" || this.hora=="" || this.nroEstudiantes=="" || this.sincronico=="" || this.observaciones=="" || this.actividad=="" || this.soporte==""){
 
-            }).then(response=>{
-                this.listarSeguimientos();
-                Swal.fire(
-                    '¡Registro exitoso!',
-                    'El registro ha sido agregado.',
-                    'success'
-                  )
-            });
+                Swal.fire({
+                    icon: 'info',
+                    title: 'Datos incompletos',
+                })
+            }else{
+                axios.post(url,{opcion:5, 
+                    asignatura:this.asignaturaSeleccionada,
+                    codigoUser:localStorage.getItem("usuario"),
+                    hora: this.hora,
+                    dia: this.dia,
+                    unidad: this.unidadSeleccionada,
+                    subtema: this.subtemaSeleccionado,
+                    actividad: this.actividad,
+                    teams: this.recursoTeams,
+                    elibre: this.recursoElibre,
+                    estrategiaOtro: this.recursoOtro,
+                    guias: this.materialGuias,
+                    word: this.materialWord,
+                    diapositiva: this.materialDiapositiva,
+                    video: this.materialVideos,
+                    materialOtro: this.materialOtro,
+                    actSincronica: this.sincronico,
+                    nroEstudiantes: this.nroEstudiantes,
+                    observaciones: this.observaciones,
+                    soporte: this.soporte
+    
+                }).then(response=>{
+                    this.listarSeguimientos();
+                    Swal.fire(
+                        '¡Registro exitoso!',
+                        'El registro ha sido agregado.',
+                        'success'
+                      )
+                });
+            }
 
             this.dia="",
             this.hora="",
@@ -228,11 +236,19 @@ var appUsuarios = new Vue({
         limpiarModal: function(){
 
             var controles= document.getElementsByClassName("limpiar");
-            var ncontroles= controles.length;
+            var nControles= controles.length;
 
-            for(var i=0;i<ncontroles;i++){
+            for(var i=0;i<nControles;i++){
     
                 controles[i].value="";
+            }
+
+            controles= document.getElementsByClassName("limpiarCheck");
+            nControles = controles.length;
+
+            for(var i=0;i<nControles;i++){
+
+                controles[i].checked=false;
             }
         },
 

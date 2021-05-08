@@ -61,7 +61,7 @@
             break;
 
         case 5: //Registrar seguimientos
-            $consulta = "INSERT INTO Seguimiento (Cod_Segui, Cod_Asignatura, Cod_User, Nombre_Asig, Horario_Segui, Dia_Segui, Cod_Unidad, Cod_Subte, Actividad_Segui, estrategiaTeams, estrategiaElibre, estrategiaOtro, materialGuias, materialWord, materialDiapositiva, materialVideo, materialOtro, actSincronica_Segui, Participantes_Segui, Observa_Segui, Soporte, Estado, jefeObserva_Segui) VALUES (null, '$asignatura', '$codigoUser', '$nombreAsig', '$hora', '$dia', '$unidad', '$subtema', '$actividad', '$teams', '$elibre', '$estrategiaOtro', '$guias', '$word', '$diapositiva', '$video', '$materialOtro', '$actSincronica', '$nroEstudiantes', '$observaciones', '$soporte', null, null)";
+            $consulta = "INSERT INTO Seguimiento (Cod_Segui, Cod_Asignatura, Cod_User, Nombre_Asig, Horario_Segui, Dia_Segui, Cod_Unidad, Cod_Subte, Actividad_Segui, estrategiaTeams, estrategiaElibre, estrategiaOtro, materialGuias, materialWord, materialDiapositiva, materialVideo, materialOtro, actSincronica_Segui, Participantes_Segui, Observa_Segui, Soporte, Estado, jefeObserva_Segui) VALUES (null, '$asignatura', '$codigoUser', '$nombreAsig', '$hora', '$dia', '$unidad', '$subtema', '$actividad', '$teams', '$elibre', '$estrategiaOtro', '$guias', '$word', '$diapositiva', '$video', '$materialOtro', '$actSincronica', '$nroEstudiantes', '$observaciones', '$soporte', 'pendiente', null)";
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             break;
