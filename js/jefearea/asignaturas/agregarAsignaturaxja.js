@@ -1,4 +1,4 @@
-var url = "../../../../php/docente/asignatura/asignaturaxdoc .php";
+var url = "../../../../php/jefearea/asignatura/asignaturaxja.php";
 var appAsignatura = new Vue({
     el: "#seccionAsignatura",
     data: {
