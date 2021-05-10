@@ -7,9 +7,28 @@
     //Recepcion de parámetros mediante axios
     $_POST = json_decode(file_get_contents("php://input"), true);
 
-    $estado= (isset($_POST['estado'])) ? $_POST['estado'] : '';
+    switch($opcion){
+        case 1: //Aprobado
+            $consultaaprobado = "SELECT count(Estado) FROM Seguimiento WHERE Estado='aprobado'";
+            $resultado = $cn->prepare($consultaaprobado);
+            $resultado->execute();
+            $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
+            break;
+        case 2: //Pendiente
+            $consultapendiente = "SELECT count(Estado) FROM Seguimiento WHERE Estado='pendiente'";
+            $resultado = $cn->prepare($consultapendiente);
+            $resultado->execute();
+            $data = $resultado->fetchAll(PDO::FETCH_ASSOC)
+            break;
+        case 3: //Rechazar
+            $consultarechazado = "SELECT count(Estado) FROM Seguimiento WHERE Estado='rechazado'";
+            $resultado = $cn->prepare($consultarechazado);
+            $resultado->execute();
+            $data = $resultado->fetchAll(PDO::FETCH_ASSOC)
+            break;
+    }
 
-    $consulta = "SELECT count(Estado) FROM Seguimiento WHERE Estado="aprobado"";
+$consultaaprobado = "SELECT count(Estado) FROM Seguimiento WHERE Estado='aprobado'";
     $resultado = $cn->prepare($consulta);
     $resultado->execute();
     $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
