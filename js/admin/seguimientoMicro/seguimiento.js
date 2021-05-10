@@ -103,59 +103,22 @@ var appUsuarios = new Vue({
             this.observaciones="",
             this.actividad="",
             this.soporte=""
+            this.asignaturaSeleccionada="",
+            this.unidadSeleccionada="",
+            this.subtemaSeleccionado=""
 
             this.limpiarModal();
         },
 
-        btnEditarSeguimiento: async function (cod_user,nombre,apellidos,email,pass,rol) {
-            let nombreRol="";
-            switch(rol)
-            {
-                case "3":
-                    nombreRol="Decano";
-                    break;
-                case "2":
-                    nombreRol="Jefe de Area";
-                    break;
-                case "1":
-                    nombreRol="Docente";
-                    break;
-            }
+        btnEditarSeguimiento: async function (cod_seguimiento, asignatura, dia,
+                                            hora, unidad, subtema, actividad,
+                                            teams, elibre, estrategiaOtro,
+                                            guias, word, diapositiva, videos,
+                                            materialOtro, sincronica, participantes,
+                                            observacion, soporte
+                                            ) {
+        
             
-            await Swal.fire({
-                title: 'Editar',
-                html:
-                '<div class="form-group"><div class="row"><label class="col-form-label"></label></div></div><div class="form-group"><div class="row">'+
-                    '<label class="col-sm-4 col-form-label text-left">Nombres</label><div class="col-sm-8"><input id="nombre" value="'+nombre+'" type="text" class="form-control"></div></div></div><div class="form-group"><div class="row">'+
-                    '<label class="col-sm-4 col-form-label text-left">Apellidos</label><div class="col-sm-8"><input id="apellidos" value="'+apellidos+'" type="text" class="form-control"></div></div></div><div class="form-group"><div class="row">'+
-                    '<label class="col-sm-6 col-form-label text-left">Nro. de Identificación</label><div class="col-sm-6"><input id="cod_user" value="'+cod_user+'"type="number" min="0" class="form-control" disabled></div></div></div><div class="form-group"><div class="row">'+
-                    '<label class="col-sm-5 col-form-label text-left">Email Unilibre</label><div class="col-sm-7"><input id="email" value="'+email+'" type="text" class="form-control"></div></div></div><div class="form-group"><div class="row">'+
-                    '<label class="col-sm-4 col-form-label text-left">Contraseña</label><div class="col-sm-8"><input id="pass" value="'+pass+'"type="password" class="form-control"></div></div></div><div class="form-group"><div class="row">'+
-                    '<label class="col-sm-4 col-form-label text-left">Rol</label><div class="col-sm-8"><select class="form-control" id="rol">'+
-                        '<option value="'+rol+'" disabled selected>'+nombreRol+'</option>'+
-                        '<option value="1">Docente</option><option value="2">Jefe de Area</option>'+
-                        '<option value="3">Decano</option></select></div></div></div>', 
-                focusConfirm: false,
-                showCancelButton: true,
-                cancelButtonText: "Cancelar",
-
-                }).then((result) => {
-                  if (result.value) {                                             
-                    nombre = Swal.getPopup().querySelector('#nombre').value,
-                    apellidos = Swal.getPopup().querySelector('#apellidos').value,
-                    cod_user = Swal.getPopup().querySelector('#cod_user').value,
-                    email = Swal.getPopup().querySelector('#email').value,
-                    pass = Swal.getPopup().querySelector('#pass').value,
-                    rol = Swal.getPopup().querySelector('#rol').value                    
-
-                    this.editarUsuarios(cod_user,pass,nombre,apellidos,email,rol);
-                    Swal.fire(
-                      '¡Actualizado!',
-                      'El registro ha sido actualizado.',
-                      'success'
-                    )                  
-                  }
-                });
         },
 
         //Procedimientos
@@ -250,6 +213,7 @@ var appUsuarios = new Vue({
 
                 controles[i].checked=false;
             }
+            this.asignaturaSeleccionada=""
         },
 
         validarChechbox: function(valor){

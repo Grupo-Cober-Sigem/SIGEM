@@ -66,7 +66,10 @@
             $resultado->execute();
             break;
 
-        case 6:
+        case 6: //Editar seguimientos
+            $consulta = "UPDATE Seguimiento SET Cod_Asignatura='$', Cod_User='$', Horario_Segui='$', Dia_Segui='$', Cod_Unidad='$', Cod_Subte='$', Actividad_Segui='$', estrategiaTeams='$', estrategiaElibre='$', estrategiaOtro='$', materialGuias='$', materialWord='$', materialDiapositiva='$', materialVideo='$', materialOtro='$', actSincronica_Segui='$', Participantes_Segui='$', Observa_Segui='$', Soporte='$' WHERE Cod_Segui='$' ";
+            $resultado = $cn->prepare($consulta);
+            $resultado->execute(); 
             break;
     };
     // Enviar el array final en formato JSON a Javascript

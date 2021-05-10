@@ -83,7 +83,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Modal de edición -->
+                    <!-- Modal de agregar -->
                     <div class="modal fade" id="seguimientoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                           <div class="modal-dialog modal-xl" role="document">
                               <div class="modal-content">
@@ -254,6 +254,177 @@
                               </div>
                           </div>
                       </div>
+                    <!-- Modal de edición -->
+                    <div class="modal fade" id="seguimientoModalEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelEdit" aria-hidden="true">
+                        <div class="modal-dialog modal-xl" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabelEdit">Seguimiento</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <label for="diaSeguimiento">Día</label>
+                                                    <input type="text" class="form-control limpiar" placeholder="DD/MM/AAAA" id="diaSeguimientoEdit" required>
+                                                </div>
+                                                <div class="col">
+                                                    <label for="horaSeguimiento">Hora</label>
+                                                    <input type="text" class="form-control limpiar" placeholder="HH:MM" id="horaSeguimientoEdit" required>
+                                                </div>
+                                                <div class="col">
+                                                    <label for="nroEstudiantes">Cantidad de participantes</label>
+                                                    <input type="text" class="form-control limpiar" id="nroEstudiantesEdit" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-1">
+                                                <div class="form-group">
+                                                    <label for="unidad">Código</label><br>
+                                                    <label><font SIZE=3>{{asignaturaSeleccionada}}</font></label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-11">
+                                                <div class="form-group">
+                                                    <label for="unidad">Asignatura</label>
+                                                    <select v-model="asignaturaSeleccionada" class="form-control limpiar" id="asignaturaEdit" @change="traerUnidades()" required>
+                                                        <option value="">Selecciones una asignatura</option>
+                                                        <option v-for="(asignatura,indice) of asignaturas" :value="asignatura.Cod_Asignatura">{{asignatura.Nombre_Asig}}</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label for="unidad">Unidad</label>
+                                                    <select v-model="unidadSeleccionada" class="form-control limpiar" id="unidadEdit" @change="traerSubtemas()" required>
+                                                      <option value="">Selecciones una unidad</option>  
+                                                      <option v-for="(unidad,indice) of unidades" :value="unidad.Cod_Unidad">{{unidad.Nombre_Unidad}}</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlSelect1">Tema</label>
+                                                    <select v-model="subtemaSeleccionado" class="form-control limpiar" id="subtemaEdit" required>
+                                                      <option value="">Selecciones un subtema</option>  
+                                                      <option v-for="(subtema,indice) of subtemas" :value="subtema.Cod_Subte">{{subtema.Nombre_Subte}}</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlSelect1">Actividad</label>
+                                                    <input type="text" class="form-control limpiar" id="ActividadEdit" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <!-- Recurso Usado -->
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlSelect1">Recurso Usado</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="form-check">
+                                                    <input class="form-check-input limpiarCheck" type="checkbox" value="" id="recursoTeamsEdit">
+                                                    <label class="form-check-label" for="flexCheckDefault">Microsoft Teams</label>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-check">
+                                                    <input class="form-check-input limpiarCheck" type="checkbox" value="" id="recursoElibreEdit">
+                                                    <label class="form-check-label" for="flexCheckDefault">Plataforma ELibre</label>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control limpiar" id="recursoOtroEdit" placeholder="Otro recurso">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Fin Recurso Usado -->
+                                        <hr />
+                                        <!-- Material empleado -->
+                                        <div class="col">
+                                            <label for="exampleFormControlInput1">Material empleado</label>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="form-check">
+                                                    <input class="form-check-input limpiarCheck" type="checkbox" value="" id="materialGuiaEdit">
+                                                    <label class="form-check-label" for="flexCheckDefault">Guia de aprendizaje</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input limpiarCheck" type="checkbox" value="" id="materialInstructivoEdit">
+                                                    <label class="form-check-label" for="flexCheckDefault">Instructivo en excel o word</label>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-check">
+                                                    <input class="form-check-input limpiarCheck" type="checkbox" value="" id="materialDiapositivaEdit">
+                                                    <label class="form-check-label" for="flexCheckDefault">Presentacion de diapositivas</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input limpiarCheck" type="checkbox" value="" id="materialVideoEdit">
+                                                    <label class="form-check-label" for="flexCheckDefault">Videos</label>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control limpiar" id="materialOtroEdit" placeholder="Otro material">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <!-- Fin de Material empleado -->
+                                        <div class="row">
+                                              <div class="col">
+                                                  <div class="form-group">
+                                                      <label for="nivelFormacion" class="col-form-label">Actividad Desarrollada</label>
+                                                      <select class="form-control" id="actSincronicaEdit" required>
+                                                          <option value="" disabled>Seleccione</option>
+                                                          <option value="Sincronica">Sincronica</option>
+                                                          <option value="Asincronica">Asincronica</option>
+                                                      </select>
+                                                  </div>
+                                              </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlSelect1">Observaciones</label>
+                                                    <input type="text" class="form-control limpiar" id="observacionesEdit" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-4">
+                                            <div class="col">
+                                                <label for="exampleFormControlInput1">Soporte</label>
+                                                <input type="text" class="form-control limpiar" id="soporteEdit" required>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" @click="limpiarModal()" data-dismiss="modal">Cerrar</button>
+                                    <button type="button" class="btn btn-success" @click="btnEditarSeguimiento()" data-dismiss="modal">Guardar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <!-- Tabla resultado de busqueda -->
                     <div class="table-responsive">
                         <table class="table table-hover table-bordered">
@@ -300,7 +471,20 @@
                                     <td><small>{{seguimiento.Soporte}}</small></td>
                                     <td><small>{{seguimiento.Estado}}</small></td>
                                     <td><small>{{seguimiento.jefeObserva_Segui}}</small></td>
-                                    <td><button type="button" class="btn btn-warning col-md-12"><i class="fa fa-edit"></i></button></td>
+                                    <td><button type="button" class="btn btn-warning col-md-12" 
+                                            @click="btnEditarSeguimiento(seguimiento.Cod_Segui,seguimiento.Cod_Asignatura,
+                                                                        seguimiento.Dia_Segui, seguimiento.Horario_Segui,
+                                                                        seguimiento.Cod_Unidad, seguimiento.Cod_Subte,
+                                                                        seguimiento.Actividad_Segui, seguimiento.estrategiaTeams,
+                                                                        seguimiento.estrategiaElibre, seguimiento.estrategiaOtro,
+                                                                        seguimiento.materialGuias, seguimiento.materialWord,
+                                                                        seguimiento.materialDiapositiva, seguimiento.materialVideos,
+                                                                        seguimiento.materialOtro, seguimiento.actSincronica_Segui,
+                                                                        seguimiento.Participantes_Segui, seguimiento.Observa_Segui,
+                                                                        seguimiento.Soporte )"
+                                            data-toggle="modal" data-target="#seguimientoModalEdit">
+                                        <i class="fa fa-edit"></i>
+                                    </button></td>
                                 </tr>
                             </tbody>
                         </table>
