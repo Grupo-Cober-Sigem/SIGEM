@@ -1,6 +1,6 @@
 var url = "../../../php/admin/estadisticas.php";
 var appUsuarios = new Vue({
-    el: "#seccionUsuarios",
+    el: "#seccionEstadisticas",
     data: {
         aprobado: 0,
         pendiente: 0,
