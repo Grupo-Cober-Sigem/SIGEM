@@ -7,6 +7,8 @@
     //Recepcion de parámetros mediante axios
     $_POST = json_decode(file_get_contents("php://input"), true);
 
+    $opcion = (isset($_POST['opcion'])) ? $_POST['opcion'] : '';
+
     switch($opcion){
         case 1: //Aprobado
             $consultaaprobado = "SELECT count(Estado) FROM Seguimiento WHERE Estado='aprobado'";
