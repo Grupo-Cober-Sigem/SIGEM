@@ -50,7 +50,8 @@ var appUsuarios = new Vue({
             this.actividad = document.getElementById("Actividad").value;
             this.soporte = document.getElementById("soporte").value;
             
-            if(this.dia=="" || this.hora=="" || this.nroEstudiantes=="" || this.sincronico=="" || this.observaciones=="" || this.actividad=="" || this.soporte==""){
+            if(this.dia=="" || this.hora=="" || this.nroEstudiantes=="" || this.sincronico=="" || 
+                this.observaciones=="" || this.actividad=="" || this.soporte==""){
 
                 Swal.fire({
                     icon: 'info',
@@ -114,11 +115,26 @@ var appUsuarios = new Vue({
                                             hora, unidad, subtema, actividad,
                                             teams, elibre, estrategiaOtro,
                                             guias, word, diapositiva, videos,
-                                            materialOtro, sincronica, participantes,
+                                            materialOtro, sincronico, participantes,
                                             observacion, soporte
-                                            ) {
+                                            ){
         
+            document.getElementById("diaSeguimientoEdit").value = dia;
+            document.getElementById("horaSeguimientoEdit").value = hora;
+            document.getElementById("nroEstudiantesEdit").value = participantes;
             
+            this.validarChechboxEdit(teams,document.getElementById("recursoTeamsEdit"));
+            this.validarChechboxEdit(elibre,document.getElementById("recursoElibreEdit"));
+            document.getElementById("recursoOtroEdit").value = estrategiaOtro;
+            this.validarChechboxEdit(guias,document.getElementById("materialGuiaEdit"));
+            this.validarChechboxEdit(word,document.getElementById("materialInstructivoEdit"));
+            this.validarChechboxEdit(diapositiva,document.getElementById("materialDiapositivaEdit"));
+            this.validarChechboxEdit(videos,document.getElementById("materialVideoEdit").checked);
+            document.getElementById("materialOtroEdit").value = materialOtro;
+            document.getElementById("actSincronicaEdit").value = sincronico;
+            document.getElementById("observacionesEdit").value = observacion;
+            document.getElementById("ActividadEdit").value = actividad;
+            document.getElementById("soporteEdit").value = soporte;
         },
 
         //Procedimientos
@@ -223,6 +239,16 @@ var appUsuarios = new Vue({
                 return 1;
             }else{
                 return 0;
+            }
+        },
+
+        validarChechboxEdit: function(valor,checkBox){
+
+            if(valor!=null || valor!="")
+            {
+                checkBox.checked=true;
+            }else{
+                checkBox.checked=false;
             }
         }
     },
