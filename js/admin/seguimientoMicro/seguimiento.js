@@ -122,7 +122,9 @@ var appUsuarios = new Vue({
             document.getElementById("diaSeguimientoEdit").value = dia;
             document.getElementById("horaSeguimientoEdit").value = hora;
             document.getElementById("nroEstudiantesEdit").value = participantes;
-            
+            document.getElementById("asignaturaEdit").value = asignatura;
+            document.getElementById("unidadEdit").value = unidad;
+            document.getElementById("subtemaEdit").value = subtema;
             this.validarChechboxEdit(teams,document.getElementById("recursoTeamsEdit"));
             this.validarChechboxEdit(elibre,document.getElementById("recursoElibreEdit"));
             document.getElementById("recursoOtroEdit").value = estrategiaOtro;
