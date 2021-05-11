@@ -14,7 +14,7 @@
             $consultaaprobado = "SELECT Estado FROM Seguimiento WHERE Estado='aprobado'";
             $resultado = $cn->prepare($consultaaprobado);
             $resultado->execute();
-            $data = $resultado->fetch(PDO::rowCount());
+            $data = $resultado->fetch(PDO::FETCH_BOUND);
             echo $data;
             break;
 
