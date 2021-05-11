@@ -13,7 +13,7 @@
             $resultado = $cn->prepare($consultaaprobado);
             $resultado->execute();
             $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
-            echo "Aprobados es $data";
+            echo $data;
 
     // Enviar el array final en formato JSON a Javascript
     print json_encode($data, JSON_UNESCAPED_UNICODE);
