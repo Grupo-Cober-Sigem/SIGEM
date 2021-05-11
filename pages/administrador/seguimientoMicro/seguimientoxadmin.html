@@ -292,7 +292,7 @@
                                             <div class="col-md-11">
                                                 <div class="form-group">
                                                     <label for="unidad">Asignatura</label>
-                                                    <select v-model="asignaturaSeleccionada" class="form-control limpiar" id="asignaturaEdit" @change="traerUnidades()" required>
+                                                    <select v-model="asignaturaSeleccionada" class="form-control limpiar" id="asignaturaEdit" disabled>
                                                         <option value="">Selecciones una asignatura</option>
                                                         <option v-for="(asignatura,indice) of asignaturas" :value="asignatura.Cod_Asignatura">{{asignatura.Nombre_Asig}}</option>
                                                     </select>
