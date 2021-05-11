@@ -11,11 +11,11 @@
 
     switch($opcion){
         case 1: //Aprobado
-            $consultaaprobado = "SELECT count(Estado) FROM Seguimiento WHERE Estado == 'aprobado'";
+            $consultaaprobado = "SELECT Estado FROM Seguimiento WHERE Estado = 'aprobado'";
             $resultado = $cn->prepare($consultaaprobado);
-            $resultado->execute(array($Estado));
-            $data = $resultado->fetch(PDO::FETCH_NUM);
-            echo $data[0];
+            $resultado->execute();
+            $data = $resultado->fetch(PDO::FETCH_ASSOC);
+            echo count($data);
             break;
 
         case 2: //Pendiente
