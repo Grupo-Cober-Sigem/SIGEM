@@ -303,12 +303,7 @@
                                             <div class="col">
                                                 <div class="form-group">
                                                     <label for="unidad">Unidad</label>
-
-                                                    <select v-model="unidadSeleccionada" class="form-control limpiar" id="unidadEdit" disabled>
-                                                      <option value="">Selecciones una unidad</option>  
-                                                      <option v-for="(unidad,indice) of unidades" :value="unidad.Cod_Unidad">{{unidad.Nombre_Unidad}}</option>
-                                                    </select>
-
+                                                    <input type="text" class="form-control limpiar" disabled id="unidadEdit">
                                                 </div>
                                             </div>
                                             <div class="col">
@@ -322,7 +317,7 @@
                                             <div class="col">
                                                 <div class="form-group">
                                                     <label for="ActividadEdit">Actividad</label>
-                                                    <input type="text" class="form-control limpiar" disabled id="ActividadEdit" >
+                                                    <input type="text" class="form-control limpiar" id="ActividadEdit" >
                                                 </div>
                                             </div>
                                         </div>
