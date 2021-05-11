@@ -14,7 +14,7 @@
             $consultaaprobado = "SELECT count(Estado) FROM Seguimiento WHERE Estado='aprobado'";
             $resultado = $cn->prepare($consultaaprobado);
             $resultado->execute();
-            $data = $resultado->fetch(PDO::FETCH_LAZY);
+            $data = $resultado->fetch(PDO::FETCH_ASSOC);
             echo $data;
             break;
 
