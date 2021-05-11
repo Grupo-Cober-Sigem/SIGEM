@@ -11,7 +11,7 @@
 
     switch($opcion){
         case 1: //Aprobado
-            $consultaaprobado = "SELECT Estado FROM Seguimiento WHERE Estado = 'aprobado'";
+            $consultaaprobado = "SELECT Estado FROM Seguimiento WHERE Estado = 'aprobado' OR 'Aprobado'";
             $resultado = $cn->prepare($consultaaprobado);
             $resultado->execute();
             $data = $resultado->fetch(PDO::FETCH_ASSOC);
