@@ -14,19 +14,24 @@
             $consultaaprobado = "SELECT count(Estado) FROM Seguimiento WHERE Estado='aprobado'";
             $resultado = $cn->prepare($consultaaprobado);
             $resultado->execute();
-            $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
+            $data = $resultado->fetch(PDO::FETCH_ASSOC);
+            echo $data;
             break;
+
         case 2: //Pendiente
             $consultapendiente = "SELECT count(Estado) FROM Seguimiento WHERE Estado='pendiente'";
             $resultado = $cn->prepare($consultapendiente);
             $resultado->execute();
-            $data = $resultado->fetchAll(PDO::FETCH_ASSOC)
+            $data = $resultado->fetch(PDO::FETCH_ASSOC);
+            echo $data;
             break;
+
         case 3: //Rechazar
             $consultarechazado = "SELECT count(Estado) FROM Seguimiento WHERE Estado='rechazado'";
             $resultado = $cn->prepare($consultarechazado);
             $resultado->execute();
-            $data = $resultado->fetchAll(PDO::FETCH_ASSOC)
+            $data = $resultado->fetch(PDO::FETCH_ASSOC);
+            echo $data;
             break;
     };
 
