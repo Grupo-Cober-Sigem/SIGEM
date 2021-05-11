@@ -303,27 +303,26 @@
                                             <div class="col">
                                                 <div class="form-group">
                                                     <label for="unidad">Unidad</label>
-                                                    <select v-model="unidadSeleccionada" class="form-control limpiar" id="unidadEdit" @change="traerSubtemas()" required>
+
+                                                    <select v-model="unidadSeleccionada" class="form-control limpiar" id="unidadEdit" disabled>
                                                       <option value="">Selecciones una unidad</option>  
                                                       <option v-for="(unidad,indice) of unidades" :value="unidad.Cod_Unidad">{{unidad.Nombre_Unidad}}</option>
                                                     </select>
+
                                                 </div>
                                             </div>
                                             <div class="col">
                                                 <div class="form-group">
-                                                    <label for="exampleFormControlSelect1">Tema</label>
-                                                    <select v-model="subtemaSeleccionado" class="form-control limpiar" id="subtemaEdit" required>
-                                                      <option value="">Selecciones un subtema</option>  
-                                                      <option v-for="(subtema,indice) of subtemas" :value="subtema.Cod_Subte">{{subtema.Nombre_Subte}}</option>
-                                                    </select>
+                                                    <label for="subtemaEdit">Tema</label>
+                                                    <input type="text" class="form-control limpiar" disabled id="subtemaEdit">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col">
                                                 <div class="form-group">
-                                                    <label for="exampleFormControlSelect1">Actividad</label>
-                                                    <input type="text" class="form-control limpiar" id="ActividadEdit" required>
+                                                    <label for="ActividadEdit">Actividad</label>
+                                                    <input type="text" class="form-control limpiar" disabled id="ActividadEdit" >
                                                 </div>
                                             </div>
                                         </div>
@@ -474,7 +473,7 @@
                                     <td><button type="button" class="btn btn-warning col-md-12" 
                                             @click="btnEditarSeguimiento(seguimiento.Cod_Segui,seguimiento.Cod_Asignatura,
                                                                         seguimiento.Dia_Segui, seguimiento.Horario_Segui,
-                                                                        seguimiento.Cod_Unidad, seguimiento.Cod_Subte,
+                                                                        seguimiento.Nombre_Unidad, seguimiento.Nombre_Subte,
                                                                         seguimiento.Actividad_Segui, seguimiento.estrategiaTeams,
                                                                         seguimiento.estrategiaElibre, seguimiento.estrategiaOtro,
                                                                         seguimiento.materialGuias, seguimiento.materialWord,
