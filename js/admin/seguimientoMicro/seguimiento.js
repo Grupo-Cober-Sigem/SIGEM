@@ -122,8 +122,10 @@ var appUsuarios = new Vue({
             document.getElementById("diaSeguimientoEdit").value = dia;
             document.getElementById("horaSeguimientoEdit").value = hora;
             document.getElementById("nroEstudiantesEdit").value = participantes;
+            this.traerAsignatura();
             document.getElementById("asignaturaEdit").value = asignatura;
             this.traerUnidades();
+            document.getElementById("unidadEdit").value = unidad;
             this.traerSubtemas();
             document.getElementById("unidadEdit").value = unidad;
             document.getElementById("subtemaEdit").value = subtema;
