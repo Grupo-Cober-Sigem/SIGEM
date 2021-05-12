@@ -1,13 +1,21 @@
 <?php
 include_once '../conexion.php';
 
+
+
 $conexion = new Conexion();
 $cn = $conexion->Conectar();
+
+
 
 //Recepcion de parámetros mediante axios
 $_POST = json_decode(file_get_contents("php://input"), true);
 
+
+
 $opcion = (isset($_POST['opcion'])) ? $_POST['opcion'] : '';
+
+
 
 switch($opcion){
 case 1: //Aprobado
@@ -15,8 +23,7 @@ $consultaaprobado = "SELECT count(Estado) as prueba FROM Seguimiento WHERE Estad
 $resultado = $cn->prepare($consultaaprobado);
 $resultado->execute();
 $data = $resultado->fetch(PDO::FETCH_ASSOC);
-$dato = $data["prueba"];
-echo "Prueba con Ing {$dato}";
+echo "Prueba con Ing {$data}";
 break;
 
 
@@ -26,8 +33,6 @@ $consultapendiente = "SELECT count(Estado) as prueba FROM Seguimiento WHERE Esta
 $resultado = $cn->prepare($consultapendiente);
 $resultado->execute();
 $data = $resultado->fetch(PDO::FETCH_ASSOC);
-        $dato = $data["prueba"];
-echo "Prueba con Ing {$dato}";
 break;
 
 
@@ -37,15 +42,13 @@ $consultarechazado = "SELECT count(Estado) as prueba FROM Seguimiento WHERE Esta
 $resultado = $cn->prepare($consultarechazado);
 $resultado->execute();
 $data = $resultado->fetch(PDO::FETCH_ASSOC);
-        $dato = $data["prueba"];
-echo "Prueba con Ing {$dato}";
 break;
 };
 
 
 
 // Enviar el array final en formato JSON a Javascript
-print json_encode($data);
+print json_encode($data, JSON_UNESCAPED_UNICODE);
 // Cerramos la conexión
 $conexion = NULL;
 ?>
