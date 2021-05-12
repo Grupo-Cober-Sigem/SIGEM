@@ -43,13 +43,14 @@ var appUsuarios = new Vue({
             // Las etiquetas son las que van en el eje X.
             const etiquetas = ["Estado"]
             // Podemos tener varios conjuntos de datos
+            ap = 4;
             axios.post(url,{opcion:1}).then(response=>{
                 this.aprobado = response.data;
                 console.log("Este es el valor de aprobado "+this.aprobado);
                 ap = this.aprobado;
                 console.log(ap);
             });
-            ap = data.aprobado;
+
             const seguimientosaprobados = {
                 label: "Seguimientos Aprobados",
                 data: [ap], // La data es un arreglo que debe tener la misma cantidad de valores que la cantidad de etiquetas
