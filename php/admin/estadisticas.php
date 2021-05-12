@@ -16,8 +16,8 @@
             $resultado->execute();
             $data = $resultado->fetch(PDO::FETCH_ASSOC);
             //$row = mysqli_fetch_array($resultado, MYSQLI_ASSOC);
-            //$dato = $data["prueba"];
-            echo $dato;
+            $dato = $data["prueba"];
+            //echo $dato;
             break;
 
         case 2: //Pendiente
@@ -26,8 +26,8 @@
             $resultado->execute();
             $data = $resultado->fetch(PDO::FETCH_ASSOC);
             //$row = mysqli_fetch_array($resultado, MYSQLI_ASSOC);
-            //$dato = $data["prueba"];
-            echo $dato;
+            $dato = $data["prueba"];
+            //echo $dato;
             break;
 
         case 3: //Rechazar
@@ -36,13 +36,13 @@
             $resultado->execute();
             $data = $resultado->fetch(PDO::FETCH_ASSOC);
             //$row = mysqli_fetch_array($resultado, MYSQLI_ASSOC);
-            //$dato = $data["prueba"];
-            echo $dato;
+            $dato = $data["prueba"];
+            //echo $dato;
             break;
     };
 
     // Enviar el array final en formato JSON a Javascript
-    print json_encode($dato);
+    print($dato);
     // Cerramos la conexión
     $conexion = NULL;
 ?>
