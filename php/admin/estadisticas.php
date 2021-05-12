@@ -12,28 +12,26 @@
     switch($opcion){
         case 1: //Aprobado
             $consultaaprobado = "SELECT count(Estado) as prueba FROM Seguimiento WHERE Estado='aprobado'";
-            $resultado1 = $cn->prepare($consultaaprobado);
-            $resultado1->execute();
+            $resultado = $cn->prepare($consultaaprobado);
+            $resultado->execute();
             $data = $resultado->fetch(PDO::FETCH_ASSOC);
             break;
 
         case 2: //Pendiente
-            $consultapendiente = "SELECT count(Estado) FROM Seguimiento WHERE Estado='pendiente'";
-            $resultado2 = $cn->prepare($consultapendiente);
-            $resultado2->execute();
+            $consultapendiente = "SELECT count(Estado) as prueba FROM Seguimiento WHERE Estado='pendiente'";
+            $resultado = $cn->prepare($consultapendiente);
+            $resultado->execute();
             $data = $resultado->fetch(PDO::FETCH_ASSOC);
             break;
 
         case 3: //Rechazar
-            $consultarechazado = "SELECT count(Estado) FROM Seguimiento WHERE Estado='rehazado'";
-            $resultado3 = $cn->prepare($consultarechazado);
-            $resultado3->execute();
+            $consultarechazado = "SELECT count(Estado) as prueba FROM Seguimiento WHERE Estado='rechazado'";
+            $resultado = $cn->prepare($consultarechazado);
+            $resultado->execute();
+            $data = $resultado->fetch(PDO::FETCH_ASSOC);
             break;
     };
 
-    $final = $resultado1.$resultado2.$resultado3;
-    echo $final;
-    $sentencia = $final->fetch(PDO::FETCH_ASSOC);
     // Enviar el array final en formato JSON a Javascript
     print json_encode($data, JSON_UNESCAPED_UNICODE);
     // Cerramos la conexión

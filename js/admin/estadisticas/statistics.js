@@ -10,6 +10,7 @@ var appUsuarios = new Vue({
         //Procedimientos
         contarAprobados: function(){
             axios.post(url,{opcion:1}).then(response=>{
+                console.log("Este es el valor de aprobado "+response.data);
                 this.aprobado = response.data;
                 console.log("Este es el valor de aprobado "+this.aprobado);
             });
