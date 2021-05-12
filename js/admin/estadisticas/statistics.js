@@ -5,8 +5,8 @@ var appUsuarios = new Vue({
         aprobado: [],
         pendiente: [],
         rechazado: []
-    },
-    methods: {
+    },*/
+    methods: {/*
         //Procedimientos
         contarAprobados: function(){
             axios.post(url,{opcion:1}).then(response=>{
@@ -76,8 +76,8 @@ var appUsuarios = new Vue({
                     },
                 }
             });
-        }/*
-    },
+        }
+    },/*
     */
     created:function(){
         //this.contarAprobados();
