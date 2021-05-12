@@ -45,7 +45,7 @@ var appUsuarios = new Vue({
             // Podemos tener varios conjuntos de datos
             var ap = 4;
             axios.post(url,{opcion:1}).then(response=>{
-                this.aprobado = response.data;
+                this.aprobado = response.dato;
                 console.log("Este es el valor de aprobado "+this.aprobado);
                 ap = this.aprobado;
                 console.log(ap);
