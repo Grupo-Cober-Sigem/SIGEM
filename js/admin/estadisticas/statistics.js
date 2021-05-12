@@ -27,7 +27,7 @@ var appUsuarios = new Vue({
         },
         mostrarGrafica: function(){
 
-            var a = Number(this.aprobado);
+            var a = Number(""+this.aprobado);
             console.log(a);
 
             // Obtener una referencia al elemento canvas del DOM
