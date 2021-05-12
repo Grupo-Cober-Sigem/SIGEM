@@ -14,8 +14,9 @@
             $consultaaprobado = "SELECT count(Estado) as prueba FROM Seguimiento WHERE Estado='aprobado'";
             $resultado = $cn->prepare($consultaaprobado);
             $resultado->execute();
-            $row = mysqli_fetch_array($resultado, MYSQLI_ASSOC);
-            $dato = $row["prueba"];
+            $data = $resultado->fetch(PDO::FETCH_ASSOC);
+            //$row = mysqli_fetch_array($resultado, MYSQLI_ASSOC);
+            $dato = $data["prueba"];
             echo $dato;
             break;
 
@@ -23,8 +24,9 @@
             $consultapendiente = "SELECT count(Estado) as prueba FROM Seguimiento WHERE Estado='pendiente'";
             $resultado = $cn->prepare($consultapendiente);
             $resultado->execute();
-            $row = mysqli_fetch_array($resultado, MYSQLI_ASSOC);
-            $dato = $row["prueba"];
+            $data = $resultado->fetch(PDO::FETCH_ASSOC);
+            //$row = mysqli_fetch_array($resultado, MYSQLI_ASSOC);
+            $dato = $data["prueba"];
             echo $dato;
             break;
 
@@ -32,8 +34,9 @@
             $consultarechazado = "SELECT count(Estado) as prueba FROM Seguimiento WHERE Estado='rechazado'";
             $resultado = $cn->prepare($consultarechazado);
             $resultado->execute();
-            $row = mysqli_fetch_array($resultado, MYSQLI_ASSOC);
-            $dato = $row["prueba"];
+            $data = $resultado->fetch(PDO::FETCH_ASSOC);
+            //$row = mysqli_fetch_array($resultado, MYSQLI_ASSOC);
+            $dato = $data["prueba"];
             echo $dato;
             break;
     };
