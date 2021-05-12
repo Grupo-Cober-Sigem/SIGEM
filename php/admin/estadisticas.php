@@ -15,6 +15,7 @@
             $resultado = $cn->prepare($consultaaprobado);
             $resultado->execute();
             $data = $resultado->fetch(PDO::FETCH_ASSOC);
+            echo $data;
             break;
 
         case 2: //Pendiente
