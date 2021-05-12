@@ -30,6 +30,7 @@ var appUsuarios = new Vue({
 
             var nAprobado = this.aprobado.map(function(num){
                 return num.prueba;
+                console.log("Valor de nAprobado: "+nAprobado);
             });
 
             var nPendiente = this.pendiente.map(function(num){
@@ -39,7 +40,7 @@ var appUsuarios = new Vue({
             var nRechazado = this.rechazado.map(function(num){
                 return num;
             });
-            console.log("VAlor de nAprobado: "+nAprobado);
+
             console.log("Valor de nAprobado")
             // Obtener una referencia al elemento canvas del DOM
             const $grafica = document.querySelector("#grafica");
