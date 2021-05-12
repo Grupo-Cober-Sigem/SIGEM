@@ -252,6 +252,8 @@ var appUsuarios = new Vue({
 
         validarChechboxEdit: function(valor,checkBox){
 
+            console.log("Contenido de VAlor; "+valor);
+            console.log("Contenido de checkBox; "+checkBox);
             if(valor!=null || valor!="")
             {
                 checkBox.checked=true;
