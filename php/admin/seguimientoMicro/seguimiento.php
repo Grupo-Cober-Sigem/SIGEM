@@ -25,7 +25,7 @@
     $word = (isset($_POST['word'])) ? $_POST['word'] : '';
     $diapositiva = (isset($_POST['diapositiva'])) ? $_POST['diapositiva'] : '';
     $video = (isset($_POST['video'])) ? $_POST['video'] : '';
-    $materialOtro = (isset($_POST['materialOtro'])) ? $_POST['guias'] : '';
+    $materialOtro = (isset($_POST['materialOtro'])) ? $_POST['materialOtro'] : '';
     $actSincronica = (isset($_POST['actSincronica'])) ? $_POST['actSincronica'] : '';
     $nroEstudiantes = (isset($_POST['nroEstudiantes'])) ? $_POST['nroEstudiantes'] : '';
     $observaciones = (isset($_POST['observaciones'])) ? $_POST['observaciones'] : '';
