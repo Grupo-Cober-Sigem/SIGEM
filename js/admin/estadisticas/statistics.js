@@ -10,19 +10,19 @@ var appUsuarios = new Vue({
         //Procedimientos
         contarAprobados: function(){
             axios.post(url,{opcion:1}).then(response=>{
-                this.aprobado = response.dato;
+                this.aprobado = response.data;
                 console.log("Este es el valor de aprobado "+this.aprobado);
             });
         },
         contarPendientes: function(){
             axios.post(url,{opcion:2}).then(response=>{
-                this.pendiente = response.dato;
+                this.pendiente = response.data;
                 console.log("Este es el valor de pendiente "+this.pendiente);
             });
         },
         contarRechazados: function(){
             axios.post(url,{opcion:3}).then(response=>{
-                this.rechazado = response.dato;
+                this.rechazado = response.data;
                 console.log("Este es el valor de rechazado "+this.rechazado);
             });
         },
