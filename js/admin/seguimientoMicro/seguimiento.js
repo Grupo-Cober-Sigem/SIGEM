@@ -254,7 +254,8 @@ var appUsuarios = new Vue({
 
             console.log("Contenido de VAlor antes de; "+valor);
             console.log("Contenido de checkBox antes de; "+checkBox.checked);
-            if(valor!=null || valor!="")
+
+            if(valor)
             {
                 checkBox.checked=true;
             }else{
