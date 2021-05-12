@@ -129,10 +129,10 @@ var appUsuarios = new Vue({
             this.validarChechboxEdit(teams,document.getElementById("recursoTeamsEdit"));
             this.validarChechboxEdit(elibre,document.getElementById("recursoElibreEdit"));
             document.getElementById("recursoOtroEdit").value = estrategiaOtro;
-            /*this.validarChechboxEdit(guias,document.getElementById("materialGuiaEdit").checked);
+            this.validarChechboxEdit(guias,document.getElementById("materialGuiaEdit").checked);
             this.validarChechboxEdit(word,document.getElementById("materialInstructivoEdit").checked);
             this.validarChechboxEdit(diapositiva,document.getElementById("materialDiapositivaEdit").checked);
-            this.validarChechboxEdit(videos,document.getElementById("materialVideoEdit").checked);*/
+            this.validarChechboxEdit(videos,document.getElementById("materialVideoEdit").checked);
             document.getElementById("materialOtroEdit").value = materialOtro;
             document.getElementById("actSincronicaEdit").value = sincronico;
             document.getElementById("observacionesEdit").value = observacion;
@@ -143,6 +143,62 @@ var appUsuarios = new Vue({
 
         btnEditarSeguimiento: async function(){
 
+            var codSeguimientoEdit = localStorage.getItem("codSeguimiento");
+            var diaEdit = document.getElementById("diaSeguimientoEdit").value;
+            var horaEdit = document.getElementById("horaSeguimientoEdit").value;
+            var nroEstudiantesEdit = document.getElementById("nroEstudiantesEdit").value;
+            var teamsEdit = this.validarChechbox(document.getElementById("recursoTeamsEdit").checked);
+            var elibreEdit = this.validarChechbox(document.getElementById("recursoElibreEdit").checked);
+            var estrategiaOtroEdit = document.getElementById("recursoOtroEdit").value;
+            var guiasEdit = this.validarChechbox(document.getElementById("materialGuiaEdit").checked);
+            var wordEdit = this.validarChechbox(document.getElementById("materialInstructivoEdit").checked);
+            var diapositivaEdit = this.validarChechbox(document.getElementById("materialDiapositivaEdit").checked);
+            var videosEdit = this.validarChechbox(document.getElementById("materialVideoEdit").checked);
+            var materialOtroEdit = document.getElementById("materialOtroEdit").value;
+            var sincronicoEdit = document.getElementById("actSincronicaEdit").value;
+            var observacionEdit = document.getElementById("observacionesEdit").value;
+            var actividadEdit = document.getElementById("ActividadEdit").value;
+            var soporteEdit = document.getElementById("soporteEdit").value;
+            
+            if(diaEdit=="" || horaEdit=="" || nroEstudiantesEdit=="" || sincronicoEdit=="" || 
+                observacionEdit=="" || actividadEdit=="" || soporteEdit==""){
+
+                Swal.fire({
+                    icon: 'info',
+                    title: 'Datos incompletos',
+                })
+
+                localStorage.removeItem("codSeguimiento");
+            }else{
+
+                axios.post(url,{opcion:6,
+                    codigoSegui: codSeguimientoEdit, 
+                    hora: horaEdit,
+                    dia: diaEdit,
+                    actividad: actividadEdit,
+                    teams: teamsEdit,
+                    elibre: elibreEdit,
+                    estrategiaOtro: estrategiaOtroEdit,
+                    guias: guiasEdit,
+                    word: wordEdit,
+                    diapositiva: diapositivaEdit,
+                    video: videosEdit,
+                    materialOtro: materialOtroEdit,
+                    actSincronica: sincronicoEdit,
+                    nroEstudiantes: nroEstudiantesEdit,
+                    observaciones: observacionEdit,
+                    soporte: soporteEdit
+    
+                }).then(response=>{
+                    localStorage.removeItem("codSeguimiento");
+                    this.listarSeguimientos();
+                    Swal.fire(
+                        '¡Registro exitoso!',
+                        'El registro ha sido agregado.',
+                        'success'
+                      )
+                });
+            };
         },
 
         //Procedimientos
@@ -252,17 +308,12 @@ var appUsuarios = new Vue({
 
         validarChechboxEdit: function(valor,checkBox){
 
-            console.log("Contenido de VAlor antes de; "+valor);
-            console.log("Contenido de checkBox antes de; "+checkBox.checked);
-
             if(valor)
             {
                 checkBox.checked=true;
             }else{
                 checkBox.checked=false;
             }
-            console.log("Contenido de VAlor despues de; "+valor);
-            console.log("Contenido de checkBox despues de; "+checkBox.checked);
         }
     },
 

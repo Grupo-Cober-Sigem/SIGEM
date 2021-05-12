@@ -9,6 +9,7 @@
 
     $opcion = (isset($_POST['opcion'])) ? $_POST['opcion'] : '';
 
+    $codigoSegui = (isset($_POST['codigoSegui'])) ? $_POST['codigoSegui'] : '';
     $asignatura = (isset($_POST['asignatura'])) ? $_POST['asignatura'] : '';
     $codigoUser = (isset($_POST['codigoUser'])) ? $_POST['codigoUser'] : '';
     $nombreAsig = (isset($_POST['nombreAsig'])) ? $_POST['nombreAsig'] : '';
@@ -67,7 +68,7 @@
             break;
 
         case 6: //Editar seguimientos
-            $consulta = "UPDATE Seguimiento SET Cod_Asignatura='$', Cod_User='$', Horario_Segui='$', Dia_Segui='$', Cod_Unidad='$', Cod_Subte='$', Actividad_Segui='$', estrategiaTeams='$', estrategiaElibre='$', estrategiaOtro='$', materialGuias='$', materialWord='$', materialDiapositiva='$', materialVideo='$', materialOtro='$', actSincronica_Segui='$', Participantes_Segui='$', Observa_Segui='$', Soporte='$' WHERE Cod_Segui='$' ";
+            $consulta = "UPDATE Seguimiento SET Horario_Segui='$hora', Dia_Segui='$dia', Actividad_Segui='$actividad', estrategiaTeams='$teams', estrategiaElibre='$elibre', estrategiaOtro='$estrategiaOtro', materialGuias='$guias', materialWord='$word', materialDiapositiva='$diapositiva', materialVideo='$video', materialOtro='$materialOtro', actSincronica_Segui='$actSincronica', Participantes_Segui='$nroEstudiantes', Observa_Segui='$observaciones', Soporte='$soporte' WHERE Cod_Segui='$codigoSegui' ";
             $resultado = $cn->prepare($consulta);
             $resultado->execute(); 
             break;
