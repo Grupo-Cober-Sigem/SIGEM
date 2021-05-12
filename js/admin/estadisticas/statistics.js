@@ -27,6 +27,9 @@ var appUsuarios = new Vue({
         },
         mostrarGrafica: function(){
 
+            var a = parseInt(this.aprobado);
+            console.log(a);
+
             // Obtener una referencia al elemento canvas del DOM
             const $grafica = document.querySelector("#grafica");
             // Las etiquetas son las que van en el eje X.
