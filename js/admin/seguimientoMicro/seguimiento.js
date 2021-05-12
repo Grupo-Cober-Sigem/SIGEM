@@ -126,12 +126,12 @@ var appUsuarios = new Vue({
             document.getElementById("asignaturaEdit").value = asignatura;
             document.getElementById("unidadEdit").value = unidad;
             document.getElementById("subtemaEdit").value = subtema;
-            /*this.validarChechboxEdit(teams,document.getElementById("recursoTeamsEdit"));
-            this.validarChechboxEdit(elibre,document.getElementById("recursoElibreEdit"));*/
+            this.validarChechboxEdit(teams,document.getElementById("recursoTeamsEdit").checked);
+            this.validarChechboxEdit(elibre,document.getElementById("recursoElibreEdit").checked);
             document.getElementById("recursoOtroEdit").value = estrategiaOtro;
-            /*this.validarChechboxEdit(guias,document.getElementById("materialGuiaEdit"));
-            this.validarChechboxEdit(word,document.getElementById("materialInstructivoEdit"));
-            this.validarChechboxEdit(diapositiva,document.getElementById("materialDiapositivaEdit"));
+            /*this.validarChechboxEdit(guias,document.getElementById("materialGuiaEdit").checked);
+            this.validarChechboxEdit(word,document.getElementById("materialInstructivoEdit").checked);
+            this.validarChechboxEdit(diapositiva,document.getElementById("materialDiapositivaEdit").checked);
             this.validarChechboxEdit(videos,document.getElementById("materialVideoEdit").checked);*/
             document.getElementById("materialOtroEdit").value = materialOtro;
             document.getElementById("actSincronicaEdit").value = sincronico;
@@ -256,9 +256,9 @@ var appUsuarios = new Vue({
             console.log("Contenido de checkBox; "+checkBox);
             if(valor!=null || valor!="")
             {
-                checkBox.checked=true;
+                checkBox=true;
             }else{
-                checkBox.checked=false;
+                checkBox=false;
             }
         }
     },
