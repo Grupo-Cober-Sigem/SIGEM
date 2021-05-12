@@ -7,27 +7,6 @@ var appUsuarios = new Vue({
     },
     methods: {
         //Procedimientos
-        contarAprobados: function(){
-            axios.post(url,{opcion:1}).then(response=>{
-                this.aprobado = response.data;
-                console.log("Este es el valor de aprobado "+this.aprobado);
-                ap = this.aprobado;
-                console.log(ap);
-            });
-        },
-        contarPendientes: function(){
-            axios.post(url,{opcion:2}).then(response=>{
-                this.pendiente = response.data;
-                console.log("Este es el valor de pendiente "+this.pendiente);
-            });
-        },
-        contarRechazados: function(){
-            axios.post(url,{opcion:3}).then(response=>{
-                this.rechazado = response.data;
-                console.log("Este es el valor de rechazado "+this.rechazado);
-            });
-        },
-
         mostrarGrafica: function(){
             // Obtener una referencia al elemento canvas del DOM
             const $grafica = document.querySelector("#grafica");
@@ -35,15 +14,15 @@ var appUsuarios = new Vue({
             const etiquetas = ["Estado"]
             // Podemos tener varios conjuntos de datos
 
-            axios.post(url,{opcion:1}).then(response=>{ //Inicia APROBADOS
+            axios.post(url,{opcion:1}).then(response=>{ //Inicia Llamar APROBADOS
                 this.aprobado = response.data;
                 console.log("Este es el valor de aprobado "+this.aprobado);
                 
-                axios.post(url,{opcion:2}).then(response=>{ //Inicia PENDIENTE
+                axios.post(url,{opcion:2}).then(response=>{ //Inicia Llamar PENDIENTE
                     this.pendiente = response.data;
                     console.log("Este es el valor de pendiente "+this.pendiente);
 
-                    axios.post(url,{opcion:3}).then(response=>{ //Inicia RECHAZADO
+                    axios.post(url,{opcion:3}).then(response=>{ //Inicia Llamar RECHAZADO
                         this.rechazado = response.data;
                         console.log("Este es el valor de rechazado "+this.rechazado);
 
@@ -91,15 +70,12 @@ var appUsuarios = new Vue({
                             }
                         });
 
-                    }); //Termina RECHAZADO
-                }); //Termina PENDIENTES
-            }); //Termina APROBADOS
+                    }); //Termina Llamar RECHAZADO
+                }); //Termina Llamar PENDIENTES
+            }); //Termina Llamar APROBADOS
         }
     },
     created:function(){
-        this.contarAprobados();
-        this.contarPendientes();
-        this.contarRechazados();
         this.mostrarGrafica();
-    }/*
-*/});
+    }
+});
