@@ -129,10 +129,10 @@ var appUsuarios = new Vue({
             this.validarChechboxEdit(teams,document.getElementById("recursoTeamsEdit"));
             this.validarChechboxEdit(elibre,document.getElementById("recursoElibreEdit"));
             document.getElementById("recursoOtroEdit").value = estrategiaOtro;
-            this.validarChechboxEdit(guias,document.getElementById("materialGuiaEdit").checked);
-            this.validarChechboxEdit(word,document.getElementById("materialInstructivoEdit").checked);
-            this.validarChechboxEdit(diapositiva,document.getElementById("materialDiapositivaEdit").checked);
-            this.validarChechboxEdit(videos,document.getElementById("materialVideoEdit").checked);
+            this.validarChechboxEdit(guias,document.getElementById("materialGuiaEdit"));
+            this.validarChechboxEdit(word,document.getElementById("materialInstructivoEdit"));
+            this.validarChechboxEdit(diapositiva,document.getElementById("materialDiapositivaEdit"));
+            this.validarChechboxEdit(videos,document.getElementById("materialVideoEdit"));
             document.getElementById("materialOtroEdit").value = materialOtro;
             document.getElementById("actSincronicaEdit").value = sincronico;
             document.getElementById("observacionesEdit").value = observacion;
