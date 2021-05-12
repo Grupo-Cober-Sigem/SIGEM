@@ -25,15 +25,8 @@ var appUsuarios = new Vue({
                 this.rechazado = response.data;
                 console.log("Este es el valor de rechazado "+this.rechazado);
             });
-        }
-    },
-
-    created:function(){
-        this.contarAprobados();
-        this.contarPendientes();
-        this.contarRechazados();
-    }
-
+        },
+        mostrarGrafica: function(){
             // Obtener una referencia al elemento canvas del DOM
             const $grafica = document.querySelector("#grafica");
             // Las etiquetas son las que van en el eje X.
@@ -82,7 +75,12 @@ var appUsuarios = new Vue({
                     },
                 }
             });
+        }
+    },
 
-
-
+    created:function(){
+        this.contarAprobados();
+        this.contarPendientes();
+        this.contarRechazados();
+    }
 });
