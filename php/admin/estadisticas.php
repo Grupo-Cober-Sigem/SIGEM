@@ -25,7 +25,7 @@ switch($opcion){
         $resultado->execute();
         $data = $resultado->fetch(PDO::FETCH_ASSOC);
         $dato = $data["prueba"];
-        echo "Prueba con Ing {$dato}";
+        echo $dato;
         break;
 
     case 3: //Rechazar
@@ -42,7 +42,7 @@ switch($opcion){
 
 
 // Enviar el array final en formato JSON a Javascript
-print json_encode($data, JSON_UNESCAPED_UNICODE);
+print json_encode($dato);
 // Cerramos la conexión
 $conexion = NULL;
 ?>
