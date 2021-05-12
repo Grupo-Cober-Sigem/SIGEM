@@ -126,8 +126,8 @@ var appUsuarios = new Vue({
             document.getElementById("asignaturaEdit").value = asignatura;
             document.getElementById("unidadEdit").value = unidad;
             document.getElementById("subtemaEdit").value = subtema;
-            this.validarChechboxEdit(teams,document.getElementById("recursoTeamsEdit").checked);
-            this.validarChechboxEdit(elibre,document.getElementById("recursoElibreEdit").checked);
+            this.validarChechboxEdit(teams,document.getElementById("recursoTeamsEdit"));
+            this.validarChechboxEdit(elibre,document.getElementById("recursoElibreEdit"));
             document.getElementById("recursoOtroEdit").value = estrategiaOtro;
             /*this.validarChechboxEdit(guias,document.getElementById("materialGuiaEdit").checked);
             this.validarChechboxEdit(word,document.getElementById("materialInstructivoEdit").checked);
@@ -252,14 +252,16 @@ var appUsuarios = new Vue({
 
         validarChechboxEdit: function(valor,checkBox){
 
-            console.log("Contenido de VAlor; "+valor);
-            console.log("Contenido de checkBox; "+checkBox);
+            console.log("Contenido de VAlor antes de; "+valor);
+            console.log("Contenido de checkBox antes de; "+checkBox.checked);
             if(valor!=null || valor!="")
             {
-                checkBox=true;
+                checkBox.checked=true;
             }else{
-                checkBox=false;
+                checkBox.checked=false;
             }
+            console.log("Contenido de VAlor despues de; "+valor);
+            console.log("Contenido de checkBox despues de; "+checkBox.checked);
         }
     },
 
