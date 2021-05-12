@@ -49,9 +49,8 @@ var appUsuarios = new Vue({
                 console.log("Este es el valor de aprobado "+this.aprobado);
                 ap = this.aprobado;
                 console.log(ap);
-            });
 
-            const seguimientosaprobados = {
+                const seguimientosaprobados = {
                 label: "Seguimientos Aprobados",
                 data: [ap], // La data es un arreglo que debe tener la misma cantidad de valores que la cantidad de etiquetas
                 backgroundColor: 'rgba(0, 143, 57, 0.2)', // Color de fondo
@@ -94,6 +93,9 @@ var appUsuarios = new Vue({
                     },
                 }
             });
+            });
+
+
         }
     },/*
     */
