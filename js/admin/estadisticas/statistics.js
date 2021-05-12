@@ -1,9 +1,5 @@
 var url = "../../../php/admin/estadisticas.php";
 
-var ap = 5;
-var pe = 0;
-var re = 0;
-
 var appUsuarios = new Vue({
     data: {
         aprobado: [],
@@ -30,8 +26,7 @@ var appUsuarios = new Vue({
 
             console.log(this.aprobado);
             var apr = Number(this.aprobado);
-            //console.log(a);
-
+            console.log(apr);
 
             // Obtener una referencia al elemento canvas del DOM
             const $grafica = document.querySelector("#grafica");
