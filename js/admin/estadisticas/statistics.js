@@ -49,6 +49,7 @@ var appUsuarios = new Vue({
                 ap = this.aprobado;
                 console.log(ap);
             });
+            ap = 4;
             const seguimientosaprobados = {
                 label: "Seguimientos Aprobados",
                 data: [ap], // La data es un arreglo que debe tener la misma cantidad de valores que la cantidad de etiquetas
