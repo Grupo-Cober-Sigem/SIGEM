@@ -26,7 +26,7 @@ var appUsuarios = new Vue({
                 console.log("Este es el valor de rechazado "+this.rechazado);
             });
         }
-    };
+    },
 
     created:function(){
         this.contarAprobados();
