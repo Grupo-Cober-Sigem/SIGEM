@@ -1,6 +1,6 @@
 var url = "../../../php/admin/estadisticas.php";
 
-
+var ap = 5;
 var pe = 0;
 var re = 0;
 
@@ -14,7 +14,7 @@ var appUsuarios = new Vue({
         //Procedimientos
         contarAprobados: function(){
             axios.post(url,{opcion:1}).then(response=>{
-                this.aprobado = response.dato;
+                this.aprobado = response.data;
                 console.log("Este es el valor de aprobado "+this.aprobado);
                 ap = this.aprobado;
                 console.log(ap);
@@ -22,13 +22,13 @@ var appUsuarios = new Vue({
         },
         contarPendientes: function(){
             axios.post(url,{opcion:2}).then(response=>{
-                this.pendiente = response.dato;
+                this.pendiente = response.data;
                 console.log("Este es el valor de pendiente "+this.pendiente);
             });
         },
         contarRechazados: function(){
             axios.post(url,{opcion:3}).then(response=>{
-                this.rechazado = response.dato;
+                this.rechazado = response.data;
                 console.log("Este es el valor de rechazado "+this.rechazado);
             });
         },
@@ -43,9 +43,9 @@ var appUsuarios = new Vue({
             // Las etiquetas son las que van en el eje X.
             const etiquetas = ["Estado"]
             // Podemos tener varios conjuntos de datos
-            var ap = 4;
+            ap = 4;
             axios.post(url,{opcion:1}).then(response=>{
-                this.aprobado = response.dato;
+                this.aprobado = response.data;
                 console.log("Este es el valor de aprobado "+this.aprobado);
                 ap = this.aprobado;
                 console.log(ap);
