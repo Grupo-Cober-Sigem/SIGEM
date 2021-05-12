@@ -10,7 +10,6 @@ var appUsuarios = new Vue({
         pendiente: [],
         rechazado: []
     },
-    ap,
     methods: {
         //Procedimientos
         contarAprobados: function(){
@@ -97,3 +96,4 @@ var appUsuarios = new Vue({
         this.mostrarGrafica();
     }/*
 */});
+this.mostrarGrafica();
