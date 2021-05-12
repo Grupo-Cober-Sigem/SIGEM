@@ -42,7 +42,7 @@
     };
 
     // Enviar el array final en formato JSON a Javascript
-    print json_encode($data);
+    //print json_encode($data);
     // Cerramos la conexión
     $conexion = NULL;
 ?>
