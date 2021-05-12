@@ -1,6 +1,6 @@
-/*var url = "../../../php/admin/estadisticas.php";
+var url = "../../../php/admin/estadisticas.php";
 var appUsuarios = new Vue({
-    el: "#seccionEstadisticas",
+    /*el: "#seccionEstadisticas",
     data: {
         aprobado: [],
         pendiente: [],
@@ -84,4 +84,4 @@ var appUsuarios = new Vue({
         this.contarPendientes();
         this.contarRechazados();
     }
-});*/
+*/});
