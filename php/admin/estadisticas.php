@@ -16,7 +16,7 @@
             $resultado->execute();
             $row = mysqli_fetch_array($resultado, MYSQLI_ASSOC);
             $dato = $row["prueba"];
-            echo "Prueba1 con Ing {$dato}";
+            echo $dato;
             break;
 
         case 2: //Pendiente
@@ -25,7 +25,7 @@
             $resultado->execute();
             $row = mysqli_fetch_array($resultado, MYSQLI_ASSOC);
             $dato = $row["prueba"];
-            echo "Prueba2 con Ing {$dato}";
+            echo $dato;
             break;
 
         case 3: //Rechazar
@@ -34,7 +34,7 @@
             $resultado->execute();
             $row = mysqli_fetch_array($resultado, MYSQLI_ASSOC);
             $dato = $row["prueba"];
-            echo "Prueba3 con Ing {$dato}";
+            echo $dato;
             break;
     };
 
