@@ -75,7 +75,7 @@ var appUsuarios = new Vue({
                         }],
                     },
                 }
-            }/*);
+            });/*
         }
     },
 
