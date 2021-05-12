@@ -16,7 +16,7 @@
             $resultado->execute();
             $data = $resultado->fetch(PDO::FETCH_ASSOC);
             //$row = mysqli_fetch_array($resultado, MYSQLI_ASSOC);
-            $dato = $data["prueba"];
+            //$dato = $data["prueba"];
             echo $dato;
             break;
 
@@ -26,7 +26,7 @@
             $resultado->execute();
             $data = $resultado->fetch(PDO::FETCH_ASSOC);
             //$row = mysqli_fetch_array($resultado, MYSQLI_ASSOC);
-            $dato = $data["prueba"];
+            //$dato = $data["prueba"];
             echo $dato;
             break;
 
@@ -36,7 +36,7 @@
             $resultado->execute();
             $data = $resultado->fetch(PDO::FETCH_ASSOC);
             //$row = mysqli_fetch_array($resultado, MYSQLI_ASSOC);
-            $dato = $data["prueba"];
+            //$dato = $data["prueba"];
             echo $dato;
             break;
     };
