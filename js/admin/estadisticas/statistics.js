@@ -28,6 +28,11 @@ var appUsuarios = new Vue({
                 console.log("Este es el valor de rechazado "+this.rechazado);
             }),
 
+            console.log(this.aprobado);
+            var apr = Number(this.aprobado);
+            //console.log(a);
+
+
             // Obtener una referencia al elemento canvas del DOM
             const $grafica = document.querySelector("#grafica");
             // Las etiquetas son las que van en el eje X.
@@ -35,7 +40,7 @@ var appUsuarios = new Vue({
             // Podemos tener varios conjuntos de datos
             const seguimientosaprobados = {
                 label: "Seguimientos Aprobados",
-                data: [this.aprobado], // La data es un arreglo que debe tener la misma cantidad de valores que la cantidad de etiquetas
+                data: [apr], // La data es un arreglo que debe tener la misma cantidad de valores que la cantidad de etiquetas
                 backgroundColor: 'rgba(0, 143, 57, 0.2)', // Color de fondo
                 borderColor: 'rgba(0, 143, 57, 1)', // Color del borde
                 borderWidth: 1,// Ancho del borde
