@@ -118,7 +118,8 @@ var appUsuarios = new Vue({
                                             materialOtro, sincronico, participantes,
                                             observacion, soporte
                                             ){
-        
+                                                
+            this.limpiarModal();
             document.getElementById("diaSeguimientoEdit").value = dia;
             document.getElementById("horaSeguimientoEdit").value = hora;
             document.getElementById("nroEstudiantesEdit").value = participantes;
@@ -137,7 +138,8 @@ var appUsuarios = new Vue({
             document.getElementById("observacionesEdit").value = observacion;
             document.getElementById("ActividadEdit").value = actividad;
             document.getElementById("soporteEdit").value = soporte;
-        },
+            localStorage.setItem("codSeguimiento",cod_seguimiento);
+        }, 
 
         btnEditarSeguimiento: async function(){
 
