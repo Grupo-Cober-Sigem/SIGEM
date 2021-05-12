@@ -12,20 +12,20 @@ var appUsuarios = new Vue({
             axios.post(url,{opcion:1}).then(response=>{
                 this.aprobado = response.data;
                 console.log("Este es el valor de aprobado "+this.aprobado);
-            }),
+            },
 
             axios.post(url,{opcion:2}).then(response=>{
                 this.pendiente = response.data;
                 console.log("Este es el valor de pendiente "+this.pendiente);
-            }),
+            },
 
             axios.post(url,{opcion:3}).then(response=>{
                 this.rechazado = response.data;
                 console.log("Este es el valor de rechazado "+this.rechazado);
-            }),
+            },
 
             console.log(this.aprobado);
-            var apr = Number(this.aprobado);
+            var apr = Number('this.aprobado');
             console.log(apr);
 
             // Obtener una referencia al elemento canvas del DOM
