@@ -1,4 +1,4 @@
-var url = "../../../php/admin/estadisticas.php";
+/*var url = "../../../php/admin/estadisticas.php";
 var appUsuarios = new Vue({
     el: "#seccionEstadisticas",
     data: {
@@ -27,6 +27,7 @@ var appUsuarios = new Vue({
             });
         },
         mostrarGrafica: function(){
+        */
             // Obtener una referencia al elemento canvas del DOM
             const $grafica = document.querySelector("#grafica");
             // Las etiquetas son las que van en el eje X.
@@ -74,7 +75,7 @@ var appUsuarios = new Vue({
                         }],
                     },
                 }
-            });
+            }/*);
         }
     },
 
@@ -83,4 +84,4 @@ var appUsuarios = new Vue({
         this.contarPendientes();
         this.contarRechazados();
     }
-});
+});*/
