@@ -2,9 +2,9 @@ var url = "../../../php/admin/estadisticas.php";
 var appUsuarios = new Vue({
     el: "#seccionEstadisticas",
     data: {
-        aprobado: 0,
-        pendiente: 0,
-        rechazado: 0
+        aprobado: [],
+        pendiente: [],
+        rechazado: []
     },
     methods: {
         //Procedimientos
