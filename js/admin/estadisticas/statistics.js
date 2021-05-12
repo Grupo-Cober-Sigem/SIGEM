@@ -82,9 +82,10 @@ var appUsuarios = new Vue({
     },
 
     created:function(){
+        this.MostrarGrafica();
         this.contarAprobados();
         this.contarPendientes();
         this.contarRechazados();
-        this.MostrarGrafica();
+
     }
 });
