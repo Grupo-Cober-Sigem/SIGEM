@@ -12,7 +12,7 @@ var appUsuarios = new Vue({
     },
     methods: {
         //Procedimientos
-        contarAprobados: function(){
+        mostrarGrafica: function(){
             axios.post(url,{opcion:1}).then(response=>{
                 this.aprobado = response.data;
                 console.log("Este es el valor de aprobado "+this.aprobado);
@@ -84,9 +84,6 @@ var appUsuarios = new Vue({
     },/*
     */
     created:function(){
-        this.contarAprobados();
-        this.contarPendientes();
-        this.contarRechazados();
         this.mostrarGrafica();
     }/*
 */});
