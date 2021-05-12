@@ -413,7 +413,7 @@
                                     </form>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" @click="limpiarModal" data-dismiss="modal">Cerrar</button>
+                                    <button type="button" class="btn btn-secondary" @click="limpiarModal()" data-dismiss="modal">Cerrar</button>
                                     <button type="button" class="btn btn-success" @click="btnEditarSeguimiento()" data-dismiss="modal">Editar</button>
                                 </div>
                             </div>
@@ -466,7 +466,7 @@
                                     <td><small>{{seguimiento.Estado}}</small></td>
                                     <td><small>{{seguimiento.jefeObserva_Segui}}</small></td>
                                     <td><button type="button" class="btn btn-warning col-md-12" 
-                                            @click="btnEditarSeguimiento(seguimiento.Cod_Segui,seguimiento.Cod_Asignatura,
+                                            @click="btnCargarSeguimiento(seguimiento.Cod_Segui,seguimiento.Cod_Asignatura,
                                                                         seguimiento.Dia_Segui, seguimiento.Horario_Segui,
                                                                         seguimiento.Nombre_Unidad, seguimiento.Nombre_Subte,
                                                                         seguimiento.Actividad_Segui, seguimiento.estrategiaTeams,

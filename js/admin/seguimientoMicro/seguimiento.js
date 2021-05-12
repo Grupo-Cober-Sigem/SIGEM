@@ -111,7 +111,7 @@ var appUsuarios = new Vue({
             this.limpiarModal();
         },
 
-        btnEditarSeguimiento: async function (cod_seguimiento, asignatura, dia,
+        btnCargarSeguimiento: async function (cod_seguimiento, asignatura, dia,
                                             hora, unidad, subtema, actividad,
                                             teams, elibre, estrategiaOtro,
                                             guias, word, diapositiva, videos,
@@ -137,8 +137,10 @@ var appUsuarios = new Vue({
             document.getElementById("observacionesEdit").value = observacion;
             document.getElementById("ActividadEdit").value = actividad;
             document.getElementById("soporteEdit").value = soporte;
+        },
 
-            
+        btnEditarSeguimiento: async function(){
+
         },
 
         //Procedimientos

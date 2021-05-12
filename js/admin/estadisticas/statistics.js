@@ -29,8 +29,7 @@ var appUsuarios = new Vue({
         MostrarGrafica: function(){
 
             var nAprobado = this.aprobado.map(function(num){
-                return num.prueba;
-                console.log("Valor de nAprobado: "+nAprobado);
+                console.log("Valor de num "+num);
             });
 
             var nPendiente = this.pendiente.map(function(num){
