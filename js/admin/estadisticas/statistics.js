@@ -34,7 +34,7 @@ var appUsuarios = new Vue({
             // Podemos tener varios conjuntos de datos
             const seguimientosaprobados = {
                 label: "Seguimientos Aprobados",
-                data: [2], // La data es un arreglo que debe tener la misma cantidad de valores que la cantidad de etiquetas
+                data: [this.aprobado], // La data es un arreglo que debe tener la misma cantidad de valores que la cantidad de etiquetas
                 backgroundColor: 'rgba(0, 143, 57, 0.2)', // Color de fondo
                 borderColor: 'rgba(0, 143, 57, 1)', // Color del borde
                 borderWidth: 1,// Ancho del borde
