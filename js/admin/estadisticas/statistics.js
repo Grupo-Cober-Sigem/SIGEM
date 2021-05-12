@@ -1,4 +1,9 @@
 var url = "../../../php/admin/estadisticas.php";
+
+var ap = 5;
+var pe = 0;
+var re = 0;
+
 var appUsuarios = new Vue({
     data: {
         aprobado: [],
@@ -11,6 +16,8 @@ var appUsuarios = new Vue({
             axios.post(url,{opcion:1}).then(response=>{
                 this.aprobado = response.data;
                 console.log("Este es el valor de aprobado "+this.aprobado);
+                ap = this.aprobado;
+                console.log(ap);
             });
         },
         contarPendientes: function(){
@@ -38,7 +45,7 @@ var appUsuarios = new Vue({
             // Podemos tener varios conjuntos de datos
             const seguimientosaprobados = {
                 label: "Seguimientos Aprobados",
-                data: [3], // La data es un arreglo que debe tener la misma cantidad de valores que la cantidad de etiquetas
+                data: [ap], // La data es un arreglo que debe tener la misma cantidad de valores que la cantidad de etiquetas
                 backgroundColor: 'rgba(0, 143, 57, 0.2)', // Color de fondo
                 borderColor: 'rgba(0, 143, 57, 1)', // Color del borde
                 borderWidth: 1,// Ancho del borde
