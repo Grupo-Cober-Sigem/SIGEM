@@ -5,7 +5,7 @@ var appUsuarios = new Vue({
         pendiente: [],
         rechazado: []
     },
-    methods: {/*
+    methods: {
         //Procedimientos
         contarAprobados: function(){
             axios.post(url,{opcion:1}).then(response=>{
@@ -25,7 +25,7 @@ var appUsuarios = new Vue({
                 console.log("Este es el valor de rechazado "+this.rechazado);
             });
         },
-        */mostrarGrafica: function(){
+        mostrarGrafica: function(){
 
             // Obtener una referencia al elemento canvas del DOM
             const $grafica = document.querySelector("#grafica");
@@ -79,9 +79,9 @@ var appUsuarios = new Vue({
     },/*
     */
     created:function(){
-        //this.contarAprobados();
-        //this.contarPendientes();
-        //this.contarRechazados();
-    this.mostrarGrafica();
+        this.contarAprobados();
+        this.contarPendientes();
+        this.contarRechazados();
+        this.mostrarGrafica();
     }/*
 */});
