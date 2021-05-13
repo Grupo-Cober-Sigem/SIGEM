@@ -34,7 +34,7 @@
 
     switch($opcion){
         case 1: //Listar
-            $consulta = "SELECT S.Cod_Segui, S.Cod_Asignatura, S.Cod_User, S.Horario_Segui, S.Dia_Segui, S.Cod_Unidad, U.Nombre_Unidad, S.Cod_Subte, T.Nombre_Subte, S.Actividad_Segui, S.estrategiaTeams, S.estrategiaElibre, S.estrategiaOtro, S.materialGuias, S.materialWord, S.materialDiapositiva, S.materialVideo, S.materialOtro, S.actSincronica_Segui, S.Participantes_Segui, S.Observa_Segui, S.Soporte, S.Estado, S.jefeObserva_Segui FROM Seguimiento S INNER JOIN Unidades U ON S.Cod_Unidad = U.Cod_Unidad INNER JOIN Subtemas T ON S.Cod_Subte = T.Cod_Subte";
+            $consulta = "SELECT S.Cod_Segui, S.Cod_Asignatura, S.Cod_User, S.Horario_Segui, S.Dia_Segui, S.Cod_Unidad, U.Nombre_Unidad, S.Cod_Subte, T.Nombre_Subte, S.Actividad_Segui, S.estrategiaTeams, S.estrategiaElibre, S.estrategiaOtro, S.materialGuias, S.materialWord, S.materialDiapositiva, S.materialVideo, S.materialOtro, S.actSincronica_Segui, S.Participantes_Segui, S.Observa_Segui, S.Soporte, S.Estado, S.jefeObserva_Segui FROM Seguimiento S INNER JOIN Unidades U ON S.Cod_Unidad = U.Cod_Unidad INNER JOIN Subtemas T ON S.Cod_Subte = T.Cod_Subte WHERE S.Estado ='aprobado' OR S.Estado='Aprobado'";
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
@@ -62,7 +62,7 @@
             break;
 
         case 5: //Registrar seguimientos
-            $consulta = "INSERT INTO Seguimiento (Cod_Segui, Cod_Asignatura, Cod_User, Nombre_Asig, Horario_Segui, Dia_Segui, Cod_Unidad, Cod_Subte, Actividad_Segui, estrategiaTeams, estrategiaElibre, estrategiaOtro, materialGuias, materialWord, materialDiapositiva, materialVideo, materialOtro, actSincronica_Segui, Participantes_Segui, Observa_Segui, Soporte, Estado, jefeObserva_Segui) VALUES (null, '$asignatura', '$codigoUser', '$nombreAsig', '$hora', '$dia', '$unidad', '$subtema', '$actividad', '$teams', '$elibre', '$estrategiaOtro', '$guias', '$word', '$diapositiva', '$video', '$materialOtro', '$actSincronica', '$nroEstudiantes', '$observaciones', '$soporte', 'pendiente', null)";
+            $consulta = "INSERT INTO Seguimiento (Cod_Segui, Cod_Asignatura, Cod_User, Nombre_Asig, Horario_Segui, Dia_Segui, Cod_Unidad, Cod_Subte, Actividad_Segui, estrategiaTeams, estrategiaElibre, estrategiaOtro, materialGuias, materialWord, materialDiapositiva, materialVideo, materialOtro, actSincronica_Segui, Participantes_Segui, Observa_Segui, Soporte, Estado, jefeObserva_Segui) VALUES (null, '$asignatura', '$codigoUser', '$nombreAsig', '$hora', '$dia', '$unidad', '$subtema', '$actividad', '$teams', '$elibre', '$estrategiaOtro', '$guias', '$word', '$diapositiva', '$video', '$materialOtro', '$actSincronica', '$nroEstudiantes', '$observaciones', '$soporte', 'Pendiente', null)";
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             break;
