@@ -37,34 +37,18 @@ var appUsuarios = new Vue({
                 })
             }else{
 
-                Swal.fire({
-                    title: '¿Está seguro?',
-                    text: "La observación se realizará, y el registro quedará rechazado inmediatamente.",
-                    icon: 'warning',
-                    showCancelButton: true,
-                    confirmButtonColor: '#1cc88a',
-                    cancelButtonColor: '#CB3234',
-                    confirmButtonText: 'Aceptar',
-                    cancelButtonColor: 'Cancelar'
+                axios.post(url,{opcion:3,observacionJefe:observacionJefe,codigoSegui:codSeguimiento}).then(response=>{
 
-                }).then((result) => {
-                    if (result.isConfirmed) {
-
-                        axios.post(url,{opcion:3,observacionJefe:observacionJefe,codigoSegui:codSeguimiento}).then(response=>{
-
-                            localStorage.removeItem("codSeguimiento");
-                            document.getElementById("observacionModal").style.display="none";
-                            this.listarSeguimientos();
-                            this.limpiarModal();
-
-                            Swal.fire(
-                                '¡Registro exitoso!',
-                                'El registro ha sido rechazado con éxito.',
-                                'success'
-                              )
-                        });
-                    }
-                })
+                    localStorage.removeItem("codSeguimiento");
+                    this.limpiarModal();
+                    this.listarSeguimientos();
+                    
+                    Swal.fire(
+                        '¡Registro exitoso!',
+                        'El registro ha sido rechazado con éxito.',
+                        'success'
+                      )
+                });
             }
         },
 
