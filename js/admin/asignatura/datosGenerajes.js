@@ -34,16 +34,17 @@ var appUsuarios = new Vue({
                 Swal.fire({
                     icon: 'info',
                     title: 'Datos incompletos',
+                    text: 'Por favor complete todos los campos del criterio de evaluación'
                 });
             }else{
 
                 this.criterios.push({
 
-                    concepto: document.getElementById("criteConcepto").value,
-                    tipo: document.getElementById("criteTipo").value,
-                    instrumento: document.getElementById("criteInstrumento").value,
-                    valor: document.getElementById("critePorcentaje").value,
-                    fecha: document.getElementById("criteFecha").value
+                    concepto: concepto,
+                    tipo: tipo,
+                    instrumento: instrumento,
+                    valor: valor,
+                    fecha: fecha
                 });
     
                 document.getElementById("criteConcepto").value="";
@@ -55,9 +56,37 @@ var appUsuarios = new Vue({
         },
 
         btnQuitarCriterio: async function(criterio){
-
             this.criterios.splice(criterio,1);
-        }
+        },
+
+        btnAgregarBiblioBasica: async function(){
+            var sigTopografica = document.getElementById("basicaSignatura").value;
+            var basicaBiblio = document.getElementById("basicaBiblio").value;
+
+            if(sigTopografica=="" || basicaBiblio==""){
+
+                Swal.fire({
+                    icon: 'info',
+                    title: 'Datos incompletos',
+                    text: 'Por favor complete todos los campos del registro de bibliografia'
+                });
+            }else{
+
+                this.biblioBasica.push({
+                    sigTopografica: sigTopografica,
+                    basicaBiblio: basicaBiblio
+                });
+
+                document.getElementById("basicaSignatura").value="";
+                document.getElementById("basicaBiblio").value="";
+            }
+        },
+
+        btnQuitarBiblioBasica: async function(basica){
+            this.biblioBasica.splice(basica,1);
+        },
+
+        
     },
 
     
