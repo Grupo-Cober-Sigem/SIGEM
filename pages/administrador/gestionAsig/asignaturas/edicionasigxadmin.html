@@ -481,7 +481,7 @@
                                                         </thead>
                                                         <tbody>
                                                           <tr v-for="(seriada,indice) of biblioSeriadas">
-                                                            <td>{{seriada.sigTopografica}}}</td>
+                                                            <td>{{seriada.sigTopografica}}</td>
                                                             <td>{{seriada.seriadaBiblio}}</td>
                                                             <td><button type="button" class="btn btn-danger col-md-12" @click="btnQuitarBiblioBasica(indice)"><i class="fa fa-trash"></i></button></td>
                                                           </tr>
@@ -494,12 +494,12 @@
                                                 <div class="row">
                                                     <div class="col">
                                                         <div class="form-group">
-                                                            <label for="exampleFormControlTextarea1">Titulo de la página web y enlace web para acceder a él</label>
-                                                            <textarea class="form-control" id="bbswtitulo" rows="3"></textarea>
+                                                            <label for="bbswtitulo">Titulo de la página web y enlace web para acceder a él</label>
+                                                            <textarea class="form-control" id="webBiblio" rows="3"></textarea>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <button type="button" class="btn btn-warning col-md-12">Agregar</button>
+                                                <button type="button" class="btn btn-warning col-md-12" @click="btnAgregarBiblioWeb()">Agregar</button>
                                                 <!-- Tabla de resultados de Bibliografía básica de sitios web -->
                                                 <div class="table-responsive">
                                                     <table class="table table-hover table-bordered">
@@ -510,9 +510,9 @@
                                                           </tr>
                                                         </thead>
                                                         <tbody>
-                                                          <tr>
-                                                            <td>CAIRÓ, O.  Metodología de la programación.  Algoritmos, Diagramas de Flujo y Programas.  Tomo 1 y Tomo 2.  Editorial Alfaomega, 1995.</td>
-                                                            <td><button type="button" class="btn btn-danger col-md-12"><i class="fa fa-trash"></i></button></td>
+                                                          <tr v-for="(web,indice) for biblioWeb">
+                                                            <td>{{web.webBiblio}}</td>
+                                                            <td><button type="button" class="btn btn-danger col-md-12" @click="btnQuitarBiblioWeb(indice)"><i class="fa fa-trash"></i></button></td>
                                                           </tr>
                                                         </tbody>
                                                     </table>
@@ -523,8 +523,8 @@
                                                 <div class="row">
                                                     <div class="col">
                                                         <div class="form-group">
-                                                            <label for="exampleFormControlTextarea1">Titulo de la página web y enlace web para acceder a él</label>
-                                                            <textarea class="form-control" id="bsltitulo" rows="3"></textarea>
+                                                            <label for="segundaLenguaBiblio">Titulo de la página web y enlace web para acceder a él</label>
+                                                            <textarea class="form-control" id="segundaLenguaBiblio" rows="3"></textarea>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -539,8 +539,8 @@
                                                           </tr>
                                                         </thead>
                                                         <tbody>
-                                                          <tr>
-                                                            <td>CAIRÓ, O.  Metodología de la programación.  Algoritmos, Diagramas de Flujo y Programas.  Tomo 1 y Tomo 2.  Editorial Alfaomega, 1995.</td>
+                                                          <tr v-for="()">
+                                                            <td>{{}}</td>
                                                             <td><button type="button" class="btn btn-danger col-md-12"><i class="fa fa-trash"></i></button></td>
                                                           </tr>
                                                         </tbody>

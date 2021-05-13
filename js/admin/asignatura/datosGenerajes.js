@@ -113,6 +113,29 @@ var appUsuarios = new Vue({
             this.biblioSeriadas.splice(seriada,1);
         },
 
+        btnAgregarBiblioWeb: async function(){
+            var webBiblio = document.getElementById("webBiblio").value;
+
+            if(webBiblio==""){
+
+                Swal.fire({
+                    icon: 'info',
+                    title: 'Datos incompletos',
+                    text: 'Por favor complete todos los campos del registro de bibliografia'
+                });
+            }else{
+
+                this.biblioWeb.push({
+                    webBiblio: webBiblio
+                });
+
+                document.getElementById("webBiblio").value="";
+            }
+        },
+
+        btnQuitarBiblioWeb: async function(web){
+            this.biblioWeb.splice(web,1);
+        },
     },
 
     
