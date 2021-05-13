@@ -40,7 +40,8 @@ var appUsuarios = new Vue({
         },
 
         btnQuitarCriterio: async function(criterio){
-            this.criterios.splice(this.criterios.indexOf(criterio),1);
+            
+            this.criterios.splice(criterio,1);
         }
     },
 
