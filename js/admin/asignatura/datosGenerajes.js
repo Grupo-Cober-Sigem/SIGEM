@@ -23,24 +23,39 @@ var appUsuarios = new Vue({
     },
     methods: {
         btnAgregarCriterio: async function(){
-            this.criterios.push({
+            var concepto= document.getElementById("criteConcepto").value;
+            var tipo= document.getElementById("criteTipo").value;
+            var instrumento= document.getElementById("criteInstrumento").value;
+            var valor= document.getElementById("critePorcentaje").value;
+            var fecha= document.getElementById("criteFecha").value;
 
-                concepto: document.getElementById("criteConcepto").value,
-                tipo: document.getElementById("criteTipo").value,
-                instrumento: document.getElementById("criteInstrumento").value,
-                valor: document.getElementById("critePorcentaje").value,
-                fecha: document.getElementById("criteFecha").value
-            });
+            if(concepto=="" || tipo=="" || instrumento=="" || valor=="" || fecha==""){
 
-            document.getElementById("criteConcepto").value="";
-            document.getElementById("criteTipo").value="";
-            document.getElementById("criteInstrumento").value="";
-            document.getElementById("critePorcentaje").value="";
-            document.getElementById("criteFecha").value="";
+                Swal.fire({
+                    icon: 'info',
+                    title: 'Datos incompletos',
+                });
+            }else{
+
+                this.criterios.push({
+
+                    concepto: document.getElementById("criteConcepto").value,
+                    tipo: document.getElementById("criteTipo").value,
+                    instrumento: document.getElementById("criteInstrumento").value,
+                    valor: document.getElementById("critePorcentaje").value,
+                    fecha: document.getElementById("criteFecha").value
+                });
+    
+                document.getElementById("criteConcepto").value="";
+                document.getElementById("criteTipo").value="";
+                document.getElementById("criteInstrumento").value="";
+                document.getElementById("critePorcentaje").value="";
+                document.getElementById("criteFecha").value="";
+            }
         },
 
         btnQuitarCriterio: async function(criterio){
-            
+
             this.criterios.splice(criterio,1);
         }
     },
