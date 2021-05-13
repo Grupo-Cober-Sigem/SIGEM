@@ -34,7 +34,7 @@
 
     switch($opcion){
         case 1: //Listar
-            $consulta = "SELECT S.Cod_Segui, S.Cod_Asignatura, S.Cod_User, S.Horario_Segui, S.Dia_Segui, S.Cod_Unidad, U.Nombre_Unidad, S.Cod_Subte, T.Nombre_Subte, S.Actividad_Segui, S.estrategiaTeams, S.estrategiaElibre, S.estrategiaOtro, S.materialGuias, S.materialWord, S.materialDiapositiva, S.materialVideo, S.materialOtro, S.actSincronica_Segui, S.Participantes_Segui, S.Observa_Segui, S.Soporte, S.Estado, S.jefeObserva_Segui FROM Seguimiento S INNER JOIN Unidades U ON S.Cod_Unidad = U.Cod_Unidad INNER JOIN Subtemas T ON S.Cod_Subte = T.Cod_Subte WHERE S.Estado ='Rechazado' AND S.Estado='Pendiente'";
+            $consulta = "SELECT S.Cod_Segui, S.Cod_Asignatura, S.Cod_User, S.Horario_Segui, S.Dia_Segui, S.Cod_Unidad, U.Nombre_Unidad, S.Cod_Subte, T.Nombre_Subte, S.Actividad_Segui, S.estrategiaTeams, S.estrategiaElibre, S.estrategiaOtro, S.materialGuias, S.materialWord, S.materialDiapositiva, S.materialVideo, S.materialOtro, S.actSincronica_Segui, S.Participantes_Segui, S.Observa_Segui, S.Soporte, S.Estado, S.jefeObserva_Segui FROM Seguimiento S INNER JOIN Unidades U ON S.Cod_Unidad = U.Cod_Unidad INNER JOIN Subtemas T ON S.Cod_Subte = T.Cod_Subte WHERE S.Estado ='Rechazado' OR S.Estado='Pendiente'";
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
@@ -68,7 +68,7 @@
             break;
 
         case 6: //Editar seguimientos
-            $consulta = "UPDATE Seguimiento SET Horario_Segui='$hora', Dia_Segui='$dia', Actividad_Segui='$actividad', estrategiaTeams='$teams', estrategiaElibre='$elibre', estrategiaOtro='$estrategiaOtro', materialGuias='$guias', materialWord='$word', materialDiapositiva='$diapositiva', materialVideo='$video', materialOtro='$materialOtro', actSincronica_Segui='$actSincronica', Participantes_Segui='$nroEstudiantes', Observa_Segui='$observaciones', Soporte='$soporte' WHERE Cod_Segui='$codigoSegui' ";
+            $consulta = "UPDATE Seguimiento SET Horario_Segui='$hora', Dia_Segui='$dia', Actividad_Segui='$actividad', estrategiaTeams='$teams', estrategiaElibre='$elibre', estrategiaOtro='$estrategiaOtro', materialGuias='$guias', materialWord='$word', materialDiapositiva='$diapositiva', materialVideo='$video', materialOtro='$materialOtro', actSincronica_Segui='$actSincronica', Participantes_Segui='$nroEstudiantes', Observa_Segui='$observaciones', Soporte='$soporte', Estado='Pendiente' WHERE Cod_Segui='$codigoSegui' ";
             $resultado = $cn->prepare($consulta);
             $resultado->execute(); 
             break;
