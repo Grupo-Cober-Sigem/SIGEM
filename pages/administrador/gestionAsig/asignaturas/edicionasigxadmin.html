@@ -455,20 +455,20 @@
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="form-group">
-                                                            <label for="exampleFormControlTextarea1">Signatura Topografica</label>
-                                                            <input type="text" class="form-control" id="bbpssignaturatopografica">
+                                                            <label for="seriadaSignatura">Signatura Topografica</label>
+                                                            <input type="text" class="form-control" id="seriadaSignatura">
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="row">
                                                     <div class="col">
                                                         <div class="form-group">
-                                                            <label for="exampleFormControlTextarea1">Datos de la publicación seriada existente en la biblioteca de la Universidad</label>
-                                                            <textarea class="form-control" id="bbpsdatos" rows="3"></textarea>
+                                                            <label for="seriadaBiblio">Datos de la publicación seriada existente en la biblioteca de la Universidad</label>
+                                                            <textarea class="form-control" id="seriadaBiblio" rows="3"></textarea>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <button type="button" class="btn btn-warning col-md-12">Agregar</button>
+                                                <button type="button" class="btn btn-warning col-md-12" @click="btnAgregarBiblioSeriada()">Agregar</button>
                                                 <!-- Tabla de resultados de fechas -->
                                                 <div class="table-responsive">
                                                     <table class="table table-hover table-bordered">
@@ -480,10 +480,10 @@
                                                           </tr>
                                                         </thead>
                                                         <tbody>
-                                                          <tr>
-                                                            <td>005.1 C136M</td>
-                                                            <td>CAIRÓ, O.  Metodología de la programación.  Algoritmos, Diagramas de Flujo y Programas.  Tomo 1 y Tomo 2.  Editorial Alfaomega, 1995.</td>
-                                                            <td><button type="button" class="btn btn-danger col-md-12"><i class="fa fa-trash"></i></button></td>
+                                                          <tr v-for="(seriada,indice) of biblioSeriadas">
+                                                            <td>{{seriada.sigTopografica}}}</td>
+                                                            <td>{{seriada.seriadaBiblio}}</td>
+                                                            <td><button type="button" class="btn btn-danger col-md-12" @click="btnQuitarBiblioBasica(indice)"><i class="fa fa-trash"></i></button></td>
                                                           </tr>
                                                         </tbody>
                                                     </table>

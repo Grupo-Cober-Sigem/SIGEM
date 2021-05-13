@@ -86,7 +86,33 @@ var appUsuarios = new Vue({
             this.biblioBasica.splice(basica,1);
         },
 
-        
+        btnAgregarBiblioSeriada: async function(){
+            var sigTopografica = document.getElementById("seriadaSignatura").value;
+            var seriadaBiblio = document.getElementById("seriadaBiblio").value;
+
+            if(sigTopografica=="" || seriadaBiblio==""){
+
+                Swal.fire({
+                    icon: 'info',
+                    title: 'Datos incompletos',
+                    text: 'Por favor complete todos los campos del registro de bibliografia'
+                });
+            }else{
+
+                this.biblioSeriadas.push({
+                    sigTopografica: sigTopografica,
+                    seriadaBiblio: seriadaBiblio
+                });
+
+                document.getElementById("seriadaSignatura").value="";
+                document.getElementById("seriadaBiblio").value="";
+            }
+        },
+
+        btnQuitarBiblioBasica: async function(seriada){
+            this.biblioSeriadas.splice(seriada,1);
+        },
+
     },
 
     
