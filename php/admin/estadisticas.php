@@ -11,7 +11,7 @@ $opcion = (isset($_POST['opcion'])) ? $_POST['opcion'] : '';
 
 switch($opcion){
     case 1: //Aprobado
-        $consultaaprobado = "SELECT count(Estado) as prueba FROM Seguimiento WHERE Estado='aprobado'";
+        $consultaaprobado = "SELECT count(Estado) as prueba FROM Seguimiento WHERE Estado='Aprobado'";
         $resultado = $cn->prepare($consultaaprobado);
         $resultado->execute();
         $data = $resultado->fetch(PDO::FETCH_ASSOC);
@@ -20,7 +20,7 @@ switch($opcion){
         break;
 
     case 2: //Pendiente
-        $consultapendiente = "SELECT count(Estado) as prueba FROM Seguimiento WHERE Estado='pendiente'";
+        $consultapendiente = "SELECT count(Estado) as prueba FROM Seguimiento WHERE Estado='Pendiente'";
         $resultado = $cn->prepare($consultapendiente);
         $resultado->execute();
         $data = $resultado->fetch(PDO::FETCH_ASSOC);
@@ -29,7 +29,7 @@ switch($opcion){
         break;
 
     case 3: //Rechazar
-        $consultarechazado = "SELECT count(Estado) as prueba FROM Seguimiento WHERE Estado='rechazado'";
+        $consultarechazado = "SELECT count(Estado) as prueba FROM Seguimiento WHERE Estado='Rechazado'";
         $resultado = $cn->prepare($consultarechazado);
         $resultado->execute();
         $data = $resultado->fetch(PDO::FETCH_ASSOC);
