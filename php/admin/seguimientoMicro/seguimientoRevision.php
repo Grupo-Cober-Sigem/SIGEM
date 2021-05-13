@@ -9,8 +9,6 @@
 
     $opcion = (isset($_POST['opcion'])) ? $_POST['opcion'] : '';
 
-
-
     switch($opcion){
         case 1: //Listar
             $consulta = "SELECT S.Cod_Segui, S.Horario_Segui, S.Dia_Segui, U.Nombre_Unidad, T.Nombre_Subte, S.Actividad_Segui, S.estrategiaTeams, S.estrategiaElibre, S.estrategiaOtro, S.materialGuias, S.materialWord, S.materialDiapositiva, S.materialVideo, S.materialOtro, S.actSincronica_Segui, S.Participantes_Segui, S.Observa_Segui, S.Soporte FROM Seguimiento S INNER JOIN Unidades U ON S.Cod_Unidad = U.Cod_Unidad INNER JOIN Subtemas T ON S.Cod_Subte = T.Cod_Subte WHERE S.Estado ='Pendiente'";
