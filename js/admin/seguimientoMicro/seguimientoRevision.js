@@ -53,7 +53,10 @@ var appUsuarios = new Vue({
                         axios.post(url,{opcion:3,observacionJefe:observacionJefe,codigoSegui:codSeguimiento}).then(response=>{
 
                             localStorage.removeItem("codSeguimiento");
+                            document.getElementById("observacionModal").style.display="none";
                             this.listarSeguimientos();
+                            this.limpiarModal();
+
                             Swal.fire(
                                 '¡Registro exitoso!',
                                 'El registro ha sido rechazado con éxito.',
