@@ -60,128 +60,111 @@
                   </div>
               </nav>
               <!-- Contenido de la página  -->
-              <div class="container-fluid">
-                  <!-- Barra de busqueda  -->
-                  <div class="row">
-                      <div class="col-md-3">
-                          <div class="form-group">
-                              <label for="exampleFormControlSelect1">Programa</label>
-                              <select class="form-control" id="nivelformacion">
-                                  <option>Ingeniería en TIC</option>
-                                  <option>Ingeniería industrial</option>
-                              </select>
-                          </div>
-                      </div>
-                      <div class="col-md-3">
-                          <div class="form-group">
-                              <label for="exampleFormControlSelect1">Área</label>
-                              <select class="form-control" id="nivelformacion">
-                                  <option>Básicas de Ingeniería</option>
-                                  <option>Ingeniería Aplicada</option>
-                              </select>
-                          </div>
-                      </div>
-                      <div class="col-md-3">
-                          <div class="form-group">
-                              <label for="exampleFormControlSelect1">Asignatura</label>
-                              <select class="form-control" id="nivelformacion">
-                                  <option>Matematicas discretas</option>
-                              </select>
-                          </div>
-                      </div>
-                      <div class="col-md-1">
-                          <div class="form-group">
-                              <label for="exampleFormControlSelect1">Estado</label>
-                              <select class="form-control" id="nivelformacion">
-                                  <option>Aprobado</option>
-                              </select>
-                          </div>
-                      </div>
-                      <div class="col-md-1">
-                          <div class="form-group">
-                              <label for="exampleFormControlSelect1">Semestre</label>
-                              <select class="form-control" id="nivelformacion">
-                                  <option>2020-1</option>
-                              </select>
-                          </div>
-                      </div>
-                      <div class="col-md-1">
-                          <div class="form-group">
-                              <button type="button" class="btn btn-warning col-md-12" style="margin-top: 33px;"><i class="fa fa-search"></i></button>
-                          </div>
-                      </div>
-                  </div>
-                  <!-- Tabla resultado de busqueda -->
-                  <div class="table-responsive">
-                      <table class="table table-hover table-bordered">
-                          <thead class="thead-dark">
-                              <tr>
-                                  <th scope="col"><small>Día</small></th>
-                                  <th scope="col"><small>Hora</small></th>
-                                  <th scope="col"><small>Unidad</small></th>
-                                  <th scope="col"><small>Tema</small></th>
-                                  <th scope="col"><small>Actividad</small></th>
-                                  <th scope="col"><small>Recurso usado</small></th>
-                                  <th scope="col"><small>Material Empleado</small></th>
-                                  <th scope="col"><small>Actividad desarrollada</small></th>
-                                  <th scope="col"><small>Cantidad de Participantes</small></th>
-                                  <th scope="col"><small>Observaciones</small></th>
-                                  <th scope="col"><small>Soporte</small></th>
-                                  <th scope="col"><small>Estado</small></th>
-                                  <th scope="col"><small>Acciones</small></th>
-                              </tr>
-                          </thead>
-                          <tbody>
-                              <tr>
-                                  <td><small>25/09</small></td>
-                                  <td><small>06:00PM</small></td>
-                                  <td><small>Introducción a la programación</small></td>
-                                  <td><small>Inducción y caracterización de estudiantes nuevos Socialización de microcurrículo y plan de aula.</small></td>
-                                  <td><small>Explicación de metodología para determinar la capacidad de procesos</small></td>
-                                  <td><small>Microsoft Teams</small></td>
-                                  <td><small>Guia de aprendizaje</small></td>
-                                  <td><small>Sincronica</small></td>
-                                  <td><small>11</small></td>
-                                  <td><small>La estudiante Carolina Ramírez no tiene computador, se conecta desde el celular</small></td>
-                                  <td><small>Soporte</small></td>
-                                  <td><small>Aprobado</small></td>
-                                  <td><button type="button" class="btn btn-success col-md-12"><i class="fa fa-check"></i></button>
-                                  <br><br>
-                                  <button type="button" class="btn btn-danger col-md-12" data-toggle="modal" data-target="#observacionModal" data-whatever="@mdo"><i class="fa fa-times"></i></button>
-                                  </td>
-                              </tr>
-                          </tbody>
-                      </table>
-                  </div>
-                  <!-- Modal -->
-                  <div class="modal fade" id="observacionModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog" role="document">
-                          <div class="modal-content">
-                              <div class="modal-header">
-                                  <h5 class="modal-title" id="exampleModalLabel">Observaciones</h5>
-                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                              </div>
-                              <div class="modal-body">
-                                  <form>
-                                      <div class="form-group">
-                                          <label for="message-text" class="col-form-label">Por favor escriba las observaciones que tiene para el docente</label>
-                                          <textarea class="form-control" id="message-text"></textarea>
-                                      </div>
-                                  </form>
-                              </div>
-                              <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                  <button type="button" class="btn btn-danger">Devolver</button>
+              <div id="revisarSeguimiento">
+                <div class="container-fluid">
+                    <!-- Barra de busqueda  -->
+                    <div class="row">
+                         <div class="col-md-10">
+                              <div class="form-group">
+                                  <input class="form-control" type="text" placeholder="Nombre de la asginatura">
                               </div>
                           </div>
-                      </div>
-                  </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <button type="button" class="btn btn-warning col-md-12">Buscar <i class="fa fa-search"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tabla resultado de busqueda -->
+                    <div class="table-responsive">
+                        <table class="table table-hover table-bordered">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col"><small>Día</small></th>
+                                    <th scope="col"><small>Hora</small></th>
+                                    <th scope="col"><small>Tematica</small></th>
+                                    <th scope="col"><small>Subtema</small></th>
+                                    <th scope="col"><small>Actividad</small></th>
+                                    <th scope="col"><small>Recurso usado</small></th>
+                                    <th scope="col"><small>Material Empleado</small></th>
+                                    <th scope="col"><small>Actividad desarrollada</small></th>
+                                    <th scope="col"><small>Nro. Participantes</small></th>
+                                    <th scope="col"><small>Observaciones</small></th>
+                                    <th scope="col"><small>Soporte</small></th>
+                                    <th scope="col"><small>Estado</small></th>
+                                    <th scope="col"><small>Acciones</small></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="(seguimiento,indice) of datosSeguimientos">
+                                    <td><small>{{seguimiento.Dia_Segui}}</small></td>
+                                    <td><small>{{seguimiento.Horario_Segui}}</small></td>
+                                    <td><small>{{seguimiento.Nombre_Unidad}}</small></td>
+                                    <td><small>{{seguimiento.Nombre_Subte}}</small></td>
+                                    <td><small>{{seguimiento.Actividad_Segui}}</small></td>
+                                    <td><small>
+                                        {{seguimiento.estrategiaTeams}}<br>
+                                        {{seguimiento.estrategiaElibre}}<br>
+                                        {{seguimiento.estrategiaOtro}}
+                                    </small></td>
+                                    <td><small>
+                                        {{seguimiento.materialGuias}}<br>
+                                        {{seguimiento.materialWord}}<br>
+                                        {{seguimiento.materialDiapositiva}}<br>
+                                        {{seguimiento.materialVideos}}<br>
+                                        {{seguimiento.materialOtro}}
+                                    </small></td>
+                                    <td><small>{{seguimiento.actSincronica_Segui}}</small></td>
+                                    <td><small>{{seguimiento.Participantes_Segui}}</small></td>
+                                    <td><small>{{seguimiento.Observa_Segui}}</small></td>
+                                    <td><small>{{seguimiento.Soporte}}</small></td>
+                                    <td><small>{{seguimiento.Estado}}</small></td>
+                                    <td>
+                                        <button type="button" class="btn btn-success col-md-12" @click="aprobarRegistro(seguimiento.Cod_Segui)"><i class="fa fa-check"></i></button>
+                                        <br><br>
+                                        <button type="button" class="btn btn-danger col-md-12" @click="cargarObservacion(seguimiento.Cod_Segui)" data-toggle="modal" data-target="#observacionModal" data-whatever="@mdo"><i class="fa fa-times"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="observacionModal" tabindex="-1" role="dialog" aria-labelledby="observacionModal" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Observaciones</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="observacionesJefe" class="col-form-label">Por favor escriba las observaciones que tiene para el docente</label>
+                                            <textarea class="form-control" id="observacionesJefe"></textarea>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal" @click="limpiarModal()">Cancelar</button>
+                                    <button type="button" class="btn btn-danger" @click="rechazarRegistro()" data-dismiss="modal">Devolver</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
               </div>
           </div>
       </div>
     <script src="../../../js/jquery.min.js"></script>
     <script src="../../../js/popper.js"></script>
     <script src="../../../js/bootstrap.min.js"></script>
+    <!-- Vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <!-- Axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- Sweet Alert 2 -->
+    <script src="../../../plugins/sweetalert2/sweetalert2.all.min.js"></script>
     <script src="../../../js/main.js"></script>
+    <script src="../../../js/jefearea/seguimientoMicro/seguimientoRevisionxja.js"></script>
   </body>
 </html>
