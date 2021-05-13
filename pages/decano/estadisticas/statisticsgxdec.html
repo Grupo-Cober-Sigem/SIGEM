@@ -1,3 +1,4 @@
+<script src="../../../js/decano/validacionDec.js"></script>
 <!doctype html>
 <html lang="es">
   <head>
@@ -56,63 +57,34 @@
                                 <li class="nav-item"><a class="nav-link" href="../../../pages/decano/indexdec.html">Inicio</a></li>
                                 <li class="nav-item"><a class="nav-link" href="http://siul.unilibre.edu.co/sinugwt/">SIUL</a></li>
                                 <li class="nav-item"><a class="nav-link" href="../../../pages/decano/perfilxdec.html">Perfil</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Cerrar Sesión</a></li>
+                                <li class="nav-item"><a class="nav-link" onclick="cerrarSesion()">Cerrar Sesión</a></li>
                             </ul>
                         </div>
                     </div>
               </nav>
               <!-- Contenido de la página -->
               <div class="container-fluid">
-                  <!-- Barra de busqueda  -->
-                  <div class="row">
-                      <div class="col-md-3">
-                    <div class="form-group">
-                        <label for="exampleFormControlSelect1">Programa</label>
-                        <select class="form-control" id="nivelformacion">
-                            <option>Ingeniería en TIC</option>
-                            <option>Ingeniería industrial</option>
-                        </select>
-                    </div>
-                </div>
-                      <div class="col-md-3">
-                    <div class="form-group">
-                        <label for="exampleFormControlSelect1">Área</label>
-                        <select class="form-control" id="nivelformacion">
-                            <option>Básicas de Ingeniería</option>
-                            <option>Ingeniería Aplicada</option>
-                        </select>
-                    </div>
-                </div>
-                      <div class="col-md-3">
-                    <div class="form-group">
-                        <label for="exampleFormControlSelect1">Asignatura</label>
-                        <select class="form-control" id="nivelformacion">
-                            <option>Matematicas discretas</option>
-
-                        </select>
-                    </div>
-                </div>
-                      <div class="col-md-2">
-                          <div class="form-group">
-                        <label for="exampleFormControlSelect1">Semestre</label>
-                        <select class="form-control" id="nivelformacion">
-                            <option>2020-1</option>
-
-                        </select>
-                    </div>
-                      </div>
-                      <div class="col-md-1">
-                          <div class="form-group">
-                              <button type="button" class="btn btn-warning col-md-12" style="margin-top: 33px;"><i class="fa fa-search"></i></button>
+                      <!-- Sección de estadisticas -->
+                      <div class="row" id="seccionEstadisticas">
+                          <div class="container-fluid">
+                              <canvas id="grafica"></canvas>
                           </div>
                       </div>
                   </div>
-              </div>
           </div>
       </div>
-    <script src="../../../js/jquery.min.js"></script>
-    <script src="../../../js/popper.js"></script>
-    <script src="../../../js/bootstrap.min.js"></script>
-    <script src="../../../js/main.js"></script>
+      <script src="../../../js/jquery.min.js"></script>
+      <script src="../../../js/popper.js"></script>
+      <script src="../../../js/bootstrap.min.js"></script>
+      <!-- Vue -->
+      <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+      <!-- Axios -->
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script><!-- Insertando chartJS -->
+      <!-- chart.js -->
+      <script src="https://cdn.jsdelivr.net/npm/chart.js@latest/dist/Chart.min.js"></script>
+      <script src="../../../js/admin/estadisticas/statistics.js"></script>
+      <!-- Sweet Alert 2 -->
+      <script src="../../../plugins/sweetalert2/sweetalert2.all.min.js"></script>
+      <script src="../../../js/main.js"></script>
   </body>
 </html>
