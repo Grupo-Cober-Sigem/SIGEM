@@ -30,6 +30,7 @@ var appUsuarios = new Vue({
             
             if(observacionJefe=="" || observacionJefe==null){
 
+                localStorage.removeItem("codSeguimiento");
                 Swal.fire({
                     icon: 'info',
                     title: 'Por favor digite una observación.',
@@ -51,6 +52,7 @@ var appUsuarios = new Vue({
 
                         axios.post(url,{opcion:3,observacionJefe:observacionJefe,codigoSegui:codSeguimiento}).then(response=>{
 
+                            localStorage.removeItem("codSeguimiento");
                             this.listarSeguimientos();
                             Swal.fire(
                                 '¡Registro exitoso!',
@@ -111,22 +113,7 @@ var appUsuarios = new Vue({
 
         limpiarModal: function(){
 
-            var controles= document.getElementsByClassName("limpiar");
-            var nControles= controles.length;
-
-            for(var i=0;i<nControles;i++){
-    
-                controles[i].value="";
-            }
-
-            controles= document.getElementsByClassName("limpiarCheck");
-            nControles = controles.length;
-
-            for(var i=0;i<nControles;i++){
-
-                controles[i].checked=false;
-            }
-            this.asignaturaSeleccionada=""
+            document.getElementById("observacionesJefe").value=""; 
         },
     },
 
