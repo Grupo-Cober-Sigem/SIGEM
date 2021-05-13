@@ -122,11 +122,11 @@
                                     <td><small>{{seguimiento.Participantes_Segui}}</small></td>
                                     <td><small>{{seguimiento.Observa_Segui}}</small></td>
                                     <td><small>{{seguimiento.Soporte}}</small></td>
-                                    <td><small>Aprobado</small></td>
+                                    <td><small>{{seguimiento.Estado}}</small></td>
                                     <td>
-                                        <button type="button" class="btn btn-success col-md-12"><i class="fa fa-check"></i></button>
+                                        <button type="button" class="btn btn-success col-md-12" @click="aprobarRegistro(seguimiento.Cod_Segui)"><i class="fa fa-check"></i></button>
                                         <br><br>
-                                        <button type="button" class="btn btn-danger col-md-12" data-toggle="modal" data-target="#observacionModal" data-whatever="@mdo"><i class="fa fa-times"></i></button>
+                                        <button type="button" class="btn btn-danger col-md-12" @click="cargarObservacion(seguimiento.Cod_Segui)" data-toggle="modal" data-target="#observacionModal" data-whatever="@mdo"><i class="fa fa-times"></i></button>
                                     </td>
                                 </tr>
                             </tbody>
@@ -150,7 +150,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                    <button type="button" class="btn btn-danger">Devolver</button>
+                                    <button type="button" class="btn btn-danger" @click="rechazarRegistro()">Devolver</button>
                                 </div>
                             </div>
                         </div>
