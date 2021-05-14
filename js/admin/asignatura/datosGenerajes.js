@@ -136,6 +136,30 @@ var appUsuarios = new Vue({
         btnQuitarBiblioWeb: async function(web){
             this.biblioWeb.splice(web,1);
         },
+
+        btnAgregarBiblioSegundaLengua: async function(){
+            var segundaLenguaBiblio = document.getElementById("segundaLenguaBiblio").value;
+
+            if(segundaLenguaBiblio==""){
+
+                Swal.fire({
+                    icon: 'info',
+                    title: 'Datos incompletos',
+                    text: 'Por favor complete todos los campos del registro de bibliografia'
+                });
+            }else{
+
+                this.biblioSegundaLengua.push({
+                    segundaLenguaBiblio: segundaLenguaBiblio
+                });
+
+                document.getElementById("segundaLenguaBiblio").value="";
+            }
+        },
+
+        btnQuitarBiblioSegundaLengua: async function(segundaLengua){
+            this.biblioSegundaLengua.splice(segundaLengua,1);
+        },
     },
 
     
