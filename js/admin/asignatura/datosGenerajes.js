@@ -176,7 +176,7 @@ var appUsuarios = new Vue({
 
                 this.biblioComplementaria.push({
                     sigTopografica: sigTopografica,
-                    complementarioBiblio: complementariaBiblio
+                    complementarioBiblio: complementarioBiblio
                 });
 
                 document.getElementById("complementarioSignatura").value="";
