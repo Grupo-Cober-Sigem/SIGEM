@@ -109,7 +109,7 @@ var appUsuarios = new Vue({
             }
         },
 
-        btnQuitarBiblioBasica: async function(seriada){
+        btnQuitarBiblioSeriada: async function(seriada){
             this.biblioSeriadas.splice(seriada,1);
         },
 
@@ -159,6 +159,33 @@ var appUsuarios = new Vue({
 
         btnQuitarBiblioSegundaLengua: async function(segundaLengua){
             this.biblioSegundaLengua.splice(segundaLengua,1);
+        },
+
+        btnAgregarBiblioComplementaria: async function(){
+            var sigTopografica = document.getElementById("complementarioSignatura").value;
+            var complementarioBiblio = document.getElementById("complementarioBiblio").value;
+
+            if(sigTopografica=="" || complementarioBiblio==""){
+
+                Swal.fire({
+                    icon: 'info',
+                    title: 'Datos incompletos',
+                    text: 'Por favor complete todos los campos del registro de bibliografia'
+                });
+            }else{
+
+                this.biblioComplementaria.push({
+                    sigTopografica: sigTopografica,
+                    complementarioBiblio: complementariaBiblio
+                });
+
+                document.getElementById("complementarioSignatura").value="";
+                document.getElementById("complementarioBiblio").value="";
+            }
+        },
+
+        btnQuitarBiblioComplementaria: async function(complementaria){
+            this.biblioComplementaria.splice(complementaria,1);
         },
     },
 

@@ -512,7 +512,7 @@
                                                         <tbody>
                                                           <tr v-for="(web,indice) of biblioWeb">
                                                             <td>{{web.webBiblio}}</td>
-                                                            <td><button type="button" class="btn btn-danger col-md-12" @click="btnQuitarBiblioWeb(indice)"><i class="fa fa-trash"></i></button></td>
+                                                            <td><button type="button" class="btn btn-danger col-md-12" @click="btnQuitarBiblioSeriada(indice)"><i class="fa fa-trash"></i></button></td>
                                                           </tr>
                                                         </tbody>
                                                     </table>
@@ -552,20 +552,20 @@
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="form-group">
-                                                            <label for="exampleFormControlTextarea1">ISBN</label>
-                                                            <input type="text" class="form-control" id="bcisbn">
+                                                            <label for="complementarioSignatura">ISBN</label>
+                                                            <input type="text" class="form-control" id="complementarioSignatura">
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="row">
                                                     <div class="col">
                                                         <div class="form-group">
-                                                            <label for="exampleFormControlTextarea1">Incluir los textos no existentes en la biblioteca requeridos para el desarrollo de la asignatura</label>
-                                                            <textarea class="form-control" id="bctitulo" rows="3"></textarea>
+                                                            <label for="complementarioBiblio">Incluir los textos no existentes en la biblioteca requeridos para el desarrollo de la asignatura</label>
+                                                            <textarea class="form-control" id="complementarioBiblio" rows="3"></textarea>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <button type="button" class="btn btn-warning col-md-12">Agregar</button>
+                                                <button type="button" class="btn btn-warning col-md-12" @click="btnAgregarBiblioComplementaria()">Agregar</button>
                                                 <!-- Tabla de resultados de fechas -->
                                                 <div class="table-responsive">
                                                     <table class="table table-hover table-bordered">
@@ -577,10 +577,10 @@
                                                           </tr>
                                                         </thead>
                                                         <tbody>
-                                                          <tr>
-                                                            <td>005.1 C136M</td>
-                                                            <td>CAIRÓ, O.  Metodología de la programación.  Algoritmos, Diagramas de Flujo y Programas.  Tomo 1 y Tomo 2.  Editorial Alfaomega, 1995.</td>
-                                                            <td><button type="button" class="btn btn-danger col-md-12"><i class="fa fa-trash"></i></button></td>
+                                                          <tr v-for="(complementario,indice) of biblioComplementaria">
+                                                            <td>{{complementario.sigTopografica}}</td>
+                                                            <td>{{complementario.complementarioBiblio}}</td>
+                                                            <td><button type="button" class="btn btn-danger col-md-12" @click="btnQuitarBiblioComplementaria(indice)"><i class="fa fa-trash"></i></button></td>
                                                           </tr>
                                                         </tbody>
                                                     </table>
