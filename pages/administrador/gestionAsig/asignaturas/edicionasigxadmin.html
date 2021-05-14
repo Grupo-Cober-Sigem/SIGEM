@@ -528,7 +528,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <button type="button" class="btn btn-warning col-md-12">Agregar</button>
+                                                <button type="button" class="btn btn-warning col-md-12" @click="btnAgregarBiblioSegundaLengua()">Agregar</button>
                                                 <!-- Tabla de resultados de Bibliografía en Segunda lengua -->
                                                 <div class="table-responsive">
                                                     <table class="table table-hover table-bordered">
@@ -539,9 +539,9 @@
                                                           </tr>
                                                         </thead>
                                                         <tbody>
-                                                          <tr>
-                                                            <td>{{}}</td>
-                                                            <td><button type="button" class="btn btn-danger col-md-12"><i class="fa fa-trash"></i></button></td>
+                                                          <tr v-for="(segundaLengua,indice) of biblioSegundaLengua">
+                                                            <td>{{segundaLengua.segundaLenguaBiblio}}</td>
+                                                            <td><button type="button" class="btn btn-danger col-md-12" @click="btnQuitarBiblioSegundaLengua(indice)"><i class="fa fa-trash"></i></button></td>
                                                           </tr>
                                                         </tbody>
                                                     </table>
