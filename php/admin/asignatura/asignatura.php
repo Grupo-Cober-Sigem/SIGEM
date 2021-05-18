@@ -52,7 +52,7 @@
             $resultado->execute(); 
             break;
         case 5: //Filtrar
-            $consulta = "SELECT Cod_Asignatura, Nombre_Asig, Ubicacion_Asig, Cod_Area, Cod_User FROM Asignatura WHERE Cod_Asignatura LIKE CONCAT('%','$codigo','%')";
+            $consulta = "SELECT * FROM Asignatura WHERE Nombre_Asig LIKE ('%','$nombre','%')";
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
