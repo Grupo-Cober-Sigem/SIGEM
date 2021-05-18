@@ -52,15 +52,17 @@
             $resultado->execute(); 
             break;
         case 5: //Filtrar
-            $consulta = "SELECT * FROM Asignatura WHERE Nombre_Asig LIKE ('%','$nombre','%')";
+            $consulta = "SELECT Cod_Asignatura, Nombre_Asig, Ubicacion_Asig, Cod_Area, Cod_User FROM Asignatura WHERE Nombre_Asig LIKE CONCAT('%','$nombre','%')";
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
+            break;
         case 6: //Listar Asignaturas
             $consulta = "SELECT Cod_Asignatura, Nombre_Asig, Ubicacion_Asig, Cod_Area, Cod_User FROM Asignatura";
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
+            break;
     }
     // Enviar el array final en formato JSON a Javascript
     print json_encode($data, JSON_UNESCAPED_UNICODE);
