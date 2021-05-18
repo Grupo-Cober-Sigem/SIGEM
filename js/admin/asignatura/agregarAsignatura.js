@@ -171,7 +171,7 @@ var appAsignatura = new Vue({
         {
             let busqueda = document.getElementById("campoBusqueda").value;
 
-            switch(nombre)
+            switch(busqueda)
             {
                 case "":
                     this.listarAsignatura();
@@ -182,7 +182,7 @@ var appAsignatura = new Vue({
                     break;
                 
                 default:
-                    axios.post(url,{opcion:5,busqueda:nombre}).then(response=>{
+                    axios.post(url,{opcion:5,nombre:busqueda}).then(response=>{
                         this.datosAsignatura = response.data;
                         console.log(this.datosAsignatura);
                         nombre="";
