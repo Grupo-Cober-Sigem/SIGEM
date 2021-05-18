@@ -169,9 +169,9 @@ var appAsignatura = new Vue({
 
         btnFiltrarAsignatura: async function()
         {
-            let busqueda = document.getElementById("campoBusqueda").value;
+            let nombre = document.getElementById("campoBusqueda").value;
 
-            switch(busqueda)
+            switch(nombre)
             {
                 case "":
                     this.listarAsignatura();
@@ -182,7 +182,7 @@ var appAsignatura = new Vue({
                     break;
                 
                 default:
-                    axios.post(url,{opcion:5,nombre:busqueda}).then(response=>{
+                    axios.post(url,{opcion:5,nombre:nombre}).then(response=>{
                         this.datosAsignatura = response.data;
                         console.log(this.datosAsignatura);
                         nombre="";
