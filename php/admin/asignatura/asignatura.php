@@ -39,7 +39,7 @@
             $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
             break;
         case 4: // Agregar Asignatura
-            $consulta = "INSERT INTO Asignatura (Cod_Asignatura, Nombre_Asig, Cod_Area, ubicacion_Asig) VALUES ('$codigo','$nombre','$area','$nivelFormacion')";
+            $consulta = "INSERT INTO Asignatura (Cod_Asignatura, Nombre_Asig, Cod_Area, ubicacion_Asig, Cod_User) VALUES ('$codigo','$nombre','$area','$nivelFormacion','$docente')";
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
 

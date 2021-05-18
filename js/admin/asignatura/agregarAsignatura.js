@@ -236,7 +236,7 @@ var appAsignatura = new Vue({
         },
 
         agregarAsignatura: function(){
-            axios.post(url, {opcion:4, nombre:this.nombre, codigo:this.codigo ,nivelFormacion:this.nivelFormacion, nroEstudiantes:this.nroEstudiantes, programa:this.programa, area:this.area, docente:this.docente }).then(response =>{
+            axios.post(url, {opcion:4, nombre:this.nombre, codigo:this.codigo ,nivelFormacion:this.nivelFormacion, nroEstudiantes:this.nroEstudiantes, area:this.area, docente:this.docente }).then(response =>{
                 this.listarAsignatura();
             });        
              this.nombre = "",
