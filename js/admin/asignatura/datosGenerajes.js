@@ -2,7 +2,7 @@ var url ="";
 var appUsuarios = new Vue({
     el: "#seccionDatosGenerales",
     data: {
-        //Arrays con datos de la asignatura
+        //Arrays para gestionar datos en las tablas
         criterios:[],
         biblioBasica:[],
         biblioSeriadas:[],
@@ -22,7 +22,9 @@ var appUsuarios = new Vue({
         horaIndependiente:""
     },
     methods: {
-        btnAgregarCriterio: async function(){
+        //GESTIONAR REGISTROS EN TABLAS
+        // <------ CRITERIOS DE EVALUACIÓN ------>
+        btnAgregarCriterio: async function(){ //Agregar Criterios de Evaluación
             var concepto= document.getElementById("criteConcepto").value;
             var tipo= document.getElementById("criteTipo").value;
             var instrumento= document.getElementById("criteInstrumento").value;
@@ -43,7 +45,7 @@ var appUsuarios = new Vue({
                     concepto: concepto,
                     tipo: tipo,
                     instrumento: instrumento,
-                    valor: valor,
+                    porcentaje: valor,
                     fecha: fecha
                 });
     
@@ -55,11 +57,12 @@ var appUsuarios = new Vue({
             }
         },
 
-        btnQuitarCriterio: async function(criterio){
+        btnQuitarCriterio: async function(criterio){ //Eliminar Criterio de Evaluación
             this.criterios.splice(criterio,1);
         },
 
-        btnAgregarBiblioBasica: async function(){
+        // <------ BIBLIOGRAFÍAS ------>
+        btnAgregarBiblioBasica: async function(){ //Agregar Bibliografías Básicas
             var sigTopografica = document.getElementById("basicaSignatura").value;
             var basicaBiblio = document.getElementById("basicaBiblio").value;
 
@@ -73,8 +76,9 @@ var appUsuarios = new Vue({
             }else{
 
                 this.biblioBasica.push({
-                    sigTopografica: sigTopografica,
-                    basicaBiblio: basicaBiblio
+                    ISBN: sigTopografica,
+                    biblioDetalle: basicaBiblio,
+                    biblioTipo:1
                 });
 
                 document.getElementById("basicaSignatura").value="";
@@ -82,11 +86,11 @@ var appUsuarios = new Vue({
             }
         },
 
-        btnQuitarBiblioBasica: async function(basica){
+        btnQuitarBiblioBasica: async function(basica){ //Eliminar Bibliografía Básica
             this.biblioBasica.splice(basica,1);
         },
 
-        btnAgregarBiblioSeriada: async function(){
+        btnAgregarBiblioSeriada: async function(){ //Agregar Bibliografía Seriada
             var sigTopografica = document.getElementById("seriadaSignatura").value;
             var seriadaBiblio = document.getElementById("seriadaBiblio").value;
 
@@ -100,8 +104,9 @@ var appUsuarios = new Vue({
             }else{
 
                 this.biblioSeriadas.push({
-                    sigTopografica: sigTopografica,
-                    seriadaBiblio: seriadaBiblio
+                    ISBN: sigTopografica,
+                    biblioDetalle: seriadaBiblio,
+                    biblioTipo:2
                 });
 
                 document.getElementById("seriadaSignatura").value="";
@@ -109,11 +114,11 @@ var appUsuarios = new Vue({
             }
         },
 
-        btnQuitarBiblioSeriada: async function(seriada){
+        btnQuitarBiblioSeriada: async function(seriada){ //Eliminar Bibliografía Seriada
             this.biblioSeriadas.splice(seriada,1);
         },
 
-        btnAgregarBiblioWeb: async function(){
+        btnAgregarBiblioWeb: async function(){ //Agregar Bibliografía Web
             var webBiblio = document.getElementById("webBiblio").value;
 
             if(webBiblio==""){
@@ -126,18 +131,19 @@ var appUsuarios = new Vue({
             }else{
 
                 this.biblioWeb.push({
-                    webBiblio: webBiblio
+                    biblioDetalle: webBiblio,
+                    biblioTipo:3
                 });
 
                 document.getElementById("webBiblio").value="";
             }
         },
 
-        btnQuitarBiblioWeb: async function(web){
+        btnQuitarBiblioWeb: async function(web){ //Eliminar Bibliografía Web
             this.biblioWeb.splice(web,1);
         },
 
-        btnAgregarBiblioSegundaLengua: async function(){
+        btnAgregarBiblioSegundaLengua: async function(){ //Agregar Bibliografía en Segunda Lengua
             var segundaLenguaBiblio = document.getElementById("segundaLenguaBiblio").value;
 
             if(segundaLenguaBiblio==""){
@@ -150,18 +156,19 @@ var appUsuarios = new Vue({
             }else{
 
                 this.biblioSegundaLengua.push({
-                    segundaLenguaBiblio: segundaLenguaBiblio
+                    biblioDetalle: segundaLenguaBiblio,
+                    biblioTipo:4
                 });
 
                 document.getElementById("segundaLenguaBiblio").value="";
             }
         },
 
-        btnQuitarBiblioSegundaLengua: async function(segundaLengua){
+        btnQuitarBiblioSegundaLengua: async function(segundaLengua){ //Eliminar Bibliografía en Segunda Lengua
             this.biblioSegundaLengua.splice(segundaLengua,1);
         },
 
-        btnAgregarBiblioComplementaria: async function(){
+        btnAgregarBiblioComplementaria: async function(){ //Agregar Bibliografía Complementaria
             var sigTopografica = document.getElementById("complementarioSignatura").value;
             var complementarioBiblio = document.getElementById("complementarioBiblio").value;
 
@@ -175,8 +182,9 @@ var appUsuarios = new Vue({
             }else{
 
                 this.biblioComplementaria.push({
-                    sigTopografica: sigTopografica,
-                    complementarioBiblio: complementarioBiblio
+                    ISBN: sigTopografica,
+                    biblioDetalle: complementarioBiblio,
+                    biblioTipo:5
                 });
 
                 document.getElementById("complementarioSignatura").value="";
@@ -184,7 +192,7 @@ var appUsuarios = new Vue({
             }
         },
 
-        btnQuitarBiblioComplementaria: async function(complementaria){
+        btnQuitarBiblioComplementaria: async function(complementaria){ //Eliminar Bibliografía Complementaria
             this.biblioComplementaria.splice(complementaria,1);
         },
     },

@@ -75,7 +75,7 @@ var appAsignatura = new Vue({
                         this.nroEstudiantes = Swal.getPopup().querySelector('#nroEstudiantes').value,
                         this.programa = Swal.getPopup().querySelector('#programa').value,
                         this.area = Swal.getPopup().querySelector('#area').value,
-                        this.docente = Swal.getPopup().querySelector('#docente')
+                        this.docente = Swal.getPopup().querySelector('#docente').value
                     ]
                 }
             })

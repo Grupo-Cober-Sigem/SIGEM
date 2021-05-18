@@ -389,7 +389,7 @@
                                                                             <td class="col-3"><span>{{criterio.concepto}}</span></td>
                                                                             <td class="col-2"><span>{{criterio.tipo}}</span></td>
                                                                             <td class="col-3"><span>{{criterio.instrumento}}</span></td>
-                                                                            <td class="col-1"><span>{{criterio.valor}}</span></td>
+                                                                            <td class="col-1"><span>{{criterio.porcentaje}}</span></td>
                                                                             <td class="col-2"><span>{{criterio.fecha}}</span></td>
                                                                             <td class="col-1"><span><button type="button" class="btn btn-danger" @click="btnQuitarCriterio(indice)"><i class="fa fa-trash"> </i></button></span></td>
                                                                         </tr>
@@ -442,8 +442,8 @@
                                                         </thead>
                                                         <tbody>
                                                           <tr v-for="(basica,indice) of biblioBasica">
-                                                            <td>{{basica.sigTopografica}}</td>
-                                                            <td>{{basica.basicaBiblio}}</td>
+                                                            <td>{{basica.ISBN}}</td>
+                                                            <td>{{basica.biblioDetalle}}</td>
                                                             <td><button type="button" class="btn btn-danger col-md-12" @click="btnQuitarBiblioBasica(indice)"><i class="fa fa-trash"></i></button></td>
                                                           </tr>
                                                         </tbody>
@@ -481,8 +481,8 @@
                                                         </thead>
                                                         <tbody>
                                                           <tr v-for="(seriada,indice) of biblioSeriadas">
-                                                            <td>{{seriada.sigTopografica}}</td>
-                                                            <td>{{seriada.seriadaBiblio}}</td>
+                                                            <td>{{seriada.ISBN}}</td>
+                                                            <td>{{seriada.biblioDetalle}}</td>
                                                             <td><button type="button" class="btn btn-danger col-md-12" @click="btnQuitarBiblioBasica(indice)"><i class="fa fa-trash"></i></button></td>
                                                           </tr>
                                                         </tbody>
@@ -511,7 +511,7 @@
                                                         </thead>
                                                         <tbody>
                                                           <tr v-for="(web,indice) of biblioWeb">
-                                                            <td>{{web.webBiblio}}</td>
+                                                            <td>{{web.biblioDetalle}}</td>
                                                             <td><button type="button" class="btn btn-danger col-md-12" @click="btnQuitarBiblioSeriada(indice)"><i class="fa fa-trash"></i></button></td>
                                                           </tr>
                                                         </tbody>
@@ -540,7 +540,7 @@
                                                         </thead>
                                                         <tbody>
                                                           <tr v-for="(segundaLengua,indice) of biblioSegundaLengua">
-                                                            <td>{{segundaLengua.segundaLenguaBiblio}}</td>
+                                                            <td>{{segundaLengua.biblioDetalle}}</td>
                                                             <td><button type="button" class="btn btn-danger col-md-12" @click="btnQuitarBiblioSegundaLengua(indice)"><i class="fa fa-trash"></i></button></td>
                                                           </tr>
                                                         </tbody>
@@ -578,8 +578,8 @@
                                                         </thead>
                                                         <tbody>
                                                           <tr v-for="(complementario,indice) of biblioComplementaria">
-                                                            <td>{{complementario.sigTopografica}}</td>
-                                                            <td>{{complementario.complementarioBiblio}}</td>
+                                                            <td>{{complementario.ISBN}}</td>
+                                                            <td>{{complementario.biblioDetalle}}</td>
                                                             <td><button type="button" class="btn btn-danger col-md-12" @click="btnQuitarBiblioComplementaria(indice)"><i class="fa fa-trash"></i></button></td>
                                                           </tr>
                                                         </tbody>
