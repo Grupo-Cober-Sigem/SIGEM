@@ -167,7 +167,7 @@ var appAsignatura = new Vue({
                 });
         },
 
-        /*btnFiltrarAsignatura: async function()
+        btnFiltrarAsignatura: async function()
         {
             let nombre = document.getElementById("campoBusqueda").value;
 
@@ -189,7 +189,7 @@ var appAsignatura = new Vue({
                     });
                     break;
             }
-        },*/
+        },
 
         btnDatosGenerales: async function (codigo){
             localStorage.setItem("cod_asignatura",codigo);
