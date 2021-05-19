@@ -51,9 +51,8 @@ var appUsuarios = new Vue({
                 });
             }
         },
-        
+
         //Procedimientos
-       
         listarSeguimientos: function(){
             axios.post(url,{opcion:1}).then(response=>{
 
