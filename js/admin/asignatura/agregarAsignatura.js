@@ -232,8 +232,10 @@ var appAsignatura = new Vue({
             });
         },
 
-        editarAsignatura:function(){
-
+        editarAsignatura:function(nombre, codigo, nivelFormacion, nroEstudiantes, programa, area, docente){
+            axios.post(url,{opcion:7, nombre:nombre,codigo:codigo, nroEstudiantes:nroEstudiantes, programa:programa, area:area, docente:docente}).then(response => {
+                this.listarAsignaturas();
+            });
         },
 
         agregarAsignatura: function(){

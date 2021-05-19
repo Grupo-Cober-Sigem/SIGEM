@@ -61,6 +61,12 @@
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
+        case 7: //Modificar
+            $consulta = "UPDATE Asignatura SET Nombre_Asig='$nombre', Ubicacion_Asig='$nivelFormacion', Cod_Area='$area', Cod_User='$docente' WHERE Cod_Asignatura = '$codigo'";
+            $resultado = $cn->prepare($consulta);
+            $resultado->execute();
+            $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
+            break;
     }
     // Enviar el array final en formato JSON a Javascript
     print json_encode($data);
