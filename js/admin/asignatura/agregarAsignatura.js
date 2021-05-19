@@ -232,11 +232,11 @@ var appAsignatura = new Vue({
             });
         },
 
-        /*editarAsignatura:function(nombre, codigo, nivelFormacion, nroEstudiantes, programa, area, docente){
+        editarAsignatura:function(nombre, codigo, nivelFormacion, nroEstudiantes, programa, area, docente){
             axios.post(url,{opcion:7, nombre:nombre,codigo:codigo, nroEstudiantes:nroEstudiantes, programa:programa, area:area, docente:docente}).then(response => {
                 this.listarAsignaturas();
             });
-        },*/
+        },
 
         agregarAsignatura: function(){
             axios.post(url, {opcion:4, nombre:this.nombre, codigo:this.codigo ,nivelFormacion:this.nivelFormacion, nroEstudiantes:this.nroEstudiantes, area:this.area, docente:this.docente }).then(response =>{

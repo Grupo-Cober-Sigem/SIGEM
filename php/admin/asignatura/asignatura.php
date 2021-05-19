@@ -61,6 +61,7 @@
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
+            break;
         case 7: //Modificar
             $consulta = "UPDATE Asignatura SET Nombre_Asig='$nombre', Ubicacion_Asig='$nivelFormacion', Cod_Area='$area', Cod_User='$docente' WHERE Cod_Asignatura = '$codigo'";
             $resultado = $cn->prepare($consulta);
