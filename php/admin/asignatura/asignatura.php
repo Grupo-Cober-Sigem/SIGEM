@@ -56,6 +56,7 @@
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
+            break;
         case 6: //Listar Asignaturas
             $consulta = "SELECT Cod_Asignatura, Nombre_Asig, Ubicacion_Asig, Cod_Area, Cod_User FROM Asignatura";
             $resultado = $cn->prepare($consulta);

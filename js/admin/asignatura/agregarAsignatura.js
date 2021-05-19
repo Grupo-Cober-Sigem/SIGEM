@@ -157,7 +157,7 @@ var appAsignatura = new Vue({
                     area = Swal.getPopup().querySelector('#area').value,
                     docente = Swal.getPopup().querySelector('#docente').value                      
 
-                    this.editarAsignatura(codigo,nombre,semestre);
+                    this.editarAsignatura(codigo,nombre,semestre,area,docente);
                     Swal.fire(
                       '¡Actualizado!',
                       'El registro ha sido actualizado.',
@@ -232,9 +232,14 @@ var appAsignatura = new Vue({
             });
         },
 
-        editarAsignatura:function(nombre, codigo, nivelFormacion, nroEstudiantes, programa, area, docente){
-            axios.post(url,{opcion:7, nombre:nombre,codigo:codigo, nroEstudiantes:nroEstudiantes, programa:programa, area:area, docente:docente}).then(response => {
+        editarAsignatura:function(codigo, nombre, nivelFormacion, area, docente){
+            axios.post(url,{opcion:7, nombre:nombre, codigo:codigo, nivelFormacion:nivelFormacion, area:area, docente:docente}).then(response => {
                 this.listarAsignaturas();
+                Swal.fire(
+                    '¡Actualizado!',
+                    'El registro ha sido editado con éxito.',
+                    'success'
+                  )   
             });
         },
 
