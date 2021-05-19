@@ -184,7 +184,7 @@ var appAsignatura = new Vue({
                 default:
                     axios.post(url,{opcion:5,nombre:nombre}).then(response=>{
                         this.datosAsignatura = response.data;
-                        
+                        console.log(this.datosAsignatura);
                         nombre="";
                     });
                     break;
@@ -233,13 +233,13 @@ var appAsignatura = new Vue({
 
         editarAsignatura:function(codigo, nombre, nivelFormacion, area, docente){
             axios.post(url,{opcion:7, nombre:nombre, codigo:codigo, nivelFormacion:nivelFormacion, area:area, docente:docente}).then(response => {
+                this.listarAsignaturas();
                 Swal.fire(
                     '¡Actualizado!',
                     'El registro ha sido editado con éxito.',
                     'success'
-                  )   
+                  )
             });
-            this.listarAsignaturas();
         },
 
         agregarAsignatura: function(){
