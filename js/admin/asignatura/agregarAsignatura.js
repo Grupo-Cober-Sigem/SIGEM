@@ -119,7 +119,7 @@ var appAsignatura = new Vue({
                         '<option value="Octavo">Octavo</option>'+
                         '<option value="Noveno">Noveno</option>'+
                         '<option value="Decimo">Decimo</option></select></div></div>'+
-/*Programa*/            '<div class="form-group"><label for="programa" class="col-form-label">Programa de la asignatura</label><select class="form-control" id="programa">'+
+/*Programa*/            '<div class="form-group col-12"><label for="programa" class="col-form-label">Programa de la asignatura</label><select class="form-control" id="programa">'+
                         '<option value="'+programa+'">'+nomPrograma+'</option>'+
                         this.filtroProgramas.map(programa=>
                             '<option value="'+programa.Cod_programa+'">'+programa.Nombre_prog+'</option>'
@@ -131,7 +131,7 @@ var appAsignatura = new Vue({
                             '<option value="'+area.Cod_Area+'">'+area.Nombre_Area+'</option>'
                         )
                         +'<option value="1">Nombre del área</option></select></div>'+
-/*Docente*/         '<div class="form-group"><label for="docente" class="col-form-label">Docente</label><select class="form-control" id="docente">'+
+/*Docente*/         '<div class="form-group col-12"><label for="docente" class="col-form-label">Docente</label><select class="form-control" id="docente">'+
                         '<option value="'+docente+'">'+nomDocente+' '+apeDocente+'</option>'+
                         this.docentes.map(docente=>
                             '<option value="'+docente.Cod_User+'">'+docente.Nombres+' '+docente.Apellidos+'</option>'
