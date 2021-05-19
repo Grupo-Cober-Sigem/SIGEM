@@ -54,7 +54,7 @@ var appUsuarios = new Vue({
 
         btnFiltrarSeguimientos: async function()
         {
-            let nombre = document.getElementById("campoBusqueda").value;
+            var nombre = document.getElementById("campoBusqueda").value;
 
             switch(nombre)
             {
@@ -67,7 +67,7 @@ var appUsuarios = new Vue({
                     break;
                 
                 default:
-                    axios.post(url,{opcion:5,nombre:nombre}).then(response=>{
+                    axios.post(url,{opcion:4,nombre:nombre}).then(response=>{
                         this.datosSeguimientos = response.data;
                         console.log(this.datosSeguimientos);
                     });
