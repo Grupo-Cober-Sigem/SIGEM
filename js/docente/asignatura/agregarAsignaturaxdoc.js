@@ -10,7 +10,7 @@ var appAsignatura = new Vue({
         semestreSeleccionado:0,
         docentes:[],
         //Variables para registros
-        datosAsignatura: [],
+        datosAsignatura:[],
         nombre:"",
         codigo:0,
         nivelFormacion:"",
@@ -75,7 +75,7 @@ var appAsignatura = new Vue({
                         this.nroEstudiantes = Swal.getPopup().querySelector('#nroEstudiantes').value,
                         this.programa = Swal.getPopup().querySelector('#programa').value,
                         this.area = Swal.getPopup().querySelector('#area').value,
-                        this.docente = Swal.getPopup().querySelector('#docente')
+                        this.docente = Swal.getPopup().querySelector('#docente').value
                     ]
                 }
             })
@@ -100,13 +100,13 @@ var appAsignatura = new Vue({
             }
         },
 
-        btnEditarAsignatura: async function (nombre,codigo,semestre,docente,area,programa,nroEstudiantes) {
+        btnEditarAsignatura: async function (codigo,nombre,semestre,programa,nomPrograma,area,nomArea,docente,nomDocente,apeDocente,nroEstudiantes) {
             await Swal.fire({
                 title: 'Editar',
                 html:'<div class="form-group">'+
 /*Nombre*/          '<label for="nombre" class="col-form-label">Nombre</label><input type="text" class="form-control" id="nombre" value="'+nombre+'"></div>'+
                     '<div class="row"><div class="col"><div class="form-group">'+
-/*Codigo */         '<label for="codigo" class="col-form-label">Código</label><input type="text" class="form-control" id="codigo" value="'+codigo+'"></div></div>'+
+/*Codigo */         '<label for="codigo" class="col-form-label">Código</label><input type="text" class="form-control" id="codigo" value="'+codigo+'" disabled></div></div>'+
 /*Semestre*/        '<div class="col"><div class="form-group"><label for="nivelFormacion" class="col-form-label">Semestre</label><select class="form-control" id="nivelFormacion">'+
                         '<option value="'+semestre+'" selected disabled>'+semestre+'</option>'+
                         '<option value="Primer">Primero</option>'+
@@ -119,22 +119,20 @@ var appAsignatura = new Vue({
                         '<option value="Octavo">Octavo</option>'+
                         '<option value="Noveno">Noveno</option>'+
                         '<option value="Decimo">Decimo</option></select></div></div>'+
-/*# Estudiantes*/   '<div class="col"><div class="form-group"><label for="nroEstudiantes" class="col-form-label">Nro. Estudiantes</label><input type="text" class="form-control" placeholder="Cantidad" id="nroEstudiantes" value="'+nroEstudiantes+'">'+
-                    '</div></div></div><div class="form-group">'+
-/*Programa*/        '<label for="programa" class="col-form-label">Programa de la asignatura</label><select class="form-control" id="programa">'+
-                        '<option value="'+programa+'">Nombre del programa</option>'+
+/*Programa*/            '<div class="form-group col-12"><label for="programa" class="col-form-label">Programa de la asignatura</label><select class="form-control" id="programa">'+
+                        '<option value="'+programa+'">'+nomPrograma+'</option>'+
                         this.filtroProgramas.map(programa=>
                             '<option value="'+programa.Cod_programa+'">'+programa.Nombre_prog+'</option>'
                         )
-                        +'</select></div><div class="form-group">'+
-/*Area*/            '<label for="area" class="col-form-label">Área de la asignatura</label><select class="form-control" id="area">'+
-                        '<option value="'+area+'">Nombre del área</option>'+
+                        +'</select></div>'+
+/*Area*/            '<div class="form-group"><label for="area" class="col-form-label">Área de la asignatura</label><select class="form-control" id="area">'+
+                        '<option value="'+area+'">'+nomArea+'</option>'+
                         this.filtroAreas.map(area=>
                             '<option value="'+area.Cod_Area+'">'+area.Nombre_Area+'</option>'
                         )
-                        +'<option value="1">Nombre del área</option></select></div><div class="form-group">'+
-/*Docente*/         '<label for="docente" class="col-form-label">Docente</label><select class="form-control" id="docente">'+
-                        '<option value="'+docente+'"></option>'+
+                        +'<option value="1">Nombre del área</option></select></div>'+
+/*Docente*/         '<div class="form-group col-12"><label for="docente" class="col-form-label">Docente</label><select class="form-control" id="docente">'+
+                        '<option value="'+docente+'">'+nomDocente+' '+apeDocente+'</option>'+
                         this.docentes.map(docente=>
                             '<option value="'+docente.Cod_User+'">'+docente.Nombres+' '+docente.Apellidos+'</option>'
                         )
@@ -157,7 +155,7 @@ var appAsignatura = new Vue({
                     area = Swal.getPopup().querySelector('#area').value,
                     docente = Swal.getPopup().querySelector('#docente').value
 
-                    this.editarAsignatura(codigo,nombre,semestre);
+                    this.editarAsignatura(codigo,nombre,nivelFormacion,area,docente);
                     Swal.fire(
                       '¡Actualizado!',
                       'El registro ha sido actualizado.',
@@ -185,7 +183,6 @@ var appAsignatura = new Vue({
                     axios.post(url,{opcion:5,nombre:nombre}).then(response=>{
                         this.datosAsignatura = response.data;
                         console.log(this.datosAsignatura);
-                        nombre="";
                     });
                     break;
             }
@@ -231,12 +228,19 @@ var appAsignatura = new Vue({
             });
         },
 
-        editarAsignatura:function(){
-
+        editarAsignatura:function(codigo, nombre, nivelFormacion, area, docente){
+            axios.post(url,{opcion:7, nombre:nombre, codigo:codigo, nivelFormacion:nivelFormacion, area:area, docente:docente}).then(response => {
+                this.listarAsignatura();
+                Swal.fire(
+                    '¡Actualizado!',
+                    'El registro ha sido editado con éxito.',
+                    'success'
+                  )
+            });
         },
 
         agregarAsignatura: function(){
-            axios.post(url, {opcion:4, nombre:this.nombre, codigo:this.codigo ,nivelFormacion:this.nivelFormacion, nroEstudiantes:this.nroEstudiantes, programa:this.programa, area:this.area, docente:this.docente }).then(response =>{
+            axios.post(url, {opcion:4, nombre:this.nombre, codigo:this.codigo ,nivelFormacion:this.nivelFormacion, nroEstudiantes:this.nroEstudiantes, area:this.area, docente:this.docente }).then(response =>{
                 this.listarAsignatura();
             });
              this.nombre = "",
