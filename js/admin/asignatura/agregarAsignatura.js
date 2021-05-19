@@ -184,7 +184,7 @@ var appAsignatura = new Vue({
                 default:
                     axios.post(url,{opcion:5,nombre:nombre}).then(response=>{
                         this.datosAsignatura = response.data;
-                        
+                        console.log(this.datosAsignatura);
                         nombre="";
                     });
                     break;
