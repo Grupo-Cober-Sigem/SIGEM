@@ -125,7 +125,7 @@ var appAsignatura = new Vue({
                             '<option value="'+programa.Cod_programa+'">'+programa.Nombre_prog+'</option>'
                         )
                         +'</select></div>'+
-/*Area*/            '<div class="form-group col-12"><label for="area" class="col-form-label">Área de la asignatura</label><select class="form-control" id="area">'+
+/*Area*/            '<div class="form-group"><label for="area" class="col-form-label">Área de la asignatura</label><select class="form-control" id="area">'+
                         '<option value="'+area+'">'+nomArea+'</option>'+
                         this.filtroAreas.map(area=>
                             '<option value="'+area.Cod_Area+'">'+area.Nombre_Area+'</option>'
