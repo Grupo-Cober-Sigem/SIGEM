@@ -58,7 +58,7 @@
             $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
             break;
         case 6: //Listar Asignaturas
-            $consulta = "SELECT Cod_Asignatura, Nombre_Asig, Ubicacion_Asig, Cod_Area, Cod_User FROM Asignatura";
+            $consulta = "SELECT A.Cod_Asignatura, A.Nombre_Asig, A.Ubicacion_Asig, P.Cod_programa, P.Nombre_prog, A.Cod_Area, AR.Nombre_Area, A.Cod_User, U.Nombres, U.Apellidos FROM Asignatura A INNER JOIN datosUsuario U ON A.Cod_User = U.Cod_User INNER JOIN Area AR ON A.Cod_Area = AR.Cod_Area INNER JOIN Programa P ON P.Cod_programa = AR.Cod_programa";
             $resultado = $cn->prepare($consulta);
             $resultado->execute();
             $data = $resultado->fetchAll(PDO::FETCH_ASSOC);

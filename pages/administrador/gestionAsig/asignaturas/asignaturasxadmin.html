@@ -106,7 +106,12 @@
                                         <td class="col-1">{{asignatura.Cod_Asignatura}}</td>
                                         <td class="col-5"><span>{{asignatura.Nombre_Asig}}</span></td>
                                         <td class="col-4"><span>{{asignatura.Ubicacion_Asig}}</span></td>
-                                        <td class="col-1"><span><button type="button" class="btn btn-warning col-md-12" @click="btnEditarAsignatura(asignatura.Nombre_Asig, asignatura.Cod_Asignatura, asignatura.Ubicacion_Asig, asignatura.Cod_User, asignatura.Cod_Area)"><i class="fa fa-edit"> </i></button></span></td>
+                                        <td class="col-1"><span><button type="button" class="btn btn-warning col-md-12" @click="btnEditarAsignatura(asignatura.Cod_Asignatura, asignatura.Nombre_Asig, 
+                                                                                                                                                    asignatura.Ubicacion_Asig, asignatura.Cod_programa,
+                                                                                                                                                    asignatura.Nombre_prog, asignatura.Cod_Area,  
+                                                                                                                                                    asignatura.Nombre_Area, asignatura.Cod_User,
+                                                                                                                                                    asignatura.Nombres, asignatura.Apellidos)">
+                                                                                                                                                    <i class="fa fa-edit"> </i></button></span></td>
                                         <td class="col-1"><span><button type="button" class="btn btn-warning col-md-12" @click="btnDatosGenerales(asignatura.Cod_Asignatura)"><i class="fa fa-pencil"> </i></button></span></td>
                                     </tr>
                                 </tbody>
@@ -126,6 +131,6 @@
     <!-- Sweet Alert 2 -->
     <script src="../../../../plugins/sweetalert2/sweetalert2.all.min.js"></script>
     <script src="../../../../js/main.js"></script>
-    <script src="../../../../js/admin/asignatura/asignaturas.js"></script>
+    <script src="../../../../js/admin/asignatura/agregarAsignatura.js"></script>
   </body>
 </html>
