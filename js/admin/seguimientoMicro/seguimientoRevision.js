@@ -27,7 +27,7 @@ var appUsuarios = new Vue({
 
             var observacionJefe = document.getElementById("observacionesJefe").value;
             var codSeguimiento = localStorage.getItem("codSeguimiento");
-            
+
             if(observacionJefe=="" || observacionJefe==null){
 
                 localStorage.removeItem("codSeguimiento");
@@ -42,7 +42,7 @@ var appUsuarios = new Vue({
                     localStorage.removeItem("codSeguimiento");
                     this.limpiarModal();
                     this.listarSeguimientos();
-                    
+
                     Swal.fire(
                         '¡Registro exitoso!',
                         'El registro ha sido rechazado con éxito.',
@@ -64,19 +64,19 @@ var appUsuarios = new Vue({
                     }else{
                         seguimiento.estrategiaTeams="";
                     }
-    
+
                     if(seguimiento.estrategiaElibre=="1"){
                         seguimiento.estrategiaElibre="Plataforma Elibre.";
                     }else{
                         seguimiento.estrategiaElibre="";
                     }
-    
+
                     if(seguimiento.materialGuias=="1"){
                         seguimiento.materialGuias="Guia de aprendizaje.";
                     }else{
                         seguimiento.materialGuias="";
                     }
-                    
+
                     if(seguimiento.materialWord=="1"){
                         seguimiento.materialWord="Instructivo en excel o word.";
                     }else{
@@ -88,23 +88,23 @@ var appUsuarios = new Vue({
                     }else{
                         seguimiento.materialDiapositiva="";
                     }
-    
+
                     if(seguimiento.materialVideos=="1"){
                         seguimiento.materialVideos="Videos.";
                     }else{
                         seguimiento.materialVideos="";
                     }
                 });
-            });            
+            });
         },
 
         limpiarModal: function(){
 
-            document.getElementById("observacionesJefe").value=""; 
+            document.getElementById("observacionesJefe").value="";
         },
     },
 
     created:function(){
         this.listarSeguimientos();
     }
-});      
+});
