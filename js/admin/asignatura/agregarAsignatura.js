@@ -119,20 +119,19 @@ var appAsignatura = new Vue({
                         '<option value="Octavo">Octavo</option>'+
                         '<option value="Noveno">Noveno</option>'+
                         '<option value="Decimo">Decimo</option></select></div></div>'+
-                    '<div class="form-group">'+
-/*Programa*/        '<label for="programa" class="col-form-label">Programa de la asignatura</label><select class="form-control" id="programa">'+
+/*Programa*/            '<div class="form-group"><label for="programa" class="col-form-label">Programa de la asignatura</label><select class="form-control" id="programa">'+
                         '<option value="'+programa+'">'+nomPrograma+'</option>'+
                         this.filtroProgramas.map(programa=>
                             '<option value="'+programa.Cod_programa+'">'+programa.Nombre_prog+'</option>'
                         )
-                        +'</select></div><div class="form-group">'+
-/*Area*/            '<label for="area" class="col-form-label">Área de la asignatura</label><select class="form-control" id="area">'+
+                        +'</select></div>'+
+/*Area*/            '<div class="form-group"><label for="area" class="col-form-label">Área de la asignatura</label><select class="form-control" id="area">'+
                         '<option value="'+area+'">'+nomArea+'</option>'+
                         this.filtroAreas.map(area=>
                             '<option value="'+area.Cod_Area+'">'+area.Nombre_Area+'</option>'
                         )
-                        +'<option value="1">Nombre del área</option></select></div><div class="form-group">'+
-/*Docente*/         '<label for="docente" class="col-form-label">Docente</label><select class="form-control" id="docente">'+
+                        +'<option value="1">Nombre del área</option></select></div>'+
+/*Docente*/         '<div class="form-group"><label for="docente" class="col-form-label">Docente</label><select class="form-control" id="docente">'+
                         '<option value="'+docente+'">'+nomDocente+' '+apeDocente+'</option>'+
                         this.docentes.map(docente=>
                             '<option value="'+docente.Cod_User+'">'+docente.Nombres+' '+docente.Apellidos+'</option>'
