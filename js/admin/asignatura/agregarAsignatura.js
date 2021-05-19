@@ -104,9 +104,9 @@ var appAsignatura = new Vue({
             await Swal.fire({
                 title: 'Editar',
                 html:'<div class="form-group">'+
-/*Nombre*/          '<label for="nombre" class="col-form-label">Nombre</label><input type="text" class="form-control" id="nombre" value="'+nombre+'" disabled></div>'+
+/*Nombre*/          '<label for="nombre" class="col-form-label">Nombre</label><input type="text" class="form-control" id="nombre" value="'+nombre+'"></div>'+
                     '<div class="row"><div class="col"><div class="form-group">'+
-/*Codigo */         '<label for="codigo" class="col-form-label">Código</label><input type="text" class="form-control" id="codigo" value="'+codigo+'"></div></div>'+
+/*Codigo */         '<label for="codigo" class="col-form-label">Código</label><input type="text" class="form-control" id="codigo" value="'+codigo+'" disabled></div></div>'+
 /*Semestre*/        '<div class="col"><div class="form-group"><label for="nivelFormacion" class="col-form-label">Semestre</label><select class="form-control" id="nivelFormacion">'+
                         '<option value="'+semestre+'" selected disabled>'+semestre+'</option>'+
                         '<option value="Primer">Primero</option>'+
