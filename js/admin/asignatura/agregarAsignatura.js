@@ -181,9 +181,9 @@ var appAsignatura = new Vue({
                     this.listarAsignatura();
                     break;
                 
-                default:
-                    axios.post(url,{opcion:5,nombre:nombre}).then(response=>{
+                axios.post(url,{opcion:5,nombre:nombre}).then(response=>{
                         this.datosAsignatura = response.data;
+                        this.datosAsignatura = this.datosAsignatura.replace(nombre,"");
                         console.log(this.datosAsignatura);
                         nombre="";
                     });
