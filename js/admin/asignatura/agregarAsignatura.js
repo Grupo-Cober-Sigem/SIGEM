@@ -119,8 +119,7 @@ var appAsignatura = new Vue({
                         '<option value="Octavo">Octavo</option>'+
                         '<option value="Noveno">Noveno</option>'+
                         '<option value="Decimo">Decimo</option></select></div></div>'+
-/*# Estudiantes*/   '<div class="col"><div class="form-group"><label for="nroEstudiantes" class="col-form-label">Estudiantes</label><input type="text" class="form-control" placeholder="Cantidad" id="nroEstudiantes" value="'+nroEstudiantes+'">'+
-                    '</div></div></div><div class="form-group">'+
+                    '<div class="form-group">'+
 /*Programa*/        '<label for="programa" class="col-form-label">Programa de la asignatura</label><select class="form-control" id="programa">'+
                         '<option value="'+programa+'">'+nomPrograma+'</option>'+
                         this.filtroProgramas.map(programa=>
