@@ -52,7 +52,30 @@ var appUsuarios = new Vue({
             }
         },
 
+        btnFiltrarSeguimientos: async function()
+        {
+            let nombre = document.getElementById("campoBusqueda").value;
+
+            switch(nombre)
+            {
+                case "":
+                    this.listarSeguimientos();
+                    break;
+
+                case null:
+                    this.listarSeguimientos();
+                    break;
+                
+                default:
+                    axios.post(url,{opcion:5,nombre:nombre}).then(response=>{
+                        this.datosSeguimientos = response.data;
+                        console.log(this.datosSeguimientos);
+                    });
+                    break;
+            }
+        },
         //Procedimientos
+       
         listarSeguimientos: function(){
             axios.post(url,{opcion:1}).then(response=>{
 
